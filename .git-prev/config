@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://louis65@bitbucket.org/65mo-mnhn/sf_portail.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "L_integration_lot2"]
+	remote = origin
+	merge = refs/heads/L_integration_lot2

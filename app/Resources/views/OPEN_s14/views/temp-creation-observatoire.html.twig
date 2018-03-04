@@ -1,0 +1,931 @@
+{% extends template_repo ~ '/views/templates/default.html.twig' %} {# Template par defaut #}
+{% set title = 'Création d’une fiche observatoire' %} {# Titre de la page - header-mea & tab du navigateur #}
+{% set imageHero = 'VisuelObservatoire.jpg' %} {# Nom de l'image pour le hero de la page #}
+
+{% block body %}
+
+  {# Content = Contient tout ce qui concerne le contenu des pages #}
+  <div class="creation-observatoire">
+    <nav class="nav__creation-observatoire">
+      {% set formSteps = [
+      'Caractéristques',
+      'Localisation',
+      'Contact, réseau, résultats',
+      'Autres informations'
+      ]%}
+      <ul>
+        {% for step in formSteps %}
+        <li data-id="{{ loop.index }}" {{ loop.index == 1 ? "class='active'" }}><span>{{ step }}</span></li>
+        {% endfor %}
+      </ul>
+      <p class="text-danger hidden-xs hidden-sm">* Champs obligatoires pour valider la création de l’observatoire. Les autres champs pourront être renseignés ultérieurement.</p>
+      <div class="bordered text-center hidden-xs hidden-sm">
+        <strong>Je soumets mon observatoire aujourd’hui, OPEN vérifie les informations et le publie le plus rapidement possible.</strong>
+      </div>
+    </nav>
+    <div class="form__creation-obersvatoire form-horizontal" enctype="multipart/form-data">
+      <form action="#" method="post" class="inputs-line">
+        {# Etape 1 #}
+        {# Ajouter la classe active pour l'étape soit visible et le supprimer pour la cacher #}
+        <div class="step active" data-id="1">
+          <div class="step__title">Caractéristiques de l’observatoire</div>
+          <div class="form-group mt-4">
+            <label for="obs_nom" class="control-label col-sm-4">Nom de l'observatoire <sup>*</sup></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="obs_nom" id="obs_nom" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_photo" class="control-label col-sm-4">Photo : <sup>*</sup><small>Poids max XXMO</small></label>
+            <div class="col-sm-8">
+              <div class="file-wrapper">
+                <input type="file" name="obs_photo" id="obs_photo" required>
+                <label for="obs_photo" class="w100">Télécharger</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_logo" class="control-label col-sm-4">Logo : <sup>*</sup><small>Poids max XXMO</small></label>
+            <div class="col-sm-8">
+              <div class="file-wrapper">
+                <input type="file" name="obs_logo" id="obs_logo" required>
+                <label for="obs_logo" class="w100">Télécharger</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_video" class="control-label col-sm-4">Vidéo <small>Lien url</small></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="obs_video" id="obs_video">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_status" class="control-label col-sm-4">Votre observatoire est-il ?<sup>*</sup></label>
+            <div class="col-sm-8">
+              <div class="multiple-radio-buttons">
+                <div>
+                  <input type="radio" name="obs_status" id="obs_status-encours">
+                  <label for="obs_status-encours">En cours</label>
+                </div>
+                <div>
+                  <input type="radio" name="obs_status" id="obs_status-enpause">
+                  <label for="obs_status-enpause">En pause</label>
+                </div>
+                <div>
+                  <input type="radio" name="obs_status" id="obs_status-termine">
+                  <label for="obs_status-termine">Terminé</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_desc" class="control-label col-xs-12">Description de l'observatoire :<sup>*</sup></label>
+            <div class="col-xs-12 mt-1">
+              <textarea name="obs_desc" id="obs_desc" rows="4" class="form-control" required placeholder="Texte descriptif, imagé et pédagogique présentant votre projet : quand, où, quoi, comment, qui et pour qui ? Limité à 1000 caractères" maxlength="1000"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_objectifs" class="col-xs-12 control-label">Objectifs de l’observatoire :<sup>*</sup><small>Classer de 1 à 3 afin de prioriser les objectifs de votre observatoire (ex aequo possible)</small></label>
+            <div class="col-xs-12 mt-1 table-responsive">
+              <table class="table table-bordered table-notation">
+                <tbody>
+                  <tr>
+                    <td>Collecte de données dans le cadre d’un observatoire naturaliste (la modalité est prioritaire : base de données naturalistes collaboratives)</td>
+                    <td><input type="number" max="3" min="1" name="observatoire_naturaliste"></td>
+                  </tr>
+                  <tr>
+                    <td>Collecte de données dans le cadre d’un protocole scientifique identifié (l’objectif scientifique est prioritaire, observatoire à visé de gestion/conservation)</td>
+                    <td><input type="number" max="3" min="1" name="observatoire_protocole"></td>
+                  </tr>
+                  <tr>
+                    <td>Collecte de données dans le cadre d’un observatoire à visée pédagogique / sensibilisation (le public à mobiliser est prioritaire, visée éducative ou de gestion/conservation)</td>
+                    <td><input type="number" max="3" min="1" name="observatoire_pedagogique"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_themes" class="control-label col-xs-12 mb-1">Thème(s) abordé(s) :<sup>*</sup></label>
+            {% set themes = [
+              {"icon": 'montagne', "label": 'En montagne'},
+              {"icon": 'foret', "label": 'En forêt'},
+              {"icon": 'mer', "label": 'Mer & littoral'},
+              {"icon": 'lacs', "label": 'Eaux intérieures'},
+              {"icon": 'ville', "label": 'En ville'},
+              {"icon": 'parc', "label": 'Parcs & jardins'},
+              {"icon": 'observation', "label": 'Observation des paysages'},
+              {"icon": 'protege', "label": 'Espaces protégés'},
+              {"icon": 'agricole', "label": 'Terres agricoles'},
+              {"icon": 'ecole', "label": 'Dans mon école'},
+              {"icon": 'climat', "label": 'Changement climatique'},
+              {"icon": 'envahissante', "label": 'Espèces envahissantes'},
+              {"icon": 'danger', "label": 'Espèces en danger'}
+            ]%}
+            <div class="col-sm-6">
+              {% for theme in themes %}
+              <div>
+                <input type="checkbox" name="theme" id="obs_theme_{{ theme.icon }}">
+                <label for="obs_theme_{{ theme.icon }}">{{ theme.label }}</label>
+              </div>
+            {% if loop.index is divisible by(7) %}
+            </div>
+            <div class="col-sm-6">
+            {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_animaux" class="control-label col-xs-12 mb-1">Groupe(s) étudié(s) :<sup>*</sup><small>Plusieurs taxons peuvent être sélectionnés</small></label>
+            {# Animaux #}
+            <div class="clearfix">
+              {% set animaux = [
+                {"icon": 'petitMam', "label": 'Petits mammifères', "desc": 'Animaux vertébrés vivipares (nourrissant leurs petits avec le lait maternel). En font partie les chauves-souris, les hérissons, les renards, les petits rongeurs…'},
+                {"icon": 'grandMam', "label": 'Grands mammifères terrestres', "desc": 'Animaux vertébrés terrestres vivipares (nourrissant leurs petits avec le lait maternel). En font partie les biches, les sangliers, les ours…'},
+                {"icon": 'mamMer', "label": 'Grand mammifères marins',  "desc": 'Animaux vertébrés marins vivipares (nourrissant leurs petits avec le lait maternel). En font partie les dauphins, les baleines, les phoques…'},
+                {"icon": 'reptiles', "label": 'Reptiles & amphibiens', "desc": 'Animaux vertébrés ovipares (pondant des œufs) à sang froid. Les reptiles -serpents, crocodiles, tortues…- possèdent des écailles et ont un corps souvent allongé. Les amphibiens -grenouilles, salamandres, tritons…- ont besoin d’eau pour se reproduire.'},
+                {"icon": 'insectes', "label": 'Insectes', "desc": 'Animaux dotés d’un squelette externe et caractérisés par un corps segmenté en trois parties : tête, thorax et abdomen. En font partie les fourmis, les libellules ou encore les abeilles.'},
+                {"icon": 'coraux', "label": 'Coraux, oursins, étoiles de mer & éponges', "desc": 'Animaux marins primitifs de tailles et de formes très variées, que l’on considère souvent à tord pour de la végétation !'},
+                {"icon": 'crustaces', "label": 'Molusques', "desc": 'Animaux invertébrés à corps mou, protégés par un squelette externe : coquille chez mollusques (moules, huîtres…) ; carapace chez les crustacés (crabes, crevettes…).'},
+                {"icon": 'arachnides', "label": 'Arachnides & mille-pattes', "desc": 'Animaux invertébrés terrestres. Les arachnides -araignées, scorpions, puces- possèdent quatre paires de pattes. Les mille-pattes ont un corps allongé, pourvus de nombreuses pattes (iules, scolopendres).'},
+                {"icon": 'gasteropodes', "label": 'Gastéropode & lombrics', "desc": 'Animaux invertébrés. Les gastéropodes sont des mollusques, dotés d’une coquille plus ou moins visibles (escargots, limaces). Les lombrics regroupent l’ensemble des vers de terre.'},
+                {"icon": 'oiseaux', "label": 'Oiseaux', "desc": 'Animaux vertébrés ovipares (pondant des œufs, au corps recouvert de plumes et dotés d’un bec dépourvu de dents. En font partie les moineaux, les aigles ou encore les mouettes.'},
+                {"icon": 'raies', "label": 'Raies & requins', "desc": 'Animaux vertébrés aquatiques ; poissons cartilagineux, de taille moyenne à grande comme les raies manta, le requin gris ou encore le poisson-scie.'},
+                {"icon": 'poissons', "label": 'Poissons', "desc": 'Animaux vertébrés aquatiques (mer et eau douce) qui possèdent des branchies et des nageoires et dont le corps est le plus souvent recouvert d’écailles.'},
+                {"icon": 'meduses', "label": 'Méduses', "desc": 'Animaux invertébrés marins au corps gélatineux, généralement venimeux, qui peuvent contenir jusqu’à 95% d’eau.'}
+              ]%}
+              <div class="col-xs-12">
+                <div class="large-item">
+                  <input type="checkbox" name="animaux" id="animaux" data-select-all="animal">
+                  <label for="animaux">Animaux</label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-xs-12">
+                {% for animal in animaux %}
+                <div>
+                  <input type="checkbox" name="animal" id="animal_{{ animal.icon }}">
+                  <label for="animal_{{ animal.icon }}">{{ animal.label }}</label>
+                </div>
+              {% if loop.index is divisible by(7) %}
+              </div>
+              <div class="col-sm-6 col-xs-12">
+              {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            {# Vegetaux #}
+            <div class="clearfix">
+              {% set vegetaux = [
+                {"icon": 'arbres', "label": 'Arbres', "desc": 'Végétaux terrestres comportant un tronc sur lequel s\'insèrent des branches ramifiées. Ils peuvent vivre jusqu’à plusieurs siècles. En font partie le chêne, le pommier ou encore le sapin.'},
+                {"icon": 'plantes', "label": 'Plantes non ligneuses', "desc": 'Par opposition aux arbres, il s’agit de tous les végétaux terrestres qui n’ont pas d’écorce. C’est le cas du bambou, des palmiers ou encore les fougères et géraniums.'},
+                {"icon": 'mousses', "label": 'Mousses & sphaignes', "desc": 'Végétaux terrestres ne possédant pas de racines, poussant sur les arbres ou à même le sol (et composant la partie vivante des tourbières pour les sphaignes), capables de supporter des conditions extrêmes.'},
+                {"icon": 'algues', "label": 'Algues', "desc": 'Végétaux aquatiques uni ou pluricellulaires. Elles constituent une part très importante de la biodiversité et sont la base principale de la chaîne alimentaire en eau douce, saumâtre et marine.'}
+              ]%}
+              <div class="col-xs-12">
+                <div class="large-item mt-1">
+                  <input type="checkbox" name="vegetaux" id="vegetaux" data-select-all="vegetal">
+                  <label for="vegetaux">Végétaux</label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-xs-12">
+                {% for vegetal in vegetaux %}
+                <div>
+                  <input type="checkbox" name="vegetal" id="vegetal_{{ vegetal.icon }}">
+                  <label for="vegetal_{{ vegetal.icon }}">{{ vegetal.label }}</label>
+                </div>
+              {% if loop.index is divisible by(2) %}
+              </div>
+              <div class="col-sm-6 col-xs-12">
+              {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            {# Champignons #}
+            <div class="clearfix">
+              <div class="col-xs-12">
+                <div class="large-item mt-1">
+                  <input type="checkbox" name="champignon" id="champignon">
+                  <label for="champignon">Champignons & lichens</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_pour" class="control-label col-sm-4">Votre observatoire est-il ?<sup>*</sup></label>
+            <div class="col-sm-8">
+              <div class="multiple-radio-buttons">
+                <div>
+                  <input type="radio" name="obs_pour" id="obs_pour-tous">
+                  <label for="obs_pour-tous">Pour tous</label>
+                </div>
+                <div>
+                  <input type="radio" name="obs_pour" id="obs_pour-inities">
+                  <label for="obs_pour-inities">Pour les initiés</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_saison" class="col-xs-12 control-label">Saisonnalité :<sup>*</sup> <small>Printemps, été, automne, hiver - Plusieurs choix possibles</small></label>
+            <div class="col-xs-12 mt-1">
+              <ul class="obs_saison">
+                {% set saisons = ['printemps', 'ete', 'automne', 'hiver'] %}
+                {% for saison in saisons %}
+                <li>
+                  <input type="checkbox" name="obs_saison-{{saison}}" id="obs_saison-{{saison}}">
+                  <label for="obs_saison-{{saison}}"><i class="icon-{{saison}}"></i></label>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_materiel" class="control-label col-xs-12">Matériel nécessaire pour l’observation :<sup>*</sup></label>
+            <div class="col-xs-12 mt-1">
+              <textarea name="obs_materiel" rows="4" class="form-control" required placeholder="Mettre “aucun” si aucun matériel spécifique n’est requis. Limité à 500 caractères" maxlength="500" id="obs_materiel"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_accroche" class="control-label col-xs-12">Présentez votre observatoire en une phrase d’accroche :<sup>*</sup></label>
+            <div class="col-xs-12 mt-1">
+              <textarea name="obs_accroche" id="obs_accroche" rows="4" class="form-control" required placeholder="Donnez envie aux participants d’en savoir plus ! Limité à 150 caractères" maxlength="150"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12">
+              <a href="#" class="step-to btn btn-danger btn-lg pull-right" data-to-step="2">Je passe à l’étape suivante</a>
+            </div>
+          </div>
+        </div>
+        {# Etape 2 #}
+        <div class="step active" data-id="2">
+          <div class="step__title">Localisation de l’observatoire </div>
+          <div id="map" class="mt-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.7269897967767!2d2.354021415086828!3d48.844346009650494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671f12d404411%3A0x4743d62149f1c6e1!2sMus%C3%A9um+national+d&#39;Histoire+naturelle!5e0!3m2!1sfr!2sfr!4v1514910381226" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-12">Portée géographique de l’observatoire :<sup>*</sup><small>Un seul choix possible</small></label>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12">
+              <input type="radio" name="portee_geo" id="national">
+              <label for="national">National</label>
+            </div>
+            <div class="col-xs-12">
+              <input type="radio" name="portee_geo" id="regionale">
+              <label for="regionale">Régionale (métropolitaine)</label>
+              <div class="checked mb-1 clearfix">
+                <div class="col-sm-6">
+                  {% set regions = [
+                    'Auvergne - Rhône-Alpes',
+                    'Bourgogne -  Franche-Comté',
+                    'Bretagne',
+                    'Centre - Val de Loire',
+                    'Corse',
+                    'Grand Est',
+                    'Hauts-de-France',
+                    'Île-de-France',
+                    'Normandie',
+                    'Nouvelle-Aquitaine',
+                    'Occitanie',
+                    'Pays de la Loire',
+                    'Provence - Alpes - Côte d’Azur'
+                  ]%}
+                {% for region in regions %}
+                  <div>
+                    <input type="checkbox" name="region-{{loop.index}}" id="region-{{loop.index}}">
+                    <label for="region-{{loop.index}}">{{ region }}</label>
+                  </div>
+                {% if loop.index is divisible by(7) %}
+                </div>
+                <div class="col-sm-6">
+                {% endif %}
+                {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <input type="radio" name="portee_geo" id="departementale">
+              <label for="departementale">Départementale</label>
+              <div class="checked mb-1 clearfix">
+                {% set departements = [
+                  '01 - Ain - Bourg-en-bresse',
+                  '02 - Aisne - Laon',
+                  '03 - Allier - Moulins',
+                  '04 - Alpes-de-Haute-Provence - Digne-les-bains',
+                  '05 - Hautes-alpes - Gap',
+                  '06 - Alpes-maritimes - Nice',
+                  '07 - Ardèche - Privas',
+                  '08 - Ardennes - Charleville-mézières',
+                  '09 - Ariège - Foix',
+                  '10 - Aube - Troyes',
+                  '11 - Aude - Carcassonne',
+                  '12 - Aveyron - Rodez',
+                  '13 - Bouches-du-Rhône - Marseille',
+                  '14 - Calvados - Caen',
+                  '15 - Cantal - Aurillac',
+                  '16 - Charente - Angoulême',
+                  '17 - Charente-maritime - La rochelle',
+                  '18 - Cher - Bourges',
+                  '19 - Corrèze - Tulle',
+                  '2a - Corse-du-sud - Ajaccio',
+                  '2b - Haute-Corse - Bastia',
+                  '21 - Côte-d\'Or - Dijon',
+                  '22 - Côtes-d\'Armor - Saint-brieuc',
+                  '23 - Creuse - Guéret',
+                  '24 - Dordogne - Périgueux',
+                  '25 - Doubs - Besançon',
+                  '26 - Drôme - Valence',
+                  '27 - Eure - Évreux',
+                  '28 - Eure-et-loir - Chartres',
+                  '29 - Finistère - Quimper',
+                  '30 - Gard - Nîmes',
+                  '31 - Haute-garonne - Toulouse',
+                  '32 - Gers - Auch',
+                  '33 - Gironde - Bordeaux',
+                  '34 - Hérault - Montpellier',
+                  '35 - Ille-et-vilaine - Rennes',
+                  '36 - Indre - Châteauroux',
+                  '37 - Indre-et-loire - Tours',
+                  '38 - Isère - Grenoble',
+                  '39 - Jura - Lons-le-saunier',
+                  '40 - Landes - Mont-de-marsan',
+                  '41 - Loir-et-cher - Blois',
+                  '42 - Loire - Saint-étienne',
+                  '43 - Haute-loire - Le puy-en-velay',
+                  '44 - Loire-atlantique - Nantes',
+                  '45 - Loiret - Orléans',
+                  '46 - Lot - Cahors',
+                  '47 - Lot-et-garonne - Agen',
+                  '48 - Lozère - Mende',
+                  '49 - Maine-et-loire - Angers',
+                  '50 - Manche - Saint-lô',
+                  '51 - Marne - Châlons-en-champagne',
+                  '52 - Haute-marne - Chaumont',
+                  '53 - Mayenne - Laval',
+                  '54 - Meurthe-et-moselle - Nancy',
+                  '55 - Meuse - Bar-le-duc',
+                  '56 - Morbihan - Vannes',
+                  '57 - Moselle - Metz',
+                  '58 - Nièvre - Nevers',
+                  '59 - Nord - Lille',
+                  '60 - Oise - Beauvais',
+                  '61 - Orne - Alençon',
+                  '62 - Pas-de-calais - Arras',
+                  '63 - Puy-de-dôme - Clermont-ferrand',
+                  '64 - Pyrénées-atlantiques - Pau',
+                  '65 - Hautes-Pyrénées - Tarbes',
+                  '66 - Pyrénées-orientales - Perpignan',
+                  '67 - Bas-rhin - Strasbourg',
+                  '68 - Haut-rhin - Colmar',
+                  '69 - Rhône - Lyon',
+                  '70 - Haute-saône - Vesoul',
+                  '71 - Saône-et-loire - Mâcon',
+                  '72 - Sarthe - Le mans',
+                  '73 - Savoie - Chambéry',
+                  '74 - Haute-savoie - Annecy',
+                  '75 - Paris - Paris',
+                  '76 - Seine-maritime - Rouen',
+                  '77 - Seine-et-marne - Melun',
+                  '78 - Yvelines - Versailles',
+                  '79 - Deux-sèvres - Niort',
+                  '80 - Somme - Amiens',
+                  '81 - Tarn - Albi',
+                  '82 - Tarn-et-garonne - Montauban',
+                  '83 - Var - Toulon',
+                  '84 - Vaucluse - Avignon',
+                  '85 - Vendée - La roche-sur-yon',
+                  '86 - Vienne - Poitiers',
+                  '87 - Haute-vienne - Limoges',
+                  '88 - Vosges - Épinal',
+                  '89 - Yonne - Auxerre',
+                  '90 - Territoire de belfort - Belfort',
+                  '91 - Essonne - Évry',
+                  '92 - Hauts-de-seine - Nanterre',
+                  '93 - Seine-Saint-Denis - Bobigny',
+                  '94 - Val-de-marne - Créteil',
+                  '95 - Val-d\'oise - Pontoise'
+                ]%}
+                <div class="col-sm-6">
+                  {% for departement in departements %}
+                    <div>
+                      <input type="checkbox" name="departement-{{loop.index}}" id="departement-{{loop.index}}">
+                      <label for="departement-{{loop.index}}">{{ departement }}</label>
+                    </div>
+                {% if loop.index is divisible by(48) %}
+                </div>
+                <div class="col-sm-6">
+                {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <input type="radio" name="portee_geo" id="communale">
+              <label for="communale">Communale (ville)</label>
+              <div class="checked mb-1">
+                <input type="text" name="cp-commune" id="cp-commune" class="form-control" placeholder="Entrez le Code Postal">
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <input type="radio" name="portee_geo" id="littorale">
+              <label for="littorale">Zones littorales et maritimes</label>
+              <div class="checked mb-1 clearfix">
+                {% set zones = [
+                  'Mer du nord',
+                  'Manche',
+                  'Mer Méditerrannée',
+                  'Océan Atlantique'
+                ]%}
+                <div class="col-sm-6">
+                  {% for zone in zones %}
+                    <div>
+                      <input type="checkbox" name="zone-{{loop.index}}" id="zone-{{loop.index}}">
+                      <label for="zone-{{loop.index}}">{{ zone }}</label>
+                    </div>
+                {% if loop.index is divisible by(2) %}
+                </div>
+                <div class="col-sm-6">
+                {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <input type="radio" name="portee_geo" id="outremer">
+              <label for="outremer">Outre-Mer</label>
+              <div class="checked mb-1 clearfix">
+                {% set outremers = [
+                  'Clipperton',
+                  'Guadeloupe',
+                  'Guyane',
+                  'La Réunion',
+                  'Martinique',
+                  'Mayotte',
+                  'Nouvelle-Calédonie',
+                  'Polynésie française',
+                  'Saint-Barthélémy',
+                  'Saint-Martin',
+                  'Saint-Pierre-et-Miquelon',
+                  'Terres australes et antarctiques françaises (TAAF)',
+                  'Wallis-et-Futuna'
+                ]%}
+                <div class="col-sm-6">
+                  {% for outremer in outremers %}
+                    <div>
+                      <input type="checkbox" name="outremer-{{loop.index}}" id="outremer-{{loop.index}}">
+                      <label for="outremer-{{loop.index}}">{{ outremer }}</label>
+                    </div>
+                {% if loop.index is divisible by(6) %}
+                </div>
+                <div class="col-sm-6">
+                {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12">
+              <a href="#" class="step-to btn btn-danger btn-lg pull-right" data-to-step="3">Je passe à l’étape suivante</a>
+            </div>
+          </div>
+        </div>
+        {# Etape 3 #}
+        <div class="step active" data-id="3">
+          <div class="step__title">Contact</div>
+          <div class="form-group mt-4">
+            <label for="obs_website" class="control-label col-sm-5">Site internet : <small>Lien url</small></label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" name="obs_website" id="obs_website">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_facebook" class="control-label col-sm-5">Facebook : <small>Lien Facebook de l'observatoire</small></label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" name="obs_facebook" id="obs_facebook">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_twitter" class="control-label col-sm-5">Twitter : <small>Lien Twitter de l'observatoire</small></label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" name="obs_twitter" id="obs_twitter">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_email" class="control-label col-sm-5">Email contact de l'observatoire :<sup>*</sup></label>
+            <div class="col-sm-7">
+              <input type="email" class="form-control" name="obs_email" id="obs_email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_structure_charge" class="control-label col-sm-5">Structure en charge de l'observatoire :<sup>*</sup></label>
+            <div class="col-sm-7">
+              <input type="text" name="obs_structure_charge" id="obs_structure_charge" class="form-control" disabled required value="Observatoire de la biodiversité des jardins">
+            </div>
+            <div class="col-xs-12">
+              <span class="form_info">Si vous souhaitez modifier cette information,  merci de contacter l’administrateur : julie@julie.com</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_contact_charge" class="control-label col-sm-5">Contact en charge de l'observatoire :<sup>*</sup></label>
+            <div class="col-sm-7">
+              <input type="text" name="obs_contact_charge" id="obs_contact_charge" class="form-control" required placeholder="Nom / Prénom">
+            </div>
+          </div>
+
+          <div class="step__title mt-4">Réseau</div>
+          <div class="form-group mt-4">
+            <label for="obs_structure_ref" class="control-label col-sm-5">Structure référente scientifiquement :</label>
+            <div class="col-sm-7">
+              <input type="text" name="obs_structure_ref" id="obs_structure_ref" class="form-control">
+            </div>
+            <div class="col-xs-12">
+              <span class="form_info">Vous ne trouvez pas une structure dans cette liste ? Invitez-la à s’inscrire sur OPEN depuis votre Compte Pro, rubrique Mes Activités</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_responsable_scientifique" class="control-label col-sm-5">Nom du responsable scientifique :</label>
+            <div class="col-sm-7">
+              <input type="text" name="obs_responsable_scientifique" id="obs_responsable_scientifique" class="form-control">
+            </div>
+            <div class="col-xs-12">
+              <span class="form_info">Cette information ne sera pas rendue visible sur le portail OPEN</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-12">Ce programme s’inscrit-il dans un des réseaux d’observation suivants ?</label>
+            <div class="col-xs-12 mt-1">
+              {% set items = [
+                'Vigie-Nature',
+                'Observatoires locaux de la biodiversité',
+                'Vigie-Mer',
+                'Vigie Nature école',
+                'Les Atlas de la Biodiversité Communale'
+              ] %}
+              {% for item in items %}
+              <div>
+                <input type="checkbox" name="obs_reseau_observation-{{loop.index}}" id="obs_reseau_observation-{{loop.index}}">
+                <label for="obs_reseau_observation-{{loop.index}}">{{ item }}</label>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_relais-locaux" class="control-label col-sm-5">Relais locaux :</label>
+            <div class="col-sm-7">
+              <input type="text" name="obs_relais-locaux" id="obs_relais-locaux" class="form-control">
+            </div>
+            <div class="col-xs-12">
+              <span class="form_info">Vous ne trouvez pas un de vos relais dans cette liste ? Invitez-le à s’inscrire sur OPEN depuis votre Compte Pro, rubrique Mes Activités</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs_partners_logos[]" class="control-label col-sm-5">Logo des partenaires : <small>Poids max XXMO</small></label>
+            <div class="col-sm-7">
+              <div class="file-wrapper">
+                <input type="file" name="obs_partners_logos[]" id="obs_partners_logos[]" multiple>
+                <label for="obs_partners_logos[]" class="w100">Télécharger</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="step__title mt-4">Résultats <small>- Avez-vous déjà des données d’observation à partager ?</small></div>
+          <div class="form-group mt-4">
+            <label for="obs_resultats-pdf" class="control-label col-sm-5">Vos résultats : <small>Format PDF ou champs éditable</small></label>
+            <div class="col-sm-7">
+              <div class="file-wrapper">
+                <input type="file" name="obs_resultats-pdf" id="obs_resultats-pdf" multiple>
+                <label for="obs_photo" class="w100">Télécharger</label>
+              </div>
+            </div>
+            <div class="col-xs-12 mt-1">
+              <textarea name="obs_resultats" rows="4" class="form-control" placeholder="Limité à 500 caractères" maxlength="500"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12">
+              <a href="#" class="step-to btn btn-danger btn-lg pull-right" data-to-step="4">Je passe à l’étape suivante</a>
+            </div>
+          </div>
+        </div>
+        {# Etape 4 #}
+        <div class="step active" data-id="4">
+          <div class="step__title">Autres informations</div>
+          <p class="text-danger">Ces données ne seront pas rendues visibles au public. Elles serviront à renseigner l’indicateur dédié aux sciences participatives de l’ONB. Seul l’indicateur global de la participation à l’ensemble des observatoires sera publié.</p>
+
+          <div class="form-group mt-4">
+            <label for="obs_date-lancement" class="col-sm-6 control-label">Date de lancement opérationnel :<sup>*</sup> <small>Année</small></label>
+            <div class="col-sm-6">
+              <input type="number" name="obs_date-lancement" id="obs_date-lancement" class="form-control" min="1900" max="2099" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-12 control-label">Durée de l’observatoire :<sup>*</sup></label>
+            <div class="col-xs-12 mt-1">
+              <div>
+                <input type="checkbox" name="obs_enquete-annuelle" id="obs_enquete-annuelle">
+                <label for="obs_enquete-annuelle">Enquête annuelle</label>
+              </div>
+              <div>
+                <input type="checkbox" name="obs_enquete-pluriannuel" id="obs_enquete-pluriannuel">
+                <label for="obs_enquete-pluriannuel">Observatoire pluri-annuel</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="step__title mt-4">Evaluation</div>
+          <p>Choississez votre année de référence et indiquez :</p>
+
+          <div class="form-group mt-4">
+            <label class="control-label col-xs-12">Le nombre de personnes inscrites à l’observatoire :<sup>*</sup></label>
+            <div class="col-xs-12">
+              <span class="form_info">Une personne inscrite au projet est une personne qui a les codes d’identifications pour saisir ses données, ou qui a signifié sa volonté de participer au projet, mais elle n’a pas nécessairement contribué. Indiquez 0 si vous n’avez pas cette donnée.</span>
+            </div>
+            <div class="col-xs-12 table-responsive mt-1">
+              <table class="table table-bordered table-notation vertical">
+                <tbody>
+                  <tr>
+                    {% set dates = ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'] %}
+                    {% for date in dates %}
+                    <td class="text-center">{{ date }}</td>
+                    {% endfor %}
+                  </tr>
+                  <tr>
+                    {% for date in dates %}
+                    <td>
+                      <input type="number" min="0" name="inscription-date-{{ date }}">
+                    </td>
+                    {% endfor %}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-12">Le nombre de participants actifs :<sup>*</sup></label>
+            <div class="col-xs-12">
+              <span class="form_info">Un participant actif est une personne inscrite au projet et qui a renseigné au moins une donnée au cours de l’année. Indiquez 0 si vous n’avez pas cette donnée.</span>
+            </div>
+            <div class="col-xs-12 table-responsive mt-1">
+              <table class="table table-bordered table-notation vertical">
+                <tbody>
+                  <tr>
+                    {% set dates = ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'] %}
+                    {% for date in dates %}
+                    <td class="text-center">{{ date }}</td>
+                    {% endfor %}
+                  </tr>
+                  <tr>
+                    {% for date in dates %}
+                    <td>
+                      <input type="number" min="0" name="participants-date-{{ date }}">
+                    </td>
+                    {% endfor %}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-12">Le nombre de données élémentaires collectées :<sup>*</sup></label>
+            <div class="col-xs-12">
+              <span class="form_info">Une donnée élémentaire est une information saisie dans une base de données, ou envoyée, et qui n’a pas encore fait l’objet de traitement/anayse. Indiquez 0 si vous n’avez pas cette donnée.</span>
+            </div>
+            <div class="col-xs-12 table-responsive mt-1">
+              <table class="table table-bordered table-notation vertical">
+                <tbody>
+                  <tr>
+                    {% set dates = ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'] %}
+                    {% for date in dates %}
+                    <td class="text-center">{{ date }}</td>
+                    {% endfor %}
+                  </tr>
+                  <tr>
+                    {% for date in dates %}
+                    <td>
+                      <input type="number" min="0" name="elementaires-date-{{ date }}">
+                    </td>
+                    {% endfor %}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-xs-12">Autres indicateurs pour évaluer l’observatoire :</label>
+            <div class="col-xs-12 mt-1">
+              <div>
+                <input type="radio" name="indicateur" id="indicateur_non">
+                <label for="indicateur_non">Non</label>
+              </div>
+              <div>
+                <input type="radio" name="indicateur" id="indicateur_oui">
+                <label for="indicateur_oui">Oui - Précisez</label>
+                <div class="checked mt-1">
+                  <textarea name="indicateur_oui-precisions" class="form-control" rows="4" placeholder="Limité à 500 caractères" maxlength="500"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-12 control-label">En moyenne, combien d’années participe un observateur ?</label>
+            <div class="col-md-10 col-xs-12 mt-1">
+              <div class="multiple-radio-buttons">
+                <div>
+                  <input type="radio" name="moyenne_participation" id="moinsunan">
+                  <label for="moinsunan">Moins d'un an</label>
+                </div>
+                <div>
+                  <input type="radio" name="moyenne_participation" id="unatrois">
+                  <label for="unatrois">1 à 3 ans</label>
+                </div>
+                <div>
+                  <input type="radio" name="moyenne_participation" id="plustrois">
+                  <label for="plustrois">Plus de 3 ans</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-12 control-label">Evolution générale du programme par rapport à l’année précédent (qualificatif)</label>
+            <div class="col-md-10 col-xs-12 mt-1">
+              <div class="multiple-radio-buttons">
+                <div>
+                  <input type="radio" name="evolution" id="croissance">
+                  <label for="croissance">Croissance</label>
+                </div>
+                <div>
+                  <input type="radio" name="evolution" id="decroissance">
+                  <label for="decroissance">Décroissance</label>
+                </div>
+                <div>
+                  <input type="radio" name="evolution" id="stabilite">
+                  <label for="stabilite">Stabilité</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step__title mt-4">Protocole</div>
+
+          <div class="form-group mt-4">
+            <label class="control-label col-xs-12">Qui valide les données ?</label>
+            <div class="col-xs-12">
+              <span class="form_info">C’est la personne qui vérifie les données envoyées avant que celles-ci soient analysées. Par exemple, celui qui vérifie les identifications sur la base de photos envoyées. Cette étape n’est pas toujours effectuée et les données absurdes sont alors révélées et écartées lors de l’analyse.</span>
+            </div>
+            <div class="col-xs-12 mt-1">
+              {% set items = [
+                'Structure animatrice du projet',
+                'Participants',
+                'Experts validateurs <small>(participant ou expert externe au projet)</small>',
+                'Partenaire scientifique'
+              ] %}
+              {% for item in items %}
+              <div>
+                <input type="checkbox" name="quivalide-{{loop.index}}" id="quivalide-{{loop.index}}">
+                <label for="quivalide-{{loop.index}}">{{ item|raw }}</label>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-12">Qui analyse les données ?</label>
+            <div class="col-xs-12">
+              <span class="form_info">C’est la personne qui analyse les données envoyées par les observateurs, après validation, ou non, en amont.</span>
+            </div>
+            <div class="col-xs-12 mt-1">
+              {% for item in items %}
+              <div>
+                <input type="checkbox" name="quianalyse-{{loop.index}}" id="quianalyse-{{loop.index}}">
+                <label for="quianalyse-{{loop.index}}">{{ item|raw }}</label>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="step__title mt-4">Données</div>
+
+          <div class="form-group mt-4">
+            <label class="control-label col-xs-12">Sous quelle forme sont restituées les données ?</label>
+            <div class="col-xs-12 mt-1">
+              <div>
+                <input type="checkbox" name="forme_donnees-brutes" id="forme_donnees-brutes">
+                <label for="forme_donnees-brutes">Brutes</label>
+              </div>
+              <div>
+                <input type="checkbox" name="forme_donnees-syntheses" id="forme_donnees-syntheses">
+                <label for="forme_donnees-syntheses">Synthèses</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-12">Des retours sont-ils prévus vers les contributeurs ?</label>
+            <div class="col-xs-12">
+              <span class="form_info">Par contributeur, on entend les observateurs, les gestionnaires de site qui saisissent les données pour le grand public, etc.</span>
+            </div>
+            <div class="col-xs-12 mt-1">
+              <div>
+                <input type="radio" name="retours_prevus" id="retours_prevus-non">
+                <label for="retours_prevus-non">Non</label>
+              </div>
+              <div>
+                <input type="radio" name="retours_prevus" id="retours_prevus-oui">
+                <label for="retours_prevus-oui">Oui <small>- Préciser le lien url vers les résultats</small></label>
+                <div class="checked mt-1">
+                  <input type="text" class="form-control" name="retours_prevus-precisions">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-12">Où les données sont-elles stockées ?</label>
+            <div class="col-xs-12 mt-1">
+              {% set donnees = ['Base de données interne au projet', 'Base de données régionale', 'Autre'] %}
+              {% for donnee in donnees %}
+              <div>
+                <input type="radio" name="stockage-donnees" id="stockage-donnees-{{loop.index}}">
+                <label for="stockage-donnees-{{loop.index}}">{{ donnee }} {{ loop.index == loop.length ? '<small>- Précisez</small>'}}</label>
+                {% if loop.index == loop.length %}
+                <div class="checked mt-1">
+                  <input type="text" name="stockage-donnees-precisions" id="stockage-donnees-precisions" class="form-control">
+                </div>
+                {% endif %}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-12">L’observatoire s’inscrit-il dans le protocole SINP ? <small>Système d’Information Nature et Paysage</small></label>
+            <div class="col-xs-12 col-sm-10 mt-1">
+              <div class="multiple-radio-buttons">
+                {% set sinp = ['Tous', 'En partie', 'Non'] %}
+                {% for s in sinp %}
+                <div>
+                  <input type="radio" name="sinp" id="sinp-{{loop.index}}">
+                  <label for="sinp-{{loop.index}}">{{ s }}</label>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="step__title mt-4">Ressources</div>
+
+          <div class="form-group mt-4">
+            <label for="etp" class="control-label col-sm-4">Nombre d'ETP :</label>
+            <div class="col-sm-4 col-sm-offset-4">
+              <input type="number" class="form-control" name="etp">
+            </div>
+            <div class="col-xs-12">
+              <span class="form_info">Equivalent à une personne travaillant à temps plein.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="travailleurs" class="control-label col-sm-6">Nombre de personnes travaillant sur le projet :</label>
+            <div class="col-sm-4 col-sm-offset-2">
+              <input type="number" class="form-control" name="travailleurs">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-12">Budget annuel :</label>
+            <div class="col-xs-12">
+              <span class="form_info">Comprenant le coût salarial, les coûts techniques, les coûts de communication.</span>
+            </div>
+            <div class="col-xs-12 mt-1">
+              {% set budgets = [
+                'De 1 000 à 5 000 €',
+                'De 5 000 à 10 000 €',
+                'De 10 000 à 50 000 €',
+                'De 50 000 à 100 000 €',
+                'Plus de 100 000 €'
+              ] %}
+              {% for budget in budgets %}
+              <div>
+                <input type="checkbox" name="budget-{{loop.index}}" id="budget-{{loop.index}}">
+                <label for="budget-{{loop.index}}">{{ budget }}</label>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="partenaires" class="control-label col-xs-12">Partenaires financiers :</label>
+            <div class="col-xs-12 mt-1">
+              <textarea name="partenaires" id="partenaires" rows="4" class="form-control" placeholder="Nom des partenaires financiers du projet et si possible les informations sur la répartition financière (% Privé, % Public, % ONG). Limité à 500 caractères" maxlength="500"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-12">
+              <button type="submit" class="step-to btn btn-danger btn-lg pull-right">Je soumets mon observatoire</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+
+{%  endblock %}

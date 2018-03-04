@@ -1,0 +1,47 @@
+{% extends template_repo ~'/views/templates/default.html.twig' %} {# Template par defaut #}
+{% set title = 'Presse' %} {# Titre de la page - header-mea & tab du navigateur #}
+{% set imageHero = 'VisuelPresse.jpg' %} {# Nom de l'image pour le hero de la page #}
+
+{% block body %}
+
+  {# Content = Contient tout ce qui concerne le contenu des pages #}
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  {# Define tabs title #}
+  {% set tabsHeader = [
+    {'tag': 'dossiers', 'title': 'Dossiers de presse'},
+    {'tag': 'communiques', 'title': 'Communiqués de presse'},
+    {'tag': 'statistiques', 'title': 'Statistiques'},
+    {'tag': 'contacts', 'title': 'Contacts presse'}
+  ] %}
+  <ul class="nav nav-tabs nav-justified mt-5">
+    {# Tabs titles #}
+    {% for tab in tabsHeader %}
+    <li {{ loop.index == 1 ? 'class="active"' }}><a href="#{{tab.tag}}" data-toggle="tab" role="tab">{{tab.title | upper}}</a></li>
+    {% endfor %}
+  </ul>
+
+  {# Tabs content #}
+  <div class="tab-content">
+    {% for tab in tabsHeader %}
+    <div class="tab-pane fade {{ loop.index == 1 ? 'in active' }}" id="{{tab.tag}}">
+      <div class="presse">
+      {% for tab in 1..5 %}
+        <div class="panel">
+          <div class="row">
+            <div class="col-sm-10">
+              <a href="#" title="Titre {{loop.index}}">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+            </div>
+            <div class="col-sm-2 date"><em>{{ "now"|date("d/m/Y") }}</em></div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem amet est, omnis sit enim? Voluptatem quaerat iure magni provident? Quas, dolor, quibusdam. Mollitia ducimus, iste rem neque tempore, vero hic!</p>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <a href="ressources" class="btn btn-default btn-block mt-5" title="Accès aux ressources">Accès aux ressources</a>
+
+{%  endblock %}

@@ -1,0 +1,111 @@
+{% extends template_repo ~ '/views/templates/default.html.twig' %} {# Template par defaut #}
+{% set title = 'Demande d\'inscription pro au portail' %} {# Titre de la page - header-mea & tab du navigateur #}
+{% set imageHero = 'VisuelInscription.jpg' %} {# Nom de l'image pour le hero de la page #}
+
+{% block body %}
+
+  {# Content = Contient tout ce qui concerne le contenu des pages #}
+  <h3 class="text-center">Vous travaillez dans le domaine des Sciences Participatives en biodiversité ?</h3>
+  <p class="text-center">Animateur de programmes, coordinateur ou expert scientifique, collectif d’observateurs, institutions publiques, OPEN vous permet de référencer vos observatoires et/ou d’entrer en contact avec d’autres professionnels des Sciences Participatives en biodiversité.</p>
+
+  <form action="#" class="mt-3 inscription-form">
+    <div class="form-group">
+      <input type="text" class="form-control" name="name" id="name" placeholder="Nom">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prénom">
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm" placeholder="Confirmation mot de passe">
+    </div>
+
+    {# Definir les noms des structures existantes  #}
+    {# Ajouter la class has-error sur form-group et ajouter un span.help-block pour afficher l'erreur #}
+    <div class="form-group">
+      <input type="text" class="form-control" name="structure" id="structure" placeholder="Structure">
+      {# <span class="help-block">Texte d'erreur !</span> #}
+    </div>
+
+      {# Block visible si la structure n'existe pas #}
+      {# Ajouter la classe active au bloc create-structure pour qu'il soit visible #}
+      <div class="create-structure form-horizontal inputs-line active">
+        <div class="title">Nouvelle structure <i class="glyphicon glyphicon-chevron-down"></i></div>
+        <div class="form-group">
+          <label for="structure_nom" class="control-label col-sm-2">Nom de la structure :</label>
+          <div class="col-sm-10"><input type="text" id="structure_nom" name="structure_nom" class="form-control"></div>
+        </div>
+        <div class="form-group">
+          <label for="structure_type" class="control-label col-sm-2">Type de structure :</label>
+          <div class="col-sm-3">
+            <div class="select-wrapper">
+              <select class="form-control" id="structure_type" name="structure_type">
+                <option disabled selected>Choisir</option>
+                {% for structure_type in 1..5 %}
+                  <option value="{{ loop.index }}">Type de structure {{ loop.index }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="structure_adresse" class="control-label col-sm-2">Adresse :</label>
+          <div class="col-sm-10"><input type="text" id="structure_adresse" name="structure_adresse" class="form-control"></div>
+        </div>
+        <div class="form-group">
+          <label for="structure_cp" class="control-label col-sm-2">Code postal :</label>
+          <div class="col-sm-3"><input type="text" id="structure_cp" name="structure_cp" class="form-control" pattern="\d*"></div>
+        </div>
+        <div class="form-group">
+          <label for="structure_ville" class="control-label col-sm-2">Ville :</label>
+          <div class="col-sm-10"><input type="text" id="structure_ville" name="structure_ville" class="form-control"></div>
+        </div>
+        <div class="form-group">
+          <label for="structure_tel" class="control-label col-sm-2">Téléphone :</label>
+          <div class="col-sm-3"><input type="tel" id="structure_tel" name="structure_tel" class="form-control" pattern="\d*"></div>
+        </div>
+        <div class="form-group">
+          <label for="structure_site" class="control-label col-sm-2">Site web :</label>
+          <div class="col-sm-10"><input type="text" id="structure_site" name="structure_site" class="form-control"></div>
+        </div>
+        <div class="form-group">
+          <label for="structure_email-contact" class="control-label col-sm-3">Email du contact dans la structure :</label>
+          <div class="col-sm-9"><input type="text" id="structure_email-contact" name="structure_email-contact" class="form-control"></div>
+        </div>
+        <div class="form-group">
+          <label for="structure_description" class="control-label col-xs-12">Description de la structure :</label>
+          <div class="col-xs-12 mt-1">
+            <textarea name="structure_description" id="structure_description" rows="6" class="form-control" placeholder="Limité à 500 caractères" maxlength="500"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="structure_logo" class="control-label col-sm-1">Logo :</label>
+          <div class="col-sm-3">
+            <div class="file-wrapper">
+              <input type="file" name="structure_logo" id="structure_logo">
+              <label for="structure_logo">Télécharger</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {# Checbox validation CGU - Charte - Email visible #}
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" id="validation-cgu-charte" name="validation-cgu-charte"> Validation des <a href="conditions-generales">CGU</a> & de la <a href="charte-du-portail">Charte du Portail</a>
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" id="accept-mail-visibility" name="accept-mail-visibility"> J’accepte que mon email soit visible pour tous les autres membres pros du Portail
+      </label>
+    </div>
+    <button type="submit" name="button" class="btn btn-block btn-danger btn-lg mt-3">Je crée un compte pro</button>
+  </form>
+
+{%  endblock %}

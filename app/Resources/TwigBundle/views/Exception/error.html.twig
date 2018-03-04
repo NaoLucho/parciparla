@@ -1,0 +1,11 @@
+{# Template par defaut #}
+{% extends template_repo ~ '/views/templates/default.html.twig' %}
+
+{% block body %}
+    <h1>Une erreur est survenue:</h1>
+    <h2>Le site renvoi l'erreur "{{ status_code }} {{ status_text }}".</h2>
+    <p>
+        The requested page couldn't be located. Checkout for any URL
+        misspelling or <a href="{{ path('homepage') }}">return to the homepage</a>.
+    </p>
+{% endblock %}

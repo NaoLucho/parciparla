@@ -1,0 +1,11 @@
+<div class="page-hero">
+  {# {{imageHero}} #}
+  <img src="{{ (page.hearderImage is defined and page.headerImage is not null) ? asset( template_repo ~ '/assets/images/headers/' ~ page.headerImage ): asset( template_repo ~ '/assets/images/headers/VisuelPresse.jpg' )}}" alt="{{title is defined ? title}}">
+  {% if title is defined %}
+  <div class="page-hero__title">
+    <div class="container">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  {% endif %}
+</div>

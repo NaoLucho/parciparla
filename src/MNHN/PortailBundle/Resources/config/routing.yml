@@ -1,0 +1,132 @@
+homepage:
+    path: /
+    defaults: 
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /home
+        permanent: true
+
+portail_home:
+    path: /
+    defaults: 
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /home
+        permanent: true
+
+portail_homepage:
+    path: /homepage
+    defaults: 
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /home
+        permanent: true
+
+
+#DEFINIR NOS ROUTES ICI:
+
+mnhn_portail_structure:
+    path:     /structure
+    defaults: { _controller: MNHNPortailBundle:Structure\Structure:list }
+
+# mnhn_portail_ecosystem:
+#     path: /ecosysteme-sciences-participatives
+#     defaults: { _controller: MNHNPortailBundle:Ecosystem\Ecosystem:show, page: 1 }
+
+# mnhn_portail_ecosystem_page:
+#     path: /ecosysteme-sciences-participatives/page-{page}
+#     defaults: { _controller: MNHNPortailBundle:Ecosystem\Ecosystem:show, page: 1 }
+
+
+create_program:
+    path:     /program/
+    defaults: { _controller: MNHNPortailBundle:Program\Program:createByStep, step: 1 }
+
+create_program_by_step:
+    path:     /program/{step}
+    defaults: { _controller: MNHNPortailBundle:Program\Program:createByStep, step: 1  }
+
+create_program_next_step:
+    path:     /program/{step}/{id}
+    defaults: { _controller: MNHNPortailBundle:Program\Program:createByStep }
+
+mnhn_portail_contact:
+    path:     /sendEmail
+    defaults: { _controller: MNHNPortailBundle:Contact\Contact:contact }
+
+
+mnhn_program_detail:
+    path:     /fiche_programme/{id}
+    defaults: { _controller: MNHNPortailBundle:Program\Program:show }
+
+
+
+
+
+
+
+
+
+portail_template:
+    path: /template/{repo}/{slug}
+    defaults: { _controller: MNHNPortailBundle:Template:template}
+    
+# portail_basetemplate:
+#     path: /basetemplate
+#     defaults: { _controller: MNHNPortailBundle:Template:basetemplate}
+
+# mnhn_buildpage_old:
+#     path:      /page/{slug}
+#     defaults:  { _controller: MNHNPortailBundle:Template:buildPage, slug: "home" }
+#     requirements:
+#         slug: .+
+
+
+
+
+#V2: intégration directe du template_repo défini dans parameters.yml
+# mnhn_buildpage2:
+#     path:      /{slug}
+#     defaults:  { _controller: MNHNPortailBundle:Template:buildPage, slug: "home" }
+
+mnhn_loginpage:
+    path:     /login/page
+    defaults: { _controller: MNHNAdminBundle:Builder\BuildPage:buildPage, slug: "login" }
+
+mnhn_login:
+    path:     /login
+    # defaults: { _controller: MNHNAdminBundle:Builder\BuildPage:buildPage, slug: "login" }
+    # RENVOI vers la route de login de fosuserbundle
+
+mnhn_popup:
+    path:     /popup/{slug}
+    defaults: { _controller: MNHNAdminBundle:Builder\BuildContent:buildPageContent }
+
+# mnhn_buildpagev1:
+#     path:      /pagev1/{slug}
+#     defaults:
+#         _controller: MNHNAdminBundle:Builder\BuildPage:buildPageWithTemplate
+
+
+# mnhn_buildpagev0:
+#     path:      /pagev0/{slug}
+#     defaults:
+#         _controller: MNHNAdminBundle:Builder\BuildPage:buildFullPage
+#     # requirements:
+#     #     id: \d+
+
+mnhn_buildpagedetails:
+    path:      /details/{slug}
+    defaults:
+        _controller: MNHNAdminBundle:Builder\BuildPage:buildPageDetails
+
+
+mnhn_buildpageid:
+    path:      /{slug}/{id}
+    defaults:
+        _controller: MNHNAdminBundle:Builder\BuildPage:buildPage
+
+
+#MAIN ROUTE ALL MATCH:
+mnhn_buildpage:
+    path:      /{slug}/
+    defaults:  { _controller: MNHNAdminBundle:Builder\BuildPage:buildPage, slug: "home" }
+    # requirements:
+    #     slug: .+

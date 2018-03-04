@@ -1,0 +1,4 @@
+services:
+#    mnhn_admin.example:
+#        class: MNHN\AdminBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
