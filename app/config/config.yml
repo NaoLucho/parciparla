@@ -7,7 +7,7 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
-    structure_logo_route: '%image_prefix%/logo_structure'
+    #structure_logo_route: '%image_prefix%/logo_structure'
 
 framework:
     #esi: ~
@@ -44,10 +44,10 @@ twig:
     form_themes:
         - 'SonataCoreBundle:Form:datepicker.html.twig'
         - 'bootstrap_3_layout.html.twig'
-        - 'MNHNPortailBundle:Form:fields.html.twig'
+        #- 'SiteBundle:Form:fields.html.twig'
     globals:
         template_repo: %template_repo%
-        js_vars: "@mnhn_portail.js_vars"
+        #js_vars: "@mnhn_portail.js_vars"
         fos_csrf_provider: "@security.csrf.token_manager"
 
 # Doctrine Configuration
@@ -67,12 +67,6 @@ doctrine:
             point:      CrEOF\Spatial\DBAL\Types\Geometry\PointType
             polygon:    CrEOF\Spatial\DBAL\Types\Geometry\PolygonType
             linestring: CrEOF\Spatial\DBAL\Types\Geometry\LineStringType
-        # if using pdo_sqlite as your database driver:
-        #   1. add the path in parameters.yml
-        #     e.g. database_path: "%kernel.project_dir%/var/data/data.sqlite"
-        #   2. Uncomment database_path in parameters.yml.dist
-        #   3. Uncomment next line:
-        #path: '%database_path%'
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
@@ -202,7 +196,7 @@ sonata_block:
             contexts:   [admin]
 
 sonata_admin:
-    title:      Portail
+    title:       Admin
     security:
         handler: sonata.admin.security.handler.role
 
@@ -283,36 +277,36 @@ vich_uploader:
             namer:              vich_uploader.namer_origname
             delete_on_update: true
             delete_on_remove: true
-        structure_logo_image:
-            uri_prefix:         '%structure_logo_route%'
-            upload_destination: '%kernel.root_dir%/../web/uploads/img/logo_structure'
-            namer:              vich_uploader.namer_origname
-            delete_on_update: true
-            delete_on_remove: true
-        program_logo_image:
-            uri_prefix:         '%image_prefix%/program/logo_progam'
-            upload_destination: '%kernel.root_dir%/../web/uploads/img/program/logo_progam'
-            namer:              vich_uploader.namer_origname
-            delete_on_update: true
-            delete_on_remove: true
-        program_photo_image:
-            uri_prefix:         '%image_prefix%/program/photo_progam'
-            upload_destination: '%kernel.root_dir%/../web/uploads/img/program/photo_progam'
-            namer:              vich_uploader.namer_origname
-            delete_on_update: true
-            delete_on_remove: true
-        partners_image:
-            uri_prefix:         '%image_prefix%/program/logo_partner'
-            upload_destination: '%kernel.root_dir%/../web/uploads/img/program/logo_partner'
-            namer:              vich_uploader.namer_origname
-            delete_on_update: true
-            delete_on_remove: true
-        program_results_pdf:
-            uri_prefix:         '%image_prefix%/program/results_pdf'
-            upload_destination: '%kernel.root_dir%/../web/uploads/img/program/results_pdf'
-            namer:              vich_uploader.namer_origname
-            delete_on_update: true
-            delete_on_remove: true
+        # structure_logo_image:
+        #     uri_prefix:         '%structure_logo_route%'
+        #     upload_destination: '%kernel.root_dir%/../web/uploads/img/logo_structure'
+        #     namer:              vich_uploader.namer_origname
+        #     delete_on_update: true
+        #     delete_on_remove: true
+        # program_logo_image:
+        #     uri_prefix:         '%image_prefix%/program/logo_progam'
+        #     upload_destination: '%kernel.root_dir%/../web/uploads/img/program/logo_progam'
+        #     namer:              vich_uploader.namer_origname
+        #     delete_on_update: true
+        #     delete_on_remove: true
+        # program_photo_image:
+        #     uri_prefix:         '%image_prefix%/program/photo_progam'
+        #     upload_destination: '%kernel.root_dir%/../web/uploads/img/program/photo_progam'
+        #     namer:              vich_uploader.namer_origname
+        #     delete_on_update: true
+        #     delete_on_remove: true
+        # partners_image:
+        #     uri_prefix:         '%image_prefix%/program/logo_partner'
+        #     upload_destination: '%kernel.root_dir%/../web/uploads/img/program/logo_partner'
+        #     namer:              vich_uploader.namer_origname
+        #     delete_on_update: true
+        #     delete_on_remove: true
+        # program_results_pdf:
+        #     uri_prefix:         '%image_prefix%/program/results_pdf'
+        #     upload_destination: '%kernel.root_dir%/../web/uploads/img/program/results_pdf'
+        #     namer:              vich_uploader.namer_origname
+        #     delete_on_update: true
+        #     delete_on_remove: true
         carousel_image:
             uri_prefix:         '%image_prefix%/carousel/'
             upload_destination: '%kernel.root_dir%/../web/uploads/img/carousel'

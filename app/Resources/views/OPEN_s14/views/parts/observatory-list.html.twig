@@ -20,7 +20,7 @@
                     <div class="media">
                         <div class="media-left">
                             {% if item.programid is defined %}
-                                <a href="{{ path('mnhn_buildpageid', { 'slug': 'fiche_observatoire', 'id': item.programid }) }}"><img src="{{ vich_uploader_asset(item.program, 'logoFile') }}" alt="{{ item.structure }}" style="width:120px"></a>
+                                <a href="{{ path('site_buildpageid', { 'slug': 'fiche_observatoire', 'id': item.programid }) }}"><img src="{{ vich_uploader_asset(item.program, 'logoFile') }}" alt="{{ item.structure }}" style="width:120px"></a>
                             {% else %}
                                 <a href="{{ item.path }}"><img src="{{ item.thumbnail }}" alt="{{ item.title }}" style="width:120px"></a>
                             {% endif %}
@@ -28,7 +28,7 @@
                         <div class="media-body">
                             <h4 class="media-heading">
                                 {% if item.programid is defined %}
-                                    <a href="{{ path('mnhn_buildpageid', { 'slug': 'fiche_observatoire', 'id': item.programid }) }}">{{ item.title }}</a>
+                                    <a href="{{ path('site_buildpageid', { 'slug': 'fiche_observatoire', 'id': item.programid }) }}">{{ item.title }}</a>
                                 {% else %}
                                     <a href="{{ item.path }}">{{ item.title }}</a>
                                 {% endif %}
@@ -136,14 +136,14 @@
             <ul class="pagination text-center">
                 {% for page in 1..pages %}
                     <li>
-                        <a href="{{ path('mnhn_buildpage', {'slug':'ecosysteme-sciences-participatives','page': page })}}">{{ loop.index }}</a>{{ loop.index != loop.length ? '-'}}</li>
+                        <a href="{{ path('site_buildpage', {'slug':'ecosysteme-sciences-participatives','page': page })}}">{{ loop.index }}</a>{{ loop.index != loop.length ? '-'}}</li>
                 {% endfor %}
             </ul>
         </nav>
     {% endif %}
 
     {% if isblock is defined %}
-        <a href="{{ path('mnhn_buildpage', {'slug':'ecosysteme-sciences-participatives'})}}" class="btn btn-default mt-2 pull-right" title="Voir tous les observatoires">Voir tous les observatoires</a>
+        <a href="{{ path('site_buildpage', {'slug':'ecosysteme-sciences-participatives'})}}" class="btn btn-default mt-2 pull-right" title="Voir tous les observatoires">Voir tous les observatoires</a>
         <span class="clearfix"></span>
     {% endif %}
 </div>

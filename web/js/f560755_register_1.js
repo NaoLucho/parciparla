@@ -1,8 +1,15 @@
 // keep track of how many owned structures have been rendered
 var structureCount = 0;
+var latInput, longInput, addressNameID, CPID, cityID;
 
 jQuery(document).ready(function() {
     $('#add_structure').click(function (e) {
+
+        latInput = '#fos_user_registration_form_ownedStructures_0_latitude';
+        longInput = '#fos_user_registration_form_ownedStructures_0_longitude';
+        addressNameID = '#fos_user_registration_form_ownedStructures_0_address';
+        CPID = '#fos_user_registration_form_ownedStructures_0_postalCode';
+        cityID = '#fos_user_registration_form_ownedStructures_0_city';
 
         $('#add_structure').hide();
         $('#structure_list_container').hide();
@@ -16,17 +23,53 @@ jQuery(document).ready(function() {
         // grab the prototype template
         var newWidget = structureList.attr('data-prototype');
         // replace the "__name__" used in the id and name of the prototype
-        // with a number that's unique to your emails
-        // end name attribute looks like name="contact[emails][2]"
+        // with a number that's unique to your structure
         newWidget = newWidget.replace(/__name__/g, structureCount);
         structureCount++;
 
         // create a new list element and add it to the list
-        var newLi = $('<li></li>').html(newWidget);
-        newLi.appendTo(structureList);
-        structureList.find('li').each(function() {
+        var newStructure = $('<div class="newstructure"></div>').html(newWidget);
+        newStructure.appendTo(structureList);
+        structureList.find('.newstructure').each(function() {
             addDeleteLink($(this));
         });
+
+
+        // Garder la premièer 
+        // fonction car elle permet d'actualiser la target si elle a été précédemment générée puis 
+        // détruite (sinon la map n'apparaitra pas dans la target)
+        map.setTarget('');
+        map.setTarget('map');
+
+        $('#map_search_button').click(function(event) {
+
+            event.preventDefault();
+
+            var coordinates = searchCoordinates(setCoordinates);
+
+            
+            
+
+            // lat.val(coordinates.lat);
+            // long.val(coordinates.long);
+
+            // console.log(coordinates);
+        });
+
+        $('[name=creecomptepro]').click(function(event) {
+            event.preventDefault();
+            var coordinates = searchCoordinates(setCoordinates);
+        });
+
+        $('#fos_user_registration_form_ownedStructures_0_imageFile').on('change', function (e) {
+            console.log('flop');
+            var label = $('label[for="' + $(this).attr('id') + '"]');
+            tab = this.value.split("\\");
+            var html = tab[tab.length - 1];
+            label.html('Logo: ' + html);
+        });
+        
+
     });
 
     function addDeleteLink(form) {
@@ -54,13 +97,13 @@ jQuery(document).ready(function() {
 
     $(".taxon-field").select2({
         tags: true,
+        placeholder: "Mes taxons étudiés",
         createTag: function (params) {
             var term = $.trim(params.term);
 
             if (term === '') {
                 return null;
             }
-            console.log(term);
 
             return {
                 id: term,
@@ -72,6 +115,7 @@ jQuery(document).ready(function() {
 
     $(".theme-field").select2({
         tags: true,
+        placeholder: "Mes thématiques étudiées",
         createTag: function (params) {
             var term = $.trim(params.term);
 
@@ -136,6 +180,16 @@ jQuery(document).ready(function() {
             }
         });
     });
+
+    
+
+    $('#fos_user_registration_form_imageFile').on('change', function(e) {
+        var label = $('label[for="' + $(this).attr('id') + '"]');
+        tab = this.value.split("\\");
+        var html = tab[tab.length-1];
+        label.html('Avatar: ' + html);
+    });
+
 
     //Récupère l'indice de l'enfant html qui détient le titre
     function checkHTMLchildren(html, searchedClass) {

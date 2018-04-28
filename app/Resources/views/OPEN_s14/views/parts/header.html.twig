@@ -3,8 +3,8 @@
     <div class="brand">
       {# Logo #}
       <a href="{{path('homepage')}}" class="logo">
-        <span>Open</span>
-        <span>Observatoires participatifs des espèces et de la nature</span>
+        <span>Perso</span>
+        <span>Site perso pour créer un site</span>
       </a>
       {# Fin du Logo #}
       <a href="#" class="toggleMenu hidden-md hidden-lg">
@@ -20,7 +20,7 @@
       </a>
       <ul>
         {# Liens pour le menu principal #}
-        {{ render(controller("MNHNAdminBundle:Builder/BuildContent:menuPrincipal", {'menuName': 'Principal'})) }}
+        {{ render(controller("BuilderBundle:Builder/BuildContent:menuPrincipal", {'menuName': 'Principal'})) }}
         {# Pour l'integrateur du design desativer le render controller ci-dessus et activer l'include ci-dessous #}
         {# {% include  template_repo ~ "/views/parts/main-menu.html.twig" %}  #}
       </ul>

@@ -66,7 +66,7 @@ class StructureAdmin extends AbstractAdmin
         //     ))
         //     ->add('structureType', EntityType::class, array(
         //         'required' => true,
-        //         'class' => 'MNHNAdminBundle:G_ListItem',
+        //         'class' => 'BuilderBundle:G_ListItem',
         //         'placeholder' => "...",
         //         'query_builder' => function (EntityRepository $er) {
         //             return $er->createQueryBuilder('listitem')

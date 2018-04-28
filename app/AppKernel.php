@@ -54,7 +54,7 @@ class AppKernel extends Kernel
 
             //Bundles fait maison
             new MNHN\PortailBundle\MNHNPortailBundle(),
-            new MNHN\AdminBundle\MNHNAdminBundle(),
+            new BuilderBundle\BuilderBundle(),
 
             //Gestion des fichiers CSS et JS (Assetic)
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),

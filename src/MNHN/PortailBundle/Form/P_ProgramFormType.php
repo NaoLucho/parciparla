@@ -5,7 +5,7 @@ namespace MNHN\PortailBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use MNHN\AdminBundle\Utils\Form\FormBuilder;
+use BuilderBundle\Utils\Form\FormBuilder;
 
 // PERMET DE CREER LE FORMULAIRE Program avec le builder
 class P_ProgramFormType extends AbstractType

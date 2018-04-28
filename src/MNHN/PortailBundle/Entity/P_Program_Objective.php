@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * Menu
  *
  * @ORM\Table(name="p_program_objective")
- * @ORM\Entity(repositoryClass="MNHN\AdminBundle\Repository\P_Program_ObjectiveRepository")
+ * @ORM\Entity(repositoryClass="BuilderBundle\Repository\P_Program_ObjectiveRepository")
  */
 class P_Program_Objective
 {
@@ -31,7 +31,7 @@ class P_Program_Objective
     protected $program;
     
     /**
-    * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+    * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
     * @ORM\JoinColumn(name="objective_id", referencedColumnName="id", nullable=false)
     */ //G_List: networkObs
     protected $objective;
@@ -107,11 +107,11 @@ class P_Program_Objective
     /**
      * Set objective
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $objective
+     * @param \BuilderBundle\Entity\G_ListItem $objective
      *
      * @return P_Program_Objective
      */
-    public function setObjective(\MNHN\AdminBundle\Entity\G_ListItem $objective)
+    public function setObjective(\BuilderBundle\Entity\G_ListItem $objective)
     {
         $this->objective = $objective;
 
@@ -121,7 +121,7 @@ class P_Program_Objective
     /**
      * Get objective
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getObjective()
     {

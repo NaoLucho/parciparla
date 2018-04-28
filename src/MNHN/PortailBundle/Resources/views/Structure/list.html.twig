@@ -37,8 +37,8 @@
                         <div class="col-xs-1 col-sm-2 col-md-2 index">{{ loop.index }}</div>
                         <div class="col-xs-3 col-sm-2 col-md-2 index">{{ structure.name }}</div>
                         <div class="col-xs-4 col-sm-3 col-md-4 center"><img src="{{ vich_uploader_asset(structure, 'imageFile') }}" alt="{{ loop.index }}" class="img-thumb-structure"></div>
-                        <div class="col-xs-4 hidden-xs"><a href="{{ path('mnhn_buildpage', { 'slug': 'fiche_structure', 'id': structure.id }) }}">Voir la fiche structure <i class="glyphicon glyphicon-chevron-right"></i></a></div>
-                        <div class="col-xs-4 hidden-sm hidden-md hidden-lg"><a href="{{ path('mnhn_buildpage', { 'slug': 'fiche_structure', 'id': structure.id }) }}">Voir <i class="glyphicon glyphicon-chevron-right"></i></a></div>
+                        <div class="col-xs-4 hidden-xs"><a href="{{ path('site_buildpage', { 'slug': 'fiche_structure', 'id': structure.id }) }}">Voir la fiche structure <i class="glyphicon glyphicon-chevron-right"></i></a></div>
+                        <div class="col-xs-4 hidden-sm hidden-md hidden-lg"><a href="{{ path('site_buildpage', { 'slug': 'fiche_structure', 'id': structure.id }) }}">Voir <i class="glyphicon glyphicon-chevron-right"></i></a></div>
                     </div>
                 </li>
             {% endfor %}

@@ -75,7 +75,7 @@ class RegistrationController extends BaseController
                 $userManager->updateUser($user);
 
                 if (null === $response = $event->getResponse()) {
-                    // $url = $this->generateUrl('mnhn_buildpage', array(
+                    // $url = $this->generateUrl('site_buildpage', array(
                     //     'slug' => 'register/confirmed'
                     // ));
                     // $response = new RedirectResponse($url);

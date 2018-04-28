@@ -37,7 +37,7 @@ class P_Structure
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_structure_type", referencedColumnName="id", nullable=true)
      * //G_LIST: structureType
      */

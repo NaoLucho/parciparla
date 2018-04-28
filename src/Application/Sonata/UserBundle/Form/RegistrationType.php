@@ -14,8 +14,8 @@ use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use MNHN\PortailBundle\Form\P_StructureFormType;
-use MNHN\AdminBundle\Entity\G_List;
-use MNHN\AdminBundle\Entity\G_ListItem;
+use BuilderBundle\Entity\G_List;
+use BuilderBundle\Entity\G_ListItem;
 use MNHN\PortailBundle\Entity\P_Structure;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -64,7 +64,7 @@ class RegistrationType extends AbstractType
         // ])
         // ->add('theme', EntityType::class, array(
         //     'required' => false,
-        //     'class' => 'MNHNAdminBundle:G_ListItem',
+        //     'class' => 'BuilderBundle:G_ListItem',
         //     'label' => 'Mes thématiques étudiées',
         //     'query_builder' => function (EntityRepository $er) {
         //         return $er->createQueryBuilder('listitem')
@@ -81,7 +81,7 @@ class RegistrationType extends AbstractType
         // ))
         // ->add('taxon', 'entity', array(
         //     'required' => false,
-        //     'class' => 'MNHNAdminBundle:G_ListItem',
+        //     'class' => 'BuilderBundle:G_ListItem',
         //     'label' => 'Mes taxons étudiées',
         //     'query_builder' => function (EntityRepository $er) {
         //         return $er->createQueryBuilder('listitem')

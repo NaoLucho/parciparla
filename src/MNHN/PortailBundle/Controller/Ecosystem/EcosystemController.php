@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\Expr\Expression;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use MNHN\AdminBundle\Controller\Builder\Utils;
+use BuilderBundle\Controller\Builder\Utils;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
 

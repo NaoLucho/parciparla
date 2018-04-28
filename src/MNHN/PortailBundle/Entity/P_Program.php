@@ -98,7 +98,7 @@ class P_Program
     private $videoLink;
 
     /** Votre observatoire est-il ?
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_status", referencedColumnName="id" ) //nullable=false
      * ___Assert\NotBlank(groups={"program_step1"})
      * ___Assert\Valid(groups={"program_step1"})
@@ -129,46 +129,46 @@ class P_Program
     protected $objectives;
     
     // /**
-    //  * @ORM\ManyToMany(targetEntity="MNHN\AdminBundle\Entity\G_ListItem", cascade={"persist"})
+    //  * @ORM\ManyToMany(targetEntity="BuilderBundle\Entity\G_ListItem", cascade={"persist"})
     //  * @ORM\JoinTable(name="p_program_objectives1")
     //  */ //G_List: program_objectives
     // private $objectives1; //Obligatoire (1 min)
 
     // /** Thème(s) abordé(s)
-    //  * @ORM\ManyToMany(targetEntity="MNHN\AdminBundle\Entity\G_ListItem", cascade={"persist"})
+    //  * @ORM\ManyToMany(targetEntity="BuilderBundle\Entity\G_ListItem", cascade={"persist"})
     //  * @ORM\JoinTable(name="p_program_objectives2")
     //  */ //G_List: program_objectives
     // private $objectives2; //Obligatoire (1 min)
 
     // /**
-    //  * @ORM\ManyToMany(targetEntity="MNHN\AdminBundle\Entity\G_ListItem", cascade={"persist"})
+    //  * @ORM\ManyToMany(targetEntity="BuilderBundle\Entity\G_ListItem", cascade={"persist"})
     //  * @ORM\JoinTable(name="p_program_objectives3")
     //  */ //G_List: program_objectives
     // private $objectives3; //Obligatoire (1 min)
 
     /** Thème(s) abordé(s)
-     * @ORM\ManyToMany(targetEntity="MNHN\AdminBundle\Entity\G_ListItem", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="BuilderBundle\Entity\G_ListItem", cascade={"persist"})
      * @ORM\JoinTable(name="p_program_themes")
      * ___Assert\Count(min=1, groups={"program_step1"})
      */ //G_List: themes
     private $themes; //Obligatoire (1 min)
 
     /** Groupe(s) étudié(s) 
-     * @ORM\ManyToMany(targetEntity="MNHN\AdminBundle\Entity\G_ListItem", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="BuilderBundle\Entity\G_ListItem", cascade={"persist"})
      * @ORM\JoinTable(name="p_program_taxons")
      * ___Assert\Count(min=1, groups={"program_step1"})
      */ //G_List: taxons
     private $taxons; //Obligatoire (1 min) //Checklist avec parent: A VOIR SI ON LE FAIT DANS G_ListItem:parent
     
     /** Accessibilité de l’observatoire
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_accessibility", referencedColumnName="id" ) //nullable=false
      * ___Assert\NotBlank(groups={"program_step1"})
      */ //G_List: program_accessibility
     private $accessibility; //Obligatoire
     
     /** Saisonnalité
-     * @ORM\ManyToMany(targetEntity="MNHN\AdminBundle\Entity\G_ListItem", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="BuilderBundle\Entity\G_ListItem", cascade={"persist"})
      * @ORM\JoinTable(name="p_program_seasons")
      * ___Assert\Count(min=1, groups={"program_step1"})
      */ //G_List: seasons
@@ -270,7 +270,7 @@ class P_Program
     //  * @__ORM\JoinColumn(name="structure_network_obs")
     //  */
     /**
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_network_obs", referencedColumnName="id", nullable=true)
      */ //G_List: networkObs
     private $networkObs;
@@ -308,7 +308,7 @@ class P_Program
 
     //Durée du programme
     /**
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_program_duration", referencedColumnName="id" ) //nullable=false
      * ___Assert\NotBlank(groups={"program_step4"})
      */ //G_List: program_duration
@@ -347,13 +347,13 @@ class P_Program
 
 
     /** En moyenne, combien d’années participent un observateur ?
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_suscriber_duration_moy", referencedColumnName="id", nullable=true)
      */ //G_List: suscriberDuration => < 1 an/1 à 3 ans/> 3 ans
     private $suscriberDurationMoy;
 
     /** Evolution générale du programme par rapport à l’année précédente (qualitatif)
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_program_quality_evolution", referencedColumnName="id", nullable=true)
      */ //G_List: programQualityEvolution => Croissance/Décroissance/Stabilité
     private $programQualityEvolution;
@@ -361,13 +361,13 @@ class P_Program
     //BLOCK PROTOTCOLE
 
     /** Qui valide les données ?
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_program_data_validator", referencedColumnName="id", nullable=true)
      */ //G_List: programDataAnalists => structure animatrice du projet/les participants/experts valideurs/partenaire scientifique
     private $programDataValidator;
 
     /** Qui analyse les données ?
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_program_data_analyser", referencedColumnName="id", nullable=true)
      */ //G_List: programDataAnalists => structure animatrice du projet/les participants/experts valideurs/partenaire scientifique
     private $programDataAnalyser;
@@ -376,7 +376,7 @@ class P_Program
     //BLOCK DONNEES
 
     /** Sous quelle forme sont restituées les données ? 
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_program_data_format", referencedColumnName="id", nullable=true)
      */ //G_List: programDataFormat => Brutes/Synthèses
     private $programDataFormat;
@@ -397,7 +397,7 @@ class P_Program
     //base de données interne au projet OU base de donnés régionale OU autre (texte)
 
     /** Le programme s’inscrit-il dans le protocole SINP ?
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_protocol_sinp", referencedColumnName="id", nullable=true)
      */ //G_List: protocolSINP => tout/en partie/non
     private $protocolSINP;
@@ -419,7 +419,7 @@ class P_Program
     private $nbWorkingPersons;
 
     /** Budget annuel 
-     * @ORM\ManyToOne(targetEntity="MNHN\AdminBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_program_annual_budget", referencedColumnName="id", nullable=true)
      */ //G_List: annualBudget => De 1 000 à 5 000€/De 5 000 à 10 000€/De 10 000 à 50 000€/De 50 000 à 100 000€/Plus de 100 000€
     private $annualBudget;
@@ -1061,11 +1061,11 @@ class P_Program
     /**
      * Set status
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $status
+     * @param \BuilderBundle\Entity\G_ListItem $status
      *
      * @return P_Program
      */
-    public function setStatus(\MNHN\AdminBundle\Entity\G_ListItem $status = null)
+    public function setStatus(\BuilderBundle\Entity\G_ListItem $status = null)
     {
         $this->status = $status;
 
@@ -1075,7 +1075,7 @@ class P_Program
     /**
      * Get status
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getStatus()
     {
@@ -1085,11 +1085,11 @@ class P_Program
     // /**
     //  * Add objectives1
     //  *
-    //  * @param \MNHN\AdminBundle\Entity\G_ListItem $objectives1
+    //  * @param \BuilderBundle\Entity\G_ListItem $objectives1
     //  *
     //  * @return P_Program
     //  */
-    // public function addObjectives1(\MNHN\AdminBundle\Entity\G_ListItem $objectives1)
+    // public function addObjectives1(\BuilderBundle\Entity\G_ListItem $objectives1)
     // {
     //     $this->objectives1[] = $objectives1;
 
@@ -1099,9 +1099,9 @@ class P_Program
     // /**
     //  * Remove objectives1
     //  *
-    //  * @param \MNHN\AdminBundle\Entity\G_ListItem $objectives1
+    //  * @param \BuilderBundle\Entity\G_ListItem $objectives1
     //  */
-    // public function removeObjectives1(\MNHN\AdminBundle\Entity\G_ListItem $objectives1)
+    // public function removeObjectives1(\BuilderBundle\Entity\G_ListItem $objectives1)
     // {
     //     $this->objectives1->removeElement($objectives1);
     // }
@@ -1119,11 +1119,11 @@ class P_Program
     // /**
     //  * Add objectives2
     //  *
-    //  * @param \MNHN\AdminBundle\Entity\G_ListItem $objectives2
+    //  * @param \BuilderBundle\Entity\G_ListItem $objectives2
     //  *
     //  * @return P_Program
     //  */
-    // public function addObjectives2(\MNHN\AdminBundle\Entity\G_ListItem $objectives2)
+    // public function addObjectives2(\BuilderBundle\Entity\G_ListItem $objectives2)
     // {
     //     $this->objectives2[] = $objectives2;
 
@@ -1133,9 +1133,9 @@ class P_Program
     // /**
     //  * Remove objectives2
     //  *
-    //  * @param \MNHN\AdminBundle\Entity\G_ListItem $objectives2
+    //  * @param \BuilderBundle\Entity\G_ListItem $objectives2
     //  */
-    // public function removeObjectives2(\MNHN\AdminBundle\Entity\G_ListItem $objectives2)
+    // public function removeObjectives2(\BuilderBundle\Entity\G_ListItem $objectives2)
     // {
     //     $this->objectives2->removeElement($objectives2);
     // }
@@ -1153,11 +1153,11 @@ class P_Program
     // /**
     //  * Add objectives3
     //  *
-    //  * @param \MNHN\AdminBundle\Entity\G_ListItem $objectives3
+    //  * @param \BuilderBundle\Entity\G_ListItem $objectives3
     //  *
     //  * @return P_Program
     //  */
-    // public function addObjectives3(\MNHN\AdminBundle\Entity\G_ListItem $objectives3)
+    // public function addObjectives3(\BuilderBundle\Entity\G_ListItem $objectives3)
     // {
     //     $this->objectives3[] = $objectives3;
 
@@ -1167,9 +1167,9 @@ class P_Program
     // /**
     //  * Remove objectives3
     //  *
-    //  * @param \MNHN\AdminBundle\Entity\G_ListItem $objectives3
+    //  * @param \BuilderBundle\Entity\G_ListItem $objectives3
     //  */
-    // public function removeObjectives3(\MNHN\AdminBundle\Entity\G_ListItem $objectives3)
+    // public function removeObjectives3(\BuilderBundle\Entity\G_ListItem $objectives3)
     // {
     //     $this->objectives3->removeElement($objectives3);
     // }
@@ -1187,11 +1187,11 @@ class P_Program
     /**
      * Add theme
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $theme
+     * @param \BuilderBundle\Entity\G_ListItem $theme
      *
      * @return P_Program
      */
-    public function addTheme(\MNHN\AdminBundle\Entity\G_ListItem $theme)
+    public function addTheme(\BuilderBundle\Entity\G_ListItem $theme)
     {
         $this->themes[] = $theme;
 
@@ -1201,9 +1201,9 @@ class P_Program
     /**
      * Remove theme
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $theme
+     * @param \BuilderBundle\Entity\G_ListItem $theme
      */
-    public function removeTheme(\MNHN\AdminBundle\Entity\G_ListItem $theme)
+    public function removeTheme(\BuilderBundle\Entity\G_ListItem $theme)
     {
         $this->themes->removeElement($theme);
     }
@@ -1221,11 +1221,11 @@ class P_Program
     /**
      * Set accessibility
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $accessibility
+     * @param \BuilderBundle\Entity\G_ListItem $accessibility
      *
      * @return P_Program
      */
-    public function setAccessibility(\MNHN\AdminBundle\Entity\G_ListItem $accessibility = null)
+    public function setAccessibility(\BuilderBundle\Entity\G_ListItem $accessibility = null)
     {
         $this->accessibility = $accessibility;
 
@@ -1235,7 +1235,7 @@ class P_Program
     /**
      * Get accessibility
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getAccessibility()
     {
@@ -1245,11 +1245,11 @@ class P_Program
     /**
      * Add season
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $season
+     * @param \BuilderBundle\Entity\G_ListItem $season
      *
      * @return P_Program
      */
-    public function addSeason(\MNHN\AdminBundle\Entity\G_ListItem $season)
+    public function addSeason(\BuilderBundle\Entity\G_ListItem $season)
     {
         $this->seasons[] = $season;
 
@@ -1259,9 +1259,9 @@ class P_Program
     /**
      * Remove season
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $season
+     * @param \BuilderBundle\Entity\G_ListItem $season
      */
-    public function removeSeason(\MNHN\AdminBundle\Entity\G_ListItem $season)
+    public function removeSeason(\BuilderBundle\Entity\G_ListItem $season)
     {
         $this->seasons->removeElement($season);
     }
@@ -1361,11 +1361,11 @@ class P_Program
     /**
      * Set networkObs
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $networkObs
+     * @param \BuilderBundle\Entity\G_ListItem $networkObs
      *
      * @return P_Program
      */
-    public function setNetworkObs(\MNHN\AdminBundle\Entity\G_ListItem $networkObs = null)
+    public function setNetworkObs(\BuilderBundle\Entity\G_ListItem $networkObs = null)
     {
         $this->networkObs = $networkObs;
 
@@ -1375,7 +1375,7 @@ class P_Program
     /**
      * Get networkObs
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getNetworkObs()
     {
@@ -1419,11 +1419,11 @@ class P_Program
     /**
      * Set programDuration
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $programDuration
+     * @param \BuilderBundle\Entity\G_ListItem $programDuration
      *
      * @return P_Program
      */
-    public function setProgramDuration(\MNHN\AdminBundle\Entity\G_ListItem $programDuration = null)
+    public function setProgramDuration(\BuilderBundle\Entity\G_ListItem $programDuration = null)
     {
         $this->programDuration = $programDuration;
 
@@ -1433,7 +1433,7 @@ class P_Program
     /**
      * Get programDuration
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getProgramDuration()
     {
@@ -1443,11 +1443,11 @@ class P_Program
     /**
      * Set suscriberDurationMoy
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $suscriberDurationMoy
+     * @param \BuilderBundle\Entity\G_ListItem $suscriberDurationMoy
      *
      * @return P_Program
      */
-    public function setSuscriberDurationMoy(\MNHN\AdminBundle\Entity\G_ListItem $suscriberDurationMoy = null)
+    public function setSuscriberDurationMoy(\BuilderBundle\Entity\G_ListItem $suscriberDurationMoy = null)
     {
         $this->suscriberDurationMoy = $suscriberDurationMoy;
 
@@ -1457,7 +1457,7 @@ class P_Program
     /**
      * Get suscriberDurationMoy
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getSuscriberDurationMoy()
     {
@@ -1467,11 +1467,11 @@ class P_Program
     /**
      * Set programQualityEvolution
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $programQualityEvolution
+     * @param \BuilderBundle\Entity\G_ListItem $programQualityEvolution
      *
      * @return P_Program
      */
-    public function setProgramQualityEvolution(\MNHN\AdminBundle\Entity\G_ListItem $programQualityEvolution = null)
+    public function setProgramQualityEvolution(\BuilderBundle\Entity\G_ListItem $programQualityEvolution = null)
     {
         $this->programQualityEvolution = $programQualityEvolution;
 
@@ -1481,7 +1481,7 @@ class P_Program
     /**
      * Get programQualityEvolution
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getProgramQualityEvolution()
     {
@@ -1491,11 +1491,11 @@ class P_Program
     /**
      * Set programDataValidator
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $programDataValidator
+     * @param \BuilderBundle\Entity\G_ListItem $programDataValidator
      *
      * @return P_Program
      */
-    public function setProgramDataValidator(\MNHN\AdminBundle\Entity\G_ListItem $programDataValidator = null)
+    public function setProgramDataValidator(\BuilderBundle\Entity\G_ListItem $programDataValidator = null)
     {
         $this->programDataValidator = $programDataValidator;
 
@@ -1505,7 +1505,7 @@ class P_Program
     /**
      * Get programDataValidator
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getProgramDataValidator()
     {
@@ -1515,11 +1515,11 @@ class P_Program
     /**
      * Set programDataAnalyser
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $programDataAnalyser
+     * @param \BuilderBundle\Entity\G_ListItem $programDataAnalyser
      *
      * @return P_Program
      */
-    public function setProgramDataAnalyser(\MNHN\AdminBundle\Entity\G_ListItem $programDataAnalyser = null)
+    public function setProgramDataAnalyser(\BuilderBundle\Entity\G_ListItem $programDataAnalyser = null)
     {
         $this->programDataAnalyser = $programDataAnalyser;
 
@@ -1529,7 +1529,7 @@ class P_Program
     /**
      * Get programDataAnalyser
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getProgramDataAnalyser()
     {
@@ -1539,11 +1539,11 @@ class P_Program
     /**
      * Set programDataFormat
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $programDataFormat
+     * @param \BuilderBundle\Entity\G_ListItem $programDataFormat
      *
      * @return P_Program
      */
-    public function setProgramDataFormat(\MNHN\AdminBundle\Entity\G_ListItem $programDataFormat = null)
+    public function setProgramDataFormat(\BuilderBundle\Entity\G_ListItem $programDataFormat = null)
     {
         $this->programDataFormat = $programDataFormat;
 
@@ -1553,7 +1553,7 @@ class P_Program
     /**
      * Get programDataFormat
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getProgramDataFormat()
     {
@@ -1563,11 +1563,11 @@ class P_Program
     /**
      * Set protocolSINP
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $protocolSINP
+     * @param \BuilderBundle\Entity\G_ListItem $protocolSINP
      *
      * @return P_Program
      */
-    public function setProtocolSINP(\MNHN\AdminBundle\Entity\G_ListItem $protocolSINP = null)
+    public function setProtocolSINP(\BuilderBundle\Entity\G_ListItem $protocolSINP = null)
     {
         $this->protocolSINP = $protocolSINP;
 
@@ -1577,7 +1577,7 @@ class P_Program
     /**
      * Get protocolSINP
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getProtocolSINP()
     {
@@ -1587,11 +1587,11 @@ class P_Program
     /**
      * Set annualBudget
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $annualBudget
+     * @param \BuilderBundle\Entity\G_ListItem $annualBudget
      *
      * @return P_Program
      */
-    public function setAnnualBudget(\MNHN\AdminBundle\Entity\G_ListItem $annualBudget = null)
+    public function setAnnualBudget(\BuilderBundle\Entity\G_ListItem $annualBudget = null)
     {
         $this->annualBudget = $annualBudget;
 
@@ -1601,7 +1601,7 @@ class P_Program
     /**
      * Get annualBudget
      *
-     * @return \MNHN\AdminBundle\Entity\G_ListItem
+     * @return \BuilderBundle\Entity\G_ListItem
      */
     public function getAnnualBudget()
     {
@@ -1853,11 +1853,11 @@ class P_Program
     /**
      * Add taxon
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $taxon
+     * @param \BuilderBundle\Entity\G_ListItem $taxon
      *
      * @return P_Program
      */
-    public function addTaxon(\MNHN\AdminBundle\Entity\G_ListItem $taxon)
+    public function addTaxon(\BuilderBundle\Entity\G_ListItem $taxon)
     {
         $this->taxons[] = $taxon;
         return $this;
@@ -1866,9 +1866,9 @@ class P_Program
     /**
      * Remove taxon
      *
-     * @param \MNHN\AdminBundle\Entity\G_ListItem $taxon
+     * @param \BuilderBundle\Entity\G_ListItem $taxon
      */
-    public function removeTaxon(\MNHN\AdminBundle\Entity\G_ListItem $taxon)
+    public function removeTaxon(\BuilderBundle\Entity\G_ListItem $taxon)
     {
         $this->taxons->removeElement($taxon);
     }

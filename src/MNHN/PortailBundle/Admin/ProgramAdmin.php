@@ -19,7 +19,7 @@ use MNHN\PortailBundle\Form\P_StructureFormType;
 use Application\Sonata\UserBundle\Entity\User;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 
-use MNHN\AdminBundle\Utils\Form\FormBuilder;
+use BuilderBundle\Utils\Form\FormBuilder;
 
 class ProgramAdmin extends AbstractAdmin
 {
@@ -29,7 +29,7 @@ class ProgramAdmin extends AbstractAdmin
         switch ($name) {
             case 'edit':
                 //var_dump( parent::getTemplate($name));
-                return 'MNHNAdminBundle::Field\admin_fields_program_template.html.twig';
+                return 'BuilderBundle::Field\admin_fields_program_template.html.twig';
                 break;
             default:
                 return parent::getTemplate($name);
@@ -49,7 +49,7 @@ class ProgramAdmin extends AbstractAdmin
         // $item->getName();
 
         $f_form = $em
-        ->getRepository('MNHNAdminBundle:F_Form')
+        ->getRepository('BuilderBundle:F_Form')
         ->findOneBy(array('name' => 'admin_program'));
         
         //$user =  $this->get('security.context')->getToken()->getUser();

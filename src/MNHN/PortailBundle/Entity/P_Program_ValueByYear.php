@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * Menu
  *
  * @ORM\Table(name="p_program_valuebyyear")
- * @ORM\Entity(repositoryClass="MNHN\AdminBundle\Repository\F_FieldRepository")
+ * @ORM\Entity(repositoryClass="BuilderBundle\Repository\F_FieldRepository")
  */
 class P_Program_ValueByYear
 {

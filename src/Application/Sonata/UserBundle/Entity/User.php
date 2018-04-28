@@ -19,7 +19,7 @@ use MNHN\PortailBundle\Entity\P_Structure;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
-use MNHN\AdminBundle\Entity\G_listItem;
+use BuilderBundle\Entity\G_listItem;
 use Symfony\Component\Validator\Constraints as Assert;
 
 
@@ -76,13 +76,13 @@ class User extends BaseUser
     private $skills;
 
     /**
-     * @ORM\ManyToMany(targetEntity="MNHN\AdminBundle\Entity\G_ListItem", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="BuilderBundle\Entity\G_ListItem", cascade={"persist"})
      * @ORM\JoinTable(name="p_users_themes")
      */
     private $themes;
 
     /**
-     * @ORM\ManyToMany(targetEntity="MNHN\AdminBundle\Entity\G_ListItem", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="BuilderBundle\Entity\G_ListItem", cascade={"persist"})
      * @ORM\JoinTable(name="p_users_taxons")
      */
     private $taxons;

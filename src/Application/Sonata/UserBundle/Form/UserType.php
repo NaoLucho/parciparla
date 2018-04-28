@@ -13,8 +13,8 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 
-use MNHN\AdminBundle\Entity\G_List;
-use MNHN\AdminBundle\Entity\G_ListItem;
+use BuilderBundle\Entity\G_List;
+use BuilderBundle\Entity\G_ListItem;
 
 class UserType extends AbstractType {
 
@@ -54,7 +54,7 @@ class UserType extends AbstractType {
         ])
         ->add('theme', EntityType::class, array(
             'required' => false,
-            'class' => 'MNHNAdminBundle:G_ListItem',
+            'class' => 'BuilderBundle:G_ListItem',
             'label' => 'Mes thématiques étudiées',
             'query_builder' => function (EntityRepository $er) {
                 return $er->createQueryBuilder('listitem')
@@ -71,7 +71,7 @@ class UserType extends AbstractType {
         ))
         ->add('taxon', 'entity', array(
             'required' => false,
-            'class' => 'MNHNAdminBundle:G_ListItem',
+            'class' => 'BuilderBundle:G_ListItem',
             'label' => 'Mes taxons étudiées',
             'query_builder' => function (EntityRepository $er) {
                 return $er->createQueryBuilder('listitem')

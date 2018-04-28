@@ -5,20 +5,20 @@ namespace MNHN\PortailBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Collections\Criteria;
-use MNHN\AdminBundle\Controller\Builder\Utils;
+use BuilderBundle\Controller\Builder\Utils;
 
 class TemplateController extends Controller
 {
     public function basetemplateAction()
     {
         return $this->render('::template_index.html.twig');
-        //return $this->render('MNHNAdminBundle:Default:index.html.twig');
+        //return $this->render('BuilderBundle:Default:index.html.twig');
     }
 
     public function indexAction()
     {
         return $this->render('::index.html.twig');
-        //return $this->render('MNHNAdminBundle:Default:index.html.twig');
+        //return $this->render('BuilderBundle:Default:index.html.twig');
     }
 
 
@@ -27,7 +27,7 @@ class TemplateController extends Controller
     {
         //LOAD MENU PRINCIPAL
         $menuprincipal = $this->get('doctrine.orm.entity_manager')
-        ->getRepository('MNHNAdminBundle:Menu')
+        ->getRepository('BuilderBundle:Menu')
         ->findOneBy(array('name' => 'Principal'));
         $menulinks = [];
         $i = 0;
@@ -42,7 +42,7 @@ class TemplateController extends Controller
 
         //LOAD MENU FOOTER
         $menufooter = $this->get('doctrine.orm.entity_manager')
-        ->getRepository('MNHNAdminBundle:Menu')
+        ->getRepository('BuilderBundle:Menu')
         ->findOneBy(array('name' => 'Footer'));
         $footerlinks = [];
         $i = 0;
@@ -74,7 +74,7 @@ class TemplateController extends Controller
     // // 1: Charge le template twig s'il existe dans app/"%template_repo%"/views:'.$slug.'.html.twig'
     // // 2: sinon si le slug correspond à une Page, charge la page avec le builder
     // // 3: sinon si la page n'existe pas en base de donnée, alors on veut intégrer dans la page le rendu d'un autre controller:
-    // // coté TWIG on appelle le controller MNHNAdminBundle:Builder/BuildContent:buildWithController avec controllerUrl = slug en paramettre
+    // // coté TWIG on appelle le controller BuilderBundle:Builder/BuildContent:buildWithController avec controllerUrl = slug en paramettre
     // // IE 
     // public function buildPageOLDAction( $slug, Request $request) 
     // {
@@ -83,7 +83,7 @@ class TemplateController extends Controller
         
     //     //LOAD MENU PRINCIPAL
     //     $menuprincipal = $this->get('doctrine.orm.entity_manager')
-    //     ->getRepository('MNHNAdminBundle:Menu')
+    //     ->getRepository('BuilderBundle:Menu')
     //     ->findOneBy(array('name' => 'Principal'));
     //     $menulinks = [];$i = 0;
 
@@ -119,7 +119,7 @@ class TemplateController extends Controller
 
     //     //LOAD MENU FOOTER
     //     $menufooter = $this->get('doctrine.orm.entity_manager')
-    //     ->getRepository('MNHNAdminBundle:Menu')
+    //     ->getRepository('BuilderBundle:Menu')
     //     ->findOneBy(array('name' => 'Footer'));
     //     $footerlinks = [];
     //     $i = 0;
@@ -165,7 +165,7 @@ class TemplateController extends Controller
     //     else //CREATE PAGE CONTENT
     //     {
     //         $page = $this->get('doctrine.orm.entity_manager')
-    //         ->getRepository('MNHNAdminBundle:Page')
+    //         ->getRepository('BuilderBundle:Page')
     //         ->findOneBy(array('slug' => $slug));
 
     //         $user = $this->getUser();
@@ -181,7 +181,7 @@ class TemplateController extends Controller
     //         $menuContent = [];
     //         $pContents = [];
     //         $footerContents = [];
-    //         $template = 'MNHNAdminBundle:BuildPage:buildpagewithtemplate.html.twig';
+    //         $template = 'BuilderBundle:BuildPage:buildpagewithtemplate.html.twig';
     //         $controller = null;
             
     //         if($page != null)
@@ -260,7 +260,7 @@ class TemplateController extends Controller
     //             'menulinks' => $menulinks,
     //             'footerlinks' => $footerlinks,
     //         ));
-    //     //return $this->render('MNHNAdminBundle:Default:index.html.twig');
+    //     //return $this->render('BuilderBundle:Default:index.html.twig');
     //     }
     // }
 }

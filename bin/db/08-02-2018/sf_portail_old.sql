@@ -53,7 +53,7 @@ INSERT INTO `app_content` (`id`, `title`, `content`, `type`, `locked`, `class`) 
 (29, 'Message de bienvenue', '<p>Contenu &quot;Message de bienvenue&quot; &agrave; d&eacute;finir dans la base.</p>', 'Content', 0, NULL),
 (30, 'Controller > Declarer structure', '<p>MNHNPortailBundle:Structure/Structure:proCreateStructure</p>', 'Controller', 1, NULL),
 (31, 'Controller > Ecosystem', '<p>MNHNPortailBundle:Ecosystem/Ecosystem:show</p>', 'Controller', 1, NULL),
-(32, 'Connexion', '<p>MNHNAdminBundle:Builder/BuildPage:login</p>', 'Controller', 0, NULL),
+(32, 'Connexion', '<p>BuilderBundle:Builder/BuildPage:login</p>', 'Controller', 0, NULL),
 (33, 'Controller > ObservatoryList', 'MNHNPortailBundle:Ecosystem/ObservatoryList:show', 'Controller', 1, NULL),
 (34, 'Controller > HomeCounters', '<p>MNHNPortailBundle:Home:counters</p>', 'Controller', 1, NULL),
 (35, 'Controller > HomeHeader', 'MNHNPortailBundle:Home:header', 'Controller', 1, NULL),

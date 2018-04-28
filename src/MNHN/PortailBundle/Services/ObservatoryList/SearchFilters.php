@@ -15,7 +15,7 @@ class SearchFilters {
 
         //Load search Form Elements:
         //Load Themes
-        $themes = $this->em->getRepository('MNHNAdminBundle:G_ListItem')->createQueryBuilder('listitem')
+        $themes = $this->em->getRepository('BuilderBundle:G_ListItem')->createQueryBuilder('listitem')
             ->leftJoin('listitem.list', 'list')
             ->where('list.name = :lname')
             ->orderBy('listitem.order', 'ASC')
@@ -23,7 +23,7 @@ class SearchFilters {
             ->getQuery()->getResult();
 
         //Load Espèces
-        $especes = $this->em->getRepository('MNHNAdminBundle:G_ListItem')->createQueryBuilder('listitem')
+        $especes = $this->em->getRepository('BuilderBundle:G_ListItem')->createQueryBuilder('listitem')
             ->leftJoin('listitem.list', 'list')
             ->where('list.name = :lname')
             ->orderBy('listitem.order', 'ASC')
@@ -31,7 +31,7 @@ class SearchFilters {
             ->getQuery()->getResult();
 
         //Load Niveaux
-        $niveaux = $this->em->getRepository('MNHNAdminBundle:G_ListItem')->createQueryBuilder('listitem')
+        $niveaux = $this->em->getRepository('BuilderBundle:G_ListItem')->createQueryBuilder('listitem')
             ->leftJoin('listitem.list', 'list')
             ->where('list.name = :lname')
             ->orderBy('listitem.order', 'ASC')

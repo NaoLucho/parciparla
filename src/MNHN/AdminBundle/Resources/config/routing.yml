@@ -1,8 +1,0 @@
-# mnhn_admin_homepage:
-#     path:     /patata
-#     defaults: { _controller: MNHNAdminBundle:Default:index }
-
-
-# mnhn_portail_structure:
-#     path:     /structure
-#     defaults: { _controller: MNHNPortailBundle:Structure\Structure:list }

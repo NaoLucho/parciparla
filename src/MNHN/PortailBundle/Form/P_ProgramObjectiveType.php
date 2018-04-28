@@ -22,7 +22,7 @@ class P_ProgramObjectiveType extends AbstractType
             ->add('objective', EntityType::class, array(
                 'required' => true,
                 //'disabled' => true,
-                'class' => 'MNHNAdminBundle:G_ListItem',
+                'class' => 'BuilderBundle:G_ListItem',
                 // 'placeholder' => "...",
                 'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('listitem')

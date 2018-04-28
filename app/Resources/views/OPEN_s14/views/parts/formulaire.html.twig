@@ -1,4 +1,7 @@
-<form id="form-multiple-search" method="post" action="{{ path('mnhn_buildpage', {'slug':'ecosysteme-sciences-participatives','page': 1 }) }}">
+{% if request is not defined %}
+  {% set request = app.request %}
+{% endif %}
+<form id="form-multiple-search" method="post" action="{{ path('site_buildpage', {'slug':'ecosysteme-sciences-participatives','page': 1 }) }}">
   <div class="form__lieu">
     <label for="lieu"><i class="icon-lieu"></i>Lieu</label>
     <input type="text" placeholder="(Ville, dépt., CP, région)" name="lieu" value="{{request.request.get('lieu')}}">

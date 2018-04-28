@@ -17,7 +17,7 @@ use Symfony\Component\Validator\Validation;
 use Symfony\Component\Form\Extension\Validator\ValidatorExtension;
 
 //FOR FORMBUILDER:
-use MNHN\AdminBundle\Utils\Form\FormBuilder;
+use BuilderBundle\Utils\Form\FormBuilder;
 use Symfony\Component\Form\Forms;
 use MNHN\PortailBundle\Form\P_ProgramFormType;
 
@@ -105,7 +105,7 @@ class ProgramController extends Controller
 
         if (!$programExist) {
             //INITIALISATION DES DONNEES
-            $qb = $em->getRepository('MNHNAdminBundle:G_ListItem')->createQueryBuilder('listitem')
+            $qb = $em->getRepository('BuilderBundle:G_ListItem')->createQueryBuilder('listitem')
                 ->leftJoin('listitem.list', 'list')
                 ->where('list.name = :lname')
                 ->orderBy('listitem.id', 'ASC')
@@ -164,7 +164,7 @@ class ProgramController extends Controller
         }
             
        
-        // $objectiveItem = $em->getRepository('MNHNAdminBundle:G_ListItem')->findOneBy(array('name' => 'objective1'));
+        // $objectiveItem = $em->getRepository('BuilderBundle:G_ListItem')->findOneBy(array('name' => 'objective1'));
         // $progObjective1 = new P_Program_Objective();
         // $progObjective1->setProgram($entity);
         // $progObjective1->setObjective($objectiveItem);
@@ -177,7 +177,7 @@ class ProgramController extends Controller
 
         //Load F_FORM => SERVICE getform($formName, $MODE[VIEW/CREATE/EDIT], $current_user)
         $f_form = $em
-            ->getRepository('MNHNAdminBundle:F_Form')
+            ->getRepository('BuilderBundle:F_Form')
             ->findOneBy(array('name' => 'program_step' . $step));
 
         //MODE SANS P_ProgramFormType:

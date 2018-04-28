@@ -55,7 +55,7 @@
                 <tr>
                     <td>
                         <img class="structure_list_logo logo_img" src="{{ vich_uploader_asset(structure, 'imageFile') }}" alt="Logo de la structure {{ structure.name }}" />
-                        <a href="{{ path('mnhn_buildpage', {'slug': 'fiche_structure' , 'id': structure.id }) }}">{{ structure.name }}</a>
+                        <a href="{{ path('site_buildpage', {'slug': 'fiche_structure' , 'id': structure.id }) }}">{{ structure.name }}</a>
                     </td>
                     <td>
                         {{ structure.structureType.name }}
@@ -82,7 +82,7 @@
 
     </table>
     <hr>
-    <a class="btn btn-warning" href="{{ path('mnhn_buildpage', { 'slug': 'add_structure' }) }}" > Déclarer une nouvelle structure </a>
+    <a class="btn btn-warning" href="{{ path('site_buildpage', { 'slug': 'add_structure' }) }}" > Déclarer une nouvelle structure </a>
 
     <hr>
     <p>Je suis membre de :</p>
@@ -104,7 +104,7 @@
                 <tr>
                     <td>
                         <img class="structure_list_logo logo_img" src="{{ vich_uploader_asset(structure, 'imageFile') }}" alt="Logo de la structure {{ structure.name }}" />
-                        <a href="{{ path('mnhn_buildpage', {'slug': 'fiche_structure' , 'id': structure.id }) }}">{{ structure.name }}</a>
+                        <a href="{{ path('site_buildpage', {'slug': 'fiche_structure' , 'id': structure.id }) }}">{{ structure.name }}</a>
                     </td>
                     <td>
                         {{ structure.owner }}

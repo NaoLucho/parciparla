@@ -14,7 +14,7 @@ class TableObjectivesType extends AbstractType
     {
         // $listname = 'program_objectives';
         // $resolver->setDefaults(array(
-        //     'class' => 'MNHNAdminBundle:G_ListItem',
+        //     'class' => 'BuilderBundle:G_ListItem',
         //     'query_builder' => (function (EntityRepository $er) use ($listname) {
         //         return $er->createQueryBuilder('listitem')
         //             ->leftJoin('listitem.list', 'list')

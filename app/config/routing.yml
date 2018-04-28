@@ -1,7 +1,3 @@
-# site_login: Pour surcharger login de fosuser
-#     path:     /login
-#     defaults: { _controller: MNHNAdminBundle:Builder\BuildPage:buildPage}
-
 user_routing:
     resource: '@ApplicationSonataUserBundle/Resources/config/routing.yml'
     prefix:   /
@@ -14,11 +10,9 @@ media:
     resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
     prefix: /media
 
-mnhn_admin:
-    resource: "@MNHNAdminBundle/Resources/config/routing.yml"
+builder_admin:
+    resource: "@BuilderBundle/Resources/config/routing.yml"
     prefix:   /
 
-mnhn_portail:
-    resource: "@MNHNPortailBundle/Resources/config/routing.yml"
-    prefix:   /
+
 

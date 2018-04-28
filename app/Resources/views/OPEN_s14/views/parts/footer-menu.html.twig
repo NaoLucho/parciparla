@@ -11,6 +11,6 @@
 
 {% for link in links %}
     <li {{ app.request.get('_route') == link.path ? 'class="active"' }}>
-        <a href="{{ path('mnhn_buildpage', { 'slug': link.path}) }}" title="{{link.title}}">{{ link.title }}</a>
+        <a href="{{ path('site_buildpage', { 'slug': link.path}) }}" title="{{link.title}}">{{ link.title }}</a>
     </li>
 {% endfor %}
