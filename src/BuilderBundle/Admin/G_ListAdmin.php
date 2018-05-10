@@ -29,11 +29,13 @@ class G_ListAdmin extends AbstractAdmin
             ))
             ->add('listItems', 'sonata_type_collection', array(
                 'by_reference' => false,
+                'btn_add' => 'Ajouter',
                 'type_options' => array(
                     'delete' => true
                 )
             ), array(
                 'edit' => 'inline',
+                'allow_add' => true,
                 'inline' => 'table',
                 'sortable' => 'order',
             ))

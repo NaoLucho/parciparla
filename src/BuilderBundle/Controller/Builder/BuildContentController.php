@@ -233,12 +233,15 @@ class BuildContentController extends Controller
         $user = $this->getUser();
         if ($menu != null) {
             foreach ($menu->getMenuPages() as $menuPage) {
-                //VERIFIER LES DROITS D'ACCES A LA PAGE:
-                // On vérifie que l'utilisateur dispose bien du rôle demandé au niveau de la page:
-                // $hasPageRights = true si le group Users est indiqué
-                // Sinon on controlle si le user a le group demandé
-                // ou si l'utilisateur à le role 'ROLE_'+group.name dans toute les responsabilités calculées
+            //VERIFIER LES DROITS D'ACCES A LA PAGE:
+            // On vérifie que l'utilisateur dispose bien du rôle demandé au niveau de la page:
+            // $hasPageRights = true si le group Users est indiqué
+            // Sinon on controlle si le user a le group demandé
+            // ou si l'utilisateur à le role 'ROLE_'+group.name dans toute les responsabilités calculées
                 $hasPageRights = false;
+                if (count($menuPage->getPage()->getRights()) == 0) {
+                    $hasPageRights = true;
+                }
                 foreach ($menuPage->getPage()->getRights() as $group) {
                     if ($group->getName() == "All") {
                         $hasPageRights = true; //All users acce
@@ -287,6 +290,9 @@ class BuildContentController extends Controller
             // Sinon on controlle si le user a le group demandé
             // ou si l'utilisateur à le role 'ROLE_'+group.name dans toute les responsabilités calculées
                 $hasPageRights = false;
+                if (count($menuPage->getPage()->getRights()) == 0) {
+                    $hasPageRights = true;
+                }
                 foreach ($menuPage->getPage()->getRights() as $group) {
                     if ($group->getName() == "All") {
                         $hasPageRights = true; //All users acce
