@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This file is part of the sf_portail project.
+ * This file is part of the sitebuilder project.
  *
- * (c) Aaron aaron.hartnell@mnhn.fr and Louis louis.watrin@mnhn.fr
+ * (c) Louis louis.watrin@gmail.com
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -14,8 +14,6 @@ namespace Application\Sonata\UserBundle\Entity;
 use Sonata\UserBundle\Entity\BaseUser as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-use MNHN\PortailBundle\Entity\Skill;
-use MNHN\PortailBundle\Entity\P_Structure;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
@@ -31,7 +29,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * References :
  *   working with object : http://www.doctrine-project.org/projects/orm/2.0/docs/reference/working-with-objects/en
  *
- * @author Aaron aaron.hartnell@mnhn.fr Louis Watrin louis.watrin@mnhn.fr
+ * @author Louis louis.watrin@gmail.com
  */
 
 /**
@@ -63,31 +61,6 @@ class User extends BaseUser
     }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="capacity", type="string", length=255, nullable=true)
-     */
-    private $capacity;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="MNHN\PortailBundle\Entity\Skill", inversedBy="users", cascade={"persist"})
-     * @ORM\JoinTable(name="p_users_skills")
-     */
-    private $skills;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="BuilderBundle\Entity\G_ListItem", cascade={"persist"})
-     * @ORM\JoinTable(name="p_users_themes")
-     */
-    private $themes;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="BuilderBundle\Entity\G_ListItem", cascade={"persist"})
-     * @ORM\JoinTable(name="p_users_taxons")
-     */
-    private $taxons;
-
-    /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * 
      * @Vich\UploadableField(mapping="avatar_image", fileNameProperty="imageName", size="imageSize")
@@ -110,18 +83,7 @@ class User extends BaseUser
      */
     private $imageSize;
 
-    /**
-     * @ORM\OneToMany(targetEntity="MNHN\PortailBundle\Entity\P_Structure", mappedBy="owner", cascade={"persist"})
-     * @Assert\Valid()
-     */
-    protected $ownedStructures;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="MNHN\PortailBundle\Entity\P_Structure", inversedBy="members", cascade={"persist"})
-     * @ORM\JoinTable(name="p_members_structures")
-     */
-    private $structures;
-
+    
 
     /**
      * Overridden so that username is now optional
@@ -135,159 +97,14 @@ class User extends BaseUser
         return parent::setEmail($email);
     }
 
-    /**
-     * Set capacity
-     *
-     * @param string $capacity
-     *
-     * @return User
-     */
-    public function setCapacity($capacity)
-    {
-        $this->capacity = $capacity;
-
-        return $this;
-    }
-
-    /**
-     * Get capacity
-     *
-     * @return string
-     */
-    public function getCapacity()
-    {
-        return $this->capacity;
-    }
+    
 
     public function __construct()
     {
         parent::__construct();
-        $this->skills = new ArrayCollection();
-        $this->ownedStructures = new ArrayCollection();
-        $this->structures = new ArrayCollection();
-        $this->themes = new ArrayCollection();
-        $this->taxons = new ArrayCollection();
     }
 
-    /**
-     * Set skill
-     *
-     * @param mixed Image $skill
-     *
-     * @return Skill
-     */
-    public function setSkills($skills)
-    {
-        $this->skills = $skills;    
-        return $this;
-    }    
-
-    /**
-     * Get skill
-     *
-     * @return Skill $skill
-     */
-    public function getSkills()
-    {
-        return $this->skills;
-    }
-
-    /**
-     * @param Skill $skill
-     */
-    public function addSkills(Skill $skill)
-    {
-        $this->skills[] = $skill;
-    }
-
-    /**
-     * @param SKill $skill
-     */
-    public function removeSkills(Skill $skill)
-    {
-        $this->skills->removeElement($skill);
-    }
-
-    /**
-     * Gets the value of themes.
-     *
-     * @return $theme
-     */
-    public function getTheme()
-    {
-        return $this->themes;
-    }
-
-    /**
-     * Sets the value of theme.
-     *
-     * @param $theme the taxons and themes specialised in
-     *
-     * @return self
-     */
-    public function setTheme($themes)
-    {
-        $this->themes = $theme;
-
-        return $this;
-    }
-
-    /**
-     * @param Theme $theme
-     */
-    public function addTheme(G_listItem $theme)
-    {
-        $this->themes[] = $theme;
-    }
-
-    /**
-     * @param Theme $theme
-     */
-    public function removeTheme(G_listItem $theme)
-    {
-        $this->themes->removeElement($theme);
-    }
-
-    /**
-     * Gets the value of taxon.
-     *
-     * @return $taxon
-     */
-    public function getTaxon()
-    {
-        return $this->taxons;
-    }
-
-    /**
-     * Sets the value of theme.
-     *
-     * @param $theme the taxons specialised in
-     *
-     * @return self
-     */
-    public function setTaxon($taxons)
-    {
-        $this->taxons = $taxons;
-
-        return $this;
-    }
-
-    /**
-     * @param Taxon $taxon
-     */
-    public function addTaxon(G_listItem $taxon)
-    {
-        $this->taxons[] = $taxon;
-    }
-
-    /**
-     * @param Taxon $taxon
-     */
-    public function removeTaxon(G_listItem $taxon)
-    {
-        $this->taxons->removeElement($taxon);
-    }
-
+    
     /**
      * If manually uploading a file (i.e. not using Symfony Form) ensure an instance
      * of 'UploadedFile' is injected into this setter to trigger the  update. If this
@@ -359,109 +176,6 @@ class User extends BaseUser
     {
         return $this->imageSize;
     }
-
-    /**
-     * Set structure
-     *
-     * @param string $structure
-     *
-     * @return User
-     */
-    public function setOwnedStructures($ownedStructures)
-    {
-        if (count($ownedStructures) > 0) {
-            foreach ($ownedStructures as $i) {
-                $this->addOwnedStructure($i);
-            }
-        }
-    }
-
-    /**
-     * Get structure
-     *
-     * @return P_Structure $structure
-     */
-    public function getOwnedStructures()
-    {
-        return $this->ownedStructures;
-    }
-
-    /**
-     * Add structure
-     *
-     * @param string $structure
-     *
-     * @return User
-     */
-    public function addOwnedStructure(\MNHN\PortailBundle\Entity\P_Structure $ownedStructure)
-    {
-        $this->ownedStructures[] = $ownedStructure;
-        $ownedStructure->setOwner($this);
-        
-        return $this;
-    }
-
-    /**
-     * @param OwnedStructure $ownedStructure
-     */
-    public function removeOwnedStructure(P_Structure $structure)
-    {
-        $this->ownedStructures->removeElement($structure);
-    }
-
-    /**
-     * Set structure
-     *
-     * @param mixed P_Structure $structure
-     *
-     * @return Structure
-     */
-    public function setStructures($structure)
-    {
-        if (is_array($structure)) {
-            $this->structures[] = $structure;
-        } else {
-            $this->structures->clear();
-            $this->structures->add($structure);
-        }
-        return $this;
-    }
-
-    /**
-     * Get structure
-     *
-     * @return P_Structure $structure
-     */
-    public function getStructures()
-    {
-        return $this->structures;
-    }
-
-    /**
-     * @param Structure $structure
-     */
-    public function addStructures(P_Structure $structure)
-    {
-        $this->structures->add($structure);
-        
-    }
-
-    /**
-     * @param SKill $skill
-     */
-    public function removeStructures(P_Structure $structure)
-    {
-        $this->structures->removeElement($structure);
-    }
-
-    // /**
-    //  * @ORM\PreRemove
-    //  */
-    // public function doFKStructureOnPreRemove() {
-    //     foreach($this->getOwnedStructures() as $structure) {
-    //         $structure->setOwner(NULL);
-    //     }
-    // }
     
 
 }

@@ -1,6 +1,6 @@
 {% extends "::builder_base_layout.html.twig" %}
 
-{% block title %}MNHN - {{ parent() }}{% endblock %}
+{% block title %}Site - {{ parent() }}{% endblock %}
 
 {% block header %}
     {{ render(controller("BuilderBundle:Builder/BuildContent:buildDefaultContent", {'selectposition': 'Header'})) }}

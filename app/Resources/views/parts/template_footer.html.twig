@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-4 newsletter">
-                <p>Je m'abonne à la newsletter Open</p>
+                <p>Je m'abonne à la newsletter du Site</p>
                 {# Mise en place du formulaire pour l'inscription à la newsletter #}
                 <form action="#">
                     <div class="form-group">
@@ -17,7 +17,7 @@
                 <nav>
                     <ul>
                         {% set links = [ { "path": 'qui-sommes-nous', "title": 'Qui sommes-nous ?' }, { "path": 'faq', "title": 'FAQ' }, { "path":
-                        'charte-du-portail', "title": 'Charte du portail' }, { "path": 'presse', "title": 'Presse', "class":
+                        'charte-du-site', "title": 'Charte du site' }, { "path": 'presse', "title": 'Presse', "class":
                         'active' }, { "path": 'mentions-legales', "title": 'Mentions légales' }, { "path": 'contacts', "title":
                         'Contacts' } ] %} {# Les liens pour la navigation du footer #} {% for link in links %}
                         <li {% if link.class is defined %} class="{{link.class}}" {% endif %}>

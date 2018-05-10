@@ -47,7 +47,6 @@ twig:
         #- 'SiteBundle:Form:fields.html.twig'
     globals:
         template_repo: %template_repo%
-        #js_vars: "@mnhn_portail.js_vars"
         fos_csrf_provider: "@security.csrf.token_manager"
 
 # Doctrine Configuration
@@ -153,7 +152,7 @@ fos_user:
             template:   ApplicationSonataUserBundle::Resetting\password_resetting.email.twig
             from_email:
                 address:        resetting@example.com
-                sender_name:    OPEN
+                sender_name:    Site
     from_email:
         address: "%mailer_user%"
         sender_name: "%mailer_user%"
@@ -171,7 +170,7 @@ fos_user:
             enabled: true
             from_email:
                 address:        "%mailer_user%"
-                sender_name:    OPEN
+                sender_name:    Site
             template:   ApplicationSonataUserBundle::Registration\confirmation.email.twig
     profile:
         form:

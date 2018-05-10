@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{% block title %}Portail{% endblock %}</title>
-	<meta name="description" content={% block seoDescription %}"Portail porté par le MNHN, financé par la FNH. Référence les sites nationaux de France autour des sciences participatives"{% endblock %} />
+	<title>{% block title %}SiteBuilder{% endblock %}</title>
+	<meta name="description" content={% block seoDescription %}"Createur de Site, par Louis Watrin"{% endblock %} />
 	<meta name="keywords" content={% block seoKeywords %}"default, keywords"{% endblock %} />
 	
 
@@ -57,7 +57,7 @@
 			{% block menu %}
 				<h3>Pages:</h3>
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="{{ path('portail_home') }}">Accueil</a></li>
+					<li><a href="{{ path('site_home') }}">Accueil</a></li>
 				</ul>
 			{% endblock %}
 		{# </div>

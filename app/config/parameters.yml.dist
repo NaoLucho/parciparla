@@ -15,12 +15,12 @@ parameters:
     mailer_user: ~
     mailer_password: ~
     mailer_encryption: ssl
-    project_name: sites/sf_portail
+    project_name: sites/sitebuilder
     mailer_encryption: ssl
     image_prefix: /%project_name%/web/uploads/img
     
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
 
-    template_repo: OPEN_050118
+    template_repo: site
     image_prefix: /%project_name%/web/uploads/img

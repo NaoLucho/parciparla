@@ -41,8 +41,8 @@ site_buildpagedetails:
         _controller: BuilderBundle:Builder\BuildPage:buildPageDetails
 
 
-site_portail:
-    resource: "@MNHNPortailBundle/Resources/config/routing.yml"
+site_routing:
+    resource: "@SiteBundle/Resources/config/routing.yml"
     prefix:   /
 
 

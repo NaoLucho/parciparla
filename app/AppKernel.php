@@ -53,7 +53,7 @@ class AppKernel extends Kernel
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
 
             //Bundles fait maison
-            new MNHN\PortailBundle\MNHNPortailBundle(),
+            new SiteBundle\SiteBundle(),
             new BuilderBundle\BuilderBundle(),
 
             //Gestion des fichiers CSS et JS (Assetic)

@@ -85,11 +85,3 @@ services:
             - { name: sonata.admin, manager_type: orm, group: "Site", label: "Carousel" }
         public: true
         
-
-    # NEED TO BE IN PortaiBundle, mais je n'arrive pas a faire l'import
-    # app.admin.structure_type:
-    #     class: MNHN\PortailBundle\Admin\StructureTypeAdmin
-    #     arguments: [~, MNHN\PortailBundle\Entity\P_StructureType, ~]
-    #     tags:
-    #         - { name: sonata.admin, manager_type: orm, group: "Metier", label: "StructureType" }
-    #     public: true

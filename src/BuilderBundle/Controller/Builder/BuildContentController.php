@@ -23,7 +23,7 @@ class BuildContentController extends Controller
         return $this->render('BuilderBundle:BuildPage:buildcontents.html.twig', array(
             'page' => $page,
             'contents' => $selectContents,
-            'notfoundmessage' => 'Erreur: le contenu par défaut en position ' . selectposition . ' doit être défini dans la base.'
+            'notfoundmessage' => 'Erreur: le contenu par défaut en position ' . $selectposition . ' doit être défini dans la base.'
         ));
         // foreach($selectContents as $sContent)
         // {

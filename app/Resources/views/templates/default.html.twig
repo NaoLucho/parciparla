@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   {# En attente de la guideline pour les meta-datas #}
-  <title>{% block title %}Portail{% endblock %}</title>
-	<meta name="description" content={% block seoDescription %}"Portail porté par le MNHN, financé par la FNH. Référence les sites nationaux de France autour des sciences participatives"{% endblock %} />
+  <title>{% block title %}Site Builder{% endblock %}</title>
+	<meta name="description" content={% block seoDescription %}"Site Builder, Créateur de site, par Louis Watrin"{% endblock %} />
   <meta name="keywords" content={% block seoKeywords %}"default, keywords"{% endblock %} />
   
-  {# <title>{% if title is defined %}{{ title }} - {% endif %} {{ "Open" | upper }}</title> #}
   {# Include du fichier style #}
   <link rel="stylesheet" href="{{ asset('assets/css/open.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/js/chosen_v1.8.2/chosen.min.css') }}" />

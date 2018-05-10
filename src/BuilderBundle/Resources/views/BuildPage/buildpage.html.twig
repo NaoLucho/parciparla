@@ -1,5 +1,8 @@
-{# {% extends "BuilderBundle::builder_layout.html.twig" %} #}
-{% extends template_repo ~ '/views/templates/default.html.twig' %}
+{% extends "BuilderBundle::builder_layout.html.twig" %}
+{# {% extends template_repo ~ '/views/templates/default.html.twig' %}
+{% extends 'builder_base_layout.html.twig' %}
+{% extends 'templates/default.html.twig' %} #}
+
 {# {% block title %}{{ page.name }}{% endblock %} #}
 {% if page %}
     {% if title is not defined %}

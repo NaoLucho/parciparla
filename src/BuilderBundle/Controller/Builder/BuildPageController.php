@@ -15,7 +15,8 @@ class BuildPageController extends Controller
     // 2: sinon si le slug correspond à une Page, charge la page avec le builder
     public function buildPageAction($slug, $id = 0, Request $request)
     {
-        //$template_repo is repository of OPEN version : OPEN_241117
+        //dump($request);
+        
         $template_repo = $this->container->getParameter('template_repo');
 
         $em = $this->get('doctrine.orm.entity_manager');
@@ -36,12 +37,8 @@ class BuildPageController extends Controller
 
         if ($page != null) { //CREATE PAGE CONTENT FROM DATABASE
                 //VERIFICATION DES DROITS D'ACCES A LA PAGE
-            if(count($page->getRights())==0)
-            {
-                $hasPageRights = true;
-            }
             foreach ($page->getRights() as $group) {
-                if ($group->getName() == "All") {
+                if ($group->getName() == "Users") {
                     $hasPageRights = true; //All users can access
                     break;
                 } elseif (isset($user) && ($user->hasGroup($group) || $this->get('security.authorization_checker')->isGranted(strtoupper('ROLE_' . $group->getName()))))// $user->hasRole(strtoupper('ROLE_'. $group->getName()))))
@@ -62,7 +59,7 @@ class BuildPageController extends Controller
             foreach ($pageContents as $pcontent) {
                 //if($pcontent->getPosition() contains MAIN && $pcontent->getContent()->getType() == "Controller")
                 if (strpos($pcontent->getPosition(), 'MAIN') !== false && $pcontent->getContent()->getType() == "Controller") {
-                    $mainController = "MNHNPortailBundle:Structure/Structure:show";
+                    $mainController = $pcontent->getContent()->getContent();
                 }
             }
 
@@ -91,6 +88,7 @@ class BuildPageController extends Controller
         }
         //no, only if pcontent.content is template
         //because if pcontent.content is Controller => need to forward it:
+        //dump($mainController);
         if ($mainController != null) {
             $builderparams = array(
                 'page' => $page,
@@ -101,6 +99,8 @@ class BuildPageController extends Controller
                 'carousel' => $carousel,
 
             );
+            //dump($builderparams);
+            //dump($id);
             return $this->forward(strip_tags($mainController), array(
                 'slug' => $slug,
                 'id' => $id,
@@ -108,7 +108,7 @@ class BuildPageController extends Controller
                 'builderparams' => $builderparams
             ));
         }
-
+        
         return $this->render($pagetemplate, array(
             'slug' => $slug,
             'page' => $page,
@@ -167,12 +167,8 @@ class BuildPageController extends Controller
         $template = 'BuilderBundle:BuildPage:buildpagetemplated.html.twig';
 
         if ($page != null) {
-            if(count($page->getRights())==0)
-            {
-                $hasPageRights = true;
-            }
             foreach ($page->getRights() as $group) {
-                if ($group->getName() == "All") {
+                if ($group->getName() == "Users") {
                     $hasPageRights = true; //All users acce
                     break;
                 } elseif (isset($user) && ($user->hasGroup($group) || $this->get('security.authorization_checker')->isGranted(strtoupper('ROLE_' . $group->getName()))))// $user->hasRole(strtoupper('ROLE_'. $group->getName()))))
@@ -327,21 +323,21 @@ class BuildPageController extends Controller
     
     // //OLD
     // //CREATION DU MENU PRINCIPAL (utilisé dans le template par defaut du 16_11_2017)
-    // public function menuPrincipalAction($menuName)
-    // {
-    //     if ($menuName == null)
-    //     {
-    //         $menuName = 'Principal';
-    //     }
+    public function menuPrincipalAction($menuName)
+    {
+        if ($menuName == null)
+        {
+            $menuName = 'Principal';
+        }
 
-    //     //IF menu is create with twig and not with knp_menu_render
-    //     $menuprincipal = $this->get('doctrine.orm.entity_manager')
-    //         ->getRepository('BuilderBundle:Menu')
-    //         ->findOneBy(array('name' => strip_tags($menuName)));
+        //IF menu is create with twig and not with knp_menu_render
+        $menuprincipal = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('BuilderBundle:Menu')
+            ->findOneBy(array('name' => strip_tags($menuName)));
 
-    //     return $this->render('BuilderBundle:BuildPage:buildmenuPrincipal.html.twig', array(
-    //         'menuName' => $menuName,
-    //         'menuprincipal' => $menuprincipal
-    //     ));
-    // }
+        return $this->render('BuilderBundle:OLD:buildmenuPrincipal.html.twig', array(
+            'menuName' => $menuName,
+            'menuprincipal' => $menuprincipal
+        ));
+    }
 }

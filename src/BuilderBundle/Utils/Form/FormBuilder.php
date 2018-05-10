@@ -14,14 +14,14 @@ use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 
-use MNHN\PortailBundle\Form\P_ProgramObjectiveType; //Formulaire
-use MNHN\PortailBundle\Form\PartnersForm; //Formulaire
-use MNHN\PortailBundle\Form\Type\TableObjectivesType; //Type de champ
+// use SiteBundle\Form\P_ProgramObjectiveType; //Formulaire
+// use SiteBundle\Form\PartnersForm; //Formulaire
+// use SiteBundle\Form\Type\TableObjectivesType; //Type de champ
 
-use MNHN\PortailBundle\Form\P_ProgramNbByYearType; //Formulaire
-use MNHN\PortailBundle\Form\Type\TableNbByYearType; //Type de champ
+// use SiteBundle\Form\P_ProgramNbByYearType; //Formulaire
+// use SiteBundle\Form\Type\TableNbByYearType; //Type de champ
 
-use MNHN\PortailBundle\Entity\Geom;
+use SiteBundle\Entity\Geom;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 
 use Doctrine\Common\Annotations\AnnotationReader;
@@ -555,7 +555,7 @@ class FormBuilder
                             //get type geo (from Geom)
                             //get value geo:
                                 //get list of departement
-                            $locDepartmentData = $em->getRepository('MNHNPortailBundle:Geom')
+                            $locDepartmentData = $em->getRepository('SiteBundle:Geom')
                                 ->createQueryBuilder('geom')
                                 ->select('geom.nom', 'geom.id', 'geom.type')
                                 ->where('geom.type = :type')
@@ -568,7 +568,7 @@ class FormBuilder
                                 $locDepartmentArray[$loc["id"]] = $loc["nom"];
                             }
                                 //get list of region
-                            $locRegionData = $em->getRepository('MNHNPortailBundle:Geom')
+                            $locRegionData = $em->getRepository('SiteBundle:Geom')
                                 ->createQueryBuilder('geom')
                                 ->select('geom.nom', 'geom.id', 'geom.type')
                                 ->where('geom.type = :type')
@@ -581,7 +581,7 @@ class FormBuilder
                                 $locRegionArray["" . $loc["id"]] = $loc["nom"];
                             }
 
-                            $locNationalData = $em->getRepository('MNHNPortailBundle:Geom')
+                            $locNationalData = $em->getRepository('SiteBundle:Geom')
                                 ->createQueryBuilder('geom')
                                 ->select('geom.nom', 'geom.id', 'geom.type')
                                 ->where('geom.type = :type')
@@ -594,7 +594,7 @@ class FormBuilder
                                 $locNationalArray["" . $loc["id"]] = $loc["nom"];
                             }
 
-                            $locDOMData = $em->getRepository('MNHNPortailBundle:Geom')
+                            $locDOMData = $em->getRepository('SiteBundle:Geom')
                                 ->createQueryBuilder('geom')
                                 ->select('geom.nom', 'geom.id', 'geom.type')
                                 ->where('geom.type = :type')
@@ -664,7 +664,7 @@ class FormBuilder
                             //dump($options);
                         }
                         if ($field->getFieldType()->getComponent() === "ImageArray") {
-                            $options['entry_type'] = 'MNHN\PortailBundle\Form\PartnersForm';
+                            $options['entry_type'] = 'SiteBundle\Form\PartnersForm';
                             $options['entry_options'] = array('label' => false);
                             $options['allow_add'] = true;
                             $options['allow_delete'] = true;
@@ -677,7 +677,7 @@ class FormBuilder
                             $formBuilder->add('partners', CollectionType::class, $options);
                         }
                         if ($field->getFieldType()->getComponent() === "FileArray") {
-                            $options['entry_type'] = 'MNHN\PortailBundle\Form\Program_ResultsForm';
+                            $options['entry_type'] = 'SiteBundle\Form\Program_ResultsForm';
                             $options['entry_options'] = array('label' => false);
                             $options['allow_add'] = true;
                             $options['allow_delete'] = true;

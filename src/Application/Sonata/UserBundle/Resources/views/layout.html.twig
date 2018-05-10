@@ -3,7 +3,7 @@
 {% if page is defined %}
 
     {% if page == 'inscription' %}
-        {% set title = 'Demande d\'inscription pro au portail' %} {# Titre de la page - header-mea & tab du navigateur #}
+        {% set title = 'Demande d\'inscription au site' %} {# Titre de la page - header-mea & tab du navigateur #}
         {% set imageHero = 'VisuelInscription.jpg' %} {# Nom de l'image pour le hero de la page #}
     {% endif %}
 {% endif %}
@@ -14,16 +14,11 @@
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 
-    {# {% stylesheets '@MNHNPortailBundle/Resources/public/css/tree.css' %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}  #}
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
-    {# {% javascripts '@MNHNPortailBundle/Resources/public/js/tree.js' %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %} #}
+
     {% javascripts '@ApplicationSonataUserBundle/Resources/public/js/register/mapping.js' %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}

@@ -47,28 +47,16 @@ class ProfileController extends BaseController
 
         $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $user);
 
-        $formBuilder->add('structures', 'entity', array(
-            'mapped' => false,
-            'class' => 'MNHNPortailBundle:P_Structure',
-            'placeholder' => "Choisissez votre structure",
-            'choice_label' => 'name',
-            'label' => false,
-            'multiple' => false,
-            'attr' => array(
-                'class' => 'structure_list structure_list_profile'
-            )
-        ))
+        $formBuilder
         ->add('save', SubmitType::class, array(
             'attr' => array(
-                'class' => 'validate_new_structure_btn'
+                //'class' => 'validate_new_structure_btn'
             )
         ));
 
         $form = $formBuilder->getForm();
 
         if($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-            $newStructure = $form['structures']->getData();
-            $user->addStructures($newStructure);
             $em->flush();
         }
 

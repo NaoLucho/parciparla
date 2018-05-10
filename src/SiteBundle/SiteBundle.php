@@ -1,10 +1,10 @@
 <?php
 
-namespace MNHN\PortailBundle;
+namespace SiteBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class MNHNPortailBundle extends Bundle
+class SiteBundle extends Bundle
 {
 
 }
