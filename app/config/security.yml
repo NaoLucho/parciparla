@@ -65,3 +65,8 @@ security:
         - { path: ^/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }
 
         - { path: ^/pro/, role: [ROLE_PRO, ROLE_ADMIN, ROLE_SONATA_ADMIN]}
+
+    firewalls:
+        main:
+            form_login:
+                use_forward:    true
