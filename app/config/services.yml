@@ -34,7 +34,6 @@ services:
     #     arguments:
     #         $someArgument: 'some_value'
 
-
 # POUR ACTIVER LES PERMISSIONS ACL (a la place de sonata_admin-security-handler: sonata.admin.security.handler.role)
 # services:
 #     security.acl.permission.map:

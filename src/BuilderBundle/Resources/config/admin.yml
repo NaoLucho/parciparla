@@ -65,19 +65,6 @@ services:
             - { name: sonata.admin, manager_type: orm, group: "Site", label: "Type de champs" }
         public: true
 
-    app.admin.g_list:
-        class: BuilderBundle\Admin\G_ListAdmin
-        arguments: [~, BuilderBundle\Entity\G_List, ~]
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: "Metier", label: "Listes" }
-        public: true
-        
-    app.admin.g_listitem:
-        class: BuilderBundle\Admin\G_ListItemAdmin
-        arguments: [~, BuilderBundle\Entity\G_ListItem, ~]
-        tags:
-            - { name: sonata.admin, manager_type: orm, show_in_dashboard: false, group: 'Metier' }
-        public: true
     app.admin.carousel:
         class: BuilderBundle\Admin\CarouselAdmin
         arguments: [~, BuilderBundle\Entity\Carousel, ~]

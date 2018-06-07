@@ -1,0 +1,40 @@
+{# <div class="info">{{filter}} {{filtervalue}}</div> #}
+<div class="filters">
+    <span  class="info-page"> Catégorie: </span><a href="{{path('site_buildpage', {'slug':(categorie|replace({' ': '_'})|lower())})}}">{{categorie}}</a>
+</div>
+<div class="nbresults">{{nb_total_items}} article{% if nb_total_items > 1 %}s{% endif %}</div>
+<div class="list-items">
+    {% if items is defined %}
+        {% for item in items %}
+            <div class="item row">
+                <div class="illustration col-2" ><img src="{{ vich_uploader_asset(item, 'photoFile') }}" alt="{{ item.title }}">
+                </div>
+                <div class="info col">
+                    <div class="title">
+                        <a href="{{path('site_buildpageid',{'slug':'article','id':item.id })}}">{{item.title}}</a>
+                    </div>
+                    <div class="date">
+                        Publié le {{item.publishedAt| date('d/m/Y')}}
+                    </div>
+                    <div class="content">
+                        {{item.content| raw }} 
+                    </div>
+                    <a class="" href="{{path('site_buildpageid',{'slug':'article','id':item.id })}}"> > lire l'article</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {# pager #}
+    {% if pages > 1 and numpage is defined %}
+        <nav class="single-pager mt-3">
+            <ul class="pagination justify-content-center">
+                {% for p in 1..pages %}
+                    <li class="{{ p == numpage ? 'active' : ''}}">
+                        <a class="ecosystempager" index="{{loop.index}}" href="#">{{ loop.index }}</a>{{ loop.index != loop.length ? '-'}}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    {% endif %}
+</div>

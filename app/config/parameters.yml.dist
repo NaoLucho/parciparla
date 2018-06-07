@@ -17,10 +17,10 @@ parameters:
     mailer_encryption: ssl
     project_name: sites/sitebuilder
     mailer_encryption: ssl
-    image_prefix: /%project_name%/web/uploads/img
+    upload_prefix: /%project_name%/web/uploads
+    image_prefix: '%upload_prefix%/img'
     
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
 
     template_repo: site
-    image_prefix: /%project_name%/web/uploads/img

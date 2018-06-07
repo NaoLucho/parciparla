@@ -9,22 +9,19 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Validator\Constraints;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
-
-// use SiteBundle\Form\P_ProgramObjectiveType; //Formulaire
-// use SiteBundle\Form\PartnersForm; //Formulaire
-// use SiteBundle\Form\Type\TableObjectivesType; //Type de champ
-
-// use SiteBundle\Form\P_ProgramNbByYearType; //Formulaire
-// use SiteBundle\Form\Type\TableNbByYearType; //Type de champ
-
-use SiteBundle\Entity\Geom;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
-
 use Doctrine\Common\Annotations\AnnotationReader;
+use Symfony\Component\Validator\Constraints;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
+
+use Symfony\Component\PropertyAccess\PropertyAccess;
+use Ivory\CKEditorBundle\Form\Type\CKEditorType;
+use Sonata\CoreBundle\Form\Type\DatePickerType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 //UTILS pour builder
 class FormBuilder
 {
@@ -398,6 +395,12 @@ class FormBuilder
                         $usebuilder = false;
                         break;
                     case "FileArray":
+                        $usebuilder = false;
+                        break;
+                    case "TextEditor":
+                        $type = CKEditorType::class;
+                        break;
+                    case "Rights":
                         $usebuilder = false;
                         break;
                     default: //Text

@@ -73,7 +73,7 @@ class BuildContentController extends Controller
                 break;
             case "Controller":
                 //$this->generateUrl('my_login_path');
-                return $this->forward(strip_tags($pageContent->getContent()->getContent()), ['request' => $request, 'id' => $id]);
+                return $this->forward(strip_tags($pageContent->getContent()->getContent()), ['request' => $request, 'id' => $id, 'pageContent' => $pageContent]);
                 break;
 
             default: //Text

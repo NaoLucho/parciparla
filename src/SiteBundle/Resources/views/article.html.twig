@@ -1,0 +1,27 @@
+{% if article is not null %}
+  {% if hasRights is defined and hasRights and article.isActive %}
+
+  {# <div class="info-page"> #}
+    {# <div class="info-page col-4"> ARTICLE</div> #}
+    <div class="">{% if article and article.typeArticle is defined %}<span class="info-page"> catégorie: </span><a href="{{path('site_buildpage', {'slug':(article.typeArticle.name|replace({' ': '_'})|lower())})}}">{{article.typeArticle.name}}</a>{% endif %} </div>
+  {# </div> #}
+  <div class="title-page">{{article.title}}</div>
+  <div class="subtitle-page">Publié le {{article.publishedAt| date('d/m/Y')}}</div>
+  <hr>
+  <div class="content">{{article.content | raw}}</div>
+  <div class="author"></div>
+
+  <div class="comments">
+    
+  </div>
+
+  {% else %}
+  <div> Vous n'êtes pas autorisés à consulter cet article (id {{article.id}}) </div>
+  {% endif %}
+{% else %}
+  <div> Il n'y a pas d'article avec cet identifiant. </div>
+{% endif %}
+
+  {# {% javascripts '@SiteBundle/Resources/public/js/article.js' %}
+      <script type="text/javascript" src="{{ asset_url }}"></script>
+  {% endjavascripts %} #}

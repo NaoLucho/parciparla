@@ -24,6 +24,11 @@
                 <link rel="stylesheet" href="{{ asset_url }}" />
             {% endstylesheets %}
 
+            {# css SonataUserBundle #}
+            {% stylesheets '@BuilderBundle/Resources/public/css/main.css' %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
+            {% endstylesheets %}
+
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         {% endblock %}
 
@@ -50,7 +55,7 @@
         {% endblock %}
     </head>
 
-    <body>
+    <body class="body-back">
         <div class="container">
             <div class="row">
                 <div class="col"></div>

@@ -4,7 +4,7 @@
     {% if value is not null %}
         {% for formfield in value %}
             <div>
-                {{formfield.position}} | {{formfield.field.property}}: <a href="{{ path('admin_builder_admin_f_formfield_edit', {id: formfield.id}) }}">{{formfield.field.label}}</a>
+                {{formfield.position}} | {{formfield.field.property}}: <a href="{{ path('admin_builder_f_formfield_edit', {id: formfield.id}) }}">{{formfield.field.label}}</a>
             </div>
         {% endfor %}
     {% endif %}

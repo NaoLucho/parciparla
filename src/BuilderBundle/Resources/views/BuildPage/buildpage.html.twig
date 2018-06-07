@@ -2,7 +2,6 @@
 {# {% extends template_repo ~ '/views/templates/default.html.twig' %}
 {% extends 'builder_base_layout.html.twig' %}
 {% extends 'templates/default.html.twig' %} #}
-
 {# {% block title %}{{ page.name }}{% endblock %} #}
 {% if page %}
     {% if title is not defined %}
@@ -77,7 +76,7 @@
     {% set access = false %}
     {# Si des droits spécifiques sont demandés: #}
     {% for group in pcontent.content.rights %}
-        {% if group.name == 'Users' %}
+        {% if group.name == 'All' %}
             {% set access = true %}
             {# <div> Access pour tous si group.name = Users </div> #}
         {% else %}
@@ -111,6 +110,9 @@
     {% if page %}<link rel="stylesheet" href="{{ page.class }}"/>{% endif %}
     {# ICI AJOUTER css de {{page.class}} #}
     {# Possible aussi d'ajouter un fichier js #}
+    {% stylesheets '@BuilderBundle/Resources/public/css/buildpage.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %} 
 {% endblock %}
 
 {% block javascripts %}

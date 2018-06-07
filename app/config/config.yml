@@ -276,12 +276,12 @@ vich_uploader:
             namer:              vich_uploader.namer_origname
             delete_on_update: true
             delete_on_remove: true
-        # structure_logo_image:
-        #     uri_prefix:         '%structure_logo_route%'
-        #     upload_destination: '%kernel.root_dir%/../web/uploads/img/logo_structure'
-        #     namer:              vich_uploader.namer_origname
-        #     delete_on_update: true
-        #     delete_on_remove: true
+        article_photo:
+            uri_prefix:         '%image_prefix%/article_photo/'
+            upload_destination: '%kernel.root_dir%/../web/uploads/img/article_photo'
+            namer:              vich_uploader.namer_origname
+            delete_on_update: true
+            delete_on_remove: true
         # program_logo_image:
         #     uri_prefix:         '%image_prefix%/program/logo_progam'
         #     upload_destination: '%kernel.root_dir%/../web/uploads/img/program/logo_progam'
