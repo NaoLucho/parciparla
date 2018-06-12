@@ -105,13 +105,15 @@ class Article
      */
     private $isActive;
 
-    public function __construct(User $user = null)
+    /** @ORM\OneToMany(targetEntity="SiteBundle\Entity\Comment", mappedBy="article", cascade={"persist"}, orphanRemoval=true) */
+    private $comments;
+
+
+    public function __construct()
     {
-        $this->author = $user;
-        //$this->rights = new ArrayCollection();
-        $this->localisations = new ArrayCollection();
         $this->isActive = false;
         $this->publishedAt = new \DateTime();
+        $this->comments = new ArrayCollection();
     }
 
     /**
@@ -299,7 +301,7 @@ class Article
      *
      * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
      *
-     * @return Product
+     * @return Article
      */
     public function setPhotoFile(File $image = null)
     {
@@ -398,4 +400,53 @@ class Article
     {
         $this->setUpdatedAt(new \Datetime());
     }
+
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * Set menu pages
+     *
+     * @param string $comments
+     *
+     * @return Page Content
+     */
+    public function setComments($comments)
+    {
+        if (count($comments) > 0) {
+            foreach ($comments as $i) {
+                $this->addComment($i);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * Add comments
+     *
+     * @param \BuilderBundle\Entity\Menu_Page $comments
+     *
+     * @return Page
+     */
+    public function addComment(\BuilderBundle\Entity\Page_Content $comments)
+    {
+        $comments->setArticle($this);
+        $this->comments[] = $comments;
+
+        return $this;
+    }
+
+    /**
+     * Remove comments
+     *
+     * @param \BuilderBundle\Entity\Page_Content $comments
+     */
+    public function removeComment(\BuilderBundle\Entity\Page_Content $comments)
+    {
+        $this->comments->removeElement($comments);
+    }
+
 }

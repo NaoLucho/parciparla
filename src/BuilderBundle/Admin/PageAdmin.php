@@ -24,8 +24,7 @@ class PageAdmin extends AbstractAdmin
                 'by_reference' => false,        
                 'type_options' => array(
                     'delete' => true
-                )
-            ), array(
+                )), array(
                 'edit' => 'inline',
                 'inline' => 'table',
                 'sortable' => 'id'

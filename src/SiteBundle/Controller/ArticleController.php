@@ -1,14 +1,19 @@
 <?php
 namespace SiteBundle\Controller;
 
+use SiteBundle\Entity\Comment;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\Common\Collections\Expr\Expression;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use MNHN\AdminBundle\Controller\Builder\Utils;
-
 use Symfony\Component\HttpFoundation\RedirectResponse;
+
+use MNHN\AdminBundle\Controller\Builder\Utils; //FORM BUILDER
+
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class ArticleController extends Controller
 {
@@ -21,7 +26,7 @@ class ArticleController extends Controller
         //$date = date("Y-m-d");
         $article = $em->getRepository('SiteBundle:Article')->findOneBy(['id' => $id]);
         $article_group = null;
-        if(isset($article)){
+        if (isset($article)) {
             $article_group = $article->getRights();
         }
         $hasRights = false;
@@ -33,9 +38,53 @@ class ArticleController extends Controller
             $hasRights = true;
         }
 
+        //Load comments:
+        $comments = $em->getRepository('SiteBundle:Comment')
+            ->findBy([
+                'article' => $article,
+                'isActive' => true
+            ]);
+        // $comments = $qbComment->getQuery()->getResult();
+
+        //Form comments:
+        $formbuilder = $this->createFormBuilder(new Comment())->add('content', TextType::class);
+
+        $optionAuthor = [];
+        if (isset($user)) {
+            $optionAuthor = array(
+                'data' => $user->getUsername(),
+                'attr' => array(
+                    'readonly' => true,
+                )
+            );
+        }
+
+        $formbuilder->add('title', TextType::class)
+            ->add('content', TextareaType::class)
+            ->add('authorName', TextType::class, $optionAuthor)
+            ->add('save', SubmitType::class, array('label' => 'Valider'));
+
+        $form = $formbuilder->getForm();
+
+
+        $form->handleRequest($request);
+        dump($form);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $comment = $form->getData();
+            $comment->setArticle($article);
+            $em->persist($comment);
+            $em->flush();
+
+            // Adding a success type message
+            $this->addFlash("success", "Votre commentaire est enregistré, il est en attente de validation par le modérateur.");
+            dump($comment);
+        }
+
         return $this->render('SiteBundle::article.html.twig', array(
             'article' => $article,
-            'hasRights' => $hasRights
+            'hasRights' => $hasRights,
+            'formComment' => $form->createView(),
+            'comments' => $comments
         ));
     }
 
@@ -59,21 +108,18 @@ class ArticleController extends Controller
             $pageinfos = explode('#', $pageContent->getPosition());
             if (count($pageinfos) > 1) {
 
-                foreach(explode(';', $pageinfos[1]) as $param)
-                {
-                    if(strpos($param, 'nbbypage')!== false)
-                    {
+                foreach (explode(';', $pageinfos[1]) as $param) {
+                    if (strpos($param, 'nbbypage') !== false) {
                         $paraminfos = explode('=', $param);
                         if (count($paraminfos) > 1) {
                             $nbbypage = $paraminfos[1];
                         }
-                    }
-                    else{
+                    } else {
                         //filter exists
                         $filterinfos = explode('=', $param);
                         $filter_property = $filterinfos[0];
                         $filter_propertyinfos = explode('.', $filter_property);
-                        if(count($filter_propertyinfos)>1){
+                        if (count($filter_propertyinfos) > 1) {
                             // $filter_property = propertyEntity.property
                             $filter_propertyEntity = $filter_propertyinfos[0];
                             $filter_property = $filter_propertyinfos[1];
@@ -81,39 +127,39 @@ class ArticleController extends Controller
                         $valueToFilter = $filterinfos[1];
                     }
                 }
-                
+
             }
         }
-        
-        
-        
+
+
+
         $qb = $em->getRepository('SiteBundle:Article')->createQueryBuilder('entity');
         if (isset($filter_propertyEntity)) {
             //dump($filter_propertyEntity);
             $qb = $qb->leftJoin('entity.' . $filter_propertyEntity, 'entityJoined');
             $qb = $qb->where('entityJoined.' . $filter_property . ' = :filtervalue');
             //dump($filter_property);
-        } elseif($filter_property !== "") {
+        } elseif ($filter_property !== "") {
             $qb = $qb->where('entity.' . $filter_property . ' = :filtervalue');
         }
-        if($filter_property !== "" && $valueToFilter !== "")
-        {
+        if ($filter_property !== "" && $valueToFilter !== "") {
             $qb = $qb->setParameter('filtervalue', $valueToFilter);
             //dump($valueToFilter);
         }
         // $qb = $qb->where('entity.isActive = true');
 
-        $paginator  = new \Doctrine\ORM\Tools\Pagination\Paginator($qb);
+        $paginArticle = new \Doctrine\ORM\Tools\Pagination\Paginator($qb);
+        $totalItems = count($paginArticle);
 
-        $totalItems = count($paginator);
-        $qb->setFirstResult($nbbypage * ($numpage-1)) // set the offset
-        ->setMaxResults($nbbypage);
+        $qb->setFirstResult($nbbypage * ($numpage - 1)) // set the offset
+            ->setMaxResults($nbbypage);
         $items = $qb->getQuery()->getResult();
 
-        
-        
+
+
         $pages = ceil($totalItems / $nbbypage);
         
+
         return $this->render('SiteBundle::list-article.html.twig', array(
             'nb_total_items' => $totalItems,
             'items' => $items,
@@ -121,7 +167,7 @@ class ArticleController extends Controller
             'nbbypage' => $nbbypage,
             'numpage' => $numpage,
             'request' => $request,
-            'categorie' => $valueToFilter
+            'categorie' => $valueToFilter,
         ));
     }
 }

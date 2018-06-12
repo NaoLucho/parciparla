@@ -43,7 +43,7 @@ class F_Form
     private $entity;
 
     /**
-    * @ORM\OneToMany(targetEntity="BuilderBundle\Entity\F_FormField", mappedBy="form", cascade={"persist"})
+    * @ORM\OneToMany(targetEntity="BuilderBundle\Entity\F_FormField", mappedBy="form", cascade={"persist"}, orphanRemoval=true)
     * @ORM\OrderBy({"position" = "ASC"})
     */
     protected $formFields;
@@ -141,6 +141,24 @@ class F_Form
     }
 
     /**
+     * Set form fields
+     *
+     * @param string $formField
+     *
+     * @return F_Form F_Form
+     */
+    public function setFormField($formFields)
+    {
+        if (count($formFields) > 0) {
+            foreach ($formFields as $i) {
+                $this->addFormField($i);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
      * Add formField
      *
      * @param \BuilderBundle\Entity\F_FormField $formField
@@ -149,6 +167,7 @@ class F_Form
      */
     public function addFormField(\BuilderBundle\Entity\F_FormField $formField)
     {
+        $formField->setForm($this);
         $this->formFields[] = $formField;
 
         return $this;

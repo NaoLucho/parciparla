@@ -7,7 +7,10 @@
     {% if items is defined %}
         {% for item in items %}
             <div class="item row">
-                <div class="illustration col-2" ><img src="{{ vich_uploader_asset(item, 'photoFile') }}" alt="{{ item.title }}">
+                <div class="illustration col-2" >
+                    <a class="" href="{{path('site_buildpageid',{'slug':'article','id':item.id })}}">
+                        <img src="{{ vich_uploader_asset(item, 'photoFile') }}" alt="{{ item.title }}">
+                    </a>
                 </div>
                 <div class="info col">
                     <div class="title">
@@ -26,15 +29,18 @@
     {% endif %}
 
     {# pager #}
-    {% if pages > 1 and numpage is defined %}
+    {% if request.get("slug") != (categorie|replace({' ': '_'})|lower()) %}
+        <a class="mb-5 d-flex justify-content-center" href="{{ path('site_buildpage', {'slug': (categorie|replace({' ': '_'})|lower())})}}">> voir plus d'articles</a>
+    {% elseif pages > 1 and numpage is defined %}
         <nav class="single-pager mt-3">
             <ul class="pagination justify-content-center">
                 {% for p in 1..pages %}
                     <li class="{{ p == numpage ? 'active' : ''}}">
-                        <a class="ecosystempager" index="{{loop.index}}" href="#">{{ loop.index }}</a>{{ loop.index != loop.length ? '-'}}
+                        <a class="pager-item" index="{{loop.index}}" href="{{ path('site_buildpage', {'slug': (categorie|replace({' ': '_'})|lower()) ,'p': p})}}">{{ loop.index }}</a>{{ loop.index != loop.length ? '-'}}
                     </li>
                 {% endfor %}
             </ul>
         </nav>
     {% endif %}
+
 </div>

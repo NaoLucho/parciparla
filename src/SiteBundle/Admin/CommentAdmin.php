@@ -21,11 +21,11 @@ use Sonata\CoreBundle\Form\Type\DateRangeType;
 use Sonata\DoctrineORMAdminBundle\Filter\DateRangeFilter;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Validator\Constraints\IsTrueValidator;
-use Sonata\CoreBundle\Form\Type\CollectionType;
+
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 
-class ArticleAdmin extends AbstractAdmin
+class CommentAdmin extends AbstractAdmin
 {
 
     //to add template for fields
@@ -52,50 +52,30 @@ class ArticleAdmin extends AbstractAdmin
 
         $f_form = $em
             ->getRepository('BuilderBundle:F_Form')
-            ->findOneBy(array('name' => 'article'));
+            ->findOneBy(array('name' => 'comment'));
         
         //$user =  $this->get('security.context')->getToken()->getUser();
         $user = $this->getConfigurationPool()->getContainer()->get('security.token_storage')->getToken()->getUser();
         //$formMapper->with($f_form->getTitle());
+        
+        // $formMapper->add('article', EntityType::class, array(
+        //     'class' => 'SiteBundle\Entity\Article',
+        //     'choice_label' => 'title',
+        // ));
+
         $formMapper = FormBuilder::createForm($f_form, $formMapper, $user, $em);
         //$formMapper->end();
         //$entity = $formMapper->getAdmin()->getSubject();
-
         
-        $formMapper->add('rights', 'sonata_type_model', array(
-            'class' => 'Application\Sonata\UserBundle\Entity\Group',
-            'property' => 'name',
-            'multiple' => false,
-            'btn_add' => false,
-            'required' => true,
-            'label' => 'Accessibilité'
-        ))
 
-        ->add('publishedAt', DatePickerType::class, array(
-            'label' => 'Date de publication'
-        ))
+        // $formMapper
+        // ->add('publishedAt', DatePickerType::class, array(
+        //     'label' => 'Date de publication'
+        // ))
 
-        ->add('isActive',null,array(
-            'label' => 'Visible'
-        ));
-
-        //NOT WORK CORRECTLY 4H de tentative échouée
-        // POURQUOI??? pourtant cela fonctionne très bien avec GList et Menu, Page et Formulaire..
-        // DECISION => ARRETER D'utiliser Sonata Admin, infernal gouffre incompréhensible..
-        // $formMapper->add('comments', 'sonata_type_collection', 
-        //     array(
-        //         'by_reference' => false,
-        //         'btn_add' => 'Ajouter',
-        //         'type_options' => array(
-        //             'delete' => true
-        //         )
-        //     ), array(
-        //         'edit' => 'inline',
-        //         'allow_add' => true,
-        //         'inline' => 'table',
-        //         'sortable' => 'publishedAt',
+        // ->add('isActive',null,array(
+        //     'label' => 'Visible'
         // ));
-        
     }
     
     // Fields to be shown on filter forms
@@ -113,6 +93,9 @@ class ArticleAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
+            ->add('article', null, array(
+                'associated_property' => 'title'
+            ))
             ->addIdentifier('title', null, array(
                 'label' => "Titre"
             ))
@@ -120,10 +103,6 @@ class ArticleAdmin extends AbstractAdmin
                 'label' => 'Date de publication',
                 'format' => 'd/m/Y',
                 'locale' => 'fr'
-            ))
-            ->add('typeArticle', null, array(
-                'associated_property' => 'name',
-                'label' => "Categorie"
             ))
             ->add('isActive',null,array(
                 'label' => 'Visible',

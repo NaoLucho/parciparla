@@ -13,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Symfony\Component\Validator\Constraints;
 use Symfony\Component\Form\FormEvent;
@@ -22,6 +23,7 @@ use Symfony\Component\PropertyAccess\PropertyAccess;
 use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 use Sonata\CoreBundle\Form\Type\DatePickerType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Sonata\CoreBundle\Form\Type\DateTimePickerType;
 //UTILS pour builder
 class FormBuilder
 {
@@ -311,6 +313,10 @@ class FormBuilder
                             );
                         }
                         break;
+                    case "boolean":
+                        $type = CheckboxType::class;
+                        $options['label'] = " " . $field->getLabel();
+                        break;
                     case "email":
                         $type = EmailType::class;
 
@@ -327,6 +333,8 @@ class FormBuilder
                             )
                         );
                         break;
+                    case "datetime":
+                        $type = DateTimePickerType::class;
                     case "year":
                     //$type = 'date';
                     // $options['years'] = [2010,2011];
@@ -695,10 +703,12 @@ class FormBuilder
 
                     }
                 } else {
+                    dump($errormessage);
                     //MESSAGE ERREUR TO LOG
-                    $formBuilder->add("error", null, array(
+                    $formBuilder->add("error", TextType::class, array(
                         "mapped" => false,
-                        "label" => $options['label'] . ' ########### ' . $errormessage
+                        "label" => $options['label'] . ' ERROR ',
+                        "data" => $errormessage
                     ));
                 }
             }

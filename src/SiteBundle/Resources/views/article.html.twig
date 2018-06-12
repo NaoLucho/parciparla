@@ -1,27 +1,68 @@
 {% if article is not null %}
-  {% if hasRights is defined and hasRights and article.isActive %}
+    {% if hasRights is defined and hasRights and article.isActive %}
 
-  {# <div class="info-page"> #}
-    {# <div class="info-page col-4"> ARTICLE</div> #}
-    <div class="">{% if article and article.typeArticle is defined %}<span class="info-page"> catégorie: </span><a href="{{path('site_buildpage', {'slug':(article.typeArticle.name|replace({' ': '_'})|lower())})}}">{{article.typeArticle.name}}</a>{% endif %} </div>
-  {# </div> #}
-  <div class="title-page">{{article.title}}</div>
-  <div class="subtitle-page">Publié le {{article.publishedAt| date('d/m/Y')}}</div>
-  <hr>
-  <div class="content">{{article.content | raw}}</div>
-  <div class="author"></div>
+        {# <div class="info-page"> #}
+        {# <div class="info-page col-4"> ARTICLE</div> #}
+        <div class="">
+            {% if article and article.typeArticle is defined %}
+                <span class="info-page">
+                    catégorie:
+                </span>
+                <a href="{{path('site_buildpage', {'slug':(article.typeArticle.name|replace({' ': '_'})|lower())})}}">{{article.typeArticle.name}}</a>
+            {% endif %}
+        </div>
+        {# </div> #}
+        <div class="title-page">{{article.title}}</div>
+        <div class="subtitle-page">Publié le
+            {{article.publishedAt| date('d/m/Y')}}</div>
+        <hr>
+        <div class="content">{{article.content | raw}}</div>
+        <div class="author"> Posté par {% if article.author is not null %}{{ article.author.username }}{% else %} un auteur anonyme.{% endif %}</div>
 
-  <div class="comments">
-    
-  </div>
+        <div class="comments">
+            {% for comment in comments %}
+				<div class="comment">
+					<div class="auteur">
+						{% if comment.author is not null %}
+							{{ comment.author.username }}
+						{% else %}
+							{{ comment.authorName }}
+						{% endif %}
+					</div>
+					<div class="date">
+						{{ comment.publishedAt| date() }}
+					</div>
+					<div class="title">
+						{{comment.title}}
+					</div>
+					<div class="content">
+						{{comment.content |nl2br }}
+					</div>
+				</div>
+            {% endfor %}
 
-  {% else %}
-  <div> Vous n'êtes pas autorisés à consulter cet article (id {{article.id}}) </div>
-  {% endif %}
+            <div>
+                {{ form_start(formComment) }}
+                {{ form_widget(formComment) }}
+                {{ form_end(formComment) }}
+            </div>
+        </div>
+
+    {% else %}
+        <div>
+            Vous n'êtes pas autorisés à consulter cet article (id
+            {{article.id}})
+        </div>
+    {% endif %}
 {% else %}
-  <div> Il n'y a pas d'article avec cet identifiant. </div>
+    <div>
+        Il n'y a pas d'article avec cet identifiant.
+    </div>
 {% endif %}
 
-  {# {% javascripts '@SiteBundle/Resources/public/js/article.js' %}
-      <script type="text/javascript" src="{{ asset_url }}"></script>
-  {% endjavascripts %} #}
+{% javascripts '@SiteBundle/Resources/public/js/article.js' %}
+	<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% stylesheets '@SiteBundle/Resources/public/css/article.css' %}
+	<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %} 

@@ -19,10 +19,10 @@ class F_FormFieldAdmin extends AbstractAdmin
 
         $formMapper
             //->add('id')
-            ->add('form', EntityType::class, array(
-                'class' => 'BuilderBundle\Entity\F_Form',
-                'choice_label' => 'name',
-            ))
+            // ->add('form', EntityType::class, array(
+            //     'class' => 'BuilderBundle\Entity\F_Form',
+            //     'choice_label' => 'name',
+            // ))
             ->add('field', EntityType::class, array(
                 'class' => 'BuilderBundle\Entity\F_Field',
                 'choice_label' => 'label',
