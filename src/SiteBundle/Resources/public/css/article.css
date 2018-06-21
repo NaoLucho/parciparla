@@ -38,4 +38,5 @@
 .comment .content{
     grid-column: 2 / end;
     grid-row: 2;
+    color: #222;
 }

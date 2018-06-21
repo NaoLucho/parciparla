@@ -47,28 +47,30 @@ class ArticleController extends Controller
         // $comments = $qbComment->getQuery()->getResult();
 
         //Form comments:
-        $formbuilder = $this->createFormBuilder(new Comment())->add('content', TextType::class);
+        $formbuilder = $this->createFormBuilder(new Comment());
 
-        $optionAuthor = [];
+        $optionAuthor = ['label' => "Auteur"];
         if (isset($user)) {
             $optionAuthor = array(
                 'data' => $user->getUsername(),
                 'attr' => array(
                     'readonly' => true,
-                )
+                    'class' => 'align-middle'
+                ),
+                'label' => "Auteur"
             );
         }
 
-        $formbuilder->add('title', TextType::class)
-            ->add('content', TextareaType::class)
+        $formbuilder->add('title', TextType::class, ['label' => 'Titre'])
+            ->add('content', TextareaType::class, ['label' => 'Commentaire'])
             ->add('authorName', TextType::class, $optionAuthor)
-            ->add('save', SubmitType::class, array('label' => 'Valider'));
+            ->add('save', SubmitType::class, array('label' => 'Commenter'));
 
         $form = $formbuilder->getForm();
 
 
         $form->handleRequest($request);
-        dump($form);
+        //dump($form);
         if ($form->isSubmitted() && $form->isValid()) {
             $comment = $form->getData();
             $comment->setArticle($article);
@@ -77,7 +79,7 @@ class ArticleController extends Controller
 
             // Adding a success type message
             $this->addFlash("success", "Votre commentaire est enregistré, il est en attente de validation par le modérateur.");
-            dump($comment);
+            //dump($comment);
         }
 
         return $this->render('SiteBundle::article.html.twig', array(

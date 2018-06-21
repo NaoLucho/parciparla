@@ -68,15 +68,6 @@
                     {% endif %}
                 </div>
             </div>
-            {% if app.request.hasPreviousSession %}
-                {% for type, messages in app.session.flashBag.all %}
-                    {% for message in messages %}
-                        <div class="{{ type }}">
-                            {{ message|trans({}, 'FOSUserBundle') }}
-                        </div>
-                    {% endfor %}
-                {% endfor %}
-            {% endif %}
 
             <div class="row">
                 {% block header %}
@@ -94,6 +85,16 @@
                     </li>
                 </ul>
             {% endblock %}
+
+            {% if app.request.hasPreviousSession %}
+                {% for type, messages in app.session.flashBag.all %}
+                    {% for message in messages %}
+                        <div class="mt-4 alert alert-{{ type }}">
+                            {{ message|trans({}, 'FOSUserBundle') }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
             {# Apparait seulement si fos_user est appelé #}
             {% block fos_user_content %}{% endblock fos_user_content %}
 

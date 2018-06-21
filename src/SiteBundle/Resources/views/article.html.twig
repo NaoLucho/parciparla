@@ -19,7 +19,8 @@
         <div class="content">{{article.content | raw}}</div>
         <div class="author"> Posté par {% if article.author is not null %}{{ article.author.username }}{% else %} un auteur anonyme.{% endif %}</div>
 
-        <div class="comments">
+        <div class="comments mt-5">
+            <h5> Commentaires: </h5>
             {% for comment in comments %}
 				<div class="comment">
 					<div class="auteur">
@@ -41,9 +42,23 @@
 				</div>
             {% endfor %}
 
-            <div>
+            <div class="mt-4">
+                <h5> Ajouter un commentaire: </h5>
                 {{ form_start(formComment) }}
-                {{ form_widget(formComment) }}
+                    <div class="d-flex flex-row mb-2">
+                        {{ form_label(formComment.title, 'Titre', {'label_attr': {'class': 'mt-2'}} ) }}
+                        {{ form_widget(formComment.title, {'attr': {'class': 'ml-2'}}) }}
+                        {{ form_errors(formComment.title) }}
+                    </div>
+                    {{ form_row(formComment.content) }}
+                    <div class="d-flex flex-row">
+                        {{ form_label(formComment.authorName, null, {'label_attr': {'class': 'mt-2'}}) }}
+                        {{ form_widget(formComment.authorName, {'attr': {'class': 'ml-2'}}) }}
+                        {{ form_errors(formComment.authorName) }}
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        {{ form_widget(formComment.save, {'attr': {'class': 'btn-secondary mt-2'}}) }}
+                    </div>
                 {{ form_end(formComment) }}
             </div>
         </div>
