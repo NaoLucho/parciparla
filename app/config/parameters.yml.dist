@@ -3,24 +3,17 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
     database_host: 127.0.0.1
-    database_port: ~
-    database_name: symfony
+    database_port: null
+    database_name: sitebuilder
     database_user: root
-    database_password: ~
-    # You should uncomment this if you want to use pdo_sqlite
-    #database_path: '%kernel.project_dir%/var/data/data.sqlite'
-
-    mailer_transport: smtp
+    database_password: root
+    mailer_transport: gmail
     mailer_host: 127.0.0.1
-    mailer_user: ~
-    mailer_password: ~
+    mailer_user: louis.watrin@gmail.com
+    mailer_password: pass
     mailer_encryption: ssl
-    project_name: sites/sitebuilder
-    mailer_encryption: ssl
+    project_name: Sites/sitebuilder
     upload_prefix: /%project_name%/web/uploads
     image_prefix: '%upload_prefix%/img'
-    
-    # A secret key that's used to generate certain security-related tokens
-    secret: ThisTokenIsNotSoSecretChangeIt
-
+    secret: cecilesecret
     template_repo: site
