@@ -55,3 +55,8 @@ a{
     margin-right: auto;
     font-style: italic;
 }
+
+/* décalage du menu de 1px pour éviter de sortir du focus avant d'être sur le sous menu */
+.dropdown-menu{ 
+    margin-top: -1px;
+}

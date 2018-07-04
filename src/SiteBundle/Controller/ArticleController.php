@@ -4,6 +4,7 @@ namespace SiteBundle\Controller;
 use SiteBundle\Entity\Comment;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\Common\Collections\Expr\Expression;
+// use DoctrineExtensions\Query\Mysql;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -170,6 +171,61 @@ class ArticleController extends Controller
             'numpage' => $numpage,
             'request' => $request,
             'categorie' => $valueToFilter,
+        ));
+    }
+
+    public function sommaireAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        
+        //get all articles:
+        $qb = $em->getRepository('SiteBundle:Article')->createQueryBuilder('article');
+        $qb = $qb->leftJoin('article.typeArticle', 'typeArticle');
+        $qb = $qb->where('article.isActive = true');
+        $qb = $qb->orderBy('article.publishedAt', 'DESC');
+        $qb = $qb->orderBy('typeArticle.order', 'ASC');
+        $articles = $qb->getQuery()->getResult();
+
+        // $articles = $em->getRepository('SiteBundle:Article')
+        //     ->findBy(
+        //         ["isActive" => true],
+        //         array('publishedAt' => 'DESC')
+        //     );
+        
+        dump($articles);
+
+        //rechercher la date de publication la plus ancienne des articles
+        $qb = $em->getRepository('SiteBundle:Article')->createQueryBuilder('article');
+        $qb->select('Min(article.publishedAt)');
+        $oldestDate = $qb->getQuery()->getOneOrNullResult()[1];
+        //dump($oldestDate[1]);
+        $oldestYear = (new \DateTime($oldestDate))->format('Y');
+        dump(date('Y'));
+        $articlesByYear = [];
+        //$articlesByYear[$year] = $results;
+        for ($year = date('Y'); $year >= $oldestYear; $year--) {
+            $qb = $em->getRepository('SiteBundle:Article')->createQueryBuilder('article');
+            $qb = $qb->where('YEAR(article.publishedAt) = :year');
+            $qb = $qb->setParameter('year', $year);
+            $qb = $qb->leftJoin('article.typeArticle', 'typeArticle');
+            $qb = $qb->andwhere('article.isActive = :true');
+            $qb = $qb->setParameter('true', true);
+            $qb = $qb->orderBy('typeArticle.order', 'ASC');
+            $qb = $qb->orderBy('article.publishedAt', 'DESC');
+            $results = $qb->getQuery()->getResult();
+            dump($results);
+            $articlesByYear[$year] = $results;
+        }
+        dump($articlesByYear);
+
+        return $this->render('SiteBundle::sommaire-article.html.twig', array(
+            'nb_total_items' => 1,
+            'articlesByYear' => $articlesByYear,
+            'pages' => 1,
+            'nbbypage' => 1,
+            'numpage' => 1,
+            'request' => $request,
+            'categorie' => 'cat',
         ));
     }
 }

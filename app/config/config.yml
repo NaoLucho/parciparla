@@ -132,6 +132,9 @@ doctrine:
                 within:                 CrEOF\Spatial\ORM\Query\AST\Functions\MySql\Within
                 x:                      CrEOF\Spatial\ORM\Query\AST\Functions\MySql\X
                 y:                      CrEOF\Spatial\ORM\Query\AST\Functions\MySql\Y 
+            datetime_functions:
+                MONTH: DoctrineExtensions\Query\Mysql\Month
+                YEAR: DoctrineExtensions\Query\Mysql\Year
 
 # Swiftmailer Configuration
 swiftmailer:

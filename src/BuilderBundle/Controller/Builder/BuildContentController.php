@@ -215,8 +215,15 @@ class BuildContentController extends Controller
         ));
     }
 
-    public function menuPrincipalAction($menuName)
+    public function menuPrincipalAction($menuName, Request $baserequest)
     {
+        $currentslug = "";
+        $baserequest = $baserequest->get('request');
+        if($baserequest)
+        {
+            $currentslug = $baserequest->get('slug');
+        }
+
         if ($menuName == null) {
             $menuName = 'Principal';
         }
@@ -263,6 +270,8 @@ class BuildContentController extends Controller
 
         return $this->render(':' . $this->container->getParameter('template_repo') . '/views/parts:main-menu.html.twig', array(
             'links' => $links,
+            'baserequest' => $baserequest,
+            'currentslug' => $currentslug
         ));
     }
 

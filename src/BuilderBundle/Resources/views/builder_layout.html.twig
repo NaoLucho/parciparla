@@ -9,9 +9,8 @@
 {% block menu %}
     <div id="menu">
         {{ render(controller("BuilderBundle:Builder/BuildContent:buildDefaultContent", {'selectposition': 'Menu'})) }}
-      {# {{ render(controller("BuilderBundle:Builder/BuildContent:menuPrincipal", {'menuName': 'Principal'})) }} #}
+      {# {{ render(controller("BuilderBundle:Builder/BuildContent:menuPrincipal", {'menuName': 'Principal', 'request': (request is defined ? request : app.request )})) }} #}
     </div>
-    {# {{ render(controller("BuilderBundle:Builder/BuildPage:menuPrincipal", {'menuName': 'Principal'})) }} #}
 {% endblock %}
 
 {% block body %}
