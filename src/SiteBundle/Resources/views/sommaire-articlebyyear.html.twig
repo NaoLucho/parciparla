@@ -1,6 +1,6 @@
 {% if articlesByYear is defined %}
     {% for articleyear,items in articlesByYear %}
-        </br></br>
+        </br>
         <h3>Année {{articleyear}}</h3>
         {% set category = '' %}
         {% for item in items %}
@@ -36,6 +36,6 @@
                 {% set category = item.typeArticle.name %}
             {% endif %}
         {% endfor %}
-        
+        </br>
     {% endfor %}
 {% endif %}

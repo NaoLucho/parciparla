@@ -61,6 +61,7 @@
     /* color: #222; */
     overflow: hidden;
     height: 100px;
+    line-height: 2rem;
 }
 
 .list-items .info > a{

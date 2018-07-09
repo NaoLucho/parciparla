@@ -20,7 +20,7 @@
                         Publié le {{item.publishedAt| date('d/m/Y')}}
                     </div>
                     <div class="content">
-                        {{item.content| raw }} 
+                        {{item.content| striptags | raw }} 
                     </div>
                     <a class="" href="{{path('site_buildpageid',{'slug':'article','id':item.id })}}"> > lire l'article</a>
                 </div>

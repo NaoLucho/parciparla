@@ -31,6 +31,10 @@
     max-width: 150px;
 }
 
+.list-items .icon img{
+    max-width: 50px;
+}
+
 .list-items .item{
     /* float:left; */
     border-bottom: 1px solid #BBB; 
@@ -57,6 +61,7 @@
     /* color: #222; */
     overflow: hidden;
     height: 100px;
+    line-height: 2rem;
 }
 
 .list-items .info > a{

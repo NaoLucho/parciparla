@@ -15,30 +15,13 @@
   {% set title = "Page inexistante" %}
   {% set imageHero = 'VisuelContact.jpg' %}
 {% endif %}
-{# {% block title %}
-    {% if page %}
-        {% if page.seoTitle != '' %}{{ page.seoTitle }}
-            -
-            {{ parent() }}
-        {% else %}
-            {% if page.name != '' %}{{ page.name }}
-                -
-                {{ parent() }}
-            {% else %}{{ parent() }}
-            {% endif %}
-        {% endif %}
-    {% endif %}
-{% endblock %} #}
+
 {% block seoDescription %}
-    {% if page %}
-        {% if page.seoDesc != '' %}"{{ page.seoDesc }}"{% else %}{{ parent() }}
-        {% endif %}
+    {% if page and page.seoDesc and page.seoDesc != '' %}"{{ page.seoDesc }}"{% else %}{{ parent() }}
     {% endif %}
 {% endblock %}
 {% block seoKeywords %}
-    {% if page %}
-        {% if page.seoKeywords and page.seoKeywords != '' %}"{{ page.seoKeywords }}"{% else %}{{ parent() }}
-        {% endif %}
+    {% if page and page.seoKeywords and page.seoKeywords != '' %}"{{ page.seoKeywords }}"{% else %}{{ parent() }}
     {% endif %}
 {% endblock %}
 

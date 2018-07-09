@@ -1,6 +1,6 @@
 {% extends "::builder_base_layout.html.twig" %}
 
-{% block title %}Site - {{ parent() }}{% endblock %}
+{% block title %}{{ parent() }} - des textes faciles à lire pour adultes - FALC{% endblock %}
 
 {% block header %}
     {{ render(controller("BuilderBundle:Builder/BuildContent:buildDefaultContent", {'selectposition': 'Header'})) }}

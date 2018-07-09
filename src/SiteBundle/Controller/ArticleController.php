@@ -63,7 +63,7 @@ class ArticleController extends Controller
         }
 
         $formbuilder->add('title', TextType::class, ['label' => 'Titre'])
-            ->add('content', TextareaType::class, ['label' => 'Commentaire'])
+            ->add('content', TextareaType::class, ['label' => 'Contenu'])
             ->add('authorName', TextType::class, $optionAuthor)
             ->add('save', SubmitType::class, array('label' => 'Commenter'));
 
@@ -149,7 +149,7 @@ class ArticleController extends Controller
             $qb = $qb->setParameter('filtervalue', $valueToFilter);
             //dump($valueToFilter);
         }
-        // $qb = $qb->where('entity.isActive = true');
+        $qb = $qb->andwhere('entity.isActive = true');
 
         $paginArticle = new \Doctrine\ORM\Tools\Pagination\Paginator($qb);
         $totalItems = count($paginArticle);
@@ -174,25 +174,9 @@ class ArticleController extends Controller
         ));
     }
 
-    public function sommaireAction(Request $request)
+    public function sommaireByYearAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        
-        //get all articles:
-        $qb = $em->getRepository('SiteBundle:Article')->createQueryBuilder('article');
-        $qb = $qb->leftJoin('article.typeArticle', 'typeArticle');
-        $qb = $qb->where('article.isActive = true');
-        $qb = $qb->orderBy('article.publishedAt', 'DESC');
-        $qb = $qb->orderBy('typeArticle.order', 'ASC');
-        $articles = $qb->getQuery()->getResult();
-
-        // $articles = $em->getRepository('SiteBundle:Article')
-        //     ->findBy(
-        //         ["isActive" => true],
-        //         array('publishedAt' => 'DESC')
-        //     );
-        
-        dump($articles);
 
         //rechercher la date de publication la plus ancienne des articles
         $qb = $em->getRepository('SiteBundle:Article')->createQueryBuilder('article');
@@ -200,7 +184,7 @@ class ArticleController extends Controller
         $oldestDate = $qb->getQuery()->getOneOrNullResult()[1];
         //dump($oldestDate[1]);
         $oldestYear = (new \DateTime($oldestDate))->format('Y');
-        dump(date('Y'));
+        //dump(date('Y'));
         $articlesByYear = [];
         //$articlesByYear[$year] = $results;
         for ($year = date('Y'); $year >= $oldestYear; $year--) {
@@ -208,17 +192,18 @@ class ArticleController extends Controller
             $qb = $qb->where('YEAR(article.publishedAt) = :year');
             $qb = $qb->setParameter('year', $year);
             $qb = $qb->leftJoin('article.typeArticle', 'typeArticle');
-            $qb = $qb->andwhere('article.isActive = :true');
-            $qb = $qb->setParameter('true', true);
-            $qb = $qb->orderBy('typeArticle.order', 'ASC');
-            $qb = $qb->orderBy('article.publishedAt', 'DESC');
+            $qb = $qb->andwhere('article.isActive = true');
+            
+            $qb = $qb->addOrderBy('typeArticle.order', 'ASC');
+            $qb = $qb->addOrderBy('article.publishedAt', 'DESC');
+            
             $results = $qb->getQuery()->getResult();
-            dump($results);
+            //dump($results);
             $articlesByYear[$year] = $results;
         }
-        dump($articlesByYear);
+        //dump($articlesByYear);
 
-        return $this->render('SiteBundle::sommaire-article.html.twig', array(
+        return $this->render('SiteBundle::sommaire-articlebyyear.html.twig', array(
             'nb_total_items' => 1,
             'articlesByYear' => $articlesByYear,
             'pages' => 1,
@@ -226,6 +211,52 @@ class ArticleController extends Controller
             'numpage' => 1,
             'request' => $request,
             'categorie' => 'cat',
+        ));
+    }
+
+    public function sommaireByCategoryAction(Request $request, $pageContent)
+    {
+        $em = $this->getDoctrine()->getManager();
+        
+        $category = null;
+        //If filter exists
+        if (strpos($pageContent->getPosition(), '#') !== false) { //filter or specific param exists
+            // position #filterProperty.prop=valueToFilter
+            $pageinfos = explode('#', $pageContent->getPosition());
+            if (count($pageinfos) > 1) {
+                $category = $pageinfos[1];
+            }
+        }
+        
+        $articles = [];
+
+            $qb = $em->getRepository('SiteBundle:Article')->createQueryBuilder('article');
+            $qb = $qb->leftJoin('article.typeArticle', 'typeArticle');
+            $qb = $qb->where('article.isActive = true');
+            
+            if (isset($category)) {
+                $qb = $qb->leftJoin('typeArticle.parent', 'parenttypeArticle');
+                $qb = $qb->andwhere('typeArticle.name = :categoryLimit OR parenttypeArticle.name = :categoryLimit');
+                $qb = $qb->setParameter('categoryLimit', $category);
+                
+            }
+
+            $qb = $qb->addOrderBy('typeArticle.order', 'ASC');
+            $qb = $qb->addOrderBy('article.publishedAt', 'DESC');
+            $results = $qb->getQuery()->getResult();
+
+            $articles = $results;
+
+        //dump($articles);
+
+        return $this->render('SiteBundle::sommaire-articlebycategory.html.twig', array(
+            'nb_total_items' => 1,
+            'articles' => $articles,
+            'pages' => 1,
+            'nbbypage' => 1,
+            'numpage' => 1,
+            'request' => $request,
+            'category' => $category,
         ));
     }
 }
