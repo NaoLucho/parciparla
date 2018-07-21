@@ -26,6 +26,8 @@ class AppKernel extends Kernel
 
             new Sonata\AdminBundle\SonataAdminBundle(),
 
+            //Doctrine extensions
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             //Doctrine updates 
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
 
@@ -73,8 +75,10 @@ class AppKernel extends Kernel
             if ('dev' === $this->getEnvironment()) {
                 $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
                 $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
-
             }
+
+            //Console online web
+            $bundles[] = new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle();
         }
 
         return $bundles;

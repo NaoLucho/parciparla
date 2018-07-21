@@ -133,6 +133,7 @@ doctrine:
                 x:                      CrEOF\Spatial\ORM\Query\AST\Functions\MySql\X
                 y:                      CrEOF\Spatial\ORM\Query\AST\Functions\MySql\Y 
             datetime_functions:
+                MATCH_AGAINST: BuilderBundle\Extensions\Doctrine\MatchAgainst
                 MONTH: DoctrineExtensions\Query\Mysql\Month
                 YEAR: DoctrineExtensions\Query\Mysql\Year
 
@@ -231,6 +232,7 @@ ivory_ck_editor:
             filebrowserImageUploadRouteParameters:
                 provider: sonata.media.provider.image
                 context: my-context # Optional, to upload in a custom context
+            extraPlugins: 'oembed'
 
 sonata_media:
     # if you don't use default namespace configuration
@@ -285,6 +287,12 @@ vich_uploader:
             namer:              vich_uploader.namer_origname
             delete_on_update: true
             delete_on_remove: true
+        lien_image:
+            uri_prefix:         '%image_prefix%/lien_image/'
+            upload_destination: '%kernel.root_dir%/../web/uploads/img/lien_image'
+            namer:              vich_uploader.namer_origname
+            delete_on_update: true
+            delete_on_remove: true
         # program_logo_image:
         #     uri_prefix:         '%image_prefix%/program/logo_progam'
         #     upload_destination: '%kernel.root_dir%/../web/uploads/img/program/logo_progam'
@@ -315,3 +323,8 @@ vich_uploader:
             namer:              vich_uploader.namer_origname
             delete_on_update: true
             delete_on_remove: true
+
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true

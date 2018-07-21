@@ -34,7 +34,7 @@ class CommentAdmin extends AbstractAdmin
         switch ($name) {
             case 'edit':
                 //var_dump( parent::getTemplate($name));
-                return 'BuilderBundle::Field\admin_fields_article_template.html.twig';
+                return 'BuilderBundle::Field\formbuilder_admin_template.html.twig';
                 break;
             default:
                 return parent::getTemplate($name);
@@ -93,12 +93,18 @@ class CommentAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('article', null, array(
-                'associated_property' => 'title'
-            ))
             ->addIdentifier('title', null, array(
                 'label' => "Titre"
             ))
+            ->add('article', null, array(
+                'associated_property' => 'title'
+            ))
+            ->add('authorName', null, array(
+                'label' => "Auteur"
+            ))
+            // ->add('author.firstname', null, array(
+            //     'label' => "Auteur (User)"
+            // ))
             ->add('publishedAt', 'date', array(
                 'label' => 'Date de publication',
                 'format' => 'd/m/Y',

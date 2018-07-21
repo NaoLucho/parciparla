@@ -392,8 +392,14 @@ class FormBuilder
                     // $options['allow_delete'] = true;
                         break;
                     case "inactif":
-                        $options['mapped'] = false;
-                        $options['label'] = "TODO:" . $options['label'];
+                        $options['attr'] = array_merge(
+                            $options['attr'],
+                            array(
+                                'read_only' => true
+                            )
+                        );
+                        $isList = true;
+                        $options['label'] = "" . $options['label'];
                         $type = TextType::class;
                         break;
                     case "LocalisationType":

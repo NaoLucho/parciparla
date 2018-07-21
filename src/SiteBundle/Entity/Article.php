@@ -9,10 +9,15 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
 
+//slugable
+use Gedmo\Mapping\Annotation as Gedmo;
+
 /**
  * Article
  *
- * @ORM\Table(name="article")
+ * @ORM\Table(name="article",
+ * indexes={@ORM\Index(name="fulltext_article_title", columns={"title"}, flags={"fulltext"}),
+ *          @ORM\Index(name="fulltext_article_content", columns={"content"}, flags={"fulltext"})})
  * @ORM\Entity(repositoryClass="SiteBundle\Repository\ArticleRepository")
  * @Vich\Uploadable
  * @ORM\HasLifecycleCallbacks()
@@ -37,9 +42,17 @@ class Article
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255)
+     * @ORM\Column(name="title", type="string", length=255, unique=true)
      */
     private $title;
+
+    /**
+     * @Gedmo\Slug(fields={"title"}, updatable=true)
+     * @ORM\Column(length=255)
+     */
+    protected $slug;
+    //ALTER TABLE article ADD slug VARCHAR(255) NOT NULL;
+    //CREATE UNIQUE INDEX UNIQ_23A0E66989D9B62 ON article (slug);
 
     /** Photo
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
@@ -102,16 +115,52 @@ class Article
      * @var bool
      *
      * @ORM\Column(name="isActive", type="boolean")
-     */
+     *///ALTER TABLE article ADD toReview TINYINT(1) NOT NULL;
     private $isActive;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="toReview", type="boolean")
+     */
+    private $toReview;
 
     /** @ORM\OneToMany(targetEntity="SiteBundle\Entity\Comment", mappedBy="article", cascade={"persist"}, orphanRemoval=true) */
     private $comments;
 
+    /**
+     * @ORM\OneToOne(targetEntity="SiteBundle\Entity\Article", inversedBy="linknext")
+     * @ORM\JoinColumn(name="linkprev_id", referencedColumnName="id", onDelete="SET NULL")
+     */
+    private $linkprev;
+
+    /**
+     * @ORM\OneToOne(targetEntity="SiteBundle\Entity\Article", mappedBy="linkprev")
+     * __ORM\JoinColumn(name="linknext_id", referencedColumnName="id", onDelete="SET NULL")
+     */
+    private $linknext;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="seodesc", type="string", length=300, nullable=true)
+     */
+    private $seoDesc = '';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="seokeywords", type="string", length=300, nullable=true)
+     */
+    private $seoKeywords = '';
+
+    //ALTER TABLE article ADD seodesc VARCHAR(300) DEFAULT NULL, ADD seoKeywords VARCHAR(300) DEFAULT NULL;
+
 
     public function __construct()
     {
-        $this->isActive = false;
+        $this->isActive = true;
+        $this->toReview = false;
         $this->publishedAt = new \DateTime();
         $this->comments = new ArrayCollection();
     }
@@ -178,7 +227,16 @@ class Article
         return $this->title;
     }
 
-
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+    
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+    
 
     /**
      * Set content
@@ -253,7 +311,7 @@ class Article
      *
      * @param boolean $isActive
      *
-     * @return P_Structure
+     * @return Article
      */
     public function setIsActive($isActive)
     {
@@ -270,6 +328,30 @@ class Article
     public function getIsActive()
     {
         return $this->isActive;
+    }
+
+    /**
+     * Set toReview
+     *
+     * @param boolean $toReview
+     *
+     * @return Article
+     */
+    public function setToReview($toReview)
+    {
+        $this->toReview = $toReview;
+
+        return $this;
+    }
+
+    /**
+     * Get toReview
+     *
+     * @return bool
+     */
+    public function getToReview()
+    {
+        return $this->toReview;
     }
 
     /**
@@ -448,5 +530,122 @@ class Article
     {
         $this->comments->removeElement($comments);
     }
+
+
+    public function getImageMapper()
+    {
+        $array = [
+            'photoFile' => 'photoName'
+        ];
+
+        return $array;
+    }
+
+    /**
+     * Gets the value of linkprev.
+     *
+     * @return Article
+     */
+    public function getLinkprev()
+    {
+        return $this->linkprev;
+    }
+
+    /**
+     * Sets the value of linkprev.
+     *
+     * @param Article $linkprev
+     *
+     * @return self
+     */
+    public function setLinkprev( $linkprev)
+    {
+        $this->linkprev = $linkprev;
+        return $this;
+    }
+
+    /**
+     * Gets the value of linknext.
+     *
+     * @return Article
+     */
+    public function getLinknext()
+    {
+        return $this->linknext;
+    }
+
+    /**
+     * Sets the value of linknext.
+     *
+     * @param Article $linknext
+     *
+     * @return self
+     */
+    public function setLinknext( $linknext)
+    {
+        //dump($linknext);
+        
+        if($linknext != null){
+            $linknext->setLinkprev($this);
+        } elseif( $this->linknext != null) {
+            $this->linknext->setLinkprev(null);
+        }
+        $this->linknext = $linknext;
+        // if($linknext != null && $linknext->getLinkprev() != null && $linknext->getLinkprev()->getLinknext() != null){
+        //     $linknext->getLinkprev()->setLinknext(null);
+        // }
+
+        return $this;
+    }
+
+
+    /**
+     * Set seoDesc
+     *
+     * @param string $seoDesc
+     *
+     * @return Page
+     */
+    public function setSeoDesc($seoDesc)
+    {
+        $this->seoDesc = $seoDesc;
+
+        return $this;
+    }
+
+    /**
+     * Get seoDesc
+     *
+     * @return string
+     */
+    public function getSeoDesc()
+    {
+        return $this->seoDesc;
+    }
+
+    /**
+     * Set seoKeywords
+     *
+     * @param string $seoKeywords
+     *
+     * @return Page
+     */
+    public function setSeoKeywords($seoKeywords)
+    {
+        $this->seoKeywords = $seoKeywords;
+
+        return $this;
+    }
+
+    /**
+     * Get seoKeywords
+     *
+     * @return string
+     */
+    public function getSeoKeywords()
+    {
+        return $this->seoKeywords;
+    }
+
 
 }

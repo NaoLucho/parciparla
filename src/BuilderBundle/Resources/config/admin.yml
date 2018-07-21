@@ -72,3 +72,22 @@ services:
             - { name: sonata.admin, manager_type: orm, group: "Site", label: "Carousel" }
         public: true
         
+    app.admin.dblog:
+        class: BuilderBundle\Admin\DBLogAdmin
+        #arguments: [~, BuilderBundle\Entity\DBLog, BuilderBundle\Controller\MigrationCRUDController]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Outil, label: DBLog }
+        arguments:
+            - null
+            - BuilderBundle\Entity\DBLog
+            - BuilderBundle:DBLogCRUD
+        calls:
+            - [ setTranslationDomain , [AdminStoreReceiptReceiptBundle]]
+        public: true
+
+    app.admin.dblogcorrespondence:
+        class: BuilderBundle\Admin\DBLogCorrespondenceAdmin
+        arguments: [~, BuilderBundle\Entity\DBLogCorrespondence, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Outil, label: MigrationID }
+        public: true

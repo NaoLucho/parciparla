@@ -34,6 +34,20 @@ services:
     #     arguments:
     #         $someArgument: 'some_value'
 
+    adminbundle.event_listener.action_db:
+        class: BuilderBundle\Events\EventListener\ActionDBListener
+        arguments: ["@service_container"]
+        tags:
+            #- { name: doctrine.event_listener, event: preUpdate }
+            - { name: doctrine.event_listener, event: postUpdate }
+            - { name: doctrine.event_listener, event: preRemove }
+            #- { name: doctrine.event_listener, event: postRemove }
+            #- { name: doctrine.event_listener, event: prePersist }
+            - { name: doctrine.event_listener, event: postPersist }
+            #- { name: doctrine.event_listener, event: preFlush }
+            #- { name: doctrine.event_listener, event: onFlush }
+            - { name: doctrine.event_listener, event: postFlush }
+
 # POUR ACTIVER LES PERMISSIONS ACL (a la place de sonata_admin-security-handler: sonata.admin.security.handler.role)
 # services:
 #     security.acl.permission.map:

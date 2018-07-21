@@ -34,7 +34,7 @@ class ArticleAdmin extends AbstractAdmin
         switch ($name) {
             case 'edit':
                 //var_dump( parent::getTemplate($name));
-                return 'BuilderBundle::Field\admin_fields_article_template.html.twig';
+                return 'BuilderBundle::Field\formbuilder_admin_template.html.twig';
                 break;
             default:
                 return parent::getTemplate($name);
@@ -77,6 +77,10 @@ class ArticleAdmin extends AbstractAdmin
 
         ->add('isActive',null,array(
             'label' => 'Visible'
+        ))
+
+        ->add('toReview',null,array(
+            'label' => 'A relire'
         ));
 
         //NOT WORK CORRECTLY 4H de tentative échouée
@@ -116,10 +120,14 @@ class ArticleAdmin extends AbstractAdmin
             ->addIdentifier('title', null, array(
                 'label' => "Titre"
             ))
+            ->add('slug')
             ->add('publishedAt', 'date', array(
                 'label' => 'Date de publication',
                 'format' => 'd/m/Y',
                 'locale' => 'fr'
+            ))
+            ->add('author.firstname', null, array(
+                'label' => "auteur"
             ))
             ->add('typeArticle', null, array(
                 'associated_property' => 'name',
@@ -127,6 +135,10 @@ class ArticleAdmin extends AbstractAdmin
             ))
             ->add('isActive',null,array(
                 'label' => 'Visible',
+                'editable' => true
+            ))
+            ->add('toReview',null,array(
+                'label' => 'A relire',
                 'editable' => true
             ));
     }

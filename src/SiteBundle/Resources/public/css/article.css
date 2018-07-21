@@ -1,3 +1,7 @@
+.content{
+    line-height: 2rem;
+}
+
 .comments{
     width: 100%;
     margin-top: 20px;
@@ -5,6 +9,7 @@
     background-color: #EEE;
     border-radius: 10px;
     padding: 10px;
+    color: #666;
 }
 .comment{
     border-radius: 10px;
@@ -39,4 +44,12 @@
     grid-column: 2 / end;
     grid-row: 2;
     color: #222;
+}
+
+.control-label{
+    width: 100px;
+}
+
+.nextarticle{
+    float: right;
 }

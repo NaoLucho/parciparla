@@ -1,7 +1,19 @@
+
 .body-back{
     background-color: #a7c5c1;
-    color:#003300
+    
 }
+
+.body{
+    font-size: 18px;
+    color:#003300;
+}
+
+.lateral{
+    border: 1px solid #86b0aa;
+    background-color: #a7c5c1;
+}
+
 a{
     color: #2aa67d;
 }
@@ -60,3 +72,4 @@ a{
 .dropdown-menu{ 
     margin-top: -1px;
 }
+
