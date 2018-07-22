@@ -69,7 +69,7 @@ class ImportLogCommand extends ContainerAwareCommand
             //dump($row['createdAt']);
             $createdAt = \DateTime::createFromFormat("d/m/Y H:i:s",$row['createdAt']);
             //dump($createdAt);
-            $dblog = $em->getRepository('MNHNAdminBundle:DBLog')
+            $dblog = $em->getRepository('BuilderBundle:DBLog')
                 ->checkIfDBLogExists($createdAt, $row['userName']);
             // // If the DBLog doest not exist we create one to import it
             //dump($dblog);

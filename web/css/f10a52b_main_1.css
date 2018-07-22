@@ -7,22 +7,40 @@
 .body{
     font-size: 18px;
     color:#003300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
 }
 
 .lateral{
-    border: 1px solid #86b0aa;
-    background-color: #a7c5c1;
+    border-left: 1px solid rgba(0,0,0,.1);;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 20px 10px 20px;
+
+    color:#666;
+}
+
+.lateral-bloc{
+    margin-bottom: 60px;
+}
+
+.lateral a{
+    color:#666;
 }
 
 a{
     color: #2aa67d;
 }
+.page{
+    padding: 10px 50px 0 50px;
+}
 .container{
-    margin: 20px auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    max-width: 1270px;
+    margin:           20px auto;
+    padding:      20px 0px 0px 0px;
     background-color: white;
-    border: 1px solid #86b0aa;
+    border:           1px  solid #86b0aa;
 }
 .navbar{
     background-color: #e0f0ee;
@@ -33,9 +51,9 @@ a{
 }
 .navbar-light .navbar-nav .active > .nav-link{
     background-color: white;
-    border-radius: 5px;
-    color: #2aa67d;
-    font-weight: bolder;
+    border-radius:    5px;
+    color:            #2aa67d;
+    font-weight:      bolder;
 }
 .navbar li:hover{
     background-color: rgba(255,255,255,.7);
@@ -44,9 +62,9 @@ a{
 
 .nav-item {
     margin-right: 5px;
-    min-width: 100px;
-    text-align: center;
-    color: #666;
+    min-width:    100px;
+    text-align:   center;
+    color:        #666;
 }
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar a:hover{
@@ -54,10 +72,10 @@ a{
 }
 .Footer{
     background-color: #222;
-    padding: 60px 0;
-    width: 100%;
-    display: block;
-    text-align: center;
+    padding:          60px 0;
+    width:            100%;
+    display:          block;
+    text-align:       center;
 
 }
 .Footer a{
@@ -73,3 +91,17 @@ a{
     margin-top: -1px;
 }
 
+.search-container input{
+    margin: 0px;
+    border: 1px solid rgba(0,0,0,.1);
+    padding-left: 5px;
+}
+.search-container button{
+    margin-left: -5px;
+    padding: 1px 10px;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.search-container{
+    margin: 0px 20px 40px 20px;
+}

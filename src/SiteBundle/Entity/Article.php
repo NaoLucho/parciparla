@@ -115,7 +115,7 @@ class Article
      * @var bool
      *
      * @ORM\Column(name="isActive", type="boolean")
-     *///ALTER TABLE article ADD toReview TINYINT(1) NOT NULL;
+     */
     private $isActive;
 
     /**
@@ -123,6 +123,7 @@ class Article
      *
      * @ORM\Column(name="toReview", type="boolean")
      */
+    //ALTER TABLE article ADD toReview TINYINT(1) NOT NULL;
     private $toReview;
 
     /** @ORM\OneToMany(targetEntity="SiteBundle\Entity\Comment", mappedBy="article", cascade={"persist"}, orphanRemoval=true) */

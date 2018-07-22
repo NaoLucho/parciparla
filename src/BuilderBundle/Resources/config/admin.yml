@@ -91,3 +91,6 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Outil, label: MigrationID }
         public: true
+
+    import.csvtoarray:
+        class: BuilderBundle\Services\ConvertCsvToArray
