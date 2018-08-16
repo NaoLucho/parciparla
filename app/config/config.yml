@@ -233,6 +233,7 @@ ivory_ck_editor:
                 provider: sonata.media.provider.image
                 context: my-context # Optional, to upload in a custom context
             extraPlugins: 'oembed'
+            #uploadUrl: '/uploader/upload.php?type=Images&responseType=json'
 
 sonata_media:
     # if you don't use default namespace configuration
@@ -257,11 +258,14 @@ sonata_media:
 
     cdn:
         server:
-            path: /%project_name%/web/uploads/media # http://media.sonata-project.org/
+            # in prod
+            path: %upload_prefix%/media # => /uploads/media
+            # in local 
+            # path: /%project_name%/web/uploads/media 
 
     filesystem:
         local:
-            directory:  "%kernel.root_dir%/../web/uploads/media"
+            directory:  "%kernel.root_dir%/../web/uploads/media" # in local "%kernel.root_dir%/../web/uploads/media"
             create:     false
 
 coop_tilleuls_ck_editor_sonata_media:

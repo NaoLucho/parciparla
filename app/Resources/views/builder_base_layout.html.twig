@@ -26,14 +26,27 @@
         {% endblock %} />
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" /> {% block stylesheets %} {# On charge le CSS de bootstrap depuis le site directement #}
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Access' Infos">
+    <meta property="og:description" content=
+            "FALC Ados, adultes - des textes accessibles et faciles à lire."
+        >
+    <meta property="og:url" content="http://www.accessinfos.fr/">
+    <meta property="og:site_name" content="Access' Infos">
+    <meta property="og:locale" content="fr_FR">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <!-- Optional theme -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
 
     {# select2_bootstrap #}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('assets/css/select2/select2_bootstrap.css') }}" /> {# css SonataUserBundle #} {% stylesheets '@ApplicationSonataUserBundle/Resources/public/css/main.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" /> {% endstylesheets %} {# css buidler #} {% stylesheets '@BuilderBundle/Resources/public/css/main.css' %}
+    <link rel="stylesheet" href="{{ asset('assets/css/select2/select2_bootstrap.css') }}" /> 
+    {# css SonataUserBundle #} 
+    {% stylesheets '@ApplicationSonataUserBundle/Resources/public/css/main.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" /> {% endstylesheets %} 
+    {# css buidler #} {% stylesheets '@BuilderBundle/Resources/public/css/main.css' %}
     <link rel="stylesheet" href="{{ asset_url }}" /> {% endstylesheets %}
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
@@ -91,7 +104,7 @@
             <h3>Pages:</h3>
             <ul class="nav nav-pills nav-stacked">
                 <li>
-                    <a href="{{ path('site_home') }}">Accueil</a>
+                    <a href="{{ path('homepage') }}">Accueil</a>
                 </li>
             </ul>
             {% endblock %} {# probleme avec les render(controller()), le template tiens compte du flashbag seulement après refresh Il

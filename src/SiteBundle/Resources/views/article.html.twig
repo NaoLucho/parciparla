@@ -57,13 +57,13 @@
         <br>
         {% endif %}
 
-        <img class="mt-2" src="{{ vich_uploader_asset(article, 'photoFile') }}" alt="{{ article.title }}">
+        <img class="mt-2 img-illustration" src="{{ vich_uploader_asset(article, 'photoFile') }}" alt="{{ article.title }}">
         <div class="illustration title-page">{{article.title}}</div>
         <div class="subtitle-page">Publié le
             {{article.publishedAt| date('d/m/Y')}}</div>
         <hr>
         <div class="content">{{article.content | raw}}</div>
-        <div class="author"> Posté par {% if article.author is not null %}{{ article.author.username }}{% else %} un auteur anonyme.{% endif %}</div>
+        {# <div class="author"> Posté par {% if article.author is not null %}{{ article.author.username }}{% else %} un auteur anonyme.{% endif %}</div> #}
 
         {% if article.linknext is not null %}
         <br>

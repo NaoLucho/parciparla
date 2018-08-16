@@ -2,22 +2,22 @@ homepage:
     path: /
     defaults: 
         _controller: FrameworkBundle:Redirect:urlRedirect
-        path: /home
+        path: /accueil
         permanent: true
 
-site_home:
-    path: /
-    defaults: 
-        _controller: FrameworkBundle:Redirect:urlRedirect
-        path: /home
-        permanent: true
+# site_home:
+#     path: /home
+#     defaults: 
+#         _controller: FrameworkBundle:Redirect:urlRedirect
+#         path: /accueil
+#         permanent: true
 
-site_homepage:
-    path: /homepage
-    defaults: 
-        _controller: FrameworkBundle:Redirect:urlRedirect
-        path: /home
-        permanent: true
+# site_homepage:
+#     path: /homepage
+#     defaults: 
+#         _controller: FrameworkBundle:Redirect:urlRedirect
+#         path: /accueil
+#         permanent: true
 
 
 
