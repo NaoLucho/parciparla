@@ -29,9 +29,7 @@
     
     <meta property="og:type" content="website">
     <meta property="og:title" content="Access' Infos">
-    <meta property="og:description" content=
-            "FALC Ados, adultes - des textes accessibles et faciles à lire."
-        >
+    <meta property="og:description" content={{ block('seoDescription') }}>
     <meta property="og:url" content="http://www.accessinfos.fr/">
     <meta property="og:site_name" content="Access' Infos">
     <meta property="og:locale" content="fr_FR">
@@ -126,7 +124,7 @@
         </div>
         {% block footer %}
         <footer>
-            <p>The sky's the limit © {{ 'now'|date('Y') }} and beyond.</p>
+            <p>Site créé par <a href="https://www.funga.fr" >Funga</a></p>
         </footer>
         {% endblock %}
     </div>

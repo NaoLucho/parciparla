@@ -89,6 +89,7 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         },
-        "branch-alias": null
+        "branch-alias": null,
+        "ckeditor-tag": "4.7.3"
     }
 }

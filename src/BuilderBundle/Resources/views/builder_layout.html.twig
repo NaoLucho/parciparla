@@ -1,6 +1,10 @@
 {% extends "::builder_base_layout.html.twig" %}
 
-{% block title %}{{ parent() }} - articles accessibles et faciles à lire. FALC Ados, adultes{% endblock %}
+{% block title %}
+    {% if title is defined and title != 'ACCUEIL' %}{{title}} - {{ parent() }}
+    {% else %}{{ parent() }} - Articles accessibles et faciles à lire. FALC Ados, adultes
+    {% endif %}
+{% endblock %}
 
 {% block header %}
     {{ render(controller("BuilderBundle:Builder/BuildContent:buildDefaultContent", {'selectposition': 'Header'})) }}

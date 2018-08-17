@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors',1);
+//ini_set('display_errors',1);
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;
 
@@ -12,7 +12,7 @@ use Symfony\Component\Debug\Debug;
 // Feel free to remove this, extend it, or make something more sophisticated.
 
 if (isset($_SERVER['HTTP_CLIENT_IP'])
-    //|| isset($_SERVER['HTTP_X_FORWARDED_FOR'])
+    //|| isset($_SERVER['HTTP_X_FORWARDED_FOR']) //block in prod, need to be comment to use console
     || !(in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1', '2.4.15.190']) || PHP_SAPI === 'cli-server')
 ) {
     header('HTTP/1.0 403 Forbidden');

@@ -2,7 +2,7 @@
 
 {% if article is not null %}
     {% block title %}
-        {{article.title}} {{ parent() }}
+        {{article.title}} - {{ parent() }}
     {% endblock %}
     
     {% block seoDescription %}

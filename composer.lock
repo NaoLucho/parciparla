@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "670f563e3bc1505b7242f7d29cc4c29f",
+    "content-hash": "dc85205dde1313f74cdd308d7f3abe7a",
     "packages": [
         {
             "name": "beberlei/DoctrineExtensions",
@@ -3920,16 +3920,16 @@
         },
         {
             "name": "sonata-project/admin-bundle",
-            "version": "3.37.0",
+            "version": "3.38.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "3f4ae4285f277251adad9bf8e47ff74ff9600aae"
+                "reference": "d49b839241e68d8bbb5b634e7db496c57685190d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/3f4ae4285f277251adad9bf8e47ff74ff9600aae",
-                "reference": "3f4ae4285f277251adad9bf8e47ff74ff9600aae",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/d49b839241e68d8bbb5b634e7db496c57685190d",
+                "reference": "d49b839241e68d8bbb5b634e7db496c57685190d",
                 "shasum": ""
             },
             "require": {
@@ -4021,7 +4021,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2018-07-26T19:29:16+00:00"
+            "time": "2018-08-14T21:54:03+00:00"
         },
         {
             "name": "sonata-project/block-bundle",
