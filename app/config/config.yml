@@ -44,10 +44,11 @@ twig:
     form_themes:
         - 'SonataCoreBundle:Form:datepicker.html.twig'
         - 'bootstrap_3_layout.html.twig'
-        #- 'SiteBundle:Form:fields.html.twig'
+        - 'BuilderBundle:Form:fields.html.twig'
     globals:
         template_repo: %template_repo%
         fos_csrf_provider: "@security.csrf.token_manager"
+        pdf_article_url: '%image_prefix%/article/fichier_pdf/'
 
 # Doctrine Configuration
 doctrine:
@@ -298,6 +299,18 @@ vich_uploader:
             namer:              vich_uploader.namer_origname
             delete_on_update: true
             delete_on_remove: true
+        fichier_pdf:
+            uri_prefix:         '%image_prefix%/article/fichier_pdf'
+            upload_destination: '%kernel.root_dir%/../web/uploads/img/article/fichier_pdf'
+            namer:              vich_uploader.namer_origname
+            delete_on_update: true
+            delete_on_remove: true
+        # partners_image:
+        #     uri_prefix:         '%image_prefix%/article/logo_partner'
+        #     upload_destination: '%kernel.root_dir%/../web/uploads/img/article/logo_partner'
+        #     namer:              vich_uploader.namer_origname
+        #     delete_on_update: true
+        #     delete_on_remove: true
         # program_logo_image:
         #     uri_prefix:         '%image_prefix%/program/logo_progam'
         #     upload_destination: '%kernel.root_dir%/../web/uploads/img/program/logo_progam'

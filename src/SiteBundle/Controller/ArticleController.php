@@ -373,7 +373,7 @@ class ArticleController extends Controller
         $qb->setFirstResult($nbbypage * ($numpage - 1)) // set the offset
             ->setMaxResults($nbbypage);
         $items = $qb->getQuery()->getResult();
-        dump($items);
+        // dump($items);
 
 
         $pages = ceil($totalItems / $nbbypage);

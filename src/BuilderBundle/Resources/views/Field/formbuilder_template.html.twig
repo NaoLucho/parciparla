@@ -708,73 +708,23 @@ form_error:
 {% endblock _form_f_localisations_widget %}
 
 
-{% block _form_partners_widget %}
-        {# ... #}
-        {# store the prototype on the data-prototype attribute #}
-        <div id="partners-field-list"
-            data-prototype="{{ form_widget(form.vars.prototype)|e }}"
-            data-widget-tags="{{ ' <div class="panel col-md-offset-2"><div class="col-sm-4"></div></div>'|e }}">
-                {% for existingchild in form %}
-                    {# {{dump(existingchild)}} #}
-                    <div class="panel col-md-offset-2">
-                        {{ form_errors(existingchild) }}
-                        {{ form_widget(existingchild) }}
-                    </div>
-                {% endfor %}
-        </div>
-        <a href="#" class="btn col-md-offset-1 add-another-partners-widget" data-list="#partners-field-list">Ajouter un partenaire</a>
-
-{% endblock _form_partners_widget %}
-
-{% block _form_resultsPdf_widget %}
-       
-        {# ... #}
-        {# store the prototype on the data-prototype attribute #}
-        <div id="resultsPdf-field-list"
-            data-prototype="{{ form_widget(form.vars.prototype)|e }}"
-            data-widget-tags="{{ ' <div class="panel col-md-offset-2"><div class="col-sm-4"></div></div>'|e }}">
-                {% for existingchild in form %}
-                    <div class="panel col-md-offset-2">
-                        {{ form_errors(existingchild) }}
-                        {{ form_widget(existingchild) }}
-                    </div>
-                {% endfor %}
-        </div>
-        <a href="#" class="btn col-md-offset-1 add-another-resultsPdf-widget" data-list="#resultsPdf-field-list">Ajouter un résultat</a>
-
-{% endblock _form_resultsPdf_widget %}
+{% block file_widget %} {# existing elements #} 
 
 
-{% block _form_logoFile_widget %}
-    {{ block('image_widgetfield') }}
-{% endblock %}
-{% block _form_photoFile_widget %}
-    {{ block('image_widgetfield') }}
-{% endblock %}
-
-{% block image_widgetfield %}
-    {% spaceless %}
-    <div class="file-wrapper {% if form.vars.attr['class'] is defined %}{{form.vars.attr['class']}}{% endif %}">
         {% set type = type|default('file') %}
-        <input class="imgUpload" type="{{ type }}" {{ block('widget_attributes') }} />
-        <label class="w100" for="{{form.vars.id}}">Télécharger</label>
-        {% set subject = form.parent.vars.value %}
-        {# {{dump(form.parent.vars.value) }}; #}
-        {% if subject and subject.id and subject.logoName %}
-            <img src="{{ asset(vich_uploader_asset(subject, name)) }}" width="200" />
-        {% endif %}
-    </div>
-    {% endspaceless %}
-{% endblock %}
-
-{% block file_widget %}
-    {% spaceless %}
-        {% set type = type|default('file') %}
-        <input class="imgUpload" type="{{ type }}" {{ block('widget_attributes') }} />
         {% set subject =  form.parent.vars.value %}
         {# {{ dump(subject) }} #}
-        {% if subject and subject.id and attribute(_context.subject, name|replace({ ('File'): 'Name' })) is defined  %}
-            <img src="{{ asset(vich_uploader_asset(subject, name)) }}" width="200" />
+        {% if subject and subject.id and "pdf" in _context.id %}
+        {# {{ vich_uploader_asset(subject, "file", "SiteBundle\\Entity\\Pdf") }} #}
+        {# {{pdf_article_url ~ subject.fileName}} #}
+        <a href="{{ asset(pdf_article_url ~ subject.fileName) }}">{{subject.name}}</a>
+        {% else %}
+             <input class="imgUpload" type="{{ type }}" {{ block('widget_attributes') }} />
+            {% if "photo" in _context.name or "image" in _context.name %}
+                {% if subject and subject.id and attribute(_context.subject, name|replace({ ('File'): 'Name' })) is defined  %}
+                    <img src="{{ asset(vich_uploader_asset(subject, name)) }}" width="200" />
+                {% endif %}
+            {% endif %}
         {% endif %}
-    {% endspaceless %}
+
 {% endblock %}

@@ -43,20 +43,6 @@
     max-width: 50px;
 }
 
-.div-illustration{
-    width: 32px;
-}
-.icon-illustration{
-    max-height: 25px;
-    max-width: 30px;
-}
-
-
-.info-date{
-    font-size: 12px;
-    margin-top: 4px;
-}
-
 .list-items .item{
     /* float:left; */
     border-bottom: 1px solid #BBB; 

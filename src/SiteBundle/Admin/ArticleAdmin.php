@@ -24,6 +24,8 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Validator\Constraints\IsTrueValidator;
 use Sonata\CoreBundle\Form\Type\CollectionType;
 
+// use Doctrine\ORM\Event\LifecycleEventArgs;
+// use Doctrine\ORM\Event\PostUpdateEventArgs;
 
 class ArticleAdmin extends AbstractAdmin
 {
@@ -149,4 +151,48 @@ class ArticleAdmin extends AbstractAdmin
         $showMapper
             ->add('title');
     }
+
+    //private $tempPrev = null;
+    
+    // public function preUpdate($article)
+    // {
+    //     $em = $this->getConfigurationPool()->getContainer()->get('doctrine.orm.entity_manager');
+    //     $uow = $em->getUnitOfWork();
+    //     dump($uow);
+    //     dump($article);
+    //     $this->tempPrev = $article->getLinkprev();
+    //     if($article->getLinkprev() != null)
+    //     {
+            
+    //         dump($article->getLinkprev());
+    //         $em->getRepository('SiteBundle:Article')->deleteLinkprev_forIntegrity($article->getLinkprev());
+    //     }
+    //     //$article->setLinkprev(null);
+    //     dump($uow);
+    // }
+
+    // public function postUpdate($object)
+    // {
+    //     $em = $this->getConfigurationPool()->getContainer()->get('doctrine.orm.entity_manager');
+    //     $uow = $em->getUnitOfWork();
+    //     dump($uow);
+
+    //     dump($object);
+    //     $object->setLinkprev($this->tempPrev);
+    //     dump($object);
+
+    //     dump($uow);
+    // }
+    // public function postPersist($article)
+    // {
+    //     dump($article);
+    //     dump($this->tempPrev);
+    //     $em = $this->getConfigurationPool()->getContainer()->get('doctrine.orm.entity_manager');
+    //     $idArticle = $article->getId();
+    //     $article = $em->getRepository('SiteBundle:Article')->findOneBy(array('id' => $idArticle));
+    //     $article->setLinkprev($this->tempPrev);
+        
+    //     dump($em->getUnitOfWork());
+    //     $em->flush();
+    // }
 }

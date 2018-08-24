@@ -24,6 +24,10 @@ use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 use Sonata\CoreBundle\Form\Type\DatePickerType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Sonata\CoreBundle\Form\Type\DateTimePickerType;
+
+use BuilderBundle\Form\Type\FileArrayType;
+
+
 //UTILS pour builder
 class FormBuilder
 {
@@ -533,6 +537,15 @@ class FormBuilder
                     $options['disabled'] = true;
                     $options['data'] = $user;
                 }
+
+
+                //DUMP field:
+                if ($field->getProperty() === 'dazdzadzadazdz') {
+                    dump($field->getProperty());
+                    dump($type);
+                    dump($options);
+                }
+                
                 
                 //ADD FIELD TO FORM
                 if ($noError) {
@@ -681,7 +694,7 @@ class FormBuilder
                             //dump($options);
                         }
                         if ($field->getFieldType()->getComponent() === "ImageArray") {
-                            $options['entry_type'] = 'SiteBundle\Form\PartnersForm';
+                            $options['entry_type'] = 'BuilderBundle\Form\PartnersForm';
                             $options['entry_options'] = array('label' => false);
                             $options['allow_add'] = true;
                             $options['allow_delete'] = true;
@@ -691,11 +704,11 @@ class FormBuilder
                                 'class' => $options['label_attr']['class'] . ' col-xs-12'
                             ));
 
-                            $formBuilder->add('partners', CollectionType::class, $options);
+                            $formBuilder->add('partners', PdfsType::class, $options);
                         }
                         if ($field->getFieldType()->getComponent() === "FileArray") {
-                            $options['entry_type'] = 'SiteBundle\Form\Program_ResultsForm';
-                            $options['entry_options'] = array('label' => false);
+                            $options['entry_type'] = 'BuilderBundle\Form\PdfsForm';
+                            //$options['entry_options'] = array('label' => false);
                             $options['allow_add'] = true;
                             $options['allow_delete'] = true;
                             $options['by_reference'] = false;
@@ -704,7 +717,7 @@ class FormBuilder
                                 'class' => $options['label_attr']['class'] . ' col-xs-12'
                             ));
 
-                            $formBuilder->add('resultsPdf', CollectionType::class, $options);
+                            $formBuilder->add($field->getProperty(), FileArrayType::class, $options);
                         }
 
                     }

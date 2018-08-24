@@ -5,10 +5,12 @@ namespace SiteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Application\Sonata\UserBundle\Entity\User;
+use SiteBundle\Entity\Pdf;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
 
+use Symfony\Component\Validator\Constraints as Assert;
 //slugable
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -130,13 +132,14 @@ class Article
     private $comments;
 
     /**
-     * @ORM\OneToOne(targetEntity="SiteBundle\Entity\Article", inversedBy="linknext")
+     * @ORM\ManyToOne(targetEntity="SiteBundle\Entity\Article", inversedBy="linknext")
      * @ORM\JoinColumn(name="linkprev_id", referencedColumnName="id", onDelete="SET NULL")
      */
     private $linkprev;
 
     /**
-     * @ORM\OneToOne(targetEntity="SiteBundle\Entity\Article", mappedBy="linkprev")
+     * @ORM\OneToMany(targetEntity="SiteBundle\Entity\Article", mappedBy="linkprev")
+     * @Assert\Count(max=1,maxMessage="Selectionnez qu'un seul article")
      * __ORM\JoinColumn(name="linknext_id", referencedColumnName="id", onDelete="SET NULL")
      */
     private $linknext;
@@ -157,6 +160,12 @@ class Article
 
     //ALTER TABLE article ADD seodesc VARCHAR(300) DEFAULT NULL, ADD seoKeywords VARCHAR(300) DEFAULT NULL;
 
+    /**
+     * @ORM\OneToMany(targetEntity="SiteBundle\Entity\Pdf", mappedBy="article", cascade={"persist"}, orphanRemoval= true)
+     * @Assert\Valid()
+     */
+    private $pdfs;
+
 
     public function __construct()
     {
@@ -164,6 +173,8 @@ class Article
         $this->toReview = false;
         $this->publishedAt = new \DateTime();
         $this->comments = new ArrayCollection();
+        $this->pdfs = new ArrayCollection();
+        $this->linknext = new ArrayCollection();
     }
 
     /**
@@ -549,7 +560,9 @@ class Article
      */
     public function getLinkprev()
     {
+ 
         return $this->linkprev;
+
     }
 
     /**
@@ -559,9 +572,27 @@ class Article
      *
      * @return self
      */
-    public function setLinkprev( $linkprev)
+    public function setLinkprev($linkprev)
     {
-        $this->linkprev = $linkprev;
+        
+        if($linkprev != null)
+        {
+            //vérifier qu'il n'y ait pas déjà un linkprev, si oui l'enlever.
+            // dump($linkprev->getLinknext());
+            if(count($linkprev->getLinknext()) > 0 && $linkprev->getLinknext()[0] != null)
+            {
+                // dump($linkprev->getLinknext()[0]);
+                $linkprev->getLinknext()[0]->setLinkprev(null);
+            }
+        }
+
+        // $this->linkprev[0] = $linkprev;
+        // dump($linkprev);
+        if ($linkprev == null) {
+            $this->linkprev = null;
+        } else {
+            $this->linkprev = $linkprev;
+        }
         return $this;
     }
 
@@ -572,32 +603,40 @@ class Article
      */
     public function getLinknext()
     {
+        // dump($this->linknext);
         return $this->linknext;
     }
 
-    /**
-     * Sets the value of linknext.
-     *
-     * @param Article $linknext
-     *
-     * @return self
-     */
-    public function setLinknext( $linknext)
-    {
-        //dump($linknext);
+    // public function addLinknext($linknext){
+    //     $this->setLinknext($linknext);
+    // }
+    // /**
+    //  * Sets the value of linknext.
+    //  *
+    //  * @param Article $linknext
+    //  *
+    //  * @return self
+    //  */
+    // public function setLinknext( $linknext)
+    // {
+    //     dump($linknext);
         
-        if($linknext != null){
-            $linknext->setLinkprev($this);
-        } elseif( $this->linknext != null) {
-            $this->linknext->setLinkprev(null);
-        }
-        $this->linknext = $linknext;
-        // if($linknext != null && $linknext->getLinkprev() != null && $linknext->getLinkprev()->getLinknext() != null){
-        //     $linknext->getLinkprev()->setLinknext(null);
-        // }
+    //     // if($linknext != null){
+    //     //     $linknext->setLinkprev($this);
+    //     // } elseif( $this->linknext != null) {
+    //     //     $this->linknext->setLinkprev(null);
+    //     // }
+    //     // $this->linknext = $linknext;
 
-        return $this;
-    }
+    //     $this->linknext = [];
+    //     if ($linknext != null) {
+    //         $this->linknext[0] = $linknext;
+    //         $linknext->setLinkprev($this);
+    //         dump($this);
+    //         dump($linknext);
+    //     }
+    //     return $this;
+    // }
 
 
     /**
@@ -647,6 +686,51 @@ class Article
     {
         return $this->seoKeywords;
     }
+
+
+    public function setPdfs($pdfs)
+    {
+        if (count($pdfs) > 0) {
+            foreach ($pdfs as $i) {
+
+                $this->addPdf($i);
+            }
+        }
+        return $this;
+    }
+
+    /**
+     * Add resultsPdf
+     *
+     * @param Pdf $pdf
+     *
+     */
+    public function addPdf(Pdf $pdf)
+    {
+        $pdf->setArticle($this);
+        $this->pdfs->add($pdf);
+    }
+
+    /**
+     * Remove pdf
+     *
+     * @param Pdf $pdf
+     */
+    public function removePdf(Pdf $pdf)
+    {
+        $this->pdfs->removeElement($pdf);
+    }
+
+    /**
+     * Get pdfs
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPdfs()
+    {
+        return $this->pdfs;
+    }
+
 
 
 }

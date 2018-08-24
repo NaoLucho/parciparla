@@ -24,3 +24,11 @@
 {% block footer %}
     {{ render(controller("BuilderBundle:Builder/BuildContent:buildDefaultContent", {'selectposition': 'Footer'})) }}
 {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {# Possible aussi d'ajouter un fichier js #}
+    {% stylesheets '@BuilderBundle/Resources/public/css/body_layout.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %} 
+{% endblock %}
