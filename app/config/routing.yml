@@ -11,8 +11,18 @@ media:
     prefix: /media
 
 builder_admin:
-    resource: "@BuilderBundle/Resources/config/routing.yml"
+    resource: "@AdminBundle/Resources/config/routing.yml"
     prefix:   /
 
+site_routing:
+    resource: "@SiteBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+builder_list:
+    resource: "@BuilderListBundle/Resources/config/routing.yml"
+    prefix:   /
 
+builder_page:
+    resource: "@BuilderPageBundle/Resources/config/routing.yml"
+    prefix:   /
 

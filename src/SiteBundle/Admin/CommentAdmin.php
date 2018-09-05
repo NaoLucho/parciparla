@@ -13,8 +13,8 @@ use Doctrine\ORM\EntityRepository;
 use Application\Sonata\UserBundle\Entity\User;
 
 
-use BuilderBundle\Utils\Form\FormBuilder;
-//use BuilderBundle\Form\Type\LocalisationType;
+use AdminBundle\Utils\Form\FormBuilder;
+//use AdminBundle\Form\Type\LocalisationType;
 use Sonata\CoreBundle\Form\Type\DatePickerType;
 use Sonata\CoreBundle\Form\Type\DateTimePickerType;
 use Sonata\CoreBundle\Form\Type\DateRangeType;
@@ -34,7 +34,7 @@ class CommentAdmin extends AbstractAdmin
         switch ($name) {
             case 'edit':
                 //var_dump( parent::getTemplate($name));
-                return 'BuilderBundle::Field\formbuilder_admin_template.html.twig';
+                return 'AdminBundle::Field\formbuilder_admin_template.html.twig';
                 break;
             default:
                 return parent::getTemplate($name);
@@ -51,7 +51,7 @@ class CommentAdmin extends AbstractAdmin
         $em = $this->getConfigurationPool()->getContainer()->get('doctrine.orm.entity_manager');
 
         $f_form = $em
-            ->getRepository('BuilderBundle:F_Form')
+            ->getRepository('BuilderFormBundle:F_Form')
             ->findOneBy(array('name' => 'comment'));
         
         //$user =  $this->get('security.context')->getToken()->getUser();

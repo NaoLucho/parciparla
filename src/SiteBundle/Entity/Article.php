@@ -87,7 +87,7 @@ class Article
     private $content;
 
     /** Type de l'article
-     * @ORM\ManyToOne(targetEntity="BuilderBundle\Entity\G_ListItem")
+     * @ORM\ManyToOne(targetEntity="AdminBundle\Entity\G_ListItem")
      * @ORM\JoinColumn(name="li_types_articles", referencedColumnName="id", nullable=false )
      */ //G_List: types_articles
      private $typeArticle; //Optionnel
@@ -277,11 +277,11 @@ class Article
     /**
      * Set typeArticle
      *
-     * @param \BuilderBundle\Entity\G_ListItem $type_article
+     * @param \AdminBundle\Entity\G_ListItem $type_article
      *
      * @return Article
      */
-    public function setTypeArticle(\BuilderBundle\Entity\G_ListItem $typeArticle = null)
+    public function setTypeArticle(\AdminBundle\Entity\G_ListItem $typeArticle = null)
     {
         $this->typeArticle = $typeArticle;
 
@@ -291,7 +291,7 @@ class Article
     /**
      * Get typeArticle
      *
-     * @return \BuilderBundle\Entity\G_ListItem
+     * @return \AdminBundle\Entity\G_ListItem
      */
     public function getTypeArticle()
     {
@@ -521,11 +521,11 @@ class Article
     /**
      * Add comments
      *
-     * @param \BuilderBundle\Entity\Menu_Page $comments
+     * @param \AdminBundle\Entity\Menu_Page $comments
      *
      * @return Page
      */
-    public function addComment(\BuilderBundle\Entity\Page_Content $comments)
+    public function addComment(\AdminBundle\Entity\Page_Content $comments)
     {
         $comments->setArticle($this);
         $this->comments[] = $comments;
@@ -536,9 +536,9 @@ class Article
     /**
      * Remove comments
      *
-     * @param \BuilderBundle\Entity\Page_Content $comments
+     * @param \AdminBundle\Entity\Page_Content $comments
      */
-    public function removeComment(\BuilderBundle\Entity\Page_Content $comments)
+    public function removeComment(\AdminBundle\Entity\Page_Content $comments)
     {
         $this->comments->removeElement($comments);
     }

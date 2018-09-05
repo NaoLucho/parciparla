@@ -24,7 +24,7 @@
     {# <div> Final access = {{access}}</div> #}
     {% if access %}
       <li>
-        <a href="{{ path('site_buildpage', {'slug': menupage.page.slug}) }}">
+        <a href="{{ path('builder_buildpage', {'slug': menupage.page.slug}) }}">
           {{ menupage.page.name }}
         </a>
       </li>
@@ -32,7 +32,7 @@
   {% else %}
     <li>Pas de pages.</li>
   {% endfor %}
-{# {% set menu = knp_menu_get('BuilderBundle:Builder:mainMenu', [], {'menuName': menuName}) %}
+{# {% set menu = knp_menu_get('AdminBundle:Builder:mainMenu', [], {'menuName': menuName}) %}
 {{ knp_menu_render(menu) }} #}
 {% else %}
 Menu 'Principal' inexistant

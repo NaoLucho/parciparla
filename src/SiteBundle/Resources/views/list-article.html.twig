@@ -2,10 +2,10 @@
 
 {% if categorie is defined and categorie is not empty %}
 <div class="filters">
-    <span  class="info-page"> Catégorie: </span><a href="{{path('site_buildpage', {'slug':(categorie|replace({' ': '_'})|lower())})}}">{{categorie}}</a>
+    <span  class="info-page"> Catégorie: </span><a href="{{path('builder_buildpage', {'slug':(categorie|replace({' ': '_'})|lower())})}}">{{categorie}}</a>
 </div>
 {% else %}
-    {# <form  action="{{ path('site_buildpage', {'slug': 'recherche'}) }}" method="GET">
+    {# <form  action="{{ path('builder_buildpage', {'slug': 'recherche'}) }}" method="GET">
     <div class="search-container">
         <input placeholder="{{ request.query.get("search") }}" type="text">
         <button type="submit" name="search"><i class="fa fa-search"></i></button>
@@ -23,13 +23,13 @@
             {% endif %}
             <div class="item row">
                 <div class="illustration col-3" >
-                    <a class="" href="{{path('site_buildpageid',{'slug':'article','id': (item.slug is empty? item.id:item.slug) })}}">
+                    <a class="" href="{{path('builder_buildpageid',{'slug':'article','id': (item.slug is empty? item.id:item.slug) })}}">
                         <img src="{{ vich_uploader_asset(item, 'photoFile') }}" alt="{{ item.title }}">
                     </a>
                 </div>
                 <div class="info col">
                     <div class="title">
-                        <a href="{{path('site_buildpageid',{'slug':'article','id':(item.slug is empty? item.id:item.slug) })}}">{{item.title}}</a>
+                        <a href="{{path('builder_buildpageid',{'slug':'article','id':(item.slug is empty? item.id:item.slug) })}}">{{item.title}}</a>
                     </div>
                     <div class="date">
                         Publié le {{item.publishedAt| date('d/m/Y')}}
@@ -37,7 +37,7 @@
                     <div class="content">
                         {{item.content| striptags | slice(0,400) | raw }} 
                     </div>
-                    <a class="" href="{{path('site_buildpageid',{'slug':'article','id':(item.slug is empty? item.id:item.slug) })}}"> > lire l'article</a>
+                    <a class="" href="{{path('builder_buildpageid',{'slug':'article','id':(item.slug is empty? item.id:item.slug) })}}"> > lire l'article</a>
                 </div>
             </div>
         {% endfor %}
@@ -45,13 +45,13 @@
 
     {# pager #}
     {% if categorie is defined and categorie is not empty and request.get("slug") != (categorie|replace({' ': '_'})|lower()) %}
-        <a class="mb-5 d-flex justify-content-center" href="{{ path('site_buildpage', {'slug': (categorie|replace({' ': '_'})|lower())})}}">> voir plus d'articles</a>
+        <a class="mb-5 d-flex justify-content-center" href="{{ path('builder_buildpage', {'slug': (categorie|replace({' ': '_'})|lower())})}}">> voir plus d'articles</a>
     {% elseif pages > 1 and numpage is defined %}
         <nav class="single-pager mt-3">
             <ul class="pagination justify-content-center">
                 {% for p in 1..pages %}
                     <li class="{{ p == numpage ? 'active' : ''}}">
-                        <a class="pager-item" index="{{loop.index}}" href="{{ path('site_buildpage', {'slug': ((categorie is defined and categorie is not empty)?(categorie|replace({' ': '_'})|lower()) : request.get("slug")) , 'request' : request,'p': p})}}">{{ loop.index }}</a>{{ loop.index != loop.length ? '-'}}
+                        <a class="pager-item" index="{{loop.index}}" href="{{ path('builder_buildpage', {'slug': ((categorie is defined and categorie is not empty)?(categorie|replace({' ': '_'})|lower()) : request.get("slug")) , 'request' : request,'p': p})}}">{{ loop.index }}</a>{{ loop.index != loop.length ? '-'}}
                     </li>
                 {% endfor %}
             </ul>

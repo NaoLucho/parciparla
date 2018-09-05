@@ -44,7 +44,7 @@ twig:
     form_themes:
         - 'SonataCoreBundle:Form:datepicker.html.twig'
         - 'bootstrap_3_layout.html.twig'
-        - 'BuilderBundle:Form:fields.html.twig'
+        - 'AdminBundle:Form:fields.html.twig'
     globals:
         template_repo: %template_repo%
         fos_csrf_provider: "@security.csrf.token_manager"
@@ -134,7 +134,7 @@ doctrine:
                 x:                      CrEOF\Spatial\ORM\Query\AST\Functions\MySql\X
                 y:                      CrEOF\Spatial\ORM\Query\AST\Functions\MySql\Y 
             datetime_functions:
-                MATCH_AGAINST: BuilderBundle\Extensions\Doctrine\MatchAgainst
+                MATCH_AGAINST: AdminBundle\Extensions\Doctrine\MatchAgainst
                 MONTH: DoctrineExtensions\Query\Mysql\Month
                 YEAR: DoctrineExtensions\Query\Mysql\Year
 
@@ -233,7 +233,7 @@ ivory_ck_editor:
             filebrowserImageUploadRouteParameters:
                 provider: sonata.media.provider.image
                 context: my-context # Optional, to upload in a custom context
-            toolbar:                    [['Source'], ['Undo','Redo' ],[ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript','-','RemoveFormat' ], [ 'NumberedList','BulletedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink', 'Anchor'], [ 'pbckcode', 'Image', 'Table','SpecialChar', 'HorizontalRule' ], '/', [ 'Format' ], [ 'RemoveFormat' ], [ 'Maximize' ] ]
+            toolbar:                    [['Source'], ['Undo','Redo' ],[ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript','-','RemoveFormat' ], [ 'NumberedList','BulletedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink', 'Anchor'], [ 'pbckcode', 'Image', 'Table','SpecialChar', 'HorizontalRule' ], '/', [ 'Styles', 'Format', 'Font', 'FontSize' ], [ 'RemoveFormat' ], [ 'TextColor', 'BGColor' ], [ 'Maximize' ] ]
             # extraPlugins: 'oembed'
             # uploadUrl: '/uploader/upload.php?type=Images&responseType=json'
 

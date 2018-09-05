@@ -1,4 +1,4 @@
-{% extends "BuilderBundle:BuildPage:buildpage.html.twig" %}
+{% extends "AdminBundle:BuildPage:buildpage.html.twig" %}
 
 {% if article is not null %}
     {% block title %}
@@ -40,7 +40,7 @@
                 <span class="info-page">
                     catégorie:
                 </span>
-                <a href="{{path('site_buildpage', {'slug':(article.typeArticle.name|replace({' ': '_'})|lower())})}}">{{article.typeArticle.name}}</a>
+                <a href="{{path('builder_buildpage', {'slug':(article.typeArticle.name|replace({' ': '_'})|lower())})}}">{{article.typeArticle.name}}</a>
             {% endif %}
         </div>
         {# </div> #}
@@ -71,7 +71,7 @@
         <div class="d-flex justify-content-between">
             <div class="d-flex flex-row">
             {% if article.linkprev is not null %}
-                <a href="{{ path('site_buildpageid',{'slug':'article', 'id': (article.linkprev.slug is empty? article.linkprev.id:article.linkprev.slug)}) }}">
+                <a href="{{ path('builder_buildpageid',{'slug':'article', 'id': (article.linkprev.slug is empty? article.linkprev.id:article.linkprev.slug)}) }}">
                     <span class="subtitle-page pt-1"><<<&nbsp;</span>
                     <img class="icon-illustration" src="{{ vich_uploader_asset(article.linkprev, 'photoFile') }}" alt="{{ article.linkprev.title }}">
                     {{ article.linkprev.title }}
@@ -80,7 +80,7 @@
             </div>
             <div class="d-flex flex-row nextarticle">
             {% if article.linknext is not null and article.linknext is not empty %}
-                <a href="{{ path('site_buildpageid',{'slug':'article', 'id': (article.linknext[0].slug is empty? article.linknext[0].id:article.linknext[0].slug)}) }}">
+                <a href="{{ path('builder_buildpageid',{'slug':'article', 'id': (article.linknext[0].slug is empty? article.linknext[0].id:article.linknext[0].slug)}) }}">
                     <img class="icon-illustration" src="{{ vich_uploader_asset(article.linknext[0], 'photoFile') }}" alt="{{ article.linknext[0].title }}">
                     {{ article.linknext[0].title }}
                     <span class="subtitle-page  pt-1">&nbsp;>>></span>

@@ -35,7 +35,7 @@ services:
     #         $someArgument: 'some_value'
 
     adminbundle.event_listener.action_db:
-        class: BuilderBundle\Events\EventListener\ActionDBListener
+        class: AdminBundle\Events\EventListener\ActionDBListener
         arguments: ["@service_container"]
         tags:
             #- { name: doctrine.event_listener, event: preUpdate }

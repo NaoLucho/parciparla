@@ -56,7 +56,10 @@ class AppKernel extends Kernel
 
             //Bundles fait maison
             new SiteBundle\SiteBundle(),
-            new BuilderBundle\BuilderBundle(),
+            new Builder\PageBundle\BuilderPageBundle(),
+            new Builder\ListBundle\BuilderListBundle(),
+            new Builder\FormBundle\BuilderFormBundle(),
+            new AdminBundle\AdminBundle(),
 
             //Gestion des fichiers CSS et JS (Assetic)
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),

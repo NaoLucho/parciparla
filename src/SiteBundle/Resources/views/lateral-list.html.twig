@@ -7,7 +7,7 @@
             <div class="div-illustration">    
                 <img class="icon-illustration" src="{{ vich_uploader_asset(article, 'photoFile') }}" alt="{{ article.title }}">
             </div>
-            <a href="{{ path('site_buildpageid',{'slug':'article', 'id': (article.slug is empty? article.id:article.slug)}) }}">
+            <a href="{{ path('builder_buildpageid',{'slug':'article', 'id': (article.slug is empty? article.id:article.slug)}) }}">
                 {{ article.title }}
             </a>
         </div>

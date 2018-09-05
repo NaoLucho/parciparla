@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityRepository;
 use Application\Sonata\UserBundle\Entity\User;
 
 
-use BuilderBundle\Utils\Form\FormBuilder;
+use AdminBundle\Utils\Form\FormBuilder;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Validator\Constraints\IsTrueValidator;
@@ -29,7 +29,7 @@ class LienAdmin extends AbstractAdmin
         switch ($name) {
             case 'edit':
                 //var_dump( parent::getTemplate($name));
-                return 'BuilderBundle::Field\formbuilder_admin_template.html.twig';
+                return 'AdminBundle::Field\formbuilder_admin_template.html.twig';
                 break;
             default:
                 return parent::getTemplate($name);
@@ -46,7 +46,7 @@ class LienAdmin extends AbstractAdmin
         $em = $this->getConfigurationPool()->getContainer()->get('doctrine.orm.entity_manager');
 
         $f_form = $em
-            ->getRepository('BuilderBundle:F_Form')
+            ->getRepository('BuilderFormBundle:F_Form')
             ->findOneBy(array('name' => 'lien'));
         
         //$user =  $this->get('security.context')->getToken()->getUser();

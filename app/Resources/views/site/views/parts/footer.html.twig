@@ -17,7 +17,7 @@
         <nav>
           <ul>
             {# Les liens pour la navigation du footer #}
-            {{ render(controller("BuilderBundle:Builder/BuildContent:menuFooter", {'menuName': 'Footer'})) }}
+            {{ render(controller("AdminBundle:Builder/BuildContent:menuFooter", {'menuName': 'Footer'})) }}
             {# Pour l'integrateur du design desativer le render controller ci-dessus et activer l'include ci-dessous #}
             {# {% include  template_repo ~ "/views/parts/footer-menu.html.twig" %}  #}
           </ul>

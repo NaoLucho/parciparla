@@ -8,19 +8,19 @@
                     </div>
                 {% endif %}
                 </br>
-                <span  class="info-page"> Catégorie: </span><a href="{{path('site_buildpage', {'slug':(item.typeArticle.name |replace({' ': '_'})|lower())})}}">{{item.typeArticle.name }}</a>
+                <span  class="info-page"> Catégorie: </span><a href="{{path('builder_buildpage', {'slug':(item.typeArticle.name |replace({' ': '_'})|lower())})}}">{{item.typeArticle.name }}</a>
                 <div class="list-items">
             {% endif %}
             
                 <div class="item row">
                     <div class="icon" >
-                        <a class="" href="{{path('site_buildpageid',{'slug':'article','id':(item.slug is empty? item.id:item.slug) })}}">
+                        <a class="" href="{{path('builder_buildpageid',{'slug':'article','id':(item.slug is empty? item.id:item.slug) })}}">
                             <img src="{{ vich_uploader_asset(item, 'photoFile') }}" alt="{{ item.title }}">
                         </a>
                     </div>
                     <div class="info col">
                         <div class="title">
-                            <a href="{{path('site_buildpageid',{'slug':'article','id':(item.slug is empty? item.id:item.slug) })}}">{{item.title}}</a>
+                            <a href="{{path('builder_buildpageid',{'slug':'article','id':(item.slug is empty? item.id:item.slug) })}}">{{item.title}}</a>
                         </div>
                         <div class="date">
                             Publié le {{item.publishedAt| date('d/m/Y')}}
@@ -28,7 +28,7 @@
                         {# <div class="content">
                             {{item.content| raw }} 
                         </div> #}
-                        <a class="" href="{{path('site_buildpageid',{'slug':'article','id':(item.slug is empty? item.id:item.slug) })}}"> > lire l'article</a>
+                        <a class="" href="{{path('builder_buildpageid',{'slug':'article','id':(item.slug is empty? item.id:item.slug) })}}"> > lire l'article</a>
                     </div>
                 </div>
             {% if category != item.typeArticle.name %}

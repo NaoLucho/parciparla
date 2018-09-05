@@ -1,0 +1,3 @@
+# builder_list_homepage:
+#     path:     /
+#     defaults: { _controller: BuilderListBundle:Default:index }
