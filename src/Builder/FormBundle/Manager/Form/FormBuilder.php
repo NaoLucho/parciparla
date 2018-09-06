@@ -588,7 +588,7 @@ class FormBuilder
                                 }
                                 
                                 $imageName = $propertyAccessor->getValue($entity, $propertyName);
-                                
+                                //dump($imageName);
                                 if ( isset($imageName) ) {
                                     
                                     $options['constraints'] = array();
@@ -860,7 +860,7 @@ class FormBuilder
                             //dump($options);
                         }
                         if ($field->getFieldType()->getComponent() === "ImageArray") {
-                            $options['entry_type'] = 'SiteBundle\Form\PartnersForm';
+                            $options['entry_type'] = 'AdminBundle\Form\PartnersForm';
                             $options['entry_options'] = array('label' => false);
                             $options['allow_add'] = true;
                             $options['allow_delete'] = true;
@@ -870,11 +870,11 @@ class FormBuilder
                                 'class' => $options['label_attr']['class'] . ' col-xs-12'
                             ));
 
-                            $formMapper->add('partners', PartnersType::class, $options);
+                            $formMapper->add('partners', PdfsType::class, $options);
                         }
                         if ($field->getFieldType()->getComponent() === "FileArray") {
-                            $options['entry_type'] = 'SiteBundle\Form\Program_ResultsForm';
-                            $options['entry_options'] = array('label' => false);
+                            $options['entry_type'] = 'AdminBundle\Form\PdfsForm';
+                            //$options['entry_options'] = array('label' => false);
                             $options['allow_add'] = true;
                             $options['allow_delete'] = true;
                             $options['by_reference'] = false;
@@ -883,7 +883,7 @@ class FormBuilder
                                 'class' => $options['label_attr']['class'] . ' col-xs-12'
                             ));
 
-                            $formMapper->add('resultsPdf', FileArrayType::class, $options);
+                            $formMapper->add($field->getProperty(), FileArrayType::class, $options);
                         }
                     }
                 } else {

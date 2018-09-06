@@ -394,9 +394,9 @@ class ActionDBListener
                 continue;
             }
 
-            // EXCLUDE Update property content of AdminBundle\Entity\Content
+            // EXCLUDE Update property content of Builder\PageBundle\Entity\Content
             if($this->container->getParameter("kernel.environment") !== "prod"
-            && $action == "update" && $entityname == "AdminBundle\Entity\Content" 
+            && $action == "update" && $entityname == "Builder\PageBundle\Entity\Content" 
             && $changedProp == "content" && $entity->getType() == "ProdContent")
             {
                 continue;

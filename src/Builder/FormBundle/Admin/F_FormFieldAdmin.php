@@ -78,7 +78,7 @@ class F_FormFieldAdmin extends AbstractAdmin
         ->add('position')
         ->add('formfieldrights', null, array(
             //'associated_property' => 'mode'
-            'template' => 'AdminBundle:Field\Admin\List:admin_list_formfield_formfieldright.html.twig'
+            'template' => 'BuilderFormBundle:Field\Admin\List:admin_list_formfield_formfieldright.html.twig'
         ))  
         // ->add('formfieldrights', null, array(
         //     'label' => 'mode',

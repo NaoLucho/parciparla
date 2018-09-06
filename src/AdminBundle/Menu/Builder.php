@@ -20,7 +20,7 @@ class Builder extends Controller implements ContainerAwareInterface
         // access services from the container!
         $em = $this->container->get('doctrine')->getManager();
 
-        $menuprincipal = $em->getRepository('AdminBundle:Menu')
+        $menuprincipal = $em->getRepository('BuilderPageBundle:Menu')
         ->findOneBy(array('name' => $menuName));
         
         //dump($menuName);

@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-use MNHN\AdminBundle\Controller\Builder\Utils; //FORM BUILDER
+use Builder\FormBundle\Manager\Form\FormBuilder; //FORM BUILDER
 
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;

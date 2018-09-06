@@ -1,0 +1,22 @@
+
+{% block _form_logoFile_widget %}
+    {{ block('image_widgetfield') }}
+{% endblock %}
+{% block _form_photoFile_widget %}
+    {{ block('image_widgetfield') }}
+{% endblock %}
+
+{% block image_widgetfield %} TESTEST
+    {% spaceless %}
+    <div class="file-wrapper {% if form.vars.attr['class'] is defined %}{{form.vars.attr['class']}}{% endif %}">
+        {% set type = type|default('file') %}
+        <input class="imgUpload" type="{{ type }}" {{ block('widget_attributes') }} />
+        <label class="w100" for="{{form.vars.id}}">Télécharger</label>
+        {% set subject = form.parent.vars.value %}
+        {# {{dump(form.parent.vars.value) }}; #}
+        {% if subject and subject.id and subject.logoName %}
+            <img src="{{ asset(vich_uploader_asset(subject, name)) }}" width="200" />
+        {% endif %}
+    </div>
+    {% endspaceless %}
+{% endblock %}

@@ -71,7 +71,7 @@ class ImportLogCorrespondenceCommand extends ContainerAwareCommand
                 //search DBlogCorrespondence where:
                 // env == $row['env'] && entityName == $row['entityName']
                 // && entityIdDistant == $row['entityIdDistant']
-                $local_dblogCorrespondences = $em->getRepository('MNHNAdminBundle:DBLogCorrespondence')
+                $local_dblogCorrespondences = $em->getRepository('BuilderPageBundle:DBLogCorrespondence')
                     ->findBy([
                         'env' => $row['env'],
                         'entityName' => $row['entityName'],
@@ -86,7 +86,7 @@ class ImportLogCorrespondenceCommand extends ContainerAwareCommand
                         $entityIdLocal = $local_dblogCorrespondence->getEntityIdLocal();
 
                         //check if exists already
-                        $exist_dblogCorrespondences = $em->getRepository('MNHNAdminBundle:DBLogCorrespondence')
+                        $exist_dblogCorrespondences = $em->getRepository('BuilderPageBundle:DBLogCorrespondence')
                         ->findBy([
                             'env' => $env,
                             'entityName' => $entityIdDistant,

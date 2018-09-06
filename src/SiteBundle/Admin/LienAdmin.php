@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityRepository;
 use Application\Sonata\UserBundle\Entity\User;
 
 
-use AdminBundle\Utils\Form\FormBuilder;
+use Builder\FormBundle\Manager\Form\FormBuilder;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Validator\Constraints\IsTrueValidator;
@@ -29,7 +29,7 @@ class LienAdmin extends AbstractAdmin
         switch ($name) {
             case 'edit':
                 //var_dump( parent::getTemplate($name));
-                return 'AdminBundle::Field\formbuilder_admin_template.html.twig';
+                return 'BuilderFormBundle::Admin\formbuilder_admin_template.html.twig';
                 break;
             default:
                 return parent::getTemplate($name);

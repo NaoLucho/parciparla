@@ -17,7 +17,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
-use AdminBundle\Entity\G_listItem;
+use Builder\ListBundle\Entity\G_listItem;
 use Symfony\Component\Validator\Constraints as Assert;
 
 

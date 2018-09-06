@@ -2,21 +2,8 @@
 <html>
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122394378-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-122394378-1');
-    </script>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}Access'Infos{% endblock %}</title>
     <meta name="description" content={% block seoDescription %}
             "FALC Ados, adultes - des textes accessibles et faciles à lire."
@@ -27,15 +14,15 @@
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" /> {% block stylesheets %} {# On charge le CSS de bootstrap depuis le site directement #}
     
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Access' Infos">
-    <meta property="og:description" content={{ block('seoDescription') }}>
-    <meta property="og:url" content="http://www.accessinfos.fr/">
-    <meta property="og:site_name" content="Access' Infos">
-    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Access' Infos" />
+    <meta property="og:description" content={{ block('seoDescription') }} />
+    <meta property="og:url" content="http://www.accessinfos.fr/" />
+    <meta property="og:site_name" content="Access' Infos" />
+    <meta property="og:locale" content="fr_FR" />
     <link rel="alternate" href="https://www.accessinfos.fr/" hreflang="fr-fr" />
     <link rel="alternate" href="https://www.accessinfos.fr/" hreflang="x-default" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
     <!-- Optional theme -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
 
@@ -49,7 +36,22 @@
     <link rel="stylesheet" href="{{ asset_url }}" /> {% endstylesheets %}
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous"> {% endblock %} {% block javascripts %} {# jquery #}
+        crossorigin="anonymous"> {% endblock %} 
+    
+    <!-- Global site tag (gtag.js) - Google Analytics PROD ONLY-->
+    {# <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122394378-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-122394378-1');
+    </script> #}
+    {% block javascripts %}
+    {# jquery #}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     {# jquery UI #}

@@ -128,7 +128,7 @@ class DBLogAdmin extends AbstractAdmin
             //         // 'edit' => [],
             //         // 'delete' => [],
             //         'clone' => [
-            //             'template' => '@MNHNAdmin/Migration/list__action_clone.html.twig'
+            //             'template' => '@Admin/Migration/list__action_clone.html.twig'
             //         ]
             //     ]
             // ])

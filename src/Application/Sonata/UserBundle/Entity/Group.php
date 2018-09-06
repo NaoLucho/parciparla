@@ -13,8 +13,8 @@ namespace Application\Sonata\UserBundle\Entity;
 
 use Sonata\UserBundle\Entity\BaseGroup as BaseGroup;
 use Doctrine\ORM\Mapping as ORM;
-use AdminBundle\Entity\Page;
-use AdminBundle\Entity\Content;
+use Builder\PageBundle\Entity\Page;
+use Builder\PageBundle\Entity\Content;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -46,13 +46,13 @@ class Group extends BaseGroup
     protected $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity="AdminBundle\Entity\Page", mappedBy="rights", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="Builder\PageBundle\Entity\Page", mappedBy="rights", cascade={"persist"})
      */
     private $pages;
 
 
     /**
-     * @ORM\ManyToMany(targetEntity="AdminBundle\Entity\Content", mappedBy="rights", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="Builder\PageBundle\Entity\Content", mappedBy="rights", cascade={"persist"})
      */
     private $contents;
 

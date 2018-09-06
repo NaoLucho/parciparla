@@ -1,0 +1,11 @@
+{% extends 'SonataAdminBundle:CRUD:base_edit.html.twig' %}
+
+{% form_theme form 'AdminBundle:Field:fields_article_template.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {% javascripts '@BuilderFormBundle/Resources/public/js/field/file_array_upload.js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}

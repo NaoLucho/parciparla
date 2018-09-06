@@ -448,7 +448,7 @@ class FormBuilder
 
                     if ($isG_List) {
                         //LISTE CREE PAR G_LIST
-                        $options['class'] = 'AdminBundle:G_ListItem';
+                        $options['class'] = 'BuilderListBundle:G_ListItem';
 
                         $options['query_builder'] = (function (EntityRepository $er) use ($listname) {
                             return $er->createQueryBuilder('listitem')
