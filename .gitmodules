@@ -4,3 +4,9 @@
 [submodule "src/Builder/PageBundle"]
 	path = src/Builder/PageBundle
 	url = https://github.com/NaoLucho/pagebuilder.git
+[submodule "src/Builder/FormBundle"]
+	path = src/Builder/FormBundle
+	url = https://github.com/NaoLucho/FormBundle.git
+[submodule "src/Builder/ListBundle"]
+	path = src/Builder/ListBundle
+	url = https://github.com/NaoLucho/ListBundle.git
