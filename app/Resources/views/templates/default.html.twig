@@ -35,7 +35,7 @@
       <img src="{{asset('assets/images/header_001.jpg')}}" alt="Titre de l'image">
     </div> #}
     {# Fin du header-mea #}
-    {{ render(controller("AdminBundle:Builder/BuildContent:buildDefaultContent", {'selectposition': 'Header'})) }}
+    {{ render(controller("BuilderPageBundle:Builder/BuildContent:buildDefaultContent", {'selectposition': 'Header'})) }}
   {% endblock %}
 
   <main role="main">

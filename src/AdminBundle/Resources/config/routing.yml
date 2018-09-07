@@ -10,7 +10,7 @@
 # site_buildpagedetails:
 #     path:      /details/{slug}
 #     defaults:
-#         _controller: AdminBundle:Builder\BuildPage:buildPageDetails
+#         _controller: BuilderPageBundle:Builder\BuildPage:buildPageDetails
 
 
 
@@ -19,12 +19,12 @@
 # site_buildpageid:
 #     path:      /{slug}/{id}
 #     defaults:
-#         _controller: AdminBundle:Builder\BuildPage:buildPage
+#         _controller: BuilderPageBundle:Builder\BuildPage:buildPage
 
 
 # #MAIN ROUTE ALL MATCH:
 # site_buildpage:
 #     path:      /{slug}/
-#     defaults:  { _controller: AdminBundle:Builder\BuildPage:buildPage, slug: "accueil" }
+#     defaults:  { _controller: BuilderPageBundle:Builder\BuildPage:buildPage, slug: "accueil" }
 #     # requirements:
 #     #     slug: .+

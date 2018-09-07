@@ -521,11 +521,11 @@ class Article
     /**
      * Add comments
      *
-     * @param \Builder\PageBundle\Entity\Menu_Page $comments
+     * @param string $comments
      *
      * @return Page
      */
-    public function addComment(\Builder\PageBundle\Entity\Page_Content $comments)
+    public function addComment($comments)
     {
         $comments->setArticle($this);
         $this->comments[] = $comments;
@@ -536,9 +536,9 @@ class Article
     /**
      * Remove comments
      *
-     * @param \Builder\PageBundle\Entity\Page_Content $comments
+     * @param string $comments
      */
-    public function removeComment(\Builder\PageBundle\Entity\Page_Content $comments)
+    public function removeComment($comments)
     {
         $this->comments->removeElement($comments);
     }

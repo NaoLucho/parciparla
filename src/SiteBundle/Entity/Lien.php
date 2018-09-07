@@ -263,6 +263,15 @@ class Lien
         return $this;
     }
 
+    public function getImageMapper()
+    {
+        $array = [
+            'imageFile' => 'imageName'
+        ];
+
+        return $array;
+    }
+
     /**
      * @return integer|null
      */
