@@ -58,7 +58,7 @@ class F_FormAdmin extends AbstractAdmin
         ))
         ->add('formFields', null, array(
             // 'associated_property' => 'field.label'
-            'template' => 'BuilderFormBundle:Field\Admin\List:admin_list_form_formfield.html.twig'
+            'template' => 'BuilderFormBundle:Admin\List:admin_list_form_formfield.html.twig'
         ))
        ;
     }
