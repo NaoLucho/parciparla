@@ -15,13 +15,13 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" /> {% block stylesheets %} {# On charge le CSS de bootstrap depuis le site directement #}
     
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Accent' Tonique" />
+    <meta property="og:title" content="Access' Infos" />
     <meta property="og:description" content={{ block('seoDescription') }} />
-    <meta property="og:url" content="http://www.accenttonique.fr/" />
-    <meta property="og:site_name" content="Accent' Tonique" />
+    <meta property="og:url" content="http://www.accessinfos.fr/" />
+    <meta property="og:site_name" content="Access' Infos" />
     <meta property="og:locale" content="fr_FR" />
-    <link rel="alternate" href="https://www.accenttonique.fr/" hreflang="fr-fr" />
-    <link rel="alternate" href="https://www.accenttonique.fr/" hreflang="x-default" />
+    <link rel="alternate" href="https://www.accessinfos.fr/" hreflang="fr-fr" />
+    <link rel="alternate" href="https://www.accessinfos.fr/" hreflang="x-default" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
     <!-- Optional theme -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
@@ -50,7 +50,6 @@
 
         gtag('config', 'UA-122394378-1');
     </script> #}
-
     {% block javascripts %}
     {# jquery #}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -67,17 +66,6 @@
     {# select2 #}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-    {# <script>  
-        $(function(){
-            skrollr.init({
-                forceHeight: false
-            });
-        });
-    </script> #}
-    {% javascripts '@BuilderPageBundle/Resources/public/js/carousel.js' %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
     {#
     <script src="{{ asset( template_repo ~ '/assets/js/owl.carousel.js') }}"></script>
     <script src="{{ asset( template_repo ~ '/assets/js/open.min.js') }}"></script> #} {#
@@ -107,19 +95,13 @@
             </div> #}
 
             <div class="row">
-                <div class="col-sm-2 pr-0 align-self-center">
-                    <img alt="" src="/Sites/AccentTonique/Site/web/uploads/media/default/0001/01/52858cb903de9877834603c24a81df95bd51c160.png" width="100%"/>
-                </div>
-			    <div class="col-sm-10 pl-0">
-                    <img alt="banner_accent_tonique" class="image_banner" src="/Sites/AccentTonique/Site/web/uploads/media/default/0001/01/c100135298942a98184481d851c7e732a000d8a0.jpeg" />
-                </div>
-          
-                {# {% block header %}
+                {% block header %}
                 <div id="header" class="jumbotron">
                     Ici est un header
                 </div>
-                {% endblock %}  #}
+                {% endblock %}
             </div>
+
             {% block menu %}
             <h3>Pages:</h3>
             <ul class="nav nav-pills nav-stacked">
@@ -135,25 +117,19 @@
             </div>
             {% endfor %} {% endfor %} {% endif %} #} {# Apparait seulement si fos_user est appelé #} {% block fos_user_content %}{% endblock
             fos_user_content %}
-            
-            <div class="row m-0">
-                <div class="body col-md-9">
-                    <div class="row justify-content-md-center m-0">
+            <div class="row">
+                <div class="body col-md-8">
                     {% block body %}{% endblock %}
-                    </div>
-                    
                 </div>
-                <div class="lateral col-md-3">
+                <div class="lateral col-md-4">
                     {% block lateral %} {% include "lateral.html.twig"%} {% endblock %}
                 </div>
             </div>
-
-            
         </div>
         {% block footer %}
-            <div class="Footer">
-                <p>Site créé par <a href="https://www.funga.fr" >Funga</a></p>
-            </div>
+        <footer>
+            <p>Site créé par <a href="https://www.funga.fr" >Funga</a></p>
+        </footer>
         {% endblock %}
     </div>
 </body>

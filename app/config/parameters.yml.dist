@@ -4,7 +4,7 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: sitebuilder
+    database_name: SITENAME
     database_user: root
     database_password: root
     mailer_transport: gmail
@@ -12,8 +12,8 @@ parameters:
     mailer_user: louis.watrin@gmail.com
     mailer_password: pass
     mailer_encryption: ssl
-    project_name: Sites/sitebuilder
+    project_name: Sites/SITENAME
     upload_prefix: /%project_name%/web/uploads
     image_prefix: '%upload_prefix%/img'
-    secret: cecilesecret
+    secret: fungasecret
     template_repo: site

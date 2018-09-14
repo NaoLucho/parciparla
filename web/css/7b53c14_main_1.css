@@ -1,107 +1,190 @@
+/* Primary Color: GREEN
+16B60E	2F892A	0A7605	4BDB43	71DB6C
+
+Secondary Color A: BLUE - not used
+1D3599	2D3B73	091B64	5068CC	7183CC
+
+Secondary Color B: YELLOW
+E1D711	A9A334	928B06	F0E84A	F0EA76
+
+Complementary Color: RED
+DF1116	A73336	910609	EF494E	EF7679 */
+
+h1,
+h2,
+h3,
+h4 {
+    color: #0A7605;
+}
+
+h3{
+    font-size: 1.3rem;
+}
 
 .body-back{
-    background-color: #a7c5c1;
-    
+
+    min-height: 100vh;
+    display: flex;
+    background-color: #df1117;
 }
 
-.body{
-    font-size: 18px;
-    color:#003300;
+.container {
+    background: #E1D711;
+
+    width: 100%;
+    max-width: 1370px;
+    padding: 0px 60px;
+    /* max-width: 1270px; */
+    /* margin:           0px auto;
+    padding:      0px 0px 0px 0px; */
+    /* background-color: white; */
+    /* border:           1px  solid #86b0aa; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.page {
+    background-color: white;
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.body {
+    font-size: 16px;
+    color: #4F4F4F;
+
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 20px;
+    padding: 20px 20px 20px 35px;
+
 }
 
-.lateral{
-    border-left: 1px solid rgba(0,0,0,.1);;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    padding: 10px 20px 10px 20px;
 
-    color:#666;
+.body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.lateral-bloc{
-    margin-bottom: 60px;
+.body li {
+    padding-left: 1em;
+    text-indent: -.7em;
 }
 
-.lateral a{
-    color:#666;
+.body li::before {
+    content: "\25AA   ";
+    color: red;
+    /* or whatever color you prefer */
 }
 
-a{
-    color: #2aa67d;
-}
-.page{
-    padding: 10px 50px 0 50px;
-}
-.container{
-    max-width: 1270px;
-    margin:           20px auto;
-    padding:      20px 0px 0px 0px;
-    background-color: white;
-    border:           1px  solid #86b0aa;
-}
-.navbar{
-    background-color: #e0f0ee;
-}
-.navbar-nav{
-    margin-left: auto;
-    margin-right: auto;
-}
-.navbar-light .navbar-nav .active > .nav-link{
-    background-color: white;
-    border-radius:    5px;
-    color:            #2aa67d;
-    font-weight:      bolder;
-}
-.navbar li:hover{
-    background-color: rgba(255,255,255,.7);
-    border-radius: 5px;
+.Header {
+    text-align: center;
+    margin: 0px 15px;
 }
 
-.nav-item {
-    margin-right: 5px;
-    min-width:    100px;
-    text-align:   center;
-    color:        #666;
+.image_banner {
+    width: 100%;
 }
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar a:hover{
-    color: #2aa67d;
-}
-.Footer{
+
+.Footer {
     background-color: #222;
-    padding:          60px 0;
-    width:            100%;
-    display:          block;
-    text-align:       center;
-
+    padding: 30px 0;
+    width: 100%;
+    display: block;
+    text-align: center;
 }
-.Footer a{
-    color:rgba(255,255,255,.7);
+
+.Footer a {
+    color: rgba(255, 255, 255, .7);
     font-size: 15px;
     margin-left: auto;
     margin-right: auto;
     font-style: italic;
 }
 
-/* décalage du menu de 1px pour éviter de sortir du focus avant d'être sur le sous menu */
-.dropdown-menu{ 
-    margin-top: -1px;
+
+.lateral {
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    ;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 35px 10px 20px;
+
+    color: #666;
 }
 
-.search-container input{
+.lateral-bloc {
+    margin-bottom: 60px;
+}
+
+.lateral a {
+    color: #666;
+}
+
+a {
+    color: #2aa67d;
+}
+
+
+.navbar {
+    /* background-color: #e0f0ee; */
+    background-color: #0A7605;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-nav .active>.nav-link {
+    background-color: #fff;
+    border-radius: 5px;
+    color: #0A7605;
+    font-weight: bolder;
+}
+
+.navbar li:hover {
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 5px;
+}
+
+.nav-item {
+    margin-right: 5px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar a:hover {
+    color: #0A7605;
+}
+
+
+/* décalage du menu de 1px pour éviter de sortir du focus avant d'être sur le sous menu */
+.dropdown-menu {
+    margin-top: -1px;
+    background-color: #0A7605;
+}
+
+
+
+.search-container input {
     margin: 0px;
-    border: 1px solid rgba(0,0,0,.1);
+    border: 1px solid rgba(0, 0, 0, .1);
     padding-left: 5px;
 }
-.search-container button{
+
+.search-container button {
     margin-left: -5px;
     padding: 1px 10px;
-    border: 1px solid rgba(0,0,0,.1);
+    border: 1px solid rgba(0, 0, 0, .1);
 }
 
-.search-container{
+.search-container {
     margin: 0px 20px 40px 20px;
 }
