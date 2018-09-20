@@ -12,7 +12,10 @@
             "accessibilité, article, falc, fle, français facile, lecture facile, dys, dyslexie, handicap, trouble cognitif, Cécile Péguin, roman adapté"
         {% endblock %} />
 
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" /> {% block stylesheets %} {# On charge le CSS de bootstrap depuis le site directement #}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" /> 
+    
+    {% block stylesheets %} 
+    {# On charge le CSS de bootstrap depuis le site directement #}
     
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Accent' Tonique" />
@@ -51,41 +54,7 @@
         gtag('config', 'UA-122394378-1');
     </script> #}
 
-    {% block javascripts %}
-    {# jquery #}
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    {# jquery UI #}
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
-    {# bootstrap #} {#
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> #} {#
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script> #}
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
-    {# select2 #}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-    {# <script>  
-        $(function(){
-            skrollr.init({
-                forceHeight: false
-            });
-        });
-    </script> #}
-    {% javascripts '@BuilderPageBundle/Resources/public/js/carousel.js' %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-    {#
-    <script src="{{ asset( template_repo ~ '/assets/js/owl.carousel.js') }}"></script>
-    <script src="{{ asset( template_repo ~ '/assets/js/open.min.js') }}"></script> #} {#
-    <script src="{{ asset('assets/js/chosen_v1.8.2/chosen.jquery.js') }}"></script> #}
-
-    {# Utilisation d'openlayers (map) #}
-    {# <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script> #}
-    {% endblock %}
+    
 </head>
 
 <body class="body-back">
@@ -127,15 +96,20 @@
                     <a href="{{ path('homepage') }}">Accueil</a>
                 </li>
             </ul>
-            {% endblock %} {# probleme avec les render(controller()), le template tiens compte du flashbag seulement après refresh Il
+            {% endblock %} 
+            {# probleme avec les render(controller()), le template tiens compte du flashbag seulement après refresh Il
             faut donc l'ajouter à chaque fois dans le template appellé par le controlleur (cf. article) #} {# {% if app.request.hasPreviousSession
             %} {% for type, messages in app.session.flashBag.all %} {% for message in messages %}
             <div class="mt-4 alert alert-{{ type }}">
                 {{ message|trans({}, 'FOSUserBundle') }}
             </div>
-            {% endfor %} {% endfor %} {% endif %} #} {# Apparait seulement si fos_user est appelé #} {% block fos_user_content %}{% endblock
-            fos_user_content %}
+            {% endfor %} {% endfor %} {% endif %} #} 
             
+            {# Apparait seulement si fos_user est appelé #} 
+            {% block fos_user_content %}
+            {% endblock %}
+
+
             <div class="row m-0">
                 <div class="body col-md-9">
                     <div class="row justify-content-md-center m-0">
@@ -148,7 +122,6 @@
                 </div>
             </div>
 
-            
         </div>
         {% block footer %}
             <div class="Footer">
@@ -156,6 +129,44 @@
             </div>
         {% endblock %}
     </div>
+
+    
 </body>
 
+
+{% block javascripts %}
+    {# jquery #}
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    {# jquery UI #}
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    {# bootstrap #} {#
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> #} {#
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script> #}
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    {# select2 #}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    {# <script>  
+        $(function(){
+            skrollr.init({
+                forceHeight: false
+            });
+        });
+    </script> #}
+    {% javascripts '@BuilderPageBundle/Resources/public/js/carousel.js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {#
+    <script src="{{ asset( template_repo ~ '/assets/js/owl.carousel.js') }}"></script>
+    <script src="{{ asset( template_repo ~ '/assets/js/open.min.js') }}"></script> #} {#
+    <script src="{{ asset('assets/js/chosen_v1.8.2/chosen.jquery.js') }}"></script> #}
+
+    {# Utilisation d'openlayers (map) #}
+    {# <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script> #}
+    {% endblock %}
 </html>
