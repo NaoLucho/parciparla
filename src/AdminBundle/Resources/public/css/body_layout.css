@@ -87,3 +87,7 @@ table td{
     width: auto;
     display: inline-block;
 }
+
+.page_info{
+    width: 80% !important;
+}

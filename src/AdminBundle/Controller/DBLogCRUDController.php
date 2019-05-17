@@ -193,6 +193,12 @@ class DBLogCRUDController extends Controller
                                             $np = "SiteBundle\\Entity\\";
                                         } elseif (class_exists("Application\\Sonata\\UserBundle\\Entity\\" . $elemInfo[0])) {
                                             $np = "Application\\Sonata\\UserBundle\\Entity\\";
+                                        } elseif (class_exists("Builder\\PageBundle\\Entity\\" . $elemInfo[0])) {
+                                            $np = "Builder\\PageBundle\\Entity\\";
+                                        } elseif (class_exists("Builder\\FormBundle\\Entity\\" . $elemInfo[0])) {
+                                            $np = "Builder\\FormBundle\\Entity\\";
+                                        } elseif (class_exists("Builder\\ListBundle\\Entity\\" . $elemInfo[0])) {
+                                            $np = "Builder\\Entity\\";
                                         }
                                     
                                     //Search in new entities
@@ -230,8 +236,14 @@ class DBLogCRUDController extends Controller
                                                     $np = "SiteBundle\\Entity\\";
                                                 } elseif (class_exists("Application\\Sonata\\UserBundle\\Entity\\" . $elemInfo[0])) {
                                                     $np = "Application\\Sonata\\UserBundle\\Entity\\";
+                                                } elseif (class_exists("Builder\\PageBundle\\Entity\\" . $elemInfo[0])) {
+                                                    $np = "Builder\\PageBundle\\Entity\\";
+                                                } elseif (class_exists("Builder\\FormBundle\\Entity\\" . $elemInfo[0])) {
+                                                    $np = "Builder\\FormBundle\\Entity\\";
+                                                } elseif (class_exists("Builder\\ListBundle\\Entity\\" . $elemInfo[0])) {
+                                                    $np = "Builder\\Entity\\";
                                                 }
-
+                                                
                                             //Search in new entities
                                                 $elem = $this->getPersistingEntity($newEntities, $np . $elemInfo[0], $elemInfo[1]);
                                                 if ($elem == null) {

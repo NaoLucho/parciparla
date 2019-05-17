@@ -188,6 +188,8 @@ a {
     margin-right: 5px;
     min-width: 100px;
     text-align: center;
+    -ms-flex-item-align: center !important;
+    align-self: center !important;
 }
 
 .Menu .nav-link {
@@ -213,6 +215,10 @@ a {
 
 .Menu .dropdown-menu .nav-link:hover{
     background-color: rgba(255, 255, 255, .7);
+}
+
+.navbar-toggler-icon{
+    color: white;
 }
 
 .search-container input {

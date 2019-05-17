@@ -132,6 +132,7 @@ class ImportLogCommand extends ContainerAwareCommand
         // Getting the CSV from filesystem
         $fileName = $input->getArgument('fileName');
         $fileName = 'web/uploads/import/'.$fileName;
+        //$fileName = 'bin/db/'.$fileName; //POUR IMPORT initwebsite.csv
         
         // Using service for converting CSV to PHP Array
         $converter = $this->getContainer()->get('import.csvtoarray');
