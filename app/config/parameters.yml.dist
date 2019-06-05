@@ -2,18 +2,18 @@
 # Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
 # https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
-    database_host: 127.0.0.1
+    database_host: fungafrwohdbat.mysql.db
     database_port: null
-    database_name: SITENAME
-    database_user: root
-    database_password: root
+    database_name: fungafrwohdbat
+    database_user: fungafrwohdbat
+    database_password: Tonique31
     mailer_transport: gmail
-    mailer_host: 127.0.0.1
+    mailer_host: null
     mailer_user: louis.watrin@gmail.com
     mailer_password: pass
     mailer_encryption: ssl
-    project_name: Sites/SITENAME
-    upload_prefix: /%project_name%/web/uploads
+    project_name: accenttonique
+    upload_prefix: /uploads
     image_prefix: '%upload_prefix%/img'
-    secret: fungasecret
+    secret: natsecret
     template_repo: site

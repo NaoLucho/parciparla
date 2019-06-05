@@ -174,14 +174,14 @@ a {
 
 .Menu .navbar-nav .active>.nav-link {
     background-color: #fff;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     color: #067100;
     font-weight: bolder;
 }
 
 .Menu .navbar li:hover {
     background-color: rgba(255, 255, 255, .7);
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .Menu .nav-item {
@@ -219,6 +219,16 @@ a {
 
 .navbar-toggler-icon{
     color: white;
+}
+
+li.disable>a{
+    cursor: not-allowed;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+li.disable{
+    background-color: #067100 !important;
 }
 
 .search-container input {
