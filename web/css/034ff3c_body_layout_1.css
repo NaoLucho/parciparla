@@ -43,10 +43,6 @@
     margin-bottom: 20px;
 }
 
-.carouselAccueil .carousel-inner{ /* a calculer en dynamique (jquery) pour connaitre la taille minimale*/
-    max-height: 510px;
-}
-
 .carousel .carousel-caption {
     /* top: 50%;  
     bottom: auto;
