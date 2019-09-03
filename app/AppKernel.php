@@ -81,10 +81,10 @@ class AppKernel extends Kernel
             if ('dev' === $this->getEnvironment()) {
                 $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
                 $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
-            }
 
-            //Console online web
-            $bundles[] = new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle();
+                //Console online web
+                $bundles[] = new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle();
+            }
         }
 
         return $bundles;
@@ -97,7 +97,7 @@ class AppKernel extends Kernel
 
     public function getCacheDir()
     {
-        return dirname(__DIR__).'/var/cache/'.$this->getEnvironment();
+        return dirname(__DIR__) . '/var/cache/' . $this->getEnvironment();
         // if ('dev' === $this->getEnvironment()) {
         //     return dirname(__DIR__).'/var/cache/'.$this->getEnvironment();
         // }
@@ -110,11 +110,11 @@ class AppKernel extends Kernel
         //     return dirname(__DIR__).'/var/logs';
         // }
         // return '/tmp/accessinfo_logs/'.$this->getEnvironment();
-        return dirname(__DIR__).'/var/logs';
+        return dirname(__DIR__) . '/var/logs';
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
+        $loader->load($this->getRootDir() . '/config/config_' . $this->getEnvironment() . '.yml');
     }
 }

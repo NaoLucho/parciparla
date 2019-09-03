@@ -53,7 +53,7 @@ class MailContactController extends Controller
             if($form->isValid()) {
                 
                 if ($this->sendEmail($data)) {
-                    dump($data);
+                    // dump($data);
                     // Everything OK, redirect to wherever you want ! :
         
                     return $this->render('SiteBundle:Contact:contact-mail-success.html.twig');
