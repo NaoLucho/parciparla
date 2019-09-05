@@ -1,0 +1,22 @@
+
+/admin
+admin fungaD-
+nat T-31
+
+MULTISITE
+ssh fungafrwoh@ssh.cluster023.hosting.ovh.net -p 22
+Ecur-
+
+CLOUD
+ssh santheq@sshcloud.cluster024.hosting.ovh.net -p 42776
+funga-D
+
+pwd
+ls
+cd accenttonique
+php bin/console cache:clear --no-warmup --env=prod
+/usr/local/php7.2/bin/php bin/console 
+
+/usr/local/php7.2/bin/php bin/console fos:user:create admin louis.watrin@gmail.com pass
+/usr/local/php7.2/bin/php bin/console fos:user:activate louis.watrin@gmail.com
+/usr/local/php7.2/bin/php bin/console fos:user:promote louis.watrin@gmail.com --super
