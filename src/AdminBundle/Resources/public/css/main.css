@@ -105,6 +105,10 @@ hr {
     background-color: #FFC400;
     width: 50%;
 }
+.lateral-bloc hr{
+    width: 100%;
+    border: none;
+}
 
 .body-back {
 

@@ -208,4 +208,20 @@ class NewsController extends Controller
         ));
     }
 
+    public function listRecentAction($title, $limit){
+        $em = $this->getDoctrine()->getManager();
+
+        $listNews = $em->getRepository('SiteBundle:Article')
+        ->findBy(
+            ['isActive' => true],
+            ['publishedAt' => 'DESC'],
+            $limit
+        );
+
+        return $this->render('SiteBundle::lateral-list-news.html.twig', array(
+            'listNews' => $listNews,
+            'title' => $title
+          ));
+    }
+
 }
