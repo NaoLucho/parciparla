@@ -23,9 +23,23 @@
 }
 
 .card-body{
-    
     text-justify: inter-word;
 }
+
+.card-body:hover{
+    background-color: #ffc40040;
+}
+
+.content-card a{
+    color:#4F4F4F !important;
+    text-decoration: none;
+}
+
+.content-card a:hover{
+    color:none !important;
+    text-decoration:none !important
+}
+
 .icon-title{
 
     text-align: center;

@@ -1,0 +1,556 @@
+﻿id,env,createdAt,userName,action,entityName,entityId,propertyName,oldValue,newValue,status
+1167,dev,"05/09/2019 11:09:38",admin,update,"Builder\PageBundle\Entity\Content",6,title,"LA FORMATION CONTINUE","LA FORMATION CONTINUE >formation_continue",done
+1168,dev,"05/09/2019 11:09:45",admin,update,"Builder\PageBundle\Entity\Content",7,title,"LA FORMATION PROFESSIONNELLE","LA FORMATION PROFESSIONNELLE >> formation_pro",done
+1169,dev,"05/09/2019 11:09:08",admin,update,"Builder\PageBundle\Entity\Content",7,title,"LA FORMATION PROFESSIONNELLE >> formation_pro","LA FORMATION PROFESSIONNELLE >>formation_pro",done
+1170,dev,"05/09/2019 11:09:30",admin,update,"Builder\PageBundle\Entity\Content",6,title,"LA FORMATION CONTINUE >formation_continue","LA FORMATION CONTINUE >>formation_continue",done
+1171,dev,"05/09/2019 11:09:25",admin,update,"Builder\PageBundle\Entity\Content",8,title,"COURS INDIVIDUELS","COURS INDIVIDUELS >>formation_continue",done
+1172,dev,"05/09/2019 11:09:44",admin,update,"Builder\PageBundle\Entity\Content",9,title,"PREPARATION CONCOURS OU EXAMENS","PREPARATION CONCOURS OU EXAMENS >>preparation",done
+1173,dev,"05/09/2019 11:09:03",admin,update,"Builder\PageBundle\Entity\Content",10,title,"ACTIVITES CULTURELLES","ACTIVITES CULTURELLES >>activites_culturelles",done
+1174,dev,"05/09/2019 11:09:20",admin,update,"Builder\PageBundle\Entity\Content",12,title,VOYAGE,"VOYAGE >>voyages",done
+1175,dev,"05/09/2019 11:09:51",admin,update,"Builder\PageBundle\Entity\Content",15,title,ATELIERS,"ATELIERS >>ateliers",done
+1176,dev,"05/09/2019 11:09:37",admin,update,"Builder\PageBundle\Entity\Content",17,title,"METHODE ET OUTILS","METHODE ET OUTILS >>pedagogie",done
+1177,dev,"05/09/2019 11:09:37",admin,update,"Builder\PageBundle\Entity\Content",17,content,"<p style=""text-align:center""><em>Le stagiaire est acteur de son apprentissage et va s&rsquo;approprier la langue &agrave; travers :</em></p>
+
+<p style=""margin-left:40px;"">L&rsquo;immersion</p>
+
+<p style=""margin-left:40px;"">L&rsquo;&eacute;coute</p>
+
+<p style=""margin-left:40px;"">La participation</p>
+
+<p style=""margin-left:40px;"">Des situations interactives</p>
+
+<p style=""margin-left:40px;"">La libert&eacute; de prises de paroles afin de favoriser l&rsquo;&eacute;change.</p>
+
+<p style=""margin-left:40px;"">D&rsquo;un accompagnement personnalis&eacute;</p>","<p style=""text-align:center""><em>Le stagiaire est acteur de son apprentissage et va s&rsquo;approprier la langue &agrave; travers :</em></p>
+
+<p style=""margin-left:40px"">L&rsquo;immersion</p>
+
+<p style=""margin-left:40px"">L&rsquo;&eacute;coute</p>
+
+<p style=""margin-left:40px"">La participation</p>
+
+<p style=""margin-left:40px"">Des situations interactives</p>
+
+<p style=""margin-left:40px"">La libert&eacute; de prises de paroles afin de favoriser l&rsquo;&eacute;change.</p>
+
+<p style=""margin-left:40px"">D&rsquo;un accompagnement personnalis&eacute;</p>",done
+1178,dev,"05/09/2019 11:09:08",admin,update,"Builder\PageBundle\Entity\Content",18,title,PROFESSEURS,"PROFESSEURS >>les_professeurs",done
+1179,dev,"05/09/2019 11:09:36",admin,update,"Builder\PageBundle\Entity\Content",20,title,PLANNING,"PLANNING >>planning",done
+1180,dev,"05/09/2019 11:09:52",admin,update,"Builder\PageBundle\Entity\Content",30,title,CONTACT,"CONTACT >>contact",done
+1181,dev,"06/09/2019 08:09:30",admin,update,"Builder\PageBundle\Entity\Content",32,title,"C> Articles","C> News",done
+1182,dev,"06/09/2019 08:09:30",admin,update,"Builder\PageBundle\Entity\Content",32,content,SiteBundle:Article:list,<p>SiteBundle:News:list</p>,done
+1183,dev,"06/09/2019 08:09:49",admin,update,"Builder\PageBundle\Entity\Content",33,title,"C> Article","C> New",done
+1184,dev,"06/09/2019 08:09:49",admin,update,"Builder\PageBundle\Entity\Content",33,content,<p>SiteBundle:Article:show</p>,<p>SiteBundle:News:show</p>,done
+1185,dev,"06/09/2019 08:09:46",admin,update,"Builder\PageBundle\Entity\Content",33,class,,page_info,done
+1186,dev,"06/09/2019 08:09:34",admin,update,"Builder\PageBundle\Entity\Page",18,name,Article,Actualité,done
+1187,dev,"06/09/2019 08:09:34",admin,update,"Builder\PageBundle\Entity\Page",18,slug,article,actualite,done
+1188,dev,"06/09/2019 08:09:26",admin,update,"Builder\PageBundle\Entity\Page",18,slug,actualite,news,done
+1189,dev,"06/09/2019 09:09:59",admin,update,"Builder\PageBundle\Entity\Page",18,slug,news,actu,done
+1190,dev,"06/09/2019 09:09:16",admin,create,"Builder\PageBundle\Entity\Page",20,,,,done
+1191,dev,"06/09/2019 09:09:16",admin,create,"Builder\PageBundle\Entity\Page",20,name,,Actualités,done
+1192,dev,"06/09/2019 09:09:16",admin,create,"Builder\PageBundle\Entity\Page",20,slug,,news,done
+1193,dev,"06/09/2019 09:09:16",admin,create,"Builder\PageBundle\Entity\Page",20,locked,,1,done
+1194,dev,"06/09/2019 09:09:16",admin,create,"Builder\PageBundle\Entity\Page_Content",36,,,,done
+1195,dev,"06/09/2019 09:09:16",admin,create,"Builder\PageBundle\Entity\Page_Content",36,position,,"1 MAIN",done
+1196,dev,"06/09/2019 09:09:16",admin,create,"Builder\PageBundle\Entity\Page_Content",36,page,,Page:20,done
+1197,dev,"06/09/2019 09:09:16",admin,create,"Builder\PageBundle\Entity\Page_Content",36,content,,Content:32,done
+1198,dev,"06/09/2019 09:09:16",admin,update,"Builder\PageBundle\Entity\Page",20,rights,,Group:1,done
+1199,dev,"06/09/2019 09:09:04",admin,update,"Builder\PageBundle\Entity\Page_Content",36,position,"1 MAIN",1,done
+1200,dev,"06/09/2019 09:09:11",admin,create,"Builder\PageBundle\Entity\Content",35,,,,done
+1201,dev,"06/09/2019 09:09:11",admin,create,"Builder\PageBundle\Entity\Content",35,title,,Accueil-section-actualite,done
+1202,dev,"06/09/2019 09:09:11",admin,create,"Builder\PageBundle\Entity\Content",35,content,,"<div>
+<hr />
+<h3>ACTUALITES</h3>
+
+<p>&nbsp;</p>
+</div>",done
+1203,dev,"06/09/2019 09:09:11",admin,create,"Builder\PageBundle\Entity\Content",35,type,,Content,done
+1204,dev,"06/09/2019 09:09:41",admin,create,"Builder\PageBundle\Entity\Page_Content",37,,,,done
+1205,dev,"06/09/2019 09:09:41",admin,create,"Builder\PageBundle\Entity\Page_Content",37,position,,7a,done
+1206,dev,"06/09/2019 09:09:41",admin,create,"Builder\PageBundle\Entity\Page_Content",37,page,,Page:2,done
+1207,dev,"06/09/2019 09:09:41",admin,create,"Builder\PageBundle\Entity\Page_Content",37,content,,Content:35,done
+1208,dev,"06/09/2019 09:09:41",admin,update,"Builder\PageBundle\Entity\Page",2,locked,,1,done
+1209,dev,"06/09/2019 09:09:41",admin,update,"Builder\PageBundle\Entity\Page_Content",32,position,"7 #typeArticle.name=News;nbbypage=3","7b #typeArticle.name=News;nbbypage=3",done
+1210,dev,"06/09/2019 09:09:27",admin,create,"Builder\PageBundle\Entity\Content",36,,,,done
+1211,dev,"06/09/2019 09:09:27",admin,create,"Builder\PageBundle\Entity\Content",36,title,,pagecontent_Actualités,done
+1212,dev,"06/09/2019 09:09:27",admin,create,"Builder\PageBundle\Entity\Content",36,content,,"<h1>Actualités</h1>
+
+<p>&nbsp;</p>",done
+1213,dev,"06/09/2019 09:09:27",admin,create,"Builder\PageBundle\Entity\Content",36,type,,Content,done
+1214,dev,"06/09/2019 09:09:27",admin,create,"Builder\PageBundle\Entity\Content",36,locked,,1,done
+1215,dev,"06/09/2019 09:09:27",admin,create,"Builder\PageBundle\Entity\Content",36,class,,page_info,done
+1216,dev,"06/09/2019 09:09:54",admin,create,"Builder\PageBundle\Entity\Page_Content",38,,,,done
+1217,dev,"06/09/2019 09:09:54",admin,create,"Builder\PageBundle\Entity\Page_Content",38,position,,1,done
+1218,dev,"06/09/2019 09:09:54",admin,create,"Builder\PageBundle\Entity\Page_Content",38,page,,Page:20,done
+1219,dev,"06/09/2019 09:09:54",admin,create,"Builder\PageBundle\Entity\Page_Content",38,content,,Content:36,done
+1220,dev,"06/09/2019 09:09:54",admin,update,"Builder\PageBundle\Entity\Page_Content",36,position,1,2,done
+1221,dev,"06/09/2019 09:09:06",admin,remove,"Builder\PageBundle\Entity\Page_Content",36,,,,done
+1222,dev,"06/09/2019 09:09:29",admin,update,"Builder\PageBundle\Entity\Page_Content",38,content,Content:36,Content:32,done
+1223,dev,"06/09/2019 09:09:48",admin,update,"Builder\PageBundle\Entity\Page_Content",38,position,1,"1 MAIN",done
+1224,dev,"06/09/2019 09:09:36",admin,update,"Builder\PageBundle\Entity\Page_Content",38,position,"1 MAIN",1,done
+1225,dev,"06/09/2019 09:09:57",admin,create,"Builder\PageBundle\Entity\Page_Content",39,,,,done
+1226,dev,"06/09/2019 09:09:57",admin,create,"Builder\PageBundle\Entity\Page_Content",39,position,,1,done
+1227,dev,"06/09/2019 09:09:57",admin,create,"Builder\PageBundle\Entity\Page_Content",39,page,,Page:20,done
+1228,dev,"06/09/2019 09:09:57",admin,create,"Builder\PageBundle\Entity\Page_Content",39,content,,Content:36,done
+1229,dev,"06/09/2019 09:09:57",admin,update,"Builder\PageBundle\Entity\Page_Content",38,position,1,2,done
+1230,dev,"06/09/2019 09:09:23",admin,update,"Builder\PageBundle\Entity\Content",11,content,"<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">L&rsquo;espagnol du globe-trotteur</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Apprendre &agrave; parler espagnol dans le plaisir</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Aller &agrave; la rencontrer des habitants lors d&rsquo;un voyage</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">S&#39;exprimer en espagnol dans le cadre d&#39;activit&eacute;s professionnelles</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Se pr&eacute;senter au Dipl&ocirc;me de Langue Etrang&egrave;re Espagnole</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Pr&eacute;parer sereinement un concours, un examen, un entretien professionnel</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Accent Tonique accompagne et propose une m&eacute;thodologie de travail personnalis&eacute;e pour mieux atteindre ses objectifs</span></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right""><span style=""color:#7bb219; font-size:12pt"">Accent Tonique</span><br />
+<span style=""color:#7bb219; font-size:12pt"">est une association n&eacute;e le 11 avril 2006.</span><br />
+<strong>Organisme de formation n&deg;73 31 0647731</strong></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right"">Suite &agrave; une rencontre particuli&egrave;re, un long v&eacute;cu<br />
+et une grande amiti&eacute; avec l&rsquo;Espagne,<br />
+Nathalie Watrin a cr&eacute;&eacute; cette association<br />
+avec la volont&eacute; de vous transmettre et de<br />
+partager la langue et la culture espagnole.<br />
+<br />
+<strong>&laquo;Je n&rsquo;ai jamais oubli&eacute; comment j&rsquo;ai appris<br />
+&agrave; communiquer, &agrave; r&ecirc;ver, &agrave; vivre<br />
+cette noble langue.&raquo;</strong><br />
+&nbsp;</p>
+
+<p style=""text-align:right"">Il est indispensable de prendre en compte<br />
+les difficult&eacute;s li&eacute;es &agrave; l&rsquo;approche d&rsquo;une langue<br />
+vivante&nbsp; afin que l&rsquo;apprenant puisse <strong>communiquer</strong><br />
+dans la spontan&eacute;it&eacute; et qu&rsquo;il soit au c&oelig;ur<br />
+de son apprentissage.<br />
+<br />
+Pour apprendre une langue, il faut s&rsquo;entendre<br />
+parler, s&rsquo;immerger, partager, mettre en pratique<br />
+dans l&rsquo;imm&eacute;diat les acquisitions, toujours dans<br />
+le plaisir d&rsquo;apprendre.</p>","<a href=""/news"" class=""home_btn"">
+  <div class=""btn big_btn col"">
+    Actualités
+  </div>
+</a>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">L&rsquo;espagnol du globe-trotteur</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Apprendre &agrave; parler espagnol dans le plaisir</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Aller &agrave; la rencontrer des habitants lors d&rsquo;un voyage</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">S&#39;exprimer en espagnol dans le cadre d&#39;activit&eacute;s professionnelles</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Se pr&eacute;senter au Dipl&ocirc;me de Langue Etrang&egrave;re Espagnole</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Pr&eacute;parer sereinement un concours, un examen, un entretien professionnel</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Accent Tonique accompagne et propose une m&eacute;thodologie de travail personnalis&eacute;e pour mieux atteindre ses objectifs</span></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right""><span style=""color:#7bb219; font-size:12pt"">Accent Tonique</span><br />
+<span style=""color:#7bb219; font-size:12pt"">est une association n&eacute;e le 11 avril 2006.</span><br />
+<strong>Organisme de formation n&deg;73 31 0647731</strong></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right"">Suite &agrave; une rencontre particuli&egrave;re, un long v&eacute;cu<br />
+et une grande amiti&eacute; avec l&rsquo;Espagne,<br />
+Nathalie Watrin a cr&eacute;&eacute; cette association<br />
+avec la volont&eacute; de vous transmettre et de<br />
+partager la langue et la culture espagnole.<br />
+<br />
+<strong>&laquo;Je n&rsquo;ai jamais oubli&eacute; comment j&rsquo;ai appris<br />
+&agrave; communiquer, &agrave; r&ecirc;ver, &agrave; vivre<br />
+cette noble langue.&raquo;</strong><br />
+&nbsp;</p>
+
+<p style=""text-align:right"">Il est indispensable de prendre en compte<br />
+les difficult&eacute;s li&eacute;es &agrave; l&rsquo;approche d&rsquo;une langue<br />
+vivante&nbsp; afin que l&rsquo;apprenant puisse <strong>communiquer</strong><br />
+dans la spontan&eacute;it&eacute; et qu&rsquo;il soit au c&oelig;ur<br />
+de son apprentissage.<br />
+<br />
+Pour apprendre une langue, il faut s&rsquo;entendre<br />
+parler, s&rsquo;immerger, partager, mettre en pratique<br />
+dans l&rsquo;imm&eacute;diat les acquisitions, toujours dans<br />
+le plaisir d&rsquo;apprendre.</p>",done
+1231,dev,"06/09/2019 09:09:51",admin,update,"Builder\PageBundle\Entity\Content",11,content,"<a href=""/news"" class=""home_btn"">
+  <div class=""btn big_btn col"">
+    Actualités
+  </div>
+</a>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">L&rsquo;espagnol du globe-trotteur</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Apprendre &agrave; parler espagnol dans le plaisir</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Aller &agrave; la rencontrer des habitants lors d&rsquo;un voyage</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">S&#39;exprimer en espagnol dans le cadre d&#39;activit&eacute;s professionnelles</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Se pr&eacute;senter au Dipl&ocirc;me de Langue Etrang&egrave;re Espagnole</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Pr&eacute;parer sereinement un concours, un examen, un entretien professionnel</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Accent Tonique accompagne et propose une m&eacute;thodologie de travail personnalis&eacute;e pour mieux atteindre ses objectifs</span></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right""><span style=""color:#7bb219; font-size:12pt"">Accent Tonique</span><br />
+<span style=""color:#7bb219; font-size:12pt"">est une association n&eacute;e le 11 avril 2006.</span><br />
+<strong>Organisme de formation n&deg;73 31 0647731</strong></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right"">Suite &agrave; une rencontre particuli&egrave;re, un long v&eacute;cu<br />
+et une grande amiti&eacute; avec l&rsquo;Espagne,<br />
+Nathalie Watrin a cr&eacute;&eacute; cette association<br />
+avec la volont&eacute; de vous transmettre et de<br />
+partager la langue et la culture espagnole.<br />
+<br />
+<strong>&laquo;Je n&rsquo;ai jamais oubli&eacute; comment j&rsquo;ai appris<br />
+&agrave; communiquer, &agrave; r&ecirc;ver, &agrave; vivre<br />
+cette noble langue.&raquo;</strong><br />
+&nbsp;</p>
+
+<p style=""text-align:right"">Il est indispensable de prendre en compte<br />
+les difficult&eacute;s li&eacute;es &agrave; l&rsquo;approche d&rsquo;une langue<br />
+vivante&nbsp; afin que l&rsquo;apprenant puisse <strong>communiquer</strong><br />
+dans la spontan&eacute;it&eacute; et qu&rsquo;il soit au c&oelig;ur<br />
+de son apprentissage.<br />
+<br />
+Pour apprendre une langue, il faut s&rsquo;entendre<br />
+parler, s&rsquo;immerger, partager, mettre en pratique<br />
+dans l&rsquo;imm&eacute;diat les acquisitions, toujours dans<br />
+le plaisir d&rsquo;apprendre.</p>","<div><a class=""home_btn"" href=""/news"">Actualit&eacute;s </a></div>
+
+<div>&nbsp;</div>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">L&rsquo;espagnol du globe-trotteur</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Apprendre &agrave; parler espagnol dans le plaisir</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Aller &agrave; la rencontrer des habitants lors d&rsquo;un voyage</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">S&#39;exprimer en espagnol dans le cadre d&#39;activit&eacute;s professionnelles</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Se pr&eacute;senter au Dipl&ocirc;me de Langue Etrang&egrave;re Espagnole</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Pr&eacute;parer sereinement un concours, un examen, un entretien professionnel</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Accent Tonique accompagne et propose une m&eacute;thodologie de travail personnalis&eacute;e pour mieux atteindre ses objectifs</span></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right""><span style=""color:#7bb219; font-size:12pt"">Accent Tonique</span><br />
+<span style=""color:#7bb219; font-size:12pt"">est une association n&eacute;e le 11 avril 2006.</span><br />
+<strong>Organisme de formation n&deg;73 31 0647731</strong></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right"">Suite &agrave; une rencontre particuli&egrave;re, un long v&eacute;cu<br />
+et une grande amiti&eacute; avec l&rsquo;Espagne,<br />
+Nathalie Watrin a cr&eacute;&eacute; cette association<br />
+avec la volont&eacute; de vous transmettre et de<br />
+partager la langue et la culture espagnole.<br />
+<br />
+<strong>&laquo;Je n&rsquo;ai jamais oubli&eacute; comment j&rsquo;ai appris<br />
+&agrave; communiquer, &agrave; r&ecirc;ver, &agrave; vivre<br />
+cette noble langue.&raquo;</strong><br />
+&nbsp;</p>
+
+<p style=""text-align:right"">Il est indispensable de prendre en compte<br />
+les difficult&eacute;s li&eacute;es &agrave; l&rsquo;approche d&rsquo;une langue<br />
+vivante&nbsp; afin que l&rsquo;apprenant puisse <strong>communiquer</strong><br />
+dans la spontan&eacute;it&eacute; et qu&rsquo;il soit au c&oelig;ur<br />
+de son apprentissage.<br />
+<br />
+Pour apprendre une langue, il faut s&rsquo;entendre<br />
+parler, s&rsquo;immerger, partager, mettre en pratique<br />
+dans l&rsquo;imm&eacute;diat les acquisitions, toujours dans<br />
+le plaisir d&rsquo;apprendre.</p>",done
+1232,dev,"06/09/2019 09:09:51",admin,update,"Builder\PageBundle\Entity\Content",11,content,"<div><a class=""home_btn"" href=""/news"">Actualit&eacute;s </a></div>
+
+<div>&nbsp;</div>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">L&rsquo;espagnol du globe-trotteur</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Apprendre &agrave; parler espagnol dans le plaisir</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Aller &agrave; la rencontrer des habitants lors d&rsquo;un voyage</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">S&#39;exprimer en espagnol dans le cadre d&#39;activit&eacute;s professionnelles</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Se pr&eacute;senter au Dipl&ocirc;me de Langue Etrang&egrave;re Espagnole</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Pr&eacute;parer sereinement un concours, un examen, un entretien professionnel</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Accent Tonique accompagne et propose une m&eacute;thodologie de travail personnalis&eacute;e pour mieux atteindre ses objectifs</span></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right""><span style=""color:#7bb219; font-size:12pt"">Accent Tonique</span><br />
+<span style=""color:#7bb219; font-size:12pt"">est une association n&eacute;e le 11 avril 2006.</span><br />
+<strong>Organisme de formation n&deg;73 31 0647731</strong></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right"">Suite &agrave; une rencontre particuli&egrave;re, un long v&eacute;cu<br />
+et une grande amiti&eacute; avec l&rsquo;Espagne,<br />
+Nathalie Watrin a cr&eacute;&eacute; cette association<br />
+avec la volont&eacute; de vous transmettre et de<br />
+partager la langue et la culture espagnole.<br />
+<br />
+<strong>&laquo;Je n&rsquo;ai jamais oubli&eacute; comment j&rsquo;ai appris<br />
+&agrave; communiquer, &agrave; r&ecirc;ver, &agrave; vivre<br />
+cette noble langue.&raquo;</strong><br />
+&nbsp;</p>
+
+<p style=""text-align:right"">Il est indispensable de prendre en compte<br />
+les difficult&eacute;s li&eacute;es &agrave; l&rsquo;approche d&rsquo;une langue<br />
+vivante&nbsp; afin que l&rsquo;apprenant puisse <strong>communiquer</strong><br />
+dans la spontan&eacute;it&eacute; et qu&rsquo;il soit au c&oelig;ur<br />
+de son apprentissage.<br />
+<br />
+Pour apprendre une langue, il faut s&rsquo;entendre<br />
+parler, s&rsquo;immerger, partager, mettre en pratique<br />
+dans l&rsquo;imm&eacute;diat les acquisitions, toujours dans<br />
+le plaisir d&rsquo;apprendre.</p>","<div><a class=""home_btn btn big_btn"" href=""/news"">Actualit&eacute;s </a></div>
+
+<div>&nbsp;</div>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">L&rsquo;espagnol du globe-trotteur</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Apprendre &agrave; parler espagnol dans le plaisir</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Aller &agrave; la rencontrer des habitants lors d&rsquo;un voyage</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">S&#39;exprimer en espagnol dans le cadre d&#39;activit&eacute;s professionnelles</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Se pr&eacute;senter au Dipl&ocirc;me de Langue Etrang&egrave;re Espagnole</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Pr&eacute;parer sereinement un concours, un examen, un entretien professionnel</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Accent Tonique accompagne et propose une m&eacute;thodologie de travail personnalis&eacute;e pour mieux atteindre ses objectifs</span></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right""><span style=""color:#7bb219; font-size:12pt"">Accent Tonique</span><br />
+<span style=""color:#7bb219; font-size:12pt"">est une association n&eacute;e le 11 avril 2006.</span><br />
+<strong>Organisme de formation n&deg;73 31 0647731</strong></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right"">Suite &agrave; une rencontre particuli&egrave;re, un long v&eacute;cu<br />
+et une grande amiti&eacute; avec l&rsquo;Espagne,<br />
+Nathalie Watrin a cr&eacute;&eacute; cette association<br />
+avec la volont&eacute; de vous transmettre et de<br />
+partager la langue et la culture espagnole.<br />
+<br />
+<strong>&laquo;Je n&rsquo;ai jamais oubli&eacute; comment j&rsquo;ai appris<br />
+&agrave; communiquer, &agrave; r&ecirc;ver, &agrave; vivre<br />
+cette noble langue.&raquo;</strong><br />
+&nbsp;</p>
+
+<p style=""text-align:right"">Il est indispensable de prendre en compte<br />
+les difficult&eacute;s li&eacute;es &agrave; l&rsquo;approche d&rsquo;une langue<br />
+vivante&nbsp; afin que l&rsquo;apprenant puisse <strong>communiquer</strong><br />
+dans la spontan&eacute;it&eacute; et qu&rsquo;il soit au c&oelig;ur<br />
+de son apprentissage.<br />
+<br />
+Pour apprendre une langue, il faut s&rsquo;entendre<br />
+parler, s&rsquo;immerger, partager, mettre en pratique<br />
+dans l&rsquo;imm&eacute;diat les acquisitions, toujours dans<br />
+le plaisir d&rsquo;apprendre.</p>",done
+1233,dev,"06/09/2019 09:09:33",admin,update,"Builder\PageBundle\Entity\Content",11,content,"<div><a class=""home_btn btn big_btn"" href=""/news"">Actualit&eacute;s </a></div>
+
+<div>&nbsp;</div>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">L&rsquo;espagnol du globe-trotteur</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Apprendre &agrave; parler espagnol dans le plaisir</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Aller &agrave; la rencontrer des habitants lors d&rsquo;un voyage</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">S&#39;exprimer en espagnol dans le cadre d&#39;activit&eacute;s professionnelles</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Se pr&eacute;senter au Dipl&ocirc;me de Langue Etrang&egrave;re Espagnole</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Pr&eacute;parer sereinement un concours, un examen, un entretien professionnel</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Accent Tonique accompagne et propose une m&eacute;thodologie de travail personnalis&eacute;e pour mieux atteindre ses objectifs</span></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right""><span style=""color:#7bb219; font-size:12pt"">Accent Tonique</span><br />
+<span style=""color:#7bb219; font-size:12pt"">est une association n&eacute;e le 11 avril 2006.</span><br />
+<strong>Organisme de formation n&deg;73 31 0647731</strong></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right"">Suite &agrave; une rencontre particuli&egrave;re, un long v&eacute;cu<br />
+et une grande amiti&eacute; avec l&rsquo;Espagne,<br />
+Nathalie Watrin a cr&eacute;&eacute; cette association<br />
+avec la volont&eacute; de vous transmettre et de<br />
+partager la langue et la culture espagnole.<br />
+<br />
+<strong>&laquo;Je n&rsquo;ai jamais oubli&eacute; comment j&rsquo;ai appris<br />
+&agrave; communiquer, &agrave; r&ecirc;ver, &agrave; vivre<br />
+cette noble langue.&raquo;</strong><br />
+&nbsp;</p>
+
+<p style=""text-align:right"">Il est indispensable de prendre en compte<br />
+les difficult&eacute;s li&eacute;es &agrave; l&rsquo;approche d&rsquo;une langue<br />
+vivante&nbsp; afin que l&rsquo;apprenant puisse <strong>communiquer</strong><br />
+dans la spontan&eacute;it&eacute; et qu&rsquo;il soit au c&oelig;ur<br />
+de son apprentissage.<br />
+<br />
+Pour apprendre une langue, il faut s&rsquo;entendre<br />
+parler, s&rsquo;immerger, partager, mettre en pratique<br />
+dans l&rsquo;imm&eacute;diat les acquisitions, toujours dans<br />
+le plaisir d&rsquo;apprendre.</p>","<div class=""home_btn""><a class=""btn big_btn"" href=""/news"">Actualit&eacute;s </a></div>
+
+<div>&nbsp;</div>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">L&rsquo;espagnol du globe-trotteur</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Apprendre &agrave; parler espagnol dans le plaisir</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Aller &agrave; la rencontrer des habitants lors d&rsquo;un voyage</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">S&#39;exprimer en espagnol dans le cadre d&#39;activit&eacute;s professionnelles</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Se pr&eacute;senter au Dipl&ocirc;me de Langue Etrang&egrave;re Espagnole</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Pr&eacute;parer sereinement un concours, un examen, un entretien professionnel</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Accent Tonique accompagne et propose une m&eacute;thodologie de travail personnalis&eacute;e pour mieux atteindre ses objectifs</span></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right""><span style=""color:#7bb219; font-size:12pt"">Accent Tonique</span><br />
+<span style=""color:#7bb219; font-size:12pt"">est une association n&eacute;e le 11 avril 2006.</span><br />
+<strong>Organisme de formation n&deg;73 31 0647731</strong></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right"">Suite &agrave; une rencontre particuli&egrave;re, un long v&eacute;cu<br />
+et une grande amiti&eacute; avec l&rsquo;Espagne,<br />
+Nathalie Watrin a cr&eacute;&eacute; cette association<br />
+avec la volont&eacute; de vous transmettre et de<br />
+partager la langue et la culture espagnole.<br />
+<br />
+<strong>&laquo;Je n&rsquo;ai jamais oubli&eacute; comment j&rsquo;ai appris<br />
+&agrave; communiquer, &agrave; r&ecirc;ver, &agrave; vivre<br />
+cette noble langue.&raquo;</strong><br />
+&nbsp;</p>
+
+<p style=""text-align:right"">Il est indispensable de prendre en compte<br />
+les difficult&eacute;s li&eacute;es &agrave; l&rsquo;approche d&rsquo;une langue<br />
+vivante&nbsp; afin que l&rsquo;apprenant puisse <strong>communiquer</strong><br />
+dans la spontan&eacute;it&eacute; et qu&rsquo;il soit au c&oelig;ur<br />
+de son apprentissage.<br />
+<br />
+Pour apprendre une langue, il faut s&rsquo;entendre<br />
+parler, s&rsquo;immerger, partager, mettre en pratique<br />
+dans l&rsquo;imm&eacute;diat les acquisitions, toujours dans<br />
+le plaisir d&rsquo;apprendre.</p>",done
+1234,dev,"06/09/2019 09:09:39",admin,update,"Builder\PageBundle\Entity\Content",11,content,"<div class=""home_btn""><a class=""btn big_btn"" href=""/news"">Actualit&eacute;s </a></div>
+
+<div>&nbsp;</div>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">L&rsquo;espagnol du globe-trotteur</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Apprendre &agrave; parler espagnol dans le plaisir</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Aller &agrave; la rencontrer des habitants lors d&rsquo;un voyage</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">S&#39;exprimer en espagnol dans le cadre d&#39;activit&eacute;s professionnelles</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Se pr&eacute;senter au Dipl&ocirc;me de Langue Etrang&egrave;re Espagnole</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Pr&eacute;parer sereinement un concours, un examen, un entretien professionnel</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Accent Tonique accompagne et propose une m&eacute;thodologie de travail personnalis&eacute;e pour mieux atteindre ses objectifs</span></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right""><span style=""color:#7bb219; font-size:12pt"">Accent Tonique</span><br />
+<span style=""color:#7bb219; font-size:12pt"">est une association n&eacute;e le 11 avril 2006.</span><br />
+<strong>Organisme de formation n&deg;73 31 0647731</strong></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right"">Suite &agrave; une rencontre particuli&egrave;re, un long v&eacute;cu<br />
+et une grande amiti&eacute; avec l&rsquo;Espagne,<br />
+Nathalie Watrin a cr&eacute;&eacute; cette association<br />
+avec la volont&eacute; de vous transmettre et de<br />
+partager la langue et la culture espagnole.<br />
+<br />
+<strong>&laquo;Je n&rsquo;ai jamais oubli&eacute; comment j&rsquo;ai appris<br />
+&agrave; communiquer, &agrave; r&ecirc;ver, &agrave; vivre<br />
+cette noble langue.&raquo;</strong><br />
+&nbsp;</p>
+
+<p style=""text-align:right"">Il est indispensable de prendre en compte<br />
+les difficult&eacute;s li&eacute;es &agrave; l&rsquo;approche d&rsquo;une langue<br />
+vivante&nbsp; afin que l&rsquo;apprenant puisse <strong>communiquer</strong><br />
+dans la spontan&eacute;it&eacute; et qu&rsquo;il soit au c&oelig;ur<br />
+de son apprentissage.<br />
+<br />
+Pour apprendre une langue, il faut s&rsquo;entendre<br />
+parler, s&rsquo;immerger, partager, mettre en pratique<br />
+dans l&rsquo;imm&eacute;diat les acquisitions, toujours dans<br />
+le plaisir d&rsquo;apprendre.</p>","<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">L&rsquo;espagnol du globe-trotteur</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Apprendre &agrave; parler espagnol dans le plaisir</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Aller &agrave; la rencontrer des habitants lors d&rsquo;un voyage</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">S&#39;exprimer en espagnol dans le cadre d&#39;activit&eacute;s professionnelles</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Se pr&eacute;senter au Dipl&ocirc;me de Langue Etrang&egrave;re Espagnole</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Pr&eacute;parer sereinement un concours, un examen, un entretien professionnel</span></p>
+
+<p style=""text-align:right""><span style=""color:#008080; font-size:14pt"">Accent Tonique accompagne et propose une m&eacute;thodologie de travail personnalis&eacute;e pour mieux atteindre ses objectifs</span></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right""><span style=""color:#7bb219; font-size:12pt"">Accent Tonique</span><br />
+<span style=""color:#7bb219; font-size:12pt"">est une association n&eacute;e le 11 avril 2006.</span><br />
+<strong>Organisme de formation n&deg;73 31 0647731</strong></p>
+
+<p>&nbsp;</p>
+
+<p style=""text-align:right"">Suite &agrave; une rencontre particuli&egrave;re, un long v&eacute;cu<br />
+et une grande amiti&eacute; avec l&rsquo;Espagne,<br />
+Nathalie Watrin a cr&eacute;&eacute; cette association<br />
+avec la volont&eacute; de vous transmettre et de<br />
+partager la langue et la culture espagnole.<br />
+<br />
+<strong>&laquo;Je n&rsquo;ai jamais oubli&eacute; comment j&rsquo;ai appris<br />
+&agrave; communiquer, &agrave; r&ecirc;ver, &agrave; vivre<br />
+cette noble langue.&raquo;</strong><br />
+&nbsp;</p>
+
+<p style=""text-align:right"">Il est indispensable de prendre en compte<br />
+les difficult&eacute;s li&eacute;es &agrave; l&rsquo;approche d&rsquo;une langue<br />
+vivante&nbsp; afin que l&rsquo;apprenant puisse <strong>communiquer</strong><br />
+dans la spontan&eacute;it&eacute; et qu&rsquo;il soit au c&oelig;ur<br />
+de son apprentissage.<br />
+<br />
+Pour apprendre une langue, il faut s&rsquo;entendre<br />
+parler, s&rsquo;immerger, partager, mettre en pratique<br />
+dans l&rsquo;imm&eacute;diat les acquisitions, toujours dans<br />
+le plaisir d&rsquo;apprendre.</p>",done

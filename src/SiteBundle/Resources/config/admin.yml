@@ -5,7 +5,7 @@ services:
     class: SiteBundle\Admin\ArticleAdmin
     arguments: [~, SiteBundle\Entity\Article, ~]
     tags:
-      - { name: sonata.admin, manager_type: orm, group: "Métier", label: "Articles" }
+      - { name: sonata.admin, manager_type: orm, group: "Métier", label: "Actualités" }
     public: true
 
   app.admin.comment:
