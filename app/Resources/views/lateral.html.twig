@@ -5,11 +5,11 @@
 </div>
 </form> #}
 
-<div class="lateral-bloc">
+<div class="mb-4">
 <a class="d-flex btn" href="/news"><div  class="btn big_btn w-100">Actualit&eacute;s </div></a>
 <div>&nbsp;</div>
 
-<div class="lateral-bloc">
+<div class="mb-4">
     {{ render(controller("SiteBundle:News:listRecent", {'title':'Dernières Actualités', 'limit': 3})) }}
 </div>
 

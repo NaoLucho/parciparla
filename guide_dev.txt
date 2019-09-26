@@ -15,11 +15,23 @@ pwd
 ls
 cd accenttonique
 php bin/console cache:clear --no-warmup --env=prod
-/usr/local/php7.2/bin/php bin/console 
+/usr/local/php7.2/bin/php bin/console cache:clear --no-warmup --env=prod
 
 /usr/local/php7.2/bin/php bin/console fos:user:create admin louis.watrin@gmail.com pass
 /usr/local/php7.2/bin/php bin/console fos:user:activate louis.watrin@gmail.com
 /usr/local/php7.2/bin/php bin/console fos:user:promote louis.watrin@gmail.com --super
 
-php bin/console assets:install
-/usr/local/php7.2/bin/php bin/console assetic:dump --env=prod --no-debug
+
+/usr/local/php7.2/bin/php bin/console ckeditor:install  (NE PAS FAIRE, CA ECRASE LE VENDOR egeloen/ckeditor-bundle)
+/usr/local/php7.2/bin/php bin/console assets:install (Créer le web/bundle à partir de vendor)
+/usr/local/php7.2/bin/php bin/console assetic:dump --env=prod --no-debug (met à jour les js/css dans web pour prod)
+/usr/local/php7.2/bin/php bin/console cache:clear --no-warmup --env=prod (FONCTIONNE?)
+/usr/local/php7.2/bin/php bin/console cache:clear --env=prod
+
+Pour le lien CKEDITOR - SONATA MEDIA
+Si ca ne fonctionne pas reprendre une version antérieur qui fonctionnait,  remplacer web/bundles/ivoryckeditor par sites/temp/web-bundle/ivoryckeditor
+
+Sinon Remplacer le vendor: vendor/egeloen/ckeditor-bundle par sites/temp/ckeditor-bundle
+Puis /usr/local/php7.2/bin/php bin/console assets:install qui met correctement le web/bundles/ivoryckeditor qui fonctionne
+> OK POUR LA PROD
+

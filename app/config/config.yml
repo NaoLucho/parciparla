@@ -246,6 +246,7 @@ ivory_ck_editor:
             toolbar:                    [['Source'], ['Undo','Redo' ],[ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript','-','RemoveFormat' ], [ 'NumberedList','BulletedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink', 'Anchor'], [ 'pbckcode', 'Image', 'Table','SpecialChar', 'HorizontalRule' ], '/', [ 'Styles', 'Format', 'Font', 'FontSize' ], [ 'RemoveFormat' ], [ 'TextColor', 'BGColor' ], [ 'Maximize' ] ]
             # extraPlugins: 'oembed'
             # uploadUrl: '/uploader/upload.php?type=Images&responseType=json'
+            height: "600px"
 
 sonata_media:
     # if you don't use default namespace configuration
