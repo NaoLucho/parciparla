@@ -34,6 +34,12 @@ services:
     #     arguments:
     #         $someArgument: 'some_value'
 
+    pagebundle.sitemap:
+        class: Builder\PageBundle\Service\SiteMap\SiteMap
+        argument: ['@doctrine.orm.entity_manager', '@router']
+        public: true
+
+
     adminbundle.event_listener.action_db:
         class: AdminBundle\Events\EventListener\ActionDBListener
         arguments: ["@service_container"]

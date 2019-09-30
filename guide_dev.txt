@@ -35,3 +35,12 @@ Sinon Remplacer le vendor: vendor/egeloen/ckeditor-bundle par sites/temp/ckedito
 Puis /usr/local/php7.2/bin/php bin/console assets:install qui met correctement le web/bundles/ivoryckeditor qui fonctionne
 > OK POUR LA PROD
 
+TRY TO FIX:
+        "egeloen/ckeditor-bundle": "^6.0",
+        TO
+        "egeloen/ckeditor-bundle": "6.0.1",
+
+COMPOSER UPDATE:
+IF sonata NOT WORK old is OK:
+sonata-project/admin-bundle (3.52.0 => 3.53.0)
+sonata-project/user-bundle dev-master (f0f67e0 => 86c1ebc)

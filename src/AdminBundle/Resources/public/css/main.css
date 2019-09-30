@@ -105,7 +105,8 @@ hr {
     background-color: #FFC400;
     width: 50%;
 }
-.lateral-bloc hr{
+
+.lateral hr{
     width: 100%;
     border: none;
 }
@@ -174,6 +175,10 @@ hr {
 .Header {
     text-align: center;
     margin: 0px 15px;
+}
+
+.logo_banner {
+    width: 100%;
 }
 
 .image_banner {
@@ -279,6 +284,10 @@ a {
 
 .navbar-toggler-icon {
     color: white;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
 }
 
 li.disable>a {

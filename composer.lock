@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf197abb248b7b03e535661a8a5295e9",
+    "content-hash": "cae379cbdf866635bf32645f46130be2",
     "packages": [
         {
             "name": "beberlei/doctrineextensions",
@@ -656,16 +656,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.10.0",
+            "version": "v2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "30e33f60f64deec87df728c02b107f82cdafad9d"
+                "reference": "b8ca1dcf6b0dc8a2af7a09baac8d0c48345df4ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/30e33f60f64deec87df728c02b107f82cdafad9d",
-                "reference": "30e33f60f64deec87df728c02b107f82cdafad9d",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/b8ca1dcf6b0dc8a2af7a09baac8d0c48345df4ff",
+                "reference": "b8ca1dcf6b0dc8a2af7a09baac8d0c48345df4ff",
                 "shasum": ""
             },
             "require": {
@@ -681,14 +681,16 @@
             },
             "require-dev": {
                 "doctrine/coding-standard": "^1.0",
-                "phpunit/phpunit": "^6.3",
+                "phpstan/phpstan": "^0.11",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpunit/phpunit": "^7.0",
                 "squizlabs/php_codesniffer": "^3.0",
                 "symfony/phpunit-bridge": "^4.0.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.10.x-dev"
+                    "dev-master": "2.11.x-dev"
                 }
             },
             "autoload": {
@@ -702,16 +704,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -733,7 +735,7 @@
                 "doctrine",
                 "php"
             ],
-            "time": "2018-11-21T01:24:55+00:00"
+            "time": "2019-09-10T10:10:14+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -1393,16 +1395,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.6.3",
+            "version": "v2.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "434820973cadf2da2d66e7184be370084cc32ca8"
+                "reference": "b52ef5a1002f99ab506a5a2d6dba5a2c236c5f43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/434820973cadf2da2d66e7184be370084cc32ca8",
-                "reference": "434820973cadf2da2d66e7184be370084cc32ca8",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/b52ef5a1002f99ab506a5a2d6dba5a2c236c5f43",
+                "reference": "b52ef5a1002f99ab506a5a2d6dba5a2c236c5f43",
                 "shasum": ""
             },
             "require": {
@@ -1417,9 +1419,8 @@
                 "symfony/console": "~3.0|~4.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^1.0",
-                "phpunit/phpunit": "^6.5",
-                "squizlabs/php_codesniffer": "^3.2",
+                "doctrine/coding-standard": "^5.0",
+                "phpunit/phpunit": "^7.5",
                 "symfony/yaml": "~3.4|~4.0"
             },
             "suggest": {
@@ -1445,16 +1446,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -1471,7 +1472,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2018-11-20T23:46:46+00:00"
+            "time": "2019-09-20T14:30:26+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -1966,16 +1967,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.10.17",
+            "version": "8.10.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "528e45db57b3dfa3d89965e52b635c50b285d584"
+                "reference": "b8f2341692df067028445fee35ca7144d009e251"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/528e45db57b3dfa3d89965e52b635c50b285d584",
-                "reference": "528e45db57b3dfa3d89965e52b635c50b285d584",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/b8f2341692df067028445fee35ca7144d009e251",
+                "reference": "b8f2341692df067028445fee35ca7144d009e251",
                 "shasum": ""
             },
             "require": {
@@ -2030,7 +2031,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2019-08-15T09:22:06+00:00"
+            "time": "2019-09-18T15:37:43+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -2757,16 +2758,16 @@
         },
         {
             "name": "knplabs/knp-menu",
-            "version": "2.5.0",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenu.git",
-                "reference": "f22db6a9232f5118f4ae378bf5e6cfea32e9c5f5"
+                "reference": "b6aade272c345b6fbd07fce5929a761cba0909b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/f22db6a9232f5118f4ae378bf5e6cfea32e9c5f5",
-                "reference": "f22db6a9232f5118f4ae378bf5e6cfea32e9c5f5",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/b6aade272c345b6fbd07fce5929a761cba0909b8",
+                "reference": "b6aade272c345b6fbd07fce5929a761cba0909b8",
                 "shasum": ""
             },
             "require": {
@@ -2820,36 +2821,36 @@
                 "menu",
                 "tree"
             ],
-            "time": "2019-08-23T08:46:21+00:00"
+            "time": "2019-09-02T10:16:14+00:00"
         },
         {
             "name": "knplabs/knp-menu-bundle",
-            "version": "2.2.2",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "267027582a1f1e355276f796f8da0e9f82026bf1"
+                "reference": "78b0cebf8e1490f12ba6555511282954de83f627"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/267027582a1f1e355276f796f8da0e9f82026bf1",
-                "reference": "267027582a1f1e355276f796f8da0e9f82026bf1",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/78b0cebf8e1490f12ba6555511282954de83f627",
+                "reference": "78b0cebf8e1490f12ba6555511282954de83f627",
                 "shasum": ""
             },
             "require": {
                 "knplabs/knp-menu": "~2.3",
-                "php": "^5.6 || ^7",
-                "symfony/framework-bundle": "~2.7|~3.0 | ^4.0"
+                "php": "^7.1",
+                "symfony/framework-bundle": "^3.4 | ^4.0"
             },
             "require-dev": {
-                "symfony/expression-language": "~2.7|~3.0 | ^4.0",
-                "symfony/phpunit-bridge": "^3.3 | ^4.0",
-                "symfony/templating": "~2.7|~3.0 | ^4.0"
+                "symfony/expression-language": "^3.4 | ^4.0",
+                "symfony/phpunit-bridge": "^3.4 | ^4.0",
+                "symfony/templating": "^3.4 | ^4.0"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -2863,12 +2864,12 @@
             ],
             "authors": [
                 {
-                    "name": "Christophe Coevoet",
-                    "email": "stof@notk.org"
-                },
-                {
                     "name": "Knplabs",
                     "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
                 },
                 {
                     "name": "Symfony Community",
@@ -2879,7 +2880,7 @@
             "keywords": [
                 "menu"
             ],
-            "time": "2019-06-17T12:58:15+00:00"
+            "time": "2019-09-19T08:51:48+00:00"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -3126,16 +3127,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.24.0",
+            "version": "1.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266"
+                "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
+                "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
                 "shasum": ""
             },
             "require": {
@@ -3200,7 +3201,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2018-11-05T09:00:11+00:00"
+            "time": "2019-09-06T13:49:17+00:00"
         },
         {
             "name": "nelmio/api-doc-bundle",
@@ -4055,16 +4056,16 @@
         },
         {
             "name": "sonata-project/admin-bundle",
-            "version": "3.52.0",
+            "version": "3.53.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "f0c22710bed3a5926bab5a65b4c1b73f2e1da671"
+                "reference": "5772753f64c1c4d32791e00f6c33f5445e127a6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/f0c22710bed3a5926bab5a65b4c1b73f2e1da671",
-                "reference": "f0c22710bed3a5926bab5a65b4c1b73f2e1da671",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/5772753f64c1c4d32791e00f6c33f5445e127a6e",
+                "reference": "5772753f64c1c4d32791e00f6c33f5445e127a6e",
                 "shasum": ""
             },
             "require": {
@@ -4072,7 +4073,7 @@
                 "doctrine/inflector": "^1.1",
                 "knplabs/knp-menu-bundle": "^2.2",
                 "php": "^7.1",
-                "sonata-project/block-bundle": "^3.11",
+                "sonata-project/block-bundle": "^3.17",
                 "sonata-project/core-bundle": "^3.15.0",
                 "sonata-project/exporter": "^1.11.0 || ^2.0",
                 "symfony/asset": "^2.8 || ^3.2 || ^4.0",
@@ -4157,27 +4158,29 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2019-08-16T11:06:16+00:00"
+            "time": "2019-09-03T19:23:34+00:00"
         },
         {
             "name": "sonata-project/block-bundle",
-            "version": "3.17.0",
+            "version": "3.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataBlockBundle.git",
-                "reference": "38619fa25eda56d32361b6a50e2c5eb6b27b1891"
+                "reference": "7520297bf9663af9f3dc1ee0100390f9531eaf34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/38619fa25eda56d32361b6a50e2c5eb6b27b1891",
-                "reference": "38619fa25eda56d32361b6a50e2c5eb6b27b1891",
+                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/7520297bf9663af9f3dc1ee0100390f9531eaf34",
+                "reference": "7520297bf9663af9f3dc1ee0100390f9531eaf34",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "^2.3",
                 "php": "^7.1",
+                "psr/cache": "^1.0",
+                "psr/cache-implementation": "*",
                 "sonata-project/cache": "^1.0 || ^2.0",
-                "sonata-project/core-bundle": "^3.13.7",
+                "sonata-project/core-bundle": "^3.15.1",
                 "sonata-project/doctrine-extensions": "^1.1",
                 "symfony/asset": "^2.8 || ^3.2 || ^4.0",
                 "symfony/config": "^2.8 || ^3.2 || ^4.0",
@@ -4244,7 +4247,7 @@
                 "block",
                 "sonata"
             ],
-            "time": "2019-08-16T11:17:01+00:00"
+            "time": "2019-09-19T20:35:31+00:00"
         },
         {
             "name": "sonata-project/cache",
@@ -4929,12 +4932,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataUserBundle.git",
-                "reference": "f0f67e0dad6b3c4a700acb8291e579d40047b82a"
+                "reference": "86c1ebc47ecc5dba845d1b2db6ef79b217a327ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/f0f67e0dad6b3c4a700acb8291e579d40047b82a",
-                "reference": "f0f67e0dad6b3c4a700acb8291e579d40047b82a",
+                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/86c1ebc47ecc5dba845d1b2db6ef79b217a327ed",
+                "reference": "86c1ebc47ecc5dba845d1b2db6ef79b217a327ed",
                 "shasum": ""
             },
             "require": {
@@ -5020,7 +5023,7 @@
                 "sonata",
                 "user"
             ],
-            "time": "2019-08-11T00:00:19+00:00"
+            "time": "2019-09-26T00:00:18+00:00"
         },
         {
             "name": "stof/doctrine-extensions-bundle",

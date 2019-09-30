@@ -30,7 +30,7 @@
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-migrations-bundle": "^1.0",
         "doctrine/orm": "^2.5",
-        "egeloen/ckeditor-bundle": "^6.0",
+        "egeloen/ckeditor-bundle": "6.0.1",
         "friendsofsymfony/user-bundle": "2.0.2",
         "gregwar/captcha-bundle": "^2.0",
         "incenteev/composer-parameter-handler": "^2.0",
@@ -92,7 +92,8 @@
         "symfony-tests-dir": "tests",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
+            "file": "app/config/parameters.yml",
+            "keep-outdated": true
         },
         "branch-alias": null,
         "ckeditor-tag": "4.7.3"
