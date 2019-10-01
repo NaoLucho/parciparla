@@ -106,7 +106,7 @@ hr {
     width: 50%;
 }
 
-.lateral hr{
+.lateral hr {
     width: 100%;
     border: none;
 }
@@ -187,7 +187,7 @@ hr {
 
 .Footer {
     background-color: #222;
-    padding: 30px 0;
+    padding: 20px 0 1px 0;
     width: 100%;
     display: block;
     text-align: center;
@@ -201,6 +201,11 @@ hr {
     margin-left: auto;
     margin-right: auto;
     font-style: italic;
+}
+
+.Footer h5 {
+    color: rgba(255, 255, 255, .7);
+    font-size: 14px;
 }
 
 
@@ -287,7 +292,7 @@ a {
 }
 
 .dropdown:hover>.dropdown-menu {
-  display: block;
+    display: block;
 }
 
 li.disable>a {
@@ -324,12 +329,12 @@ li.disable {
 }
 
 
-.big_btn{
+.big_btn {
     background-color: #067100;
     color: white;
 }
 
-.big_btn:hover{
+.big_btn:hover {
     background-color: #FFC400;
     color: #df1117;
 }

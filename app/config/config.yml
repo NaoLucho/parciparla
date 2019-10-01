@@ -50,6 +50,13 @@ twig:
         fos_csrf_provider: "@security.csrf.token_manager"
         pdf_article_url: '%image_prefix%/article/fichier_pdf/'
 
+# Assetic: generate css/js
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller:
+        enabled:              '%kernel.debug%'
+        profiler:             false
+
 # Doctrine Configuration
 doctrine:
     dbal:

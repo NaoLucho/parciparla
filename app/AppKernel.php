@@ -106,11 +106,11 @@ class AppKernel extends Kernel
 
     public function getLogDir()
     {
+        return dirname(__DIR__) . '/var/logs';
         // if ('dev' === $this->getEnvironment()) {
         //     return dirname(__DIR__).'/var/logs';
         // }
         // return '/tmp/accessinfo_logs/'.$this->getEnvironment();
-        return dirname(__DIR__) . '/var/logs';
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

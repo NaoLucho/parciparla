@@ -1,26 +1,7 @@
 # This file is a "template" of what your parameters.yml file should look like
 # Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
 # https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
-# MULTISITE
-# parameters:
-#     database_host: fungafrwohdbat.mysql.db
-#     database_port: null
-#     database_name: fungafrwohdbat
-#     database_user: fungafrwohdbat
-#     database_password: Tonique31
-#     mailer_transport: gmail
-#     mailer_host: null
-#     mailer_user: louis.watrin@gmail.com
-#     mailer_password: pass
-#     mailer_encryption: ssl
-#     project_name: accenttonique
-#     upload_prefix: /uploads
-#     image_prefix: '%upload_prefix%/img'
-#     secret: natsecret
-#     template_repo: site
-#     table_prefix: at_
 
-# CLOUD
 parameters:
     database_host: santheqfungadb.mysql.db
     database_port: null
@@ -30,11 +11,11 @@ parameters:
     mailer_transport: gmail
     mailer_host: null
     mailer_user: louis.watrin@gmail.com
-    mailer_password: pass
+    mailer_password: gmailP@55
     mailer_encryption: ssl
     project_name: accenttonique
     upload_prefix: /uploads
     image_prefix: '%upload_prefix%/img'
     secret: natsecret
-    template_repo: site
+    template_repo: accenttonique
     table_prefix: at_
