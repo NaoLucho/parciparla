@@ -25,7 +25,7 @@
                             {{item.publishedAt| date('d/m/Y')}}
                         </div>
                         <div class="content">
-                            {{item.content| striptags | slice(0,600) | raw }} ...
+                            {{item.content| striptags | slice(0,400) | raw }} ...
                         </div>
                         <a class="" href="{{path('builder_buildpageid',{'slug':'actu','id':(item.slug is empty? item.id:item.slug) })}}">
                             > lire l'actualité</a>

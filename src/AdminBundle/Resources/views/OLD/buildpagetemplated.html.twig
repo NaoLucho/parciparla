@@ -1,7 +1,7 @@
 {# {% extends "BuilderPageBundle::builder_layout.html.twig" %} #}
 {% extends 'templates/default.html.twig' %}
 
-{% block title %}{% if page %}{% if page.seoTitle != '' %}{{ page.seoTitle }} - {{ parent() }}{% else %}{% if page.name != '' %}{{ page.name }} - {{ parent() }}{% else %}{{ parent() }}{% endif %}{% endif %}{% endif %}{% endblock %}
+{% block title %}{% if page %}{% if page.seoTitle != '' %}{{ page.seoTitle }}{% else %}{% if page.name != '' %}{{ page.name }} - {{ parent() }}{% else %}{{ parent() }}{% endif %}{% endif %}{% endif %}{% endblock %}
 {% block seoDescription %}{% if page %}{% if page.seoDesc != '' %}"{{ page.seoDesc }}"{% else %}{{ parent() }}{% endif %}{% endif %}{% endblock %}
 {% block seoKeywords %}{% if page %}{% if page.seoKeywords and page.seoKeywords != '' %}"{{ page.seoKeywords }}"{% else %}{{ parent() }}{% endif %}{% endif %}{% endblock %}
 
