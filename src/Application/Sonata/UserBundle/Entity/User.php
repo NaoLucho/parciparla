@@ -83,7 +83,16 @@ class User extends BaseUser
      */
     private $imageSize;
 
-    
+    /**
+     * @ORM\ManyToMany(targetEntity="Application\Sonata\UserBundle\Entity\Group")
+     * @ORM\JoinTable(name="fos_user_user_group",
+     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
+     * )
+     */
+    protected $groups;
+
+
 
     /**
      * Overridden so that username is now optional
@@ -97,14 +106,14 @@ class User extends BaseUser
         return parent::setEmail($email);
     }
 
-    
+
 
     public function __construct()
     {
         parent::__construct();
     }
 
-    
+
     /**
      * If manually uploading a file (i.e. not using Symfony Form) ensure an instance
      * of 'UploadedFile' is injected into this setter to trigger the  update. If this
@@ -176,6 +185,4 @@ class User extends BaseUser
     {
         return $this->imageSize;
     }
-    
-
 }

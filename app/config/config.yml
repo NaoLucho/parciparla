@@ -53,9 +53,9 @@ twig:
 # Assetic: generate css/js
 assetic:
     debug:          '%kernel.debug%'
-    use_controller:
-        enabled:              '%kernel.debug%'
-        profiler:             false
+    use_controller: true
+        # enabled:              '%kernel.debug%'
+        # profiler:             false
 
 # Doctrine Configuration
 doctrine:

@@ -1,194 +1,167 @@
 <!DOCTYPE html>
 <html lang="fr-fr">
 
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149535256-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149535256-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-        gtag('config', 'UA-149535256-1');
-    </script>
+            gtag('config', 'UA-149535256-1');
+        </script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% block title %}Accent'Tonique, association cours d'espagnol à Toulouse{% endblock %}</title>
-    <meta name="description" content={% block seoDescription %}
-            "Cours d'Espagnol à Toulouse, tous niveaux, Accent Tonique"
-        {% endblock %}/>
-    <meta name="keywords" content={% block seoKeywords %}
-            "apprendre l espagnol, cours toulouse, accent tonique"
-        {% endblock %} />
-
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/logo-AccentTonique-2018-64x64.ico') }}" /> 
-    
-    {% block stylesheets %} 
-    {# On charge le CSS de bootstrap depuis le site directement #}
-    
-
-    <meta name="author" content="Funga.fr">
-    <meta name="copyright" content="2019 © ACCENT TONIQUE">
-    <meta http-equiv="content-type" content="text/html;UTF-8">
-    <meta http-equiv="content-language" content="fr">
-
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Accent Tonique" />
-    <meta property="og:description" content={{ block('seoDescription') }} />
-    <meta property="og:url" content="https://www.cours-espagnol-toulouse-at.com/" />
-    <meta property="og:site_name" content="Accent Tonique" />
-    <meta property="og:locale" content="fr_FR" />
-    <meta property="og:image" content="https://www.cours-espagnol-toulouse-at.com/assets/logo_AccentTonique_2019.jpg" />
-    <link rel="alternate" href="https://www.cours-espagnol-toulouse-at.com/" hreflang="fr-fr" />
-    <link rel="alternate" href="https://www.cours-espagnol-toulouse-at.com/" hreflang="x-default" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
-    <!-- Optional theme -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
-
-    {# select2_bootstrap #}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('assets/css/select2/select2_bootstrap.css') }}" /> 
-    {# css SonataUserBundle #} 
-    {% stylesheets '@ApplicationSonataUserBundle/Resources/public/css/main.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" /> {% endstylesheets %} 
-    {# css buidler #} {% stylesheets '@AdminBundle/Resources/public/css/main.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" /> {% endstylesheets %}
-
-    <script src="https://kit.fontawesome.com/e00cbb0e10.js" crossorigin="anonymous"></script>
-    {# <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">  #}
-    {% endblock %} 
-    
-    <!-- Global site tag (gtag.js) - Google Analytics PROD ONLY-->
-    {# <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122394378-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-122394378-1');
-    </script> #}
-
-    
-</head>
-
-<body class="body-back">
-    <div class="container col-sm-11 col-xl-9">
-        <div class="page col-sm-11">
-            {# BLOCK CONNEXION #} {#
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-3 ml-auto ">
-                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <a href="{{ path('fos_user_profile_show') }}">Profil {{ app.user.username }}</a>
-                    <a href="{{ path('fos_user_security_logout') }}">
-                        <i class="fas fa-sign-out-alt"></i>
-                    </a>
-                    {% else %}
-                    <a href="{{ path('site_loginpage') }}">Se Connecter</a>
-                    {% endif %}
-                </div>
-            </div> #}
-
-            <div class="row m-0">
-                <div class="col-sm-2 p-0 align-self-center">
-                    <a href="/accueil/"><img class="logo_banner" alt="logo Accent Tonique" src="/assets/logo_AccentTonique_2019.jpg"/></a>
-                </div>
-			    <div class="col-sm-10 p-0">
-                    <img alt="bannière principale d'Accent Tonique" class="image_banner" src="/assets/header.jpg" />
-                </div>
-          
-                {# {% block header %}
-                <div id="header" class="jumbotron">
-                    Ici est un header
-                </div>
-                {% endblock %}  #}
-            </div>
-            {% block menu %}
-            <h3>Pages:</h3>
-            <ul class="nav nav-pills nav-stacked">
-                <li>
-                    <a href="{{ path('homepage') }}">Accueil</a>
-                </li>
-            </ul>
-            {% endblock %} 
-            {# probleme avec les render(controller()), le template tiens compte du flashbag seulement après refresh Il
-            faut donc l'ajouter à chaque fois dans le template appellé par le controlleur (cf. article) #} {# {% if app.request.hasPreviousSession
-            %} {% for type, messages in app.session.flashBag.all %} {% for message in messages %}
-            <div class="mt-4 alert alert-{{ type }}">
-                {{ message|trans({}, 'FOSUserBundle') }}
-            </div>
-            {% endfor %} {% endfor %} {% endif %} #} 
-            
-            {# Apparait seulement si fos_user est appelé #} 
-            {% block fos_user_content %}
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>
+            {% block title %}Par-ci, Par-là - association club d'escalade - Lodève
             {% endblock %}
+        </title>
+        <meta name="description" content={% block seoDescription %} "L’association Par-ci Par-là développe les sports de pleine nature dans le Lodèvois, dans le respect de l’environnement." {% endblock %}/>
+        <meta name="keywords" content={% block seoKeywords %} "apprendre l'escalade, cours d'escalade, Parci Parlà, Par-ci Par-là, Lodève" {% endblock %}/>
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('assets/logo-parciparla-64x64.ico') }}"/>
+
+        {% block stylesheets %}
+            {# On charge le CSS de bootstrap depuis le site directement #}
 
 
-            <div class="row m-0">
-                <div class="body col-lg-9">
-                    <div class="row justify-content-md-center m-0">
-                    {% block body %}{% endblock %}
-                    </div>
-                    
-                </div>
-                <div class="lateral col-lg-3">
-                    {% block lateral %} {% include "lateral.html.twig"%} {% endblock %}
-                </div>
+            <meta name="author" content="Funga.fr">
+            <meta name="copyright" content="2019 © Parci Parlà">
+            <meta http-equiv="content-type" content="text/html;UTF-8">
+            <meta http-equiv="content-language" content="fr">
+
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content="Parci Parlà"/>
+            <meta property="og:description" content={{ block('seoDescription') }}/>
+            <meta property="og:url" content="https://www.parci-parla.org/"/>
+            <meta property="og:site_name" content="Parci Parlà"/>
+            <meta property="og:locale" content="fr_FR"/>
+            <meta property="og:image" content="https://www.parci-parla.org/assets/logo.png"/>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
+            <!-- Optional theme -->
+            <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+            {# select2_bootstrap #}
+            {# <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+                <link rel="stylesheet" href="{{ asset('assets/css/select2/select2_bootstrap.css') }}" />  #}
+            {# css SonataUserBundle #}
+            {% stylesheets '@ApplicationSonataUserBundle/Resources/public/css/main.css' %}
+            <link rel="stylesheet" href="{{ asset_url }}"/> {% endstylesheets %}
+            {# css buidler #}
+            {% stylesheets '@AdminBundle/Resources/public/css/main.css' %}
+            <link rel="stylesheet" href="{{ asset_url }}"/>
+            {% endstylesheets %}
+
+            <script src="https://kit.fontawesome.com/e00cbb0e10.js" crossorigin="anonymous"></script>
+            {# <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+                                crossorigin="anonymous">  #}
+        {% endblock %}
+
+        <!-- Global site tag (gtag.js) - Google Analytics PROD ONLY-->
+        {# <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122394378-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-122394378-1');
+        </script> #}
+
+
+    </head>
+
+    <body class="body-back">
+        {# <div class="container col-sm-11 col-xl-9"> #}
+        {# <div class="topmenu"> #}
+
+                {% block menu %}
+                <h3>Pages:</h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li>
+                        <a href="{{ path('homepage') }}">Accueil</a>
+                    </li>
+                </ul>
+                {% endblock %}
             </div>
+        {# </div> #}
 
-        </div>
-        {% block footer %}
-            <div class="Footer">
-                <p>Site créé par <a href="https://www.funga.fr" >Funga</a></p>
+        {% block headerBanner %}
+            <div class="banner"> 
+                <img alt="bannière principale Parci Parla" class="image_banner" src="/assets/image1-min.png"/>
             </div>
         {% endblock %}
-    </div>
+        
+       
+        <div class="container page">
 
-    
-</body>
+            <div class="page-content row mx-0"> 
+                {# <div class="col-lg-9 mt-4"> #}
+                <div class="col-lg-12 p-5">
+                    <div class="container row justify-content-md-center mx-auto"> {% block body %}{% endblock %}
+                    </div>
+
+                </div>
+                {# <div class="lateral col-lg-3">
+                    {% block lateral %}
+                        {% include "lateral.html.twig"%}
+                    {% endblock %}
+                </div> #}
+            </div>
+
+            {% block footer %}
+            <div class="Footer">
+                <p>Site créé par
+                    <a href="https://www.funga.fr">Funga</a>
+                </p>
+            </div>
+            {% endblock %}
+        </div>
+    </body>
 
 
-{% block javascripts %}
-    {# jquery #}
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    {# jquery UI #}
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    {% block javascripts %}
+        {# jquery #}
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        {# jquery UI #}
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
-    {# bootstrap #} {#
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> #} {#
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script> #}
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        {# bootstrap #}
+        {#
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> #}
+        {#
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script> #}
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"> </script>
 
-    {# select2 #}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+        {# select2 #}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-    {# <script>  
-        $(function(){
-            skrollr.init({
-                forceHeight: false
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+        {# <script>  
+            $(function(){
+                skrollr.init({
+                    forceHeight: false
+                });
             });
-        });
-    </script> #}
-    {% javascripts '@BuilderPageBundle/Resources/public/js/carousel.js' %}
+        </script> #}
+        {% javascripts '@BuilderPageBundle/Resources/public/js/carousel.js' %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-    {#
-    <script src="{{ asset( template_repo ~ '/assets/js/owl.carousel.js') }}"></script>
-    <script src="{{ asset( template_repo ~ '/assets/js/open.min.js') }}"></script> #} {#
-    <script src="{{ asset('assets/js/chosen_v1.8.2/chosen.jquery.js') }}"></script> #}
+        {% endjavascripts %}
+        {#
+        <script src="{{ asset( template_repo ~ '/assets/js/owl.carousel.js') }}"></script>
+        <script src="{{ asset( template_repo ~ '/assets/js/open.min.js') }}"></script> #}
+        {#
+        <script src="{{ asset('assets/js/chosen_v1.8.2/chosen.jquery.js') }}"></script> #}
 
-    {# Utilisation d'openlayers (map) #}
-    {# <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script> #}
+        {# Utilisation d'openlayers (map) #}
+        {# <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script> #}
     {% endblock %}
 </html>
