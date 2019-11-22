@@ -1,4 +1,11 @@
 
+CLOUD PARCIPARLA
+santheqpcpl.mysql.db
+santheqpcpl
+funga-D
+
+ssh santheq@sshcloud.cluster024.hosting.ovh.net -p 42776
+
 /admin
 admin fungaD-
 nat T-31
@@ -13,7 +20,7 @@ funga-D
 
 pwd
 ls
-cd accenttonique
+cd sitename
 php bin/console cache:clear --no-warmup --env=prod
 /usr/local/php7.2/bin/php bin/console cache:clear --no-warmup --env=prod
 

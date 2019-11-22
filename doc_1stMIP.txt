@@ -1,0 +1,29 @@
+INSTALLATION POUR LA PROD
+
+Créer un hébergement avec accès ssh
+- indiquer le répèretoire /sitename/web
+Créer une base de donnée
+
+Se connecter en ssh à l'hébergement avec filezilla et envoyer les fichiers du site (sauf .git/ et .vscode/ et peut vérifier aussi les app/config/parameters.yaml)
+
+Vérifier l'état du site initial.
+Vérifier les droits pour var/ et web/upload/
+
+Créer et mettre à jour la base de donnée
+/usr/local/php7.2/bin/php bin/console doctrine:database:create
+/usr/local/php7.2/bin/php bin/console d:s:u --dump-sql -f
+
+Importer les fixtures
+/usr/local/php7.2/bin/php php bin/console importlog:csv initwebsite.csv prod
+
+Créer un utilisateur admin
+/usr/local/php7.2/bin/php bin/console fos:user:create admin louis.watrin@gmail.com pass
+/usr/local/php7.2/bin/php bin/console fos:user:activate louis.watrin@gmail.com
+/usr/local/php7.2/bin/php bin/console fos:user:promote louis.watrin@gmail.com --super
+
+
+
+/usr/local/php7.2/bin/php bin/console assets:install --symlink --env=prod --no-debug (mets à jour le web/bundle et crée le lien auto)
+/usr/local/php7.2/bin/php bin/console assetic:dump --env=prod --no-debug (met à jour les js/css dans web pour prod)
+/usr/local/php7.2/bin/php bin/console cache:clear --no-warmup --env=prod (FONCTIONNE?)
+

@@ -108,6 +108,17 @@ hr {
     background-color:white;
     padding: 10px 20px;
     max-width: 350px;
+    z-index: 320;
+    position: relative;
+}
+
+.banner-img{
+    position: absolute;
+    z-index: 310;
+
+    bottom: 0;
+    /* left: 350px; */
+    
 }
 
 .logo-text {
@@ -165,6 +176,7 @@ a {
     position: relative;
     z-index: 300;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
     /* background-color: #FDE101; */
     
 }

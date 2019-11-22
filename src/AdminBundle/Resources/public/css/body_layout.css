@@ -57,6 +57,34 @@ h2.card-title{
     font-size: 1.3rem;
 }
 
+
+
+.carouselAccueil{
+    position: fixed;
+    top: 0;
+    width: 100% !important;
+}
+
+.carouselAccueil .carousel-control-prev-icon, .carouselAccueil .carousel-control-next-icon{
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.carouselAccueil .carousel-control-prev:hover, .carousel-control-next:hover{
+    background-color: rgba(255,255,255,.2);
+}
+
+.carouselAccueil .carousel-indicators{
+    top: 100px;
+}
+
+.carouselAccueil .carousel-indicators li{
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .2);
+}
+
+.carouselAccueil .carousel-indicators li.active{
+    background-color: #FDE101;
+}
+
 .carousel{
     margin-bottom: 20px;
 }

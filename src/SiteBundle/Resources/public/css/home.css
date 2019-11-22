@@ -8,6 +8,12 @@
     min-width: 30%;
 }
 
+.carouselAccueil{
+    position: fixed;
+    top: 0;
+    width: 100% !important;
+}
+
 
 .carousel-control-prev-icon, .carousel-control-next-icon{
     background-color: rgba(0,0,0,0.2);
