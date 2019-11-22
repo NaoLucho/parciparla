@@ -7,7 +7,7 @@ parameters:
     database_port: null
     database_name: santheqfungadb
     database_user: santheqfungadb
-    database_password: fungaD3V
+    database_password: fungaD-
     mailer_transport: gmail
     mailer_host: null
     mailer_user: louis.watrin@gmail.com
