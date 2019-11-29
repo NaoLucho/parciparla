@@ -1,0 +1,2987 @@
+﻿id,env,createdAt,userName,action,entityName,entityId,propertyName,oldValue,newValue,status
+56,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Menu",1,,,,done
+57,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Menu",1,name,,Principal,done
+58,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page",1,,,,done
+59,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page",1,name,,"Default Contents",done
+60,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page",1,slug,,default,done
+61,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page",1,locked,,1,done
+62,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page",2,,,,done
+63,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page",2,name,,ACCUEIL,done
+64,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page",2,slug,,accueil,done
+65,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Menu_Page",1,,,,done
+66,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Menu_Page",1,position,,1,done
+67,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Menu_Page",1,menu,,Menu:1,done
+68,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Menu_Page",1,page,,Page:2,done
+69,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",1,,,,done
+70,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",1,title,,default_header,done
+71,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",1,content,,<p>default_header</p>,done
+72,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",1,type,,Content,done
+73,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",1,locked,,1,done
+74,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",2,,,,done
+75,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",2,title,,default_MenuPrincipal,done
+76,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",2,content,,<p>Principal</p>,done
+77,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",2,type,,MainMenu,done
+78,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",2,locked,,1,done
+79,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",3,,,,done
+80,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",3,title,,default_footer,done
+81,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",3,content,,"<p><a href=""https://funga.fr/"">Propuls&eacute; par Funga</a></p>",done
+82,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",3,type,,Content,done
+83,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",3,locked,,1,done
+84,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",4,,,,done
+85,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",4,title,,Accueil-infos,done
+86,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",4,content,,<p>Bienvenue</p>,done
+87,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Content",4,type,,Content,done
+88,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",1,,,,done
+89,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",1,position,,Header,done
+90,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",1,page,,Page:1,done
+91,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",1,content,,Content:1,done
+92,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",2,,,,done
+93,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",2,position,,Menu,done
+94,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",2,page,,Page:1,done
+95,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",2,content,,Content:2,done
+96,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",3,,,,done
+97,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",3,position,,Footer,done
+98,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",3,page,,Page:1,done
+99,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",3,content,,Content:3,done
+100,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",4,,,,done
+101,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",4,position,,1,done
+102,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",4,page,,Page:2,done
+103,dev,"14/10/2019 15:10:02",admin,create,"Builder\PageBundle\Entity\Page_Content",4,content,,Content:4,done
+104,dev,"14/10/2019 15:10:02",admin,update,"Builder\PageBundle\Entity\Content",,rights,,Group:1,done
+105,dev,"14/10/2019 15:10:02",admin,update,"Builder\PageBundle\Entity\Page",,rights,,Group:1,done
+106,dev,"14/10/2019 15:10:02",admin,update,"Builder\PageBundle\Entity\Page",2,rights,,Group:1,done
+107,dev,"14/10/2019 15:10:02",admin,update,"Builder\PageBundle\Entity\Content",2,rights,,Group:1,done
+108,dev,"14/10/2019 15:10:02",admin,update,"Builder\PageBundle\Entity\Content",3,rights,,Group:1,done
+109,dev,"14/10/2019 15:10:02",admin,update,"Builder\PageBundle\Entity\Content",4,rights,,Group:1,done
+110,dev,"14/10/2019 15:10:23",admin,update,"Builder\PageBundle\Entity\Content",1,content,<p>default_header</p>,"<p><img alt="""" src=""/uploads/media/my-context/0001/01/642ffc3deac41dc7acef9a3a2221c803bda876cb.png"" style=""height:150px; width:154px"" /></p>",done
+111,dev,"14/10/2019 16:10:35",admin,update,"Builder\PageBundle\Entity\Content",1,content,"<p><img alt="""" src=""/uploads/media/my-context/0001/01/642ffc3deac41dc7acef9a3a2221c803bda876cb.png"" style=""height:150px; width:154px"" /></p>","<p><img alt="""" src=""/uploads/media/my-context/0001/01/642ffc3deac41dc7acef9a3a2221c803bda876cb.png"" style=""height:150px; width:154px"" /></p>
+
+<p><img alt="""" src=""/site/assets/images/image1-min.png"" /></p>",done
+112,dev,"14/10/2019 16:10:18",admin,update,"Builder\PageBundle\Entity\Content",1,content,"<p><img alt="""" src=""/uploads/media/my-context/0001/01/642ffc3deac41dc7acef9a3a2221c803bda876cb.png"" style=""height:150px; width:154px"" /></p>
+
+<p><img alt="""" src=""/site/assets/images/image1-min.png"" /></p>","<p><img alt=""logo parci parla"" src=""/uploads/media/my-context/0001/01/642ffc3deac41dc7acef9a3a2221c803bda876cb.png"" style=""height:150px; width:154px"" /><img alt="""" src=""/site/assets/images/image1-min.png"" style=""width:80%""/></p>",done
+113,dev,"15/10/2019 10:10:16",admin,create,"Builder\PageBundle\Entity\Content",5,,,,done
+114,dev,"15/10/2019 10:10:16",admin,create,"Builder\PageBundle\Entity\Content",5,title,,Accueil-caroussel,done
+115,dev,"15/10/2019 10:10:16",admin,create,"Builder\PageBundle\Entity\Content",5,content,,<p>caroussel-home</p>,done
+116,dev,"15/10/2019 10:10:16",admin,create,"Builder\PageBundle\Entity\Content",5,type,,Carousel,done
+117,dev,"15/10/2019 10:10:16",admin,create,"Builder\PageBundle\Entity\Content",5,class,,carouselAccueil,done
+118,dev,"15/10/2019 10:10:53",admin,create,"Builder\PageBundle\Entity\Content",6,,,,done
+119,dev,"15/10/2019 10:10:53",admin,create,"Builder\PageBundle\Entity\Content",6,title,,Accueil-section-activite,done
+120,dev,"15/10/2019 10:10:53",admin,create,"Builder\PageBundle\Entity\Content",6,content,,"<h1>ACTIVITE CLUB</h1>",done
+121,dev,"15/10/2019 10:10:53",admin,create,"Builder\PageBundle\Entity\Content",6,type,,Content,done
+122,dev,"15/10/2019 10:10:53",admin,create,"Builder\PageBundle\Entity\Content",6,class,,section,done
+123,dev,"15/10/2019 10:10:03",admin,create,"Builder\PageBundle\Entity\Content",7,,,,done
+124,dev,"15/10/2019 10:10:03",admin,create,"Builder\PageBundle\Entity\Content",7,title,,"COURS D'ESCALADE >>cours_escalade",done
+125,dev,"15/10/2019 10:10:03",admin,create,"Builder\PageBundle\Entity\Content",7,content,,"<p style=""text-align:center"">Apprenez tout au long de l&#39;ann&eacute;e</p>
+
+<p style=""margin-left:40px""><strong>Public </strong> : Enfant (+6 ans), Adulte</p>
+
+<p style=""margin-left:40px""><strong>Niveaux </strong>: Tous niveau</p>",done
+126,dev,"15/10/2019 10:10:03",admin,create,"Builder\PageBundle\Entity\Content",7,type,,Card,done
+127,dev,"15/10/2019 10:10:03",admin,create,"Builder\PageBundle\Entity\Content",7,class,,users,done
+128,dev,"15/10/2019 10:10:03",admin,update,"Builder\PageBundle\Entity\Content",7,rights,,Group:1,done
+129,dev,"15/10/2019 10:10:34",admin,create,"Builder\PageBundle\Entity\Content",8,,,,done
+130,dev,"15/10/2019 10:10:34",admin,create,"Builder\PageBundle\Entity\Content",8,title,,"ESCALADE LIBRE >>escalade_libre",done
+131,dev,"15/10/2019 10:10:34",admin,create,"Builder\PageBundle\Entity\Content",8,content,,"<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<p style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">EN SALLE (SAE: structure artificielle d&#39;escalade)</span></span></span></p>
+
+<p style=""list-style-type:circle; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">A Lod&egrave;ve</span></span></span></p>
+
+<p style=""list-style-type:square; margin-left:80px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></span></p>
+
+<p style=""list-style-type:circle; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span></span></p>
+
+<p style=""list-style-type:square; margin-left:80px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></span></p>",done
+132,dev,"15/10/2019 10:10:34",admin,create,"Builder\PageBundle\Entity\Content",8,type,,Card,done
+133,dev,"15/10/2019 10:10:34",admin,create,"Builder\PageBundle\Entity\Content",8,class,,calendar-alt,done
+134,dev,"15/10/2019 10:10:00",admin,create,"Builder\PageBundle\Entity\Content",9,,,,done
+135,dev,"15/10/2019 10:10:00",admin,create,"Builder\PageBundle\Entity\Content",9,title,,"SORTIE ESCALADE>>escalade_sortie",done
+136,dev,"15/10/2019 10:10:00",admin,create,"Builder\PageBundle\Entity\Content",9,content,,"<p style=""text-align:center""><em>Encadr&eacute; ou en autonomie, profitez!</em></p>
+
+<p>EN PLEINE NATURE</p>
+
+<p style=""list-style-type:circle; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">- Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></p>
+
+<p style=""list-style-type:circle; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">- Autonome sans encadrement</span></span></span></p>
+
+<p style=""list-style-type:square; margin-left:80px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></p>",done
+137,dev,"15/10/2019 10:10:00",admin,create,"Builder\PageBundle\Entity\Content",9,type,,Card,done
+138,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",5,,,,done
+139,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",5,position,,2,done
+140,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",5,page,,Page:2,done
+141,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",5,content,,Content:6,done
+142,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",6,,,,done
+143,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",6,position,,3,done
+144,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",6,page,,Page:2,done
+145,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",6,content,,Content:7,done
+146,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",7,,,,done
+147,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",7,position,,4,done
+148,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",7,page,,Page:2,done
+149,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",7,content,,Content:8,done
+150,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",8,,,,done
+151,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",8,position,,5,done
+152,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",8,page,,Page:2,done
+153,dev,"15/10/2019 10:10:58",admin,create,"Builder\PageBundle\Entity\Page_Content",8,content,,Content:9,done
+154,dev,"15/10/2019 10:10:58",admin,update,"Builder\PageBundle\Entity\Page",2,class,,accueil,done
+155,dev,"15/10/2019 10:10:04",admin,update,"Builder\PageBundle\Entity\Content",4,content,<p>Bienvenue</p>,"<p style=""text-align:center""><span style=""font-size:16px""><span style=""font-family:Arial""><span style=""color:#000000"">Bienvenue &agrave; Parci-Parla, au pied du Larzac. Notre association, cr&eacute;&eacute;e en 2003 par des passionn&eacute;s, propose en toute convivialit&eacute; de d&eacute;couvrir, de s&rsquo;initier et de se perfectionner &agrave; l&rsquo;escalade.</span></span></span></p>
+
+<p style=""text-align:center"">&nbsp;</p>
+
+<p style=""text-align:center""><span style=""font-size:16px""><span style=""font-family:Arial""><span style=""color:#000000""><em>Notre vocation est de d&eacute;velopper des activit&eacute;s de pleine nature, en particulier l&rsquo;escalade.</em></span></span></span></p>
+
+<p>&nbsp;</p>",done
+156,dev,"15/10/2019 10:10:56",admin,update,"Builder\PageBundle\Entity\Content",6,content,"<h1>ACTIVITE CLUB</h1>","<h1>ACTIVITE CLUB</h1>
+
+<p>&nbsp;</p>",done
+157,dev,"15/10/2019 10:10:15",admin,update,"Builder\PageBundle\Entity\Content",7,content,"<p style=""text-align:center"">Apprenez tout au long de l&#39;ann&eacute;e</p>
+
+<p style=""margin-left:40px""><strong>Public </strong> : Enfant (+6 ans), Adulte</p>
+
+<p style=""margin-left:40px""><strong>Niveaux </strong>: Tous niveau</p>","<p style=""text-align:center""><em>Apprenez tout au long de l&#39;ann&eacute;e</em></p>
+
+<p style=""margin-left:40px""><strong>Public </strong> : Enfant (+6 ans), Adulte</p>
+
+<p style=""margin-left:40px""><strong>Niveaux </strong>: Tous niveau</p>",done
+158,dev,"17/10/2019 14:10:39",admin,create,"Builder\PageBundle\Entity\Content",10,,,,done
+159,dev,"17/10/2019 14:10:39",admin,create,"Builder\PageBundle\Entity\Content",10,title,,"LES STAGES >>stages",done
+160,dev,"17/10/2019 14:10:39",admin,create,"Builder\PageBundle\Entity\Content",10,content,,"<p style=""list-style-type:disc; text-align:center""><em>Profitez des vacances pour participer &agrave; nos stages</em></p>
+
+<p style=""list-style-type:disc; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public : </strong>Enfant / Adulte</span></span></span></p>
+
+<p style=""list-style-type:disc; margin-left:40px""><strong><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Escalade : </span></span></span></strong><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">En pleine nature ou en salle (SAE)</span></span></span></p>
+
+<p style=""list-style-type:disc; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Canyoning : </strong>D&eacute;couvrez les cayons de la r&eacute;gion</span></span></span></p>",done
+161,dev,"17/10/2019 14:10:39",admin,create,"Builder\PageBundle\Entity\Content",10,type,,Card,done
+162,dev,"17/10/2019 14:10:39",admin,create,"Builder\PageBundle\Entity\Content",10,class,,bolt,done
+163,dev,"17/10/2019 14:10:21",admin,create,"Builder\PageBundle\Entity\Page_Content",9,,,,done
+164,dev,"17/10/2019 14:10:21",admin,create,"Builder\PageBundle\Entity\Page_Content",9,position,,6,done
+165,dev,"17/10/2019 14:10:21",admin,create,"Builder\PageBundle\Entity\Page_Content",9,page,,Page:2,done
+166,dev,"17/10/2019 14:10:21",admin,create,"Builder\PageBundle\Entity\Page_Content",9,content,,Content:10,done
+167,dev,"17/10/2019 14:10:51",admin,create,"Builder\PageBundle\Entity\Content",11,,,,done
+168,dev,"17/10/2019 14:10:51",admin,create,"Builder\PageBundle\Entity\Content",11,title,,Accueil-section-plus,done
+169,dev,"17/10/2019 14:10:51",admin,create,"Builder\PageBundle\Entity\Content",11,content,,"<h1>Par-ci Par-l&agrave; propose aussi</h1>
+
+<p style=""margin-left:40px"">&nbsp;</p>",done
+170,dev,"17/10/2019 14:10:51",admin,create,"Builder\PageBundle\Entity\Content",11,type,,Content,done
+171,dev,"17/10/2019 14:10:51",admin,create,"Builder\PageBundle\Entity\Content",11,class,,section,done
+172,dev,"17/10/2019 14:10:07",admin,create,"Builder\PageBundle\Entity\Content",12,,,,done
+173,dev,"17/10/2019 14:10:07",admin,create,"Builder\PageBundle\Entity\Content",12,title,,"NOS EVENEMENTS >>events",done
+174,dev,"17/10/2019 14:10:07",admin,create,"Builder\PageBundle\Entity\Content",12,content,,"<p style=""list-style-type:circle; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Festival Lod&egrave;ve Bloc Trip </span></span></span><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">(1 fois par an)</span></span></span></p>
+
+<p style=""list-style-type:disc; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Foire aux associations Lod&egrave;ve (septembre)</span></span></span></p>
+
+<p style=""list-style-type:disc; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Sortie de fin d&rsquo;ann&eacute;e (juin)</span></span></span></p>",done
+175,dev,"17/10/2019 14:10:07",admin,create,"Builder\PageBundle\Entity\Content",12,type,,Card,done
+176,dev,"17/10/2019 14:10:07",admin,create,"Builder\PageBundle\Entity\Content",12,class,,calendar-alt,done
+177,dev,"17/10/2019 14:10:40",admin,update,"Builder\PageBundle\Entity\Content",9,content,"<p style=""text-align:center""><em>Encadr&eacute; ou en autonomie, profitez!</em></p>
+
+<p>EN PLEINE NATURE</p>
+
+<p style=""list-style-type:circle; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">- Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></p>
+
+<p style=""list-style-type:circle; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">- Autonome sans encadrement</span></span></span></p>
+
+<p style=""list-style-type:square; margin-left:80px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></p>","<p style=""text-align:center""><em>Encadr&eacute; ou en autonomie, profitez!</em></p>
+
+<p>EN PLEINE NATURE</p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">- Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">- Autonome sans encadrement</span></span></span></p>
+
+<p style=""margin-left:80px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></p>",done
+178,dev,"17/10/2019 14:10:40",admin,update,"Builder\PageBundle\Entity\Content",9,class,,shoe-prints,done
+179,dev,"17/10/2019 14:10:16",admin,create,"Builder\PageBundle\Entity\Content",13,,,,done
+180,dev,"17/10/2019 14:10:16",admin,create,"Builder\PageBundle\Entity\Content",13,title,,"NOS PRESTATIONS >>prestations",done
+181,dev,"17/10/2019 14:10:16",admin,create,"Builder\PageBundle\Entity\Content",13,content,,"<ul>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Intervention dans les institutions</span></span></span></li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Mise &agrave; disposition de moniteurs</span></span></span></li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Elaboration de projets</span></span></span></li>
+</ul>",done
+182,dev,"17/10/2019 14:10:16",admin,create,"Builder\PageBundle\Entity\Content",13,type,,Card,done
+183,dev,"17/10/2019 14:10:16",admin,create,"Builder\PageBundle\Entity\Content",13,class,,chalkboard-teacher,done
+184,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",10,,,,done
+185,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",10,position,,3,done
+186,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",10,page,,Page:2,done
+187,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",10,content,,Content:11,done
+188,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",11,,,,done
+189,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",11,position,,3.1,done
+190,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",11,page,,Page:2,done
+191,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",11,content,,Content:12,done
+192,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",12,,,,done
+193,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",12,position,,3.2,done
+194,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",12,page,,Page:2,done
+195,dev,"17/10/2019 14:10:33",admin,create,"Builder\PageBundle\Entity\Page_Content",12,content,,Content:13,done
+196,dev,"17/10/2019 14:10:33",admin,update,"Builder\PageBundle\Entity\Page_Content",6,position,3,2.1,done
+197,dev,"17/10/2019 14:10:33",admin,update,"Builder\PageBundle\Entity\Page_Content",7,position,4,2.2,done
+198,dev,"17/10/2019 14:10:33",admin,update,"Builder\PageBundle\Entity\Page_Content",8,position,5,2..3,done
+199,dev,"17/10/2019 14:10:33",admin,update,"Builder\PageBundle\Entity\Page_Content",9,position,6,2.4,done
+200,dev,"17/10/2019 14:10:00",admin,update,"Builder\PageBundle\Entity\Page_Content",8,position,2..3,2.3,done
+201,dev,"17/10/2019 14:10:59",admin,update,"Builder\PageBundle\Entity\Content",12,content,"<p style=""list-style-type:circle; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Festival Lod&egrave;ve Bloc Trip </span></span></span><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">(1 fois par an)</span></span></span></p>
+
+<p style=""list-style-type:disc; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Foire aux associations Lod&egrave;ve (septembre)</span></span></span></p>
+
+<p style=""list-style-type:disc; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Sortie de fin d&rsquo;ann&eacute;e (juin)</span></span></span></p>","<ul>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Festival Lod&egrave;ve Bloc Trip </span></span></span><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">(1 fois par an)</span></span></span></li>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Foire aux associations Lod&egrave;ve (septembre)</span></span></span></li>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Sortie de fin d&rsquo;ann&eacute;e (juin)</span></span></span></li>
+</ul>",done
+202,dev,"17/10/2019 14:10:31",admin,update,"Builder\PageBundle\Entity\Content",13,content,"<ul>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Intervention dans les institutions</span></span></span></li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Mise &agrave; disposition de moniteurs</span></span></span></li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Elaboration de projets</span></span></span></li>
+</ul>","<ul style=""margin-left:40px"">
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Intervention dans les institutions</span></span></span></li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Mise &agrave; disposition de moniteurs</span></span></span></li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Elaboration de projets</span></span></span></li>
+</ul>",done
+203,dev,"17/10/2019 14:10:12",admin,update,"Builder\PageBundle\Entity\Content",9,content,"<p style=""text-align:center""><em>Encadr&eacute; ou en autonomie, profitez!</em></p>
+
+<p>EN PLEINE NATURE</p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">- Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">- Autonome sans encadrement</span></span></span></p>
+
+<p style=""margin-left:80px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></p>","<p style=""text-align:center""><em>En pleine nature!</em></p>
+
+<ul style=""margin-left:40px"">
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></li>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Autonome sans encadrement</span></span></span>
+	<ul>
+		<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></li>
+	</ul>
+	</li>
+</ul>",done
+204,dev,"17/10/2019 14:10:25",admin,update,"Builder\PageBundle\Entity\Content",8,content,"<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<p style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">EN SALLE (SAE: structure artificielle d&#39;escalade)</span></span></span></p>
+
+<p style=""list-style-type:circle; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">A Lod&egrave;ve</span></span></span></p>
+
+<p style=""list-style-type:square; margin-left:80px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></span></p>
+
+<p style=""list-style-type:circle; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span></span></p>
+
+<p style=""list-style-type:square; margin-left:80px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></span></p>","<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<ul style=""margin-left:40px"">
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">EN SALLE (SAE: structure artificielle d&#39;escalade)</span></span></span></li>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">A Lod&egrave;ve</span></span></span>
+	<ul>
+		<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></span></li>
+	</ul>
+	</li>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span></span>
+	<ul>
+		<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></span></li>
+	</ul>
+	</li>
+</ul>",done
+205,dev,"17/10/2019 14:10:56",admin,update,"Builder\PageBundle\Entity\Content",8,content,"<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<ul style=""margin-left:40px"">
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">EN SALLE (SAE: structure artificielle d&#39;escalade)</span></span></span></li>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">A Lod&egrave;ve</span></span></span>
+	<ul>
+		<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></span></li>
+	</ul>
+	</li>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span></span>
+	<ul>
+		<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></span></li>
+	</ul>
+	</li>
+</ul>","<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<ul>
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">EN SALLE (SAE: structure artificielle d&#39;escalade)</span></span></span>
+
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">A Lod&egrave;ve</span></span></span>
+
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></span></li>
+		</ul>
+		</li>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>",done
+206,dev,"17/10/2019 14:10:05",admin,update,"Builder\PageBundle\Entity\Content",9,content,"<p style=""text-align:center""><em>En pleine nature!</em></p>
+
+<ul style=""margin-left:40px"">
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></li>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Autonome sans encadrement</span></span></span>
+	<ul>
+		<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></li>
+	</ul>
+	</li>
+</ul>","<p style=""text-align:center""><em>En pleine nature!</em></p>
+
+<ul>
+	<li>EN EXTERIEUR
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></li>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Autonome sans encadrement</span></span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>",done
+207,dev,"17/10/2019 14:10:43",admin,update,"Builder\PageBundle\Entity\Page_Content",8,position,2.3,2.5,done
+208,dev,"17/10/2019 14:10:07",admin,update,"Builder\PageBundle\Entity\Content",11,content,"<h1>Par-ci Par-l&agrave; propose aussi</h1>
+
+<p style=""margin-left:40px"">&nbsp;</p>","<h1>&nbsp;</h1>
+
+<h1>MAIS AUSSI</h1>
+
+<p style=""margin-left:40px"">&nbsp;</p>",done
+209,dev,"17/10/2019 14:10:21",admin,create,"Builder\PageBundle\Entity\Content",14,,,,done
+210,dev,"17/10/2019 14:10:21",admin,create,"Builder\PageBundle\Entity\Content",14,title,,Accueil-section-contact,done
+211,dev,"17/10/2019 14:10:21",admin,create,"Builder\PageBundle\Entity\Content",14,content,,"<h1>&nbsp;</h1>
+
+<h1>VENEZ NOUS RENCONTRER</h1>",done
+212,dev,"17/10/2019 14:10:21",admin,create,"Builder\PageBundle\Entity\Content",14,type,,Content,done
+213,dev,"17/10/2019 14:10:21",admin,create,"Builder\PageBundle\Entity\Content",14,class,,section,done
+214,dev,"17/10/2019 14:10:04",admin,create,"Builder\PageBundle\Entity\Content",15,,,,done
+215,dev,"17/10/2019 14:10:04",admin,create,"Builder\PageBundle\Entity\Content",15,title,,"CONTACT >>contact",done
+216,dev,"17/10/2019 14:10:04",admin,create,"Builder\PageBundle\Entity\Content",15,content,,"<ul>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Nous trouver</span></span></span></li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Nous contacter</span></span></span></li>
+	<li style=""list-style-type:disc"">Pr&eacute;sentation de l&#39;&eacute;quipe</li>
+</ul>",done
+217,dev,"17/10/2019 14:10:04",admin,create,"Builder\PageBundle\Entity\Content",15,type,,Card,done
+218,dev,"17/10/2019 14:10:04",admin,create,"Builder\PageBundle\Entity\Content",15,class,,address-book,done
+219,dev,"17/10/2019 14:10:28",admin,create,"Builder\PageBundle\Entity\Page_Content",13,,,,done
+220,dev,"17/10/2019 14:10:28",admin,create,"Builder\PageBundle\Entity\Page_Content",13,position,,4,done
+221,dev,"17/10/2019 14:10:28",admin,create,"Builder\PageBundle\Entity\Page_Content",13,page,,Page:2,done
+222,dev,"17/10/2019 14:10:28",admin,create,"Builder\PageBundle\Entity\Page_Content",13,content,,Content:14,done
+223,dev,"17/10/2019 14:10:28",admin,create,"Builder\PageBundle\Entity\Page_Content",14,,,,done
+224,dev,"17/10/2019 14:10:28",admin,create,"Builder\PageBundle\Entity\Page_Content",14,position,,4.1,done
+225,dev,"17/10/2019 14:10:28",admin,create,"Builder\PageBundle\Entity\Page_Content",14,page,,Page:2,done
+226,dev,"17/10/2019 14:10:28",admin,create,"Builder\PageBundle\Entity\Page_Content",14,content,,Content:15,done
+227,dev,"17/10/2019 14:10:32",admin,update,"Builder\PageBundle\Entity\Content",14,content,"<h1>&nbsp;</h1>
+
+<h1>VENEZ NOUS RENCONTRER</h1>","<h1>&nbsp;</h1>
+
+<h1>VENEZ NOUS RENCONTRER</h1>
+
+<p>&nbsp;</p>",done
+228,dev,"17/10/2019 15:10:10",admin,create,"Builder\PageBundle\Entity\Content",16,,,,done
+229,dev,"17/10/2019 15:10:10",admin,create,"Builder\PageBundle\Entity\Content",16,title,,pagecontent_cours,done
+230,dev,"17/10/2019 15:10:10",admin,create,"Builder\PageBundle\Entity\Content",16,content,,"<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p style=""margin-left:40px""><strong>Planning </strong>:</p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""10"" cellspacing=""10"" style=""height:710px; width:1588px"">
+	<tbody>
+		<tr>
+			<td><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+231,dev,"17/10/2019 15:10:10",admin,create,"Builder\PageBundle\Entity\Content",16,type,,Content,done
+232,dev,"17/10/2019 15:10:21",admin,update,"Builder\PageBundle\Entity\Content",16,class,,page_info,done
+233,dev,"17/10/2019 15:10:45",admin,create,"Builder\PageBundle\Entity\Page",3,,,,done
+234,dev,"17/10/2019 15:10:45",admin,create,"Builder\PageBundle\Entity\Page",3,name,,"Nos Cours",done
+235,dev,"17/10/2019 15:10:45",admin,create,"Builder\PageBundle\Entity\Page",3,slug,,cours_escalade,done
+236,dev,"17/10/2019 15:10:45",admin,create,"Builder\PageBundle\Entity\Page_Content",15,,,,done
+237,dev,"17/10/2019 15:10:45",admin,create,"Builder\PageBundle\Entity\Page_Content",15,position,,1,done
+238,dev,"17/10/2019 15:10:45",admin,create,"Builder\PageBundle\Entity\Page_Content",15,page,,Page:3,done
+239,dev,"17/10/2019 15:10:45",admin,create,"Builder\PageBundle\Entity\Page_Content",15,content,,Content:16,done
+240,dev,"17/10/2019 15:10:45",admin,update,"Builder\PageBundle\Entity\Page",3,rights,,Group:1,done
+241,dev,"17/10/2019 15:10:16",admin,update,"Builder\PageBundle\Entity\Content",16,content,"<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p style=""margin-left:40px""><strong>Planning </strong>:</p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""10"" cellspacing=""10"" style=""height:710px; width:1588px"">
+	<tbody>
+		<tr>
+			<td><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>","<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p style=""margin-left:40px""><strong>Planning </strong>:</p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""10"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+242,dev,"17/10/2019 15:10:07",admin,update,"Builder\PageBundle\Entity\Content",16,content,"<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p style=""margin-left:40px""><strong>Planning </strong>:</p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""10"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>","<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p style=""margin-left:40px""><strong>Planning </strong>:</p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""10"" cellspacing=""40"">
+	<tbody>
+		<tr>
+			<td><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+243,dev,"17/10/2019 15:10:00",admin,update,"Builder\PageBundle\Entity\Content",16,content,"<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p style=""margin-left:40px""><strong>Planning </strong>:</p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""10"" cellspacing=""40"">
+	<tbody>
+		<tr>
+			<td><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>","<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p style=""margin-left:40px""><strong>Planning </strong>:</p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+244,dev,"17/10/2019 15:10:40",admin,update,"Builder\PageBundle\Entity\Content",16,content,"<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p style=""margin-left:40px""><strong>Planning </strong>:</p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>","<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p style=""margin-left:40px""><strong>Planning </strong>:</p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+245,dev,"17/10/2019 15:10:15",admin,update,"Builder\PageBundle\Entity\Content",16,content,"<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p style=""margin-left:40px""><strong>Planning </strong>:</p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>","<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+246,dev,"17/10/2019 15:10:01",admin,update,"Builder\PageBundle\Entity\Content",16,content,"<h1>Cours d&#39;escalade</h1>
+
+<p><strong>Nous proposons des cours en salle ou en ext&eacute;rieur:</strong></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>","<h1>Cours d&#39;escalade</h1>
+
+<p><span style=""font-size:20px"">Nous proposons des cours en salle ou en ext&eacute;rieur.</span></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+247,dev,"17/10/2019 15:10:10",admin,update,"Builder\PageBundle\Entity\Content",16,content,"<h1>Cours d&#39;escalade</h1>
+
+<p><span style=""font-size:20px"">Nous proposons des cours en salle ou en ext&eacute;rieur.</span></p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>","<h1>Cours d&#39;escalade</h1>
+
+<p><span style=""font-size:20px"">Nous proposons des cours en salle ou en ext&eacute;rieur.</span></p>
+
+<p>&nbsp;</p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+248,dev,"17/10/2019 15:10:47",admin,create,"Builder\PageBundle\Entity\Menu_Page",2,,,,done
+249,dev,"17/10/2019 15:10:47",admin,create,"Builder\PageBundle\Entity\Menu_Page",2,position,,2,done
+250,dev,"17/10/2019 15:10:47",admin,create,"Builder\PageBundle\Entity\Menu_Page",2,menu,,Menu:1,done
+251,dev,"17/10/2019 15:10:47",admin,create,"Builder\PageBundle\Entity\Menu_Page",2,page,,Page:3,done
+252,dev,"17/10/2019 15:10:28",admin,create,"Builder\PageBundle\Entity\Content",17,,,,done
+253,dev,"17/10/2019 15:10:28",admin,create,"Builder\PageBundle\Entity\Content",17,title,,pagecontent_escalade_libre,done
+254,dev,"17/10/2019 15:10:28",admin,create,"Builder\PageBundle\Entity\Content",17,content,,"<h1>Escalade libre</h1>
+
+<ul>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">EN SALLE (SAE)</span></span></span>
+
+	<ul>
+		<li style=""list-style-type:circle""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">A Lod&egrave;ve</span></span></span>
+
+		<ul>
+			<li style=""list-style-type:square""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></span></li>
+		</ul>
+		</li>
+		<li style=""list-style-type:circle""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span></span>
+		<ul>
+			<li style=""list-style-type:square""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">En ext&eacute;rieur:</span></span></span>
+	<ul>
+		<li style=""list-style-type:circle""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></li>
+		<li style=""list-style-type:circle""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Autonome sans encadrement</span></span></span>
+		<ul>
+			<li style=""list-style-type:square""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>",done
+255,dev,"17/10/2019 15:10:28",admin,create,"Builder\PageBundle\Entity\Content",17,type,,Content,done
+256,dev,"17/10/2019 15:10:28",admin,create,"Builder\PageBundle\Entity\Content",17,class,,page_info,done
+257,dev,"17/10/2019 15:10:48",admin,create,"Builder\PageBundle\Entity\Page",4,,,,done
+258,dev,"17/10/2019 15:10:48",admin,create,"Builder\PageBundle\Entity\Page",4,name,,"Escalade libre",done
+259,dev,"17/10/2019 15:10:48",admin,create,"Builder\PageBundle\Entity\Page",4,slug,,escalade_libre,done
+260,dev,"17/10/2019 15:10:48",admin,create,"Builder\PageBundle\Entity\Page_Content",16,,,,done
+261,dev,"17/10/2019 15:10:48",admin,create,"Builder\PageBundle\Entity\Page_Content",16,position,,1,done
+262,dev,"17/10/2019 15:10:48",admin,create,"Builder\PageBundle\Entity\Page_Content",16,page,,Page:4,done
+263,dev,"17/10/2019 15:10:48",admin,create,"Builder\PageBundle\Entity\Page_Content",16,content,,Content:17,done
+264,dev,"17/10/2019 15:10:48",admin,update,"Builder\PageBundle\Entity\Page",4,rights,,Group:1,done
+265,dev,"17/10/2019 15:10:49",admin,create,"Builder\PageBundle\Entity\Page",5,,,,done
+266,dev,"17/10/2019 15:10:49",admin,create,"Builder\PageBundle\Entity\Page",5,name,,"Nos Stages",done
+267,dev,"17/10/2019 15:10:49",admin,create,"Builder\PageBundle\Entity\Page",5,slug,,stages,done
+268,dev,"17/10/2019 15:10:49",admin,create,"Builder\PageBundle\Entity\Page_Content",17,,,,done
+269,dev,"17/10/2019 15:10:49",admin,create,"Builder\PageBundle\Entity\Page_Content",17,position,,1,done
+270,dev,"17/10/2019 15:10:49",admin,create,"Builder\PageBundle\Entity\Page_Content",17,page,,Page:5,done
+271,dev,"17/10/2019 15:10:49",admin,create,"Builder\PageBundle\Entity\Page_Content",17,content,,Content:10,done
+272,dev,"17/10/2019 15:10:49",admin,update,"Builder\PageBundle\Entity\Page",5,rights,,Group:1,done
+273,dev,"17/10/2019 15:10:52",admin,create,"Builder\PageBundle\Entity\Page",6,,,,done
+274,dev,"17/10/2019 15:10:52",admin,create,"Builder\PageBundle\Entity\Page",6,name,,"Nos Sorties",done
+275,dev,"17/10/2019 15:10:52",admin,create,"Builder\PageBundle\Entity\Page",6,slug,,escalade_sorties,done
+276,dev,"17/10/2019 15:10:52",admin,create,"Builder\PageBundle\Entity\Page_Content",18,,,,done
+277,dev,"17/10/2019 15:10:52",admin,create,"Builder\PageBundle\Entity\Page_Content",18,position,,1,done
+278,dev,"17/10/2019 15:10:52",admin,create,"Builder\PageBundle\Entity\Page_Content",18,page,,Page:6,done
+279,dev,"17/10/2019 15:10:52",admin,create,"Builder\PageBundle\Entity\Page_Content",18,content,,Content:9,done
+280,dev,"17/10/2019 15:10:52",admin,update,"Builder\PageBundle\Entity\Page",6,rights,,Group:1,done
+281,dev,"17/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page",7,,,,done
+282,dev,"17/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page",7,name,,"Nos Evénements",done
+283,dev,"17/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page",7,slug,,evenements,done
+284,dev,"17/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page_Content",19,,,,done
+285,dev,"17/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page_Content",19,position,,1,done
+286,dev,"17/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page_Content",19,page,,Page:7,done
+287,dev,"17/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page_Content",19,content,,Content:12,done
+288,dev,"17/10/2019 15:10:36",admin,update,"Builder\PageBundle\Entity\Page",7,rights,,Group:1,done
+289,dev,"17/10/2019 15:10:49",admin,update,"Builder\PageBundle\Entity\Content",12,title,"NOS EVENEMENTS >>events","NOS EVENEMENTS >>evenements",done
+290,dev,"17/10/2019 15:10:49",admin,update,"Builder\PageBundle\Entity\Content",12,content,"<ul>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Festival Lod&egrave;ve Bloc Trip </span></span></span><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">(1 fois par an)</span></span></span></li>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Foire aux associations Lod&egrave;ve (septembre)</span></span></span></li>
+	<li style=""margin-left: 40px;""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Sortie de fin d&rsquo;ann&eacute;e (juin)</span></span></span></li>
+</ul>","<ul>
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Festival Lod&egrave;ve Bloc Trip </span></span></span><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">(1 fois par an)</span></span></span></li>
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Foire aux associations Lod&egrave;ve (septembre)</span></span></span></li>
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Sortie de fin d&rsquo;ann&eacute;e (juin)</span></span></span></li>
+</ul>",done
+291,dev,"17/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page",8,,,,done
+292,dev,"17/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page",8,name,,"Nos Prestations",done
+293,dev,"17/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page",8,slug,,prestations,done
+294,dev,"17/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page_Content",20,,,,done
+295,dev,"17/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page_Content",20,position,,1,done
+296,dev,"17/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page_Content",20,page,,Page:8,done
+297,dev,"17/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page_Content",20,content,,Content:13,done
+298,dev,"17/10/2019 15:10:30",admin,update,"Builder\PageBundle\Entity\Page",8,rights,,Group:1,done
+299,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",3,,,,done
+300,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",3,position,,3,done
+301,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",3,menu,,Menu:1,done
+302,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",3,page,,Page:4,done
+303,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",4,,,,done
+304,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",4,position,,4,done
+305,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",4,menu,,Menu:1,done
+306,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",4,page,,Page:5,done
+307,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",5,,,,done
+308,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",5,position,,5,done
+309,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",5,menu,,Menu:1,done
+310,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",5,page,,Page:6,done
+311,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",6,,,,done
+312,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",6,position,,6,done
+313,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",6,menu,,Menu:1,done
+314,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",6,page,,Page:7,done
+315,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",7,,,,done
+316,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",7,position,,7,done
+317,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",7,menu,,Menu:1,done
+318,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",7,page,,Page:8,done
+319,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",8,,,,done
+320,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",8,position,,8,done
+321,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",8,menu,,Menu:1,done
+322,dev,"17/10/2019 15:10:24",admin,create,"Builder\PageBundle\Entity\Menu_Page",8,page,,Page:8,done
+323,dev,"17/10/2019 15:10:20",admin,create,"Builder\PageBundle\Entity\Page",9,,,,done
+324,dev,"17/10/2019 15:10:20",admin,create,"Builder\PageBundle\Entity\Page",9,name,,Contact,done
+325,dev,"17/10/2019 15:10:20",admin,create,"Builder\PageBundle\Entity\Page",9,slug,,contact,done
+326,dev,"17/10/2019 15:10:20",admin,create,"Builder\PageBundle\Entity\Page_Content",21,,,,done
+327,dev,"17/10/2019 15:10:20",admin,create,"Builder\PageBundle\Entity\Page_Content",21,position,,1,done
+328,dev,"17/10/2019 15:10:20",admin,create,"Builder\PageBundle\Entity\Page_Content",21,page,,Page:9,done
+329,dev,"17/10/2019 15:10:20",admin,create,"Builder\PageBundle\Entity\Page_Content",21,content,,Content:15,done
+330,dev,"17/10/2019 15:10:20",admin,update,"Builder\PageBundle\Entity\Page",9,rights,,Group:1,done
+331,dev,"17/10/2019 15:10:33",admin,update,"Builder\PageBundle\Entity\Menu_Page",8,page,Page:8,Page:9,done
+332,dev,"17/10/2019 15:10:54",admin,update,"Builder\PageBundle\Entity\Content",7,content,"<p style=""text-align:center""><em>Apprenez tout au long de l&#39;ann&eacute;e</em></p>
+
+<p style=""margin-left:40px""><strong>Public </strong> : Enfant (+6 ans), Adulte</p>
+
+<p style=""margin-left:40px""><strong>Niveaux </strong>: Tous niveau</p>","<p style=""text-align:center""><em>Apprenez tout au long de l&#39;ann&eacute;e</em></p>
+
+<p style=""margin-left:40px"">En <strong>int&eacute;rieur</strong> ou en <strong>ext&eacute;rieur</strong>.</p>
+
+<p style=""margin-left:40px""><strong>Public </strong> : Enfant (+6 ans), Adulte</p>
+
+<p style=""margin-left:40px""><strong>Niveaux </strong>: Tous niveau</p>",done
+333,dev,"18/10/2019 12:10:59",admin,update,"Builder\PageBundle\Entity\Content",9,title,"SORTIE ESCALADE>>escalade_sortie","SORTIE ESCALADE>>escalade_sorties",done
+334,dev,"18/10/2019 13:10:39",admin,update,"Builder\PageBundle\Entity\Content",16,content,"<h1>Cours d&#39;escalade</h1>
+
+<p><span style=""font-size:20px"">Nous proposons des cours en salle ou en ext&eacute;rieur.</span></p>
+
+<p>&nbsp;</p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>","<h1>Cours d&#39;escalade</h1>
+
+<p><span style=""font-size:20px"">Nous proposons des cours en salle ou en ext&eacute;rieur.</span></p>
+
+<p>&nbsp;</p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>PLANNING TODO</p>
+
+<p>&nbsp;</p>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p>Rendez-vous 15 min derri&egrave;re la cath&eacute;drale &agrave; Lod&egrave;ve.</p>
+
+<p>Les sites ext&eacute;rieurs</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+335,dev,"23/10/2019 15:10:46",admin,create,"Builder\PageBundle\Entity\Content",18,,,,done
+336,dev,"23/10/2019 15:10:46",admin,create,"Builder\PageBundle\Entity\Content",18,title,,"Cours en salle",done
+337,dev,"23/10/2019 15:10:46",admin,create,"Builder\PageBundle\Entity\Content",18,content,,"<h1>Cours en salle (SAE)</h1>
+
+<p>Cours int&eacute;rieur SAE: Structure artificielle d&#39;escalade</p>
+
+<p><strong>Lieu: </strong>A la salle de Lod&egrave;ve, dans le hall des sports Didier Dinard</p>
+
+<p>&nbsp;</p>",done
+338,dev,"23/10/2019 15:10:46",admin,create,"Builder\PageBundle\Entity\Content",18,type,,Content,done
+339,dev,"23/10/2019 15:10:46",admin,create,"Builder\PageBundle\Entity\Content",18,class,,page_info,done
+340,dev,"23/10/2019 15:10:46",admin,update,"Builder\PageBundle\Entity\Content",18,rights,,Group:1,done
+341,dev,"23/10/2019 15:10:20",admin,update,"Builder\PageBundle\Entity\Content",16,title,pagecontent_cours,pagecontent_cours_exterieur,done
+342,dev,"23/10/2019 15:10:20",admin,update,"Builder\PageBundle\Entity\Content",16,content,"<h1>Cours d&#39;escalade</h1>
+
+<p><span style=""font-size:20px"">Nous proposons des cours en salle ou en ext&eacute;rieur.</span></p>
+
+<p>&nbsp;</p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>PLANNING TODO</p>
+
+<p>&nbsp;</p>
+
+<h3>&nbsp;</h3>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<h2>Cours Ext&eacute;rieur</h2>
+
+<p>Rendez-vous 15 min derri&egrave;re la cath&eacute;drale &agrave; Lod&egrave;ve.</p>
+
+<p>Les sites ext&eacute;rieurs</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>","<h1>Cours d&#39;escalade en ext&eacute;rieur.</h1>
+
+<p>Rendez-vous 15 min derri&egrave;re la cath&eacute;drale &agrave; Lod&egrave;ve.</p>
+
+<p>Les sites ext&eacute;rieurs sont au maximum &agrave; 30 minutes, d&eacute;finis selon la m&eacute;t&eacute;o.</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+343,dev,"23/10/2019 15:10:05",admin,update,"Builder\PageBundle\Entity\Content",18,title,"Cours en salle",pagecontent_cours_en_salle,done
+344,dev,"23/10/2019 15:10:05",admin,update,"Builder\PageBundle\Entity\Content",18,content,"<h1>Cours en salle (SAE)</h1>
+
+<p>Cours int&eacute;rieur SAE: Structure artificielle d&#39;escalade</p>
+
+<p><strong>Lieu: </strong>A la salle de Lod&egrave;ve, dans le hall des sports Didier Dinard</p>
+
+<p>&nbsp;</p>","<h1>Cours d&#39;escalade en salle (SAE)</h1>
+
+<p>Cours int&eacute;rieur SAE: Structure artificielle d&#39;escalade</p>
+
+<p><strong>Lieu: </strong>A la salle de Lod&egrave;ve, dans le hall des sports Didier Dinard</p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>PLANNING TODO</p>
+
+<p>&nbsp;</p>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>",done
+345,dev,"23/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page",10,,,,done
+346,dev,"23/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page",10,name,,"Cours en salle",done
+347,dev,"23/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page",10,slug,,cours_en_salle,done
+348,dev,"23/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page_Content",22,,,,done
+349,dev,"23/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page_Content",22,position,,1,done
+350,dev,"23/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page_Content",22,page,,Page:10,done
+351,dev,"23/10/2019 15:10:36",admin,create,"Builder\PageBundle\Entity\Page_Content",22,content,,Content:18,done
+352,dev,"23/10/2019 15:10:36",admin,update,"Builder\PageBundle\Entity\Page",10,rights,,Group:1,done
+353,dev,"23/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page",11,,,,done
+354,dev,"23/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page",11,name,,"Cours en extérieur",done
+355,dev,"23/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page",11,slug,,cours_en_exterieur,done
+356,dev,"23/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page_Content",23,,,,done
+357,dev,"23/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page_Content",23,position,,1,done
+358,dev,"23/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page_Content",23,page,,Page:11,done
+359,dev,"23/10/2019 15:10:30",admin,create,"Builder\PageBundle\Entity\Page_Content",23,content,,Content:16,done
+360,dev,"23/10/2019 15:10:30",admin,update,"Builder\PageBundle\Entity\Page",11,rights,,Group:1,done
+361,dev,"23/10/2019 15:10:33",admin,remove,"Builder\PageBundle\Entity\Page_Content",15,,,,done
+362,dev,"23/10/2019 15:10:33",admin,update,"Builder\PageBundle\Entity\Page",3,class,,disable,done
+363,dev,"23/10/2019 15:10:16",admin,create,"Builder\PageBundle\Entity\Menu_Page",9,,,,done
+364,dev,"23/10/2019 15:10:16",admin,create,"Builder\PageBundle\Entity\Menu_Page",9,position,,3.1,done
+365,dev,"23/10/2019 15:10:16",admin,create,"Builder\PageBundle\Entity\Menu_Page",9,menu,,Menu:1,done
+366,dev,"23/10/2019 15:10:16",admin,create,"Builder\PageBundle\Entity\Menu_Page",9,page,,Page:10,done
+367,dev,"23/10/2019 15:10:16",admin,create,"Builder\PageBundle\Entity\Menu_Page",10,,,,done
+368,dev,"23/10/2019 15:10:16",admin,create,"Builder\PageBundle\Entity\Menu_Page",10,position,,3.2,done
+369,dev,"23/10/2019 15:10:16",admin,create,"Builder\PageBundle\Entity\Menu_Page",10,menu,,Menu:1,done
+370,dev,"23/10/2019 15:10:16",admin,create,"Builder\PageBundle\Entity\Menu_Page",10,page,,Page:11,done
+371,dev,"23/10/2019 15:10:16",admin,update,"Builder\PageBundle\Entity\Menu_Page",2,position,2,3,done
+372,dev,"23/10/2019 15:10:16",admin,update,"Builder\PageBundle\Entity\Menu_Page",3,position,3,2,done
+373,dev,"23/10/2019 15:10:57",admin,remove,"Builder\PageBundle\Entity\Menu_Page",5,,,,done
+374,dev,"23/10/2019 15:10:57",admin,update,"Builder\PageBundle\Entity\Menu_Page",4,position,4,5,done
+375,dev,"23/10/2019 15:10:57",admin,update,"Builder\PageBundle\Entity\Menu_Page",6,position,6,4,done
+376,dev,"23/10/2019 15:10:57",admin,update,"Builder\PageBundle\Entity\Menu_Page",7,position,7,6,done
+377,dev,"23/10/2019 15:10:29",admin,update,"Builder\PageBundle\Entity\Content",8,content,"<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<ul>
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">EN SALLE (SAE: structure artificielle d&#39;escalade)</span></span></span>
+
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">A Lod&egrave;ve</span></span></span>
+
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></span></li>
+		</ul>
+		</li>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>","<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<ul>
+	<li>EN EXTERIEUR
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></li>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Autonome sans encadrement</span></span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<ul>
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">EN SALLE (SAE: structure artificielle d&#39;escalade)</span></span></span>
+
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">A Lod&egrave;ve</span></span></span>
+
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></span></li>
+		</ul>
+		</li>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>",done
+378,dev,"23/10/2019 16:10:21",admin,update,"Builder\PageBundle\Entity\Content",17,title,pagecontent_escalade_libre,pagecontent_activite_club,done
+379,dev,"23/10/2019 16:10:21",admin,update,"Builder\PageBundle\Entity\Content",17,content,"<h1>Escalade libre</h1>
+
+<ul>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">EN SALLE (SAE)</span></span></span>
+
+	<ul>
+		<li style=""list-style-type:circle""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">A Lod&egrave;ve</span></span></span>
+
+		<ul>
+			<li style=""list-style-type:square""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></span></li>
+		</ul>
+		</li>
+		<li style=""list-style-type:circle""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span></span>
+		<ul>
+			<li style=""list-style-type:square""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">En ext&eacute;rieur:</span></span></span>
+	<ul>
+		<li style=""list-style-type:circle""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></li>
+		<li style=""list-style-type:circle""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Autonome sans encadrement</span></span></span>
+		<ul>
+			<li style=""list-style-type:square""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>","<h1>Activit&eacute; club</h1>
+
+<p>Sortie autonome sans encadrement ouvert &agrave; tous sous r&eacute;serve de validation du niveau<br />
+d&rsquo;autonomie.<br />
+SAE s&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30<br />
+Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit<br />
+Sortie site naturel toutes l&rsquo;ann&eacute;e</p>",done
+380,dev,"23/10/2019 16:10:48",admin,remove,"Builder\PageBundle\Entity\Page_Content",5,,,,done
+381,dev,"23/10/2019 16:10:48",admin,remove,"Builder\PageBundle\Entity\Content",6,,,,done
+382,dev,"23/10/2019 16:10:48",admin,remove,"Builder\PageBundle\Entity\Page_Content",10,,,,done
+383,dev,"23/10/2019 16:10:48",admin,remove,"Builder\PageBundle\Entity\Content",11,,,,done
+384,dev,"23/10/2019 16:10:52",admin,update,"Builder\PageBundle\Entity\Content",16,content,"<h1>Cours d&#39;escalade en ext&eacute;rieur.</h1>
+
+<p>Rendez-vous 15 min derri&egrave;re la cath&eacute;drale &agrave; Lod&egrave;ve.</p>
+
+<p>Les sites ext&eacute;rieurs sont au maximum &agrave; 30 minutes, d&eacute;finis selon la m&eacute;t&eacute;o.</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>","<h1>Cours d&#39;escalade en ext&eacute;rieur</h1>
+
+<p>Rendez-vous 15 min derri&egrave;re la cath&eacute;drale &agrave; Lod&egrave;ve.</p>
+
+<p>Les sites ext&eacute;rieurs sont au maximum &agrave; 30 minutes, d&eacute;finis selon la m&eacute;t&eacute;o.</p>
+
+<table border=""0"" cellpadding=""30"" cellspacing=""10"">
+	<tbody>
+		<tr>
+			<td colspan=""2""><strong>PLANNING 2019-2020</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>MERCREDI</p>
+			</td>
+			<td>
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">9h 30 - 13h15 </span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>6&nbsp; -&nbsp; 7 ans</p>
+
+			<p>11 - 13 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>SAMEDI</p>
+			</td>
+			<td>
+			<p>9h00 - <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h15</span></span></span></p>
+
+			<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">13h45 - 18h30</span></span></span></p>
+			</td>
+			<td>
+			<p>8 - 10 ans</p>
+
+			<p>14 -18 ans</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style=""color:#000000"">DIMANCHE</span></p>
+			</td>
+			<td>
+			<p>10h - 18h</p>
+			</td>
+			<td>Adulte</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Photo d&rsquo;un cours falaise</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Descriptif sur des sites naturels en bloc ou falaise aux alentours de Lod&egrave;ve Photo des diff&eacute;rents sites.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Pr&eacute;sentation des lieux aussi dans Sorties: faire une page &agrave; part?, ou reprendre la pr&eacute;sentation des spots &agrave; chaque fois, &agrave; la fin/ au d&eacute;but?</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Pour chaque cours mettre fiche d&rsquo;inscription, autorisation parentale et certificat m&eacute;dical &agrave; t&eacute;l&eacute;charger.</span></span></span></p>
+
+<p><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">= &gt; Mettre un lien des pdfs &agrave; t&eacute;l&eacute;charger, par cours</span></span></span></p>",done
+385,dev,"23/10/2019 16:10:23",admin,update,"Builder\PageBundle\Entity\Content",18,content,"<h1>Cours d&#39;escalade en salle (SAE)</h1>
+
+<p>Cours int&eacute;rieur SAE: Structure artificielle d&#39;escalade</p>
+
+<p><strong>Lieu: </strong>A la salle de Lod&egrave;ve, dans le hall des sports Didier Dinard</p>
+
+<h2>Cours en salle</h2>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>PLANNING TODO</p>
+
+<p>&nbsp;</p>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>","<h1>Cours d&#39;escalade en salle (SAE)</h1>
+
+<p>SAE: Structure artificielle d&#39;escalade</p>
+
+<p>Nos <span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">moniteurs sont licenci&eacute;s et form&eacute;s, ils vous apprendrons la s&eacute;curit&eacute; et les techniques de grimpe dans la bonne humeur. </span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Lieux</strong> : A la salle de Lod&egrave;ve, dans la hall des sports Didier Dinard</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Niveaux </strong>: Tous niveau</span></span></span></p>
+
+<p style=""margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public </strong>: Enfant, Adultes.</span></span></span></p>
+
+<p>PLANNING TODO</p>
+
+<p>&nbsp;</p>
+
+<h2>Documents</h2>
+
+<p>Fiche d&rsquo;inscription, certificat m&eacute;dical</p>
+
+<p>Enfant: Autorisation parentale</p>",done
+386,dev,"05/11/2019 15:11:39",admin,remove,"Builder\PageBundle\Entity\Page_Content",13,,,,done
+387,dev,"05/11/2019 15:11:50",admin,update,"Builder\PageBundle\Entity\Content",8,content,"<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<ul>
+	<li>EN EXTERIEUR
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></li>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Autonome sans encadrement</span></span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<ul>
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">EN SALLE (SAE: structure artificielle d&#39;escalade)</span></span></span>
+
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">A Lod&egrave;ve</span></span></span>
+
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></span></li>
+		</ul>
+		</li>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>","<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<ul>
+	<li>EN EXTERIEUR
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""color:#000000"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></li>
+		<li><span style=""font-size:11pt""><span style=""color:#000000"">Autonome sans encadrement</span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>EN SALLE (SAE: structure artificielle d&#39;escalade)
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""color:#000000"">A Lod&egrave;ve</span></span>
+
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></li>
+		</ul>
+		</li>
+		<li><span style=""font-size:11pt""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>",done
+388,dev,"05/11/2019 15:11:06",admin,create,"Builder\PageBundle\Entity\Content",19,,,,done
+389,dev,"05/11/2019 15:11:06",admin,create,"Builder\PageBundle\Entity\Content",19,title,,"COURS EN SALLE >>cours_en_salle",done
+390,dev,"05/11/2019 15:11:06",admin,create,"Builder\PageBundle\Entity\Content",19,content,,"<p style=""text-align:center""><em>Apprenez tout au long de l&#39;ann&eacute;e</em></p>
+
+<p style=""margin-left:40px"">En <strong>int&eacute;rieur</strong>, &agrave; Lod&egrave;ve</p>
+
+<p style=""margin-left:40px""><strong>Public </strong> : Enfant (+ 6 ans), Adulte</p>
+
+<p style=""margin-left:40px""><strong>Niveaux </strong>: Tous niveau</p>",done
+391,dev,"05/11/2019 15:11:06",admin,create,"Builder\PageBundle\Entity\Content",19,type,,Card,done
+392,dev,"05/11/2019 15:11:20",admin,create,"Builder\PageBundle\Entity\Content",20,,,,done
+393,dev,"05/11/2019 15:11:20",admin,create,"Builder\PageBundle\Entity\Content",20,title,,"COURS EN EXTERIEUR >>cours_en_exterieur",done
+394,dev,"05/11/2019 15:11:20",admin,create,"Builder\PageBundle\Entity\Content",20,content,,"<p style=""text-align:center""><em>Apprenez tout au long de l&#39;ann&eacute;e</em></p>
+
+<p style=""margin-left:40px"">En <strong>ext&eacute;rieur</strong>, environs de Lod&egrave;ve</p>
+
+<p style=""margin-left:40px""><strong>Public </strong> : Enfant (+6 ans), Adulte</p>
+
+<p style=""margin-left:40px""><strong>Niveaux </strong>: Tous niveau</p>",done
+395,dev,"05/11/2019 15:11:20",admin,create,"Builder\PageBundle\Entity\Content",20,type,,Card,done
+396,dev,"05/11/2019 15:11:43",admin,update,"Builder\PageBundle\Entity\Page_Content",6,position,2.1,3.1,done
+397,dev,"05/11/2019 15:11:43",admin,update,"Builder\PageBundle\Entity\Page_Content",6,content,Content:7,Content:19,done
+398,dev,"05/11/2019 15:11:43",admin,update,"Builder\PageBundle\Entity\Page_Content",7,position,2.2,2,done
+399,dev,"05/11/2019 15:11:43",admin,update,"Builder\PageBundle\Entity\Page_Content",9,position,2.4,4.2,done
+400,dev,"05/11/2019 15:11:43",admin,update,"Builder\PageBundle\Entity\Page_Content",8,position,2.5,3.2,done
+401,dev,"05/11/2019 15:11:43",admin,update,"Builder\PageBundle\Entity\Page_Content",8,content,Content:9,Content:20,done
+402,dev,"05/11/2019 15:11:43",admin,update,"Builder\PageBundle\Entity\Page_Content",11,position,3.1,4.1,done
+403,dev,"05/11/2019 15:11:43",admin,update,"Builder\PageBundle\Entity\Page_Content",12,position,3.2,5,done
+404,dev,"05/11/2019 15:11:43",admin,update,"Builder\PageBundle\Entity\Page_Content",14,position,4.1,6,done
+405,dev,"05/11/2019 16:11:07",admin,update,"Builder\PageBundle\Entity\Page_Content",7,position,2,"2 row",done
+406,dev,"05/11/2019 16:11:32",admin,update,"Builder\PageBundle\Entity\Page_Content",7,position,"2 row","2 mx-1",done
+407,dev,"05/11/2019 16:11:37",admin,update,"Builder\PageBundle\Entity\Page",4,headerImage,,EXT1,done
+408,dev,"20/11/2019 16:11:24",admin,update,"Builder\PageBundle\Entity\Content",4,content,"<p style=""text-align:center""><span style=""font-size:16px""><span style=""font-family:Arial""><span style=""color:#000000"">Bienvenue &agrave; Parci-Parla, au pied du Larzac. Notre association, cr&eacute;&eacute;e en 2003 par des passionn&eacute;s, propose en toute convivialit&eacute; de d&eacute;couvrir, de s&rsquo;initier et de se perfectionner &agrave; l&rsquo;escalade.</span></span></span></p>
+
+<p style=""text-align:center"">&nbsp;</p>
+
+<p style=""text-align:center""><span style=""font-size:16px""><span style=""font-family:Arial""><span style=""color:#000000""><em>Notre vocation est de d&eacute;velopper des activit&eacute;s de pleine nature, en particulier l&rsquo;escalade.</em></span></span></span></p>
+
+<p>&nbsp;</p>","<p style=""text-align:center"">Bienvenue &agrave; Parci-Parla, au pied du Larzac. Notre association, cr&eacute;&eacute;e en 2003 par des passionn&eacute;s, propose en toute convivialit&eacute; de d&eacute;couvrir, de s&rsquo;initier et de se perfectionner &agrave; l&rsquo;escalade.</p>
+
+<p style=""text-align:center"">&nbsp;</p>
+
+<p style=""text-align:center""><em>Notre vocation est de d&eacute;velopper des activit&eacute;s de pleine nature, en particulier l&rsquo;escalade.</em></p>
+
+<p>&nbsp;</p>",done
+409,dev,"20/11/2019 16:11:17",admin,update,"Builder\PageBundle\Entity\Content",4,content,"<p style=""text-align:center"">Bienvenue &agrave; Parci-Parla, au pied du Larzac. Notre association, cr&eacute;&eacute;e en 2003 par des passionn&eacute;s, propose en toute convivialit&eacute; de d&eacute;couvrir, de s&rsquo;initier et de se perfectionner &agrave; l&rsquo;escalade.</p>
+
+<p style=""text-align:center"">&nbsp;</p>
+
+<p style=""text-align:center""><em>Notre vocation est de d&eacute;velopper des activit&eacute;s de pleine nature, en particulier l&rsquo;escalade.</em></p>
+
+<p>&nbsp;</p>","<p style=""text-align:center""><big>Bienvenue &agrave; Parci-Parla, au pied du Larzac. Notre association, cr&eacute;&eacute;e en 2003 par des passionn&eacute;s, propose en toute convivialit&eacute; de d&eacute;couvrir, de s&rsquo;initier et de se perfectionner &agrave; l&rsquo;escalade.</big></p>
+
+<p style=""text-align:center"">&nbsp;</p>
+
+<p style=""text-align:center""><big><em>Notre vocation est de d&eacute;velopper des activit&eacute;s de pleine nature, en particulier l&rsquo;escalade.</em></big></p>
+
+<p>&nbsp;</p>",done
+410,dev,"20/11/2019 16:11:01",admin,update,"Builder\PageBundle\Entity\Content",9,content,"<p style=""text-align:center""><em>En pleine nature!</em></p>
+
+<ul>
+	<li>EN EXTERIEUR
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></span></li>
+		<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Autonome sans encadrement</span></span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>","<p style=""text-align:center""><em>En pleine nature!</em></p>
+
+<ul>
+	<li>EN EXTERIEUR
+	<ul>
+		<li>Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</li>
+		<li>Autonome sans encadrement
+		<ul>
+			<li>Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>",done
+411,dev,"20/11/2019 16:11:38",admin,update,"Builder\PageBundle\Entity\Content",10,content,"<p style=""list-style-type:disc; text-align:center""><em>Profitez des vacances pour participer &agrave; nos stages</em></p>
+
+<p style=""list-style-type:disc; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Public : </strong>Enfant / Adulte</span></span></span></p>
+
+<p style=""list-style-type:disc; margin-left:40px""><strong><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Escalade : </span></span></span></strong><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">En pleine nature ou en salle (SAE)</span></span></span></p>
+
+<p style=""list-style-type:disc; margin-left:40px""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000""><strong>Canyoning : </strong>D&eacute;couvrez les cayons de la r&eacute;gion</span></span></span></p>","<p style=""text-align:center""><em>Profitez des vacances pour participer &agrave; nos stages</em></p>
+
+<p style=""margin-left:40px""><strong>Public </strong>: Enfant / Adulte</p>
+
+<p style=""margin-left:40px""><strong>Escalade </strong>: En pleine nature ou en salle (SAE)</p>
+
+<p style=""margin-left:40px""><strong>Canyoning </strong>: D&eacute;couvrez les cayons de la r&eacute;gion</p>",done
+412,dev,"20/11/2019 16:11:35",admin,update,"Builder\PageBundle\Entity\Content",12,content,"<ul>
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Festival Lod&egrave;ve Bloc Trip </span></span></span><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">(1 fois par an)</span></span></span></li>
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Foire aux associations Lod&egrave;ve (septembre)</span></span></span></li>
+	<li><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Sortie de fin d&rsquo;ann&eacute;e (juin)</span></span></span></li>
+</ul>","<p style=""margin-left:40px"">Festival Lod&egrave;ve Bloc Trip (1 fois par an)</p>
+
+<p style=""margin-left:40px"">Foire aux associations Lod&egrave;ve (septembre)</p>
+
+<p style=""margin-left:40px"">Sortie de fin d&rsquo;ann&eacute;e (juin)</p>",done
+413,dev,"20/11/2019 16:11:32",admin,update,"Builder\PageBundle\Entity\Content",8,content,"<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<ul>
+	<li>EN EXTERIEUR
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""color:#000000"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</span></span></li>
+		<li><span style=""font-size:11pt""><span style=""color:#000000"">Autonome sans encadrement</span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""color:#000000"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>EN SALLE (SAE: structure artificielle d&#39;escalade)
+	<ul>
+		<li><span style=""font-size:11pt""><span style=""color:#000000"">A Lod&egrave;ve</span></span>
+
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""color:#000000"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</span></span></li>
+		</ul>
+		</li>
+		<li><span style=""font-size:11pt""><span style=""color:#000000"">Au Eco-Hameau du Claux</span></span>
+		<ul>
+			<li><span style=""font-size:11pt""><span style=""color:#000000"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>","<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<p><strong>EN EXTERIEUR</strong></p>
+
+<div style=""margin-left:40px"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</div>
+
+<div style=""margin-left:40px"">Autonome sans encadrement</div>
+
+<div style=""margin-left:80px"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</div>
+
+<p><strong>EN SALLE</strong> (SAE: structure artificielle d&#39;escalade)</p>
+
+<div style=""margin-left:40px"">A Lod&egrave;ve</div>
+
+<div style=""margin-left:80px"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</div>
+
+<div style=""margin-left:40px"">Au Eco-Hameau du Claux</div>
+
+<div style=""margin-left:80px"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</div>",done
+414,dev,"20/11/2019 16:11:40",admin,update,"Builder\PageBundle\Entity\Content",8,content,"<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<p><strong>EN EXTERIEUR</strong></p>
+
+<div style=""margin-left:40px"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</div>
+
+<div style=""margin-left:40px"">Autonome sans encadrement</div>
+
+<div style=""margin-left:80px"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</div>
+
+<p><strong>EN SALLE</strong> (SAE: structure artificielle d&#39;escalade)</p>
+
+<div style=""margin-left:40px"">A Lod&egrave;ve</div>
+
+<div style=""margin-left:80px"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</div>
+
+<div style=""margin-left:40px"">Au Eco-Hameau du Claux</div>
+
+<div style=""margin-left:80px"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</div>","<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<div><strong>EN EXTERIEUR</strong></div>
+
+<div style=""margin-left:40px"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</div>
+
+<div style=""margin-left:40px"">Autonome sans encadrement</div>
+
+<div style=""margin-left:80px"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</div>
+
+<div>&nbsp;</div>
+
+<div><strong>EN SALLE</strong> (SAE: structure artificielle d&#39;escalade)</div>
+
+<div style=""margin-left:40px"">A Lod&egrave;ve</div>
+
+<div style=""margin-left:80px"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</div>
+
+<div style=""margin-left:40px"">Au Eco-Hameau du Claux</div>
+
+<div style=""margin-left:80px"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</div>",done
+415,dev,"20/11/2019 16:11:13",admin,update,"Builder\PageBundle\Entity\Content",8,content,"<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<div><strong>EN EXTERIEUR</strong></div>
+
+<div style=""margin-left:40px"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</div>
+
+<div style=""margin-left:40px"">Autonome sans encadrement</div>
+
+<div style=""margin-left:80px"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</div>
+
+<div>&nbsp;</div>
+
+<div><strong>EN SALLE</strong> (SAE: structure artificielle d&#39;escalade)</div>
+
+<div style=""margin-left:40px"">A Lod&egrave;ve</div>
+
+<div style=""margin-left:80px"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</div>
+
+<div style=""margin-left:40px"">Au Eco-Hameau du Claux</div>
+
+<div style=""margin-left:80px"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</div>","<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<div style=""margin-left:40px""><strong>EN EXTERIEUR</strong></div>
+
+<div style=""margin-left:80px"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</div>
+
+<div style=""margin-left:80px"">Autonome sans encadrement</div>
+
+<div style=""margin-left:120px"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</div>
+
+<div style=""margin-left:40px"">&nbsp;</div>
+
+<div style=""margin-left:40px""><strong>EN SALLE</strong> (SAE: structure artificielle d&#39;escalade)</div>
+
+<div style=""margin-left:80px"">A Lod&egrave;ve</div>
+
+<div style=""margin-left:120px"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</div>
+
+<div style=""margin-left:80px"">Au Eco-Hameau du Claux</div>
+
+<div style=""margin-left:120px"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</div>",done
+416,dev,"20/11/2019 16:11:20",admin,update,"Builder\PageBundle\Entity\Content",13,content,"<ul style=""margin-left:40px"">
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Intervention dans les institutions</span></span></span></li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Mise &agrave; disposition de moniteurs</span></span></span></li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Elaboration de projets</span></span></span></li>
+</ul>","<p style=""margin-left:40px"">Intervention dans les institutions</p>
+
+<p style=""margin-left:40px"">Mise &agrave; disposition de moniteurs</p>
+
+<p style=""margin-left:40px"">Elaboration de projets</p>",done
+417,dev,"20/11/2019 17:11:55",admin,update,"Builder\PageBundle\Entity\Content",15,content,"<ul>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Nous trouver</span></span></span></li>
+	<li style=""list-style-type:disc""><span style=""font-size:11pt""><span style=""font-family:Arial""><span style=""color:#000000"">Nous contacter</span></span></span></li>
+	<li style=""list-style-type:disc"">Pr&eacute;sentation de l&#39;&eacute;quipe</li>
+</ul>","<p style=""margin-left:40px"">Nous trouver</p>
+
+<p style=""margin-left:40px"">Nous contacter</p>
+
+<p style=""margin-left:40px"">Pr&eacute;sentation de l&#39;&eacute;quipe</p>",done
+418,dev,"20/11/2019 17:11:22",admin,update,"Builder\PageBundle\Entity\Content",8,content,"<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<div style=""margin-left:40px""><strong>EN EXTERIEUR</strong></div>
+
+<div style=""margin-left:80px"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</div>
+
+<div style=""margin-left:80px"">Autonome sans encadrement</div>
+
+<div style=""margin-left:120px"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</div>
+
+<div style=""margin-left:40px"">&nbsp;</div>
+
+<div style=""margin-left:40px""><strong>EN SALLE</strong> (SAE: structure artificielle d&#39;escalade)</div>
+
+<div style=""margin-left:80px"">A Lod&egrave;ve</div>
+
+<div style=""margin-left:120px"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</div>
+
+<div style=""margin-left:80px"">Au Eco-Hameau du Claux</div>
+
+<div style=""margin-left:120px"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</div>","<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<p>&nbsp;</p>
+
+<div style=""margin-left:40px""><strong>EN EXTERIEUR</strong></div>
+
+<div style=""margin-left:80px"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</div>
+
+<div style=""margin-left:80px"">Autonome sans encadrement</div>
+
+<div style=""margin-left:120px"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</div>
+
+<div style=""margin-left:40px"">&nbsp;</div>
+
+<div style=""margin-left:40px""><strong>EN SALLE</strong> (SAE: structure artificielle d&#39;escalade)</div>
+
+<div style=""margin-left:80px"">A Lod&egrave;ve</div>
+
+<div style=""margin-left:120px"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</div>
+
+<div style=""margin-left:80px"">Au Eco-Hameau du Claux</div>
+
+<div style=""margin-left:120px"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</div>
+
+<p>&nbsp;</p>",done
+419,dev,"20/11/2019 17:11:49",admin,update,"Builder\PageBundle\Entity\Content",8,content,"<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<p>&nbsp;</p>
+
+<div style=""margin-left:40px""><strong>EN EXTERIEUR</strong></div>
+
+<div style=""margin-left:80px"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</div>
+
+<div style=""margin-left:80px"">Autonome sans encadrement</div>
+
+<div style=""margin-left:120px"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</div>
+
+<div style=""margin-left:40px"">&nbsp;</div>
+
+<div style=""margin-left:40px""><strong>EN SALLE</strong> (SAE: structure artificielle d&#39;escalade)</div>
+
+<div style=""margin-left:80px"">A Lod&egrave;ve</div>
+
+<div style=""margin-left:120px"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</div>
+
+<div style=""margin-left:80px"">Au Eco-Hameau du Claux</div>
+
+<div style=""margin-left:120px"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</div>
+
+<p>&nbsp;</p>","<p style=""text-align:center""><em>Progressez et gagnez en autonomie</em></p>
+
+<div style=""margin-left:40px""><strong>EN EXTERIEUR</strong></div>
+
+<div style=""margin-left:80px"">Encadr&eacute;e, en site naturel toute l&rsquo;ann&eacute;e</div>
+
+<div style=""margin-left:80px"">Autonome sans encadrement</div>
+
+<div style=""margin-left:120px"">Ouvert &agrave; tous sous r&eacute;serve de validation du niveau d&rsquo;autonomie.</div>
+
+<div style=""margin-left:40px"">&nbsp;</div>
+
+<div style=""margin-left:40px""><strong>EN SALLE</strong> (SAE: structure artificielle d&#39;escalade)</div>
+
+<div style=""margin-left:80px"">A Lod&egrave;ve</div>
+
+<div style=""margin-left:120px"">S&eacute;ance libre tous les jeudi de 19h30 &agrave; 21h30</div>
+
+<div style=""margin-left:80px"">Au Eco-Hameau du Claux</div>
+
+<div style=""margin-left:120px"">Bistro Grimpe tous les mardi de 19h jusqu&rsquo;au bout de la nuit</div>",done
+420,dev,"20/11/2019 17:11:05",admin,create,"Builder\PageBundle\Entity\Carousel",1,,,,done
+421,dev,"20/11/2019 17:11:05",admin,create,"Builder\PageBundle\Entity\Carousel",1,carousel,,carousel_home,done
+422,dev,"20/11/2019 17:11:05",admin,create,"Builder\PageBundle\Entity\Carousel",1,title,,falaise,done
+423,dev,"20/11/2019 17:11:05",admin,create,"Builder\PageBundle\Entity\Carousel",1,imageName,,5dd5751147c52_i1.jpg,done
+424,dev,"20/11/2019 17:11:05",admin,create,"Builder\PageBundle\Entity\Carousel",1,imageSize,,332692,done
+425,dev,"20/11/2019 17:11:05",admin,create,"Builder\PageBundle\Entity\Carousel",1,updatedAt,,"2019-11-20 17:17:05",done
+426,dev,"20/11/2019 17:11:30",admin,create,"Builder\PageBundle\Entity\Carousel",2,,,,done
+427,dev,"20/11/2019 17:11:30",admin,create,"Builder\PageBundle\Entity\Carousel",2,carousel,,carousel_home,done
+428,dev,"20/11/2019 17:11:30",admin,create,"Builder\PageBundle\Entity\Carousel",2,title,,couenne,done
+429,dev,"20/11/2019 17:11:30",admin,create,"Builder\PageBundle\Entity\Carousel",2,imageName,,5dd5752ab91e7_i2.jpg,done
+430,dev,"20/11/2019 17:11:30",admin,create,"Builder\PageBundle\Entity\Carousel",2,imageSize,,325683,done
+431,dev,"20/11/2019 17:11:30",admin,create,"Builder\PageBundle\Entity\Carousel",2,updatedAt,,"2019-11-20 17:17:30",done
+432,dev,"20/11/2019 17:11:03",admin,create,"Builder\PageBundle\Entity\Carousel",3,,,,done
+433,dev,"20/11/2019 17:11:03",admin,create,"Builder\PageBundle\Entity\Carousel",3,carousel,,carousel_home,done
+434,dev,"20/11/2019 17:11:03",admin,create,"Builder\PageBundle\Entity\Carousel",3,title,,"roche calcaire",done
+435,dev,"20/11/2019 17:11:03",admin,create,"Builder\PageBundle\Entity\Carousel",3,content,,"longue voie",done
+436,dev,"20/11/2019 17:11:03",admin,create,"Builder\PageBundle\Entity\Carousel",3,imageName,,5dd5754b9c846_i3.jpg,done
+437,dev,"20/11/2019 17:11:03",admin,create,"Builder\PageBundle\Entity\Carousel",3,imageSize,,365879,done
+438,dev,"20/11/2019 17:11:03",admin,create,"Builder\PageBundle\Entity\Carousel",3,updatedAt,,"2019-11-20 17:18:03",done
+439,dev,"20/11/2019 17:11:35",admin,create,"Builder\PageBundle\Entity\Carousel",4,,,,done
+440,dev,"20/11/2019 17:11:35",admin,create,"Builder\PageBundle\Entity\Carousel",4,carousel,,carousel_home,done
+441,dev,"20/11/2019 17:11:35",admin,create,"Builder\PageBundle\Entity\Carousel",4,title,,"Escalade en salle",done
+442,dev,"20/11/2019 17:11:35",admin,create,"Builder\PageBundle\Entity\Carousel",4,content,,"A Lodève",done
+443,dev,"20/11/2019 17:11:35",admin,create,"Builder\PageBundle\Entity\Carousel",4,imageName,,5dd5756b6877d_i4.jpg,done
+444,dev,"20/11/2019 17:11:35",admin,create,"Builder\PageBundle\Entity\Carousel",4,imageSize,,1149998,done
+445,dev,"20/11/2019 17:11:35",admin,create,"Builder\PageBundle\Entity\Carousel",4,updatedAt,,"2019-11-20 17:18:35",done
+446,dev,"20/11/2019 17:11:43",admin,create,"Builder\PageBundle\Entity\Carousel",5,,,,done
+447,dev,"20/11/2019 17:11:43",admin,create,"Builder\PageBundle\Entity\Carousel",5,carousel,,carousel_home,done
+448,dev,"20/11/2019 17:11:43",admin,create,"Builder\PageBundle\Entity\Carousel",5,imageName,,5dd57573853d8_i5.jpg,done
+449,dev,"20/11/2019 17:11:43",admin,create,"Builder\PageBundle\Entity\Carousel",5,imageSize,,826994,done
+450,dev,"20/11/2019 17:11:43",admin,create,"Builder\PageBundle\Entity\Carousel",5,updatedAt,,"2019-11-20 17:18:43",done
+451,dev,"20/11/2019 17:11:58",admin,create,"Builder\PageBundle\Entity\Content",21,,,,done
+452,dev,"20/11/2019 17:11:58",admin,create,"Builder\PageBundle\Entity\Content",21,title,,carouselAccueil,done
+453,dev,"20/11/2019 17:11:58",admin,create,"Builder\PageBundle\Entity\Content",21,content,,<p>carousel_home</p>,done
+454,dev,"20/11/2019 17:11:58",admin,create,"Builder\PageBundle\Entity\Content",21,type,,Carousel,done
+455,dev,"20/11/2019 17:11:58",admin,create,"Builder\PageBundle\Entity\Content",21,locked,,1,done
+456,dev,"20/11/2019 17:11:58",admin,create,"Builder\PageBundle\Entity\Content",21,class,,carouselAccueil,done
+457,dev,"26/11/2019 12:11:30",admin,update,"Builder\PageBundle\Entity\Content",1,content,"<p><img alt=""logo parci parla"" src=""/uploads/media/my-context/0001/01/642ffc3deac41dc7acef9a3a2221c803bda876cb.png"" style=""height:150px; width:154px"" /><img alt="""" src=""/site/assets/images/image1-min.png"" style=""width:80%""/></p>","<p><img alt=""logo parci parla"" src=""/uploads/media/my-context/0001/01/97aed5e93f9a2215ef8ccaa89d43ce738867a201.png"" style=""width:20%"" /><img alt="""" src=""/uploads/media/my-context/0001/01/31bdfade5f79379004f1d347e0916ab876cc55a5.png"" style=""width:80%"" /></p>",done
+458,dev,"27/11/2019 10:11:43",admin,update,"Builder\PageBundle\Entity\Carousel",1,carousel,carousel_home,caroussel-home,done
+459,dev,"27/11/2019 10:11:14",admin,update,"Builder\PageBundle\Entity\Carousel",2,carousel,carousel_home,caroussel-home,done

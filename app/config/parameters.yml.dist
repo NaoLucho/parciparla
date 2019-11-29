@@ -3,19 +3,19 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 
 parameters:
-    database_host: santheqfungadb.mysql.db
+    database_host: santheqpcpl.mysql.db
     database_port: null
-    database_name: santheqfungadb
-    database_user: santheqfungadb
-    database_password: fungaD3V
+    database_name: santheqpcpl
+    database_user: santheqpcpl
+    database_password: fungaD
     mailer_transport: gmail
     mailer_host: null
     mailer_user: louis.watrin@gmail.com
-    mailer_password: GMAIL----
+    mailer_password: gmailP
     mailer_encryption: ssl
-    project_name: accenttonique
+    project_name: parciparla
     upload_prefix: /uploads
     image_prefix: '%upload_prefix%/img'
-    secret: secret
-    template_repo: accenttonique
-    table_prefix: at_
+    secret: grimpe
+    template_repo: site
+    table_prefix: pp__
