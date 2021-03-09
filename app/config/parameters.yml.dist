@@ -7,15 +7,15 @@ parameters:
     database_port: null
     database_name: santheqpcpl
     database_user: santheqpcpl
-    database_password: fungaD
+    database_password: 
     mailer_transport: gmail
     mailer_host: null
     mailer_user: louis.watrin@gmail.com
-    mailer_password: gmailP
+    mailer_password: 
     mailer_encryption: ssl
     project_name: parciparla
     upload_prefix: /uploads
     image_prefix: '%upload_prefix%/img'
-    secret: grimpe
+    secret: 
     template_repo: site
     table_prefix: pp__
