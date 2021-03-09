@@ -1,0 +1,4 @@
+
+- Gestion des images pour modifier les fonts depuis la galerie plutot que le filer.
+>> créer une galerie : headers
+>> faire le pont

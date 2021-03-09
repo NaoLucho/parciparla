@@ -7,8 +7,9 @@ funga-D
 ssh santheq@sshcloud.cluster024.hosting.ovh.net -p 42776
 
 /admin
+admin pass
 admin fungaD-
-nat T-31
+//nat T-31
 
 MULTISITE
 ssh fungafrwoh@ssh.cluster023.hosting.ovh.net -p 22
@@ -17,6 +18,7 @@ Ecur-
 CLOUD
 ssh santheq@sshcloud.cluster024.hosting.ovh.net -p 42776
 funga-D
+cloud-D
 
 pwd
 ls
@@ -33,7 +35,7 @@ php bin/console cache:clear --no-warmup --env=prod
 /usr/local/php7.2/bin/php bin/console assets:install (Créer le web/bundle à partir de vendor)
 /usr/local/php7.2/bin/php bin/console assets:install --symlink --env=prod --no-debug
 /usr/local/php7.2/bin/php bin/console assetic:dump --env=prod --no-debug (met à jour les js/css dans web pour prod)
-/usr/local/php7.2/bin/php bin/console cache:clear --no-warmup --env=prod (FONCTIONNE?)
+/usr/local/php7.2/bin/php bin/console cache:clear --no-warmup --env=prod (FONCTIONNE PAS! site non dispo...)
 /usr/local/php7.2/bin/php bin/console cache:clear --env=prod
 
 Pour le lien CKEDITOR - SONATA MEDIA

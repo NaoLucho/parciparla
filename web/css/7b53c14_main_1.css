@@ -105,7 +105,7 @@ hr {
 }
 
 .logo-img {
-    background-color:white;
+    /* background-color:white; */
     padding: 10px 20px;
     max-width: 350px;
     z-index: 320;
@@ -116,6 +116,7 @@ hr {
 }
 
 .banner-img{
+    display: none;
     position: absolute;
     z-index: 310;
 
@@ -132,6 +133,7 @@ hr {
 
 
 .Footer {
+    position: relative;
     background-color: #222;
     padding: 20px 0 1px 0;
     width: 100%;
@@ -139,6 +141,7 @@ hr {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    color: rgba(255, 255, 255, .7);
 }
 
 .Footer a {
@@ -146,7 +149,6 @@ hr {
     font-size: 15px;
     margin-left: auto;
     margin-right: auto;
-    font-style: italic;
 }
 
 .Footer h5 {
@@ -181,7 +183,7 @@ a {
     position: relative;
     z-index: 300;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: rgba(255, 255, 255, 0.2); */
     /* background-color: #FDE101; */
     
 }
@@ -228,7 +230,7 @@ a {
 }
 
 .Menu .navbar-nav {
-    margin-left: 10%;
+    /* margin-left: 10%; */
     margin-right: auto;
 }
 
@@ -269,12 +271,13 @@ a {
     border-radius: 0px;
     border: 0;
     box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.5);
-    background-color: #e9ffe5;
+    /* background-color: #e9ffe5; */
+    background-color: #ffc400;
 }
 
 .Menu .dropdown-menu:hover {
     /* margin-top: -1px; */
-    /* background-color: #067100; */
+    
 }
 
 .Menu .dropdown-menu .nav-link:hover {
@@ -340,7 +343,7 @@ li.disable {
 
 
 .banner {
-    height: 50vh;
+    height: 40vh;
     overflow: hidden;
 }
 
@@ -350,4 +353,21 @@ li.disable {
     left: 50%;
     transform: translate(-50%, 0);
     max-width: 100%;
+}
+
+.adminbtn{
+    position: absolute;
+    right: 0;
+    background:yellow;
+    top: 0;
+    border: 1px solid;
+    opacity: 0.1;
+}
+
+.adminbtn:hover{
+    opacity: 1;
+}
+
+.adminbtn a{
+    color: black !important;
 }

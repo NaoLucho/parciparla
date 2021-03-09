@@ -20,12 +20,12 @@ DirectoryIndex app.php
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # # SI acccenttonique.funga pour l'admin
-    # # RewriteCond %{REQUEST_URI} !^https://parciparla.funga.fr/admin
-    # RewriteCond %{HTTP_HOST} ^parciparla.funga.fr$
-    # # Exception qui ne fonctionne pas...
-    # # RewriteRule ^parciparla.funga.fr/admin(.*)$  - [L]
-    # RewriteRule ^(.*)$ https://www.parciparla.funga.fr/$1 [R=301,L]
+    # SI acccenttonique.funga pour l'admin
+    # RewriteCond %{REQUEST_URI} !^https://parciparla.funga.fr/admin
+    RewriteCond %{HTTP_HOST} ^parciparla.funga.fr$
+    # Exception qui ne fonctionne pas...
+    # RewriteRule ^parciparla.funga.fr/admin(.*)$  - [L]
+    RewriteRule ^(.*)$ https://www.parciparla.funga.fr/$1 [R=301,L]
     
     #Rediriger le http vers https
     RewriteCond %{HTTP:X-Forwarded-Port} 80 

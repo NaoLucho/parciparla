@@ -59,30 +59,44 @@ h2.card-title{
 
 
 
-.carouselAccueil{
+.carouselHeader{
     position: fixed;
     top: 0;
     width: 100% !important;
 }
 
-.carouselAccueil .carousel-control-prev-icon, .carouselAccueil .carousel-control-next-icon{
+.carouselHeader .carousel-item img{
+    min-width: 100%;
+    min-height: 100vh;  
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    /* bottom: -50vh;
+    transform: translate(-50%,-50%); */
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+.carouselHeader .carousel-control-prev-icon, .carouselHeader .carousel-control-next-icon{
     /* background-color: rgba(0,0,0,0.2);
     border-radius: 5px; */
     height: 100vh;
 }
-.carouselAccueil .carousel-control-prev:hover, .carousel-control-next:hover{
+.carouselHeader .carousel-control-prev:hover, .carousel-control-next:hover{
     background-color: rgba(255,255,255,.2);
 }
 
-.carouselAccueil .carousel-indicators{
+.carouselHeader .carousel-indicators{
     top: 100px;
 }
 
-.carouselAccueil .carousel-indicators li{
+.carouselHeader .carousel-indicators li{
     box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .2);
 }
 
-.carouselAccueil .carousel-indicators li.active{
+.carouselHeader .carousel-indicators li.active{
     background-color: #FDE101;
 }
 

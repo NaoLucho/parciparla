@@ -62,4 +62,4 @@ rm -r vendor
 scp -r ../accenttonique/vendor/ ./
 
 AJOUTS POUR PARCIPARLA:
-=>créer le carousel carouselAccueil pour que la page d'accueil fonctionne
+=>créer le carousel carouselHeader pour que la page d'accueil fonctionne
